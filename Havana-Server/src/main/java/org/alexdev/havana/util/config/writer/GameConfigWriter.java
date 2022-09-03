@@ -137,7 +137,6 @@ public class GameConfigWriter implements ConfigWriter {
         config.put("chat.spam.count", "10");
         config.put("walk.spam.count", "10");
 
-        config.put("stout.room", "0");
         config.put("messenger.enable.official.update.speed", "false");
 
         for (var set : CommandManager.getCommands()) {
