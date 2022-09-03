@@ -487,26 +487,6 @@ public class PlayerDao {
         }
     }
 
-    public static void setAuthToken(int userId, String authTicket, long updatedAt) {
-        Connection sqlConnection = null;
-        PreparedStatement preparedStatement = null;
-
-        try {
-            sqlConnection = Storage.getStorage().getConnection();
-            preparedStatement = Storage.getStorage().prepare("UPDATE users SET authentication_key = ?, authentication_key_date = ? WHERE id = ? LIMIT 1", sqlConnection);
-            preparedStatement.setString(1, authTicket);
-            preparedStatement.setLong(2, updatedAt);
-            preparedStatement.setInt(3, userId);
-            preparedStatement.execute();
-
-        } catch (Exception e) {
-            Storage.logError(e);
-        } finally {
-            Storage.closeSilently(preparedStatement);
-            Storage.closeSilently(sqlConnection);
-        }
-    }
-
     /**
      * Reset SSO ticket
      * Protects against replay attacks
