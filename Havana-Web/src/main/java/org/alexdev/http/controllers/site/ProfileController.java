@@ -445,15 +445,12 @@ public class ProfileController {
         boolean wordFilterEnabled = !webConnection.post().getString("wordFilterSetting").equals("false");
         boolean allowFriendRequests = webConnection.post().getString("allowFriendRequests").equals("true");
         boolean allowFriendStalking = webConnection.post().getString("followFriendSetting").equals("true");
-        boolean shockwavePreferred = webConnection.post().getString("clientpreference").equals("SHOCKWAVE");
-        String authToken = webConnection.session().getString("authenticationToken");
 
         if (motto.length() > 32) {
             motto = motto.substring(0, 32);
         }
 
         SessionDao.savePreferences(motto, profileVisibility, onlineStatusVisibility, wordFilterEnabled, allowFriendRequests, allowFriendStalking, userId);
-        PlayerDao.setAuthToken(userId, authToken, DateUtil.getCurrentTimeSeconds());
         
         webConnection.session().set("settings.saved.successfully", "true");
         webConnection.redirect("/profile?tab=2");
