@@ -1,0 +1,1562 @@
+<?xml version="1.0"?>
+<map>
+  <lib id="Jacket_F_Schooljacket" revision="26608">
+    <part id="2109" type="cc"/>
+    <part id="2109" type="lc"/>
+    <part id="2109" type="rc"/>
+  </lib>
+  <lib id="shirt_M_skull" revision="32794">
+    <part id="2273" type="ch"/>
+    <part id="2273" type="ls"/>
+    <part id="2273" type="rs"/>
+  </lib>
+  <lib id="shoes_F_thicksole" revision="32795">
+    <part id="2293" type="sh"/>
+    <part id="2294" type="sh"/>
+    <part id="2295" type="sh"/>
+  </lib>
+  <lib id="trousers_U_shorts_belt" revision="34414">
+    <part id="2333" type="lg"/>
+    <part id="2334" type="lg"/>
+  </lib>
+  <lib id="shirt_F_tshirt_blend" revision="26096">
+    <part id="2087" type="ch"/>
+    <part id="2087" type="ls"/>
+    <part id="2087" type="rs"/>
+    <part id="2088" type="ch"/>
+  </lib>
+  <lib id="Shirt_F_Punk_Shirt" revision="26096">
+    <part id="2076" type="ch"/>
+    <part id="2076" type="ls"/>
+    <part id="2076" type="rs"/>
+    <part id="2077" type="ch"/>
+  </lib>
+  <lib id="hair_F_tiedup" revision="26096">
+    <part id="2019" type="hr"/>
+    <part id="2019" type="hrb"/>
+  </lib>
+  <lib id="jacket_F_winter_coat" revision="30243">
+    <part id="2258" type="cc"/>
+    <part id="2258" type="lc"/>
+    <part id="2258" type="rc"/>
+    <part id="2259" type="cc"/>
+  </lib>
+  <lib id="acc_print_M_tattoo_tribal" revision="34263">
+    <part id="2337" type="cp"/>
+  </lib>
+  <lib id="hair_M_messed2" revision="32704">
+    <part id="2268" type="hr"/>
+    <part id="2268" type="hrb"/>
+  </lib>
+  <lib id="Shoes_F_Schoolshoes" revision="26274">
+    <part id="2107" type="sh"/>
+  </lib>
+  <lib id="hair_M_emoish" revision="26608">
+    <part id="2040" type="hr"/>
+    <part id="2040" type="hrb"/>
+  </lib>
+  <lib id="shirt_F_bik_twist_top" revision="34374">
+    <part id="2327" type="ch"/>
+    <part id="2328" type="ch"/>
+  </lib>
+  <lib id="shirt_F_stripyhoodie" revision="26096">
+    <part id="2021" type="ch"/>
+    <part id="2021" type="ls"/>
+    <part id="2021" type="rs"/>
+  </lib>
+  <lib id="Shirt_F_Punk_Bra" revision="26096">
+    <part id="2074" type="ch"/>
+    <part id="2074" type="ls"/>
+    <part id="2074" type="rs"/>
+    <part id="2075" type="ch"/>
+  </lib>
+  <lib id="acc_eye_U_sunglasses4" revision="32724">
+    <part id="2276" type="ea"/>
+  </lib>
+  <lib id="acc_head_F_buns" revision="33227">
+    <part id="2306" type="he"/>
+    <part id="2307" type="he"/>
+  </lib>
+  <lib id="Jacket_M_Schooljacket" revision="26608">
+    <part id="2122" type="cc"/>
+    <part id="2122" type="lc"/>
+    <part id="2122" type="rc"/>
+  </lib>
+  <lib id="acc_eye_U_sunglasses5" revision="32702">
+    <part id="2277" type="ea"/>
+  </lib>
+  <lib id="shoes_U_football" revision="27009">
+    <part id="2178" type="sh"/>
+    <part id="2179" type="sh"/>
+    <part id="2180" type="sh"/>
+  </lib>
+  <lib id="acc_head_U_big_flower" revision="32704">
+    <part id="2269" type="he"/>
+    <part id="2270" type="he"/>
+  </lib>
+  <lib id="acc_chest_U_jewels" revision="32734">
+    <part id="2285" type="ca"/>
+    <part id="2286" type="ca"/>
+  </lib>
+  <lib id="Trousers_U_Sraight" revision="26073">
+    <part id="2098" type="lg"/>
+  </lib>
+  <lib id="acc_head_U_ears_elf" revision="26250">
+    <part id="2135" type="he"/>
+  </lib>
+  <lib id="trousers_F_bik_twist_bot" revision="34214">
+    <part id="2329" type="lg"/>
+    <part id="2330" type="lg"/>
+  </lib>
+  <lib id="hair_U_spiky" revision="26564">
+    <part id="2033" type="hr"/>
+    <part id="2033" type="hrb"/>
+    <part id="2034" type="hr"/>
+  </lib>
+  <lib id="hat_U_truckbandana" revision="26704">
+    <part id="2209" type="ha"/>
+    <part id="2210" type="ha"/>
+    <part id="2211" type="ha"/>
+  </lib>
+  <lib id="acc_eye_U_scuba" revision="34207">
+    <part id="2323" type="ea"/>
+    <part id="2324" type="ea"/>
+  </lib>
+  <lib id="hat_U_incahat" revision="30243">
+    <part id="2243" type="ha"/>
+    <part id="2244" type="ha"/>
+  </lib>
+  <lib id="trousers_F_plskirt" revision="33228">
+    <part id="2315" type="lg"/>
+    <part id="2316" type="lg"/>
+  </lib>
+  <lib id="hat_U_shade" revision="26722">
+    <part id="2042" type="ha"/>
+    <part id="2043" type="ha"/>
+  </lib>
+  <lib id="trousers_M_shorts_dive" revision="34258">
+    <part id="2331" type="lg"/>
+    <part id="2332" type="lg"/>
+  </lib>
+  <lib id="acc_eye_U_sunglasses3" revision="32702">
+    <part id="2274" type="ea"/>
+    <part id="2275" type="ea"/>
+  </lib>
+  <lib id="shirt_F_top" revision="26096">
+    <part id="2006" type="ch"/>
+    <part id="2007" type="ch"/>
+  </lib>
+  <lib id="hair_U_runway" revision="27009">
+    <part id="2154" type="hr"/>
+    <part id="2154" type="hrb"/>
+    <part id="2155" type="hr"/>
+  </lib>
+  <lib id="shoes_U_woolsocks" revision="30262">
+    <part id="2252" type="sh"/>
+    <part id="2253" type="sh"/>
+    <part id="2254" type="sh"/>
+  </lib>
+  <lib id="acc_print_U_number5" revision="26774">
+    <part id="2197" type="cp"/>
+    <part id="2198" type="cp"/>
+  </lib>
+  <lib id="hat_U_mardihat" revision="29083">
+    <part id="2229" type="ha"/>
+    <part id="2230" type="ha"/>
+  </lib>
+  <lib id="Trousers_U_Skinny_Jeans" revision="26073">
+    <part id="2097" type="lg"/>
+  </lib>
+  <lib id="acc_print_U_number8" revision="26772">
+    <part id="2203" type="cp"/>
+    <part id="2204" type="cp"/>
+  </lib>
+  <lib id="shirt_F_simplestripe" revision="25984">
+    <part id="2059" type="ch"/>
+    <part id="2060" type="ch"/>
+  </lib>
+  <lib id="hat_U_dafthelmet" revision="32734">
+    <part id="2291" type="ha"/>
+    <part id="2292" type="ha"/>
+  </lib>
+  <lib id="acc_eye_U_sunglasses2" revision="26465">
+    <part id="2159" type="ea"/>
+    <part id="2160" type="ea"/>
+    <part id="2161" type="ea"/>
+  </lib>
+  <lib id="acc_head_U_hair_band" revision="32826">
+    <part id="2296" type="he"/>
+  </lib>
+  <lib id="shirt_F_minitop" revision="26096">
+    <part id="0" type="ch"/>
+    <part id="0" type="ls"/>
+    <part id="0" type="rs"/>
+  </lib>
+  <lib id="Shirt_F_Schoolshirt" revision="26564">
+    <part id="2110" type="ch"/>
+    <part id="2110" type="ls"/>
+    <part id="2110" type="rs"/>
+  </lib>
+  <lib id="hair_F_backbun" revision="33268">
+    <part id="2321" type="hr"/>
+    <part id="2321" type="hrb"/>
+    <part id="2322" type="hr"/>
+  </lib>
+  <lib id="shirt_simple_stripe" revision="25984">
+    <part id="666" type="ch"/>
+    <part id="666" type="ls"/>
+    <part id="666" type="rs"/>
+    <part id="667" type="ch"/>
+  </lib>
+  <lib id="trousers_F_bikinibottomdot" revision="27031">
+    <part id="2218" type="lg"/>
+    <part id="2219" type="lg"/>
+  </lib>
+  <lib id="Hair_U_Messy" revision="26096">
+    <part id="2071" type="hr"/>
+    <part id="2071" type="hrb"/>
+    <part id="2072" type="hr"/>
+  </lib>
+  <lib id="acc_print_U_number6" revision="26772">
+    <part id="2199" type="cp"/>
+    <part id="2200" type="cp"/>
+  </lib>
+  <lib id="hair_F_rihanna" revision="25432">
+    <part id="2004" type="hr"/>
+    <part id="2004" type="hrb"/>
+    <part id="2005" type="hr"/>
+  </lib>
+  <lib id="acc_chest_U_silkscarf" revision="26704">
+    <part id="2212" type="ca"/>
+    <part id="2213" type="ca"/>
+  </lib>
+  <lib id="trousers_F_skirt" revision="26096">
+    <part id="2008" type="lg"/>
+    <part id="2009" type="lg"/>
+  </lib>
+  <lib id="shirt_M_tshirt_open" revision="26012">
+    <part id="2063" type="ch"/>
+    <part id="2063" type="ls"/>
+    <part id="2063" type="rs"/>
+  </lib>
+  <lib id="shirt_M_stripyhoodie" revision="26096">
+    <part id="2022" type="ch"/>
+    <part id="2022" type="ls"/>
+    <part id="2022" type="rs"/>
+  </lib>
+  <lib id="hair_U_sidesweep" revision="33268">
+    <part id="2319" type="hr"/>
+    <part id="2319" type="hrb"/>
+    <part id="2320" type="hr"/>
+  </lib>
+  <lib id="trousers_U_baggy" revision="26564">
+    <part id="2129" type="lg"/>
+    <part id="2130" type="lg"/>
+  </lib>
+  <lib id="hair_U_wavy" revision="26096">
+    <part id="2018" type="hr"/>
+    <part id="2018" type="hrb"/>
+  </lib>
+  <lib id="acc_head_U_earring_x" revision="26174">
+    <part id="2116" type="he"/>
+  </lib>
+  <lib id="shirt_M_football3" revision="26444">
+    <part id="2167" type="ch"/>
+    <part id="2167" type="ls"/>
+    <part id="2167" type="rs"/>
+    <part id="2168" type="ch"/>
+    <part id="2169" type="ch"/>
+  </lib>
+  <lib id="hat_U_skullhat" revision="29083">
+    <part id="2226" type="ha"/>
+    <part id="2227" type="ha"/>
+    <part id="2228" type="ha"/>
+  </lib>
+  <lib id="acc_head_U_ears_cat" revision="26274">
+    <part id="2136" type="he"/>
+    <part id="2137" type="he"/>
+  </lib>
+  <lib id="shirt_M_muscles" revision="34191">
+    <part id="2335" type="ch"/>
+    <part id="2335" type="ls"/>
+    <part id="2335" type="rs"/>
+  </lib>
+  <lib id="shirt_M_tshirt_blend" revision="26096">
+    <part id="2085" type="ch"/>
+    <part id="2085" type="ls"/>
+    <part id="2085" type="rs"/>
+    <part id="2086" type="ch"/>
+  </lib>
+  <lib id="hair_U_shower" revision="32721">
+    <part id="2280" type="hr"/>
+    <part id="2280" type="hrb"/>
+  </lib>
+  <lib id="acc_face_U_veil" revision="33228">
+    <part id="2317" type="fa"/>
+    <part id="2318" type="fa"/>
+  </lib>
+  <lib id="hair_U_mohawk" revision="25952">
+    <part id="2080" type="hr"/>
+    <part id="2080" type="hrb"/>
+    <part id="2081" type="hr"/>
+    <part id="2082" type="hr"/>
+  </lib>
+  <lib id="shirt_F_bikinitopstars" revision="27009">
+    <part id="2222" type="ch"/>
+    <part id="2222" type="ls"/>
+    <part id="2222" type="rs"/>
+    <part id="2223" type="ch"/>
+  </lib>
+  <lib id="jacket_M_winter_coat" revision="30243">
+    <part id="2248" type="cc"/>
+    <part id="2248" type="lc"/>
+    <part id="2248" type="rc"/>
+    <part id="2249" type="cc"/>
+  </lib>
+  <lib id="Shirt_M_Tshirt_Plain" revision="26635">
+    <part id="2050" type="ch"/>
+    <part id="2050" type="ls"/>
+    <part id="2050" type="rs"/>
+  </lib>
+  <lib id="jacket_M_runway" revision="26465">
+    <part id="2146" type="cc"/>
+    <part id="2146" type="lc"/>
+    <part id="2146" type="rc"/>
+    <part id="2147" type="cc"/>
+  </lib>
+  <lib id="hat_U_furcap" revision="30259">
+    <part id="2234" type="ha"/>
+    <part id="2235" type="ha"/>
+  </lib>
+  <lib id="Shirt_M_Cardigan" revision="26608">
+    <part id="2126" type="ch"/>
+    <part id="2126" type="ls"/>
+    <part id="2126" type="rs"/>
+    <part id="2127" type="ch"/>
+    <part id="2128" type="ch"/>
+  </lib>
+  <lib id="hair_F_neat" revision="30410">
+    <part id="2066" type="hr"/>
+    <part id="2066" type="hrb"/>
+    <part id="2067" type="hr"/>
+  </lib>
+  <lib id="jacket_F_hippievest" revision="25984">
+    <part id="2016" type="cc"/>
+    <part id="2017" type="cc"/>
+  </lib>
+  <lib id="hat_U_furhood" revision="30260">
+    <part id="2236" type="ha"/>
+    <part id="2237" type="ha"/>
+  </lib>
+  <lib id="acc_eye_U_sunglasses1" revision="26465">
+    <part id="2156" type="ea"/>
+    <part id="2157" type="ea"/>
+    <part id="2158" type="ea"/>
+  </lib>
+  <lib id="hat_U_bandana" revision="26704">
+    <part id="2185" type="ha"/>
+    <part id="2186" type="ha"/>
+  </lib>
+  <lib id="acc_head_U_earring_gem" revision="26174">
+    <part id="2113" type="he"/>
+    <part id="2114" type="he"/>
+  </lib>
+  <lib id="Trousers_F_Leather_skirt" revision="26096">
+    <part id="2078" type="lg"/>
+  </lib>
+  <lib id="Trousers_F_Schoolskirt" revision="26274">
+    <part id="2104" type="lg"/>
+  </lib>
+  <lib id="Hair_M_yo" revision="26421">
+    <part id="2096" type="hr"/>
+    <part id="2096" type="hrb"/>
+  </lib>
+  <lib id="Hat_U_urban" revision="26587">
+    <part id="2093" type="ha"/>
+    <part id="2094" type="ha"/>
+  </lib>
+  <lib id="hat_U_armyhelmet" revision="32699">
+    <part id="2281" type="ha"/>
+  </lib>
+  <lib id="acc_chest_U_bowtie" revision="32963">
+    <part id="2304" type="ca"/>
+    <part id="2305" type="ca"/>
+  </lib>
+  <lib id="trousers_F_pencilskirt" revision="33228">
+    <part id="2313" type="lg"/>
+    <part id="2314" type="lg"/>
+  </lib>
+  <lib id="Hat_U_sombrero" revision="26587">
+    <part id="2143" type="ha"/>
+    <part id="2144" type="ha"/>
+    <part id="2145" type="ha"/>
+  </lib>
+  <lib id="acc_eye_U_skimask" revision="30243">
+    <part id="2240" type="ea"/>
+    <part id="2241" type="ea"/>
+  </lib>
+  <lib id="trousers_F_minishorts" revision="26096">
+    <part id="2027" type="lg"/>
+  </lib>
+  <lib id="acc_waist_U_championsbelt" revision="26250">
+    <part id="2133" type="wa"/>
+    <part id="2134" type="wa"/>
+  </lib>
+  <lib id="shirt_F_checks" revision="26620">
+    <part id="2102" type="ch"/>
+    <part id="2103" type="ch"/>
+  </lib>
+  <lib id="shirt_M_football1" revision="27009">
+    <part id="2162" type="ch"/>
+    <part id="2162" type="ls"/>
+    <part id="2162" type="rs"/>
+    <part id="2163" type="ch"/>
+    <part id="2164" type="ch"/>
+  </lib>
+  <lib id="shoes_F_bootie" revision="33779">
+    <part id="2299" type="sh"/>
+    <part id="2300" type="sh"/>
+  </lib>
+  <lib id="jacket_F_winter_coat_long" revision="30243">
+    <part id="2261" type="cc"/>
+    <part id="2261" type="lc"/>
+    <part id="2261" type="rc"/>
+    <part id="2262" type="cc"/>
+  </lib>
+  <lib id="acc_print_U_number4" revision="26772">
+    <part id="2195" type="cp"/>
+    <part id="2196" type="cp"/>
+  </lib>
+  <lib id="shoes_U_sneakers" revision="26096">
+    <part id="2023" type="sh"/>
+    <part id="2024" type="sh"/>
+  </lib>
+  <lib id="trousers_F_wdress" revision="33228">
+    <part id="2310" type="lg"/>
+    <part id="2311" type="lg"/>
+    <part id="2312" type="lg"/>
+  </lib>
+  <lib id="acc_head_U_stem" revision="33012">
+    <part id="2308" type="he"/>
+    <part id="2309" type="he"/>
+  </lib>
+  <lib id="jacket_F_jeans" revision="25558">
+    <part id="2002" type="cc"/>
+    <part id="2002" type="lc"/>
+    <part id="2002" type="rc"/>
+    <part id="2003" type="cc"/>
+  </lib>
+  <lib id="acc_print_U_number7" revision="26772">
+    <part id="2201" type="cp"/>
+    <part id="2202" type="cp"/>
+  </lib>
+  <lib id="acc_head_U_ears_muffs" revision="30243">
+    <part id="2242" type="he"/>
+  </lib>
+  <lib id="shirt_F_football1" revision="26452">
+    <part id="2170" type="ch"/>
+    <part id="2171" type="ch"/>
+    <part id="2172" type="ch"/>
+  </lib>
+  <lib id="hat_U_hhcap" revision="32704">
+    <part id="2278" type="ha"/>
+    <part id="2279" type="ha"/>
+  </lib>
+  <lib id="acc_eye_U_skullmask" revision="29149">
+    <part id="2231" type="ea"/>
+  </lib>
+  <lib id="shirt_F_silkytop" revision="25755">
+    <part id="2083" type="ch"/>
+    <part id="2084" type="ch"/>
+  </lib>
+  <lib id="jacket_M_tuxtop" revision="32963">
+    <part id="2302" type="cc"/>
+    <part id="2302" type="lc"/>
+    <part id="2302" type="rc"/>
+    <part id="2303" type="cc"/>
+  </lib>
+  <lib id="shoes_U_runway" revision="26421">
+    <part id="2151" type="sh"/>
+    <part id="2152" type="sh"/>
+    <part id="2153" type="sh"/>
+  </lib>
+  <lib id="acc_head_U_earring_ring" revision="26174">
+    <part id="2115" type="he"/>
+  </lib>
+  <lib id="jacket_F_quilted_vest" revision="30301">
+    <part id="2233" type="cc"/>
+    <part id="2233" type="lc"/>
+    <part id="2233" type="rc"/>
+  </lib>
+  <lib id="acc_print_U_number2" revision="26772">
+    <part id="2191" type="cp"/>
+    <part id="2192" type="cp"/>
+  </lib>
+  <lib id="Hair_F_Bob" revision="26073">
+    <part id="2073" type="hr"/>
+    <part id="2073" type="hrb"/>
+  </lib>
+  <lib id="shoes_U_skater" revision="26174">
+    <part id="2111" type="sh"/>
+    <part id="2112" type="sh"/>
+  </lib>
+  <lib id="jacket_M_hippievest" revision="25984">
+    <part id="2014" type="cc"/>
+    <part id="2015" type="cc"/>
+  </lib>
+  <lib id="shirt_M_football2" revision="26444">
+    <part id="2165" type="ls"/>
+    <part id="2165" type="rs"/>
+    <part id="2165" type="ch"/>
+    <part id="2166" type="ch"/>
+  </lib>
+  <lib id="jacket_F_hippie" revision="25984">
+    <part id="2012" type="cc"/>
+    <part id="2013" type="cc"/>
+  </lib>
+  <lib id="acc_waist_U_armybelt" revision="26174">
+    <part id="2119" type="wa"/>
+  </lib>
+  <lib id="hair_M_dude" revision="26608">
+    <part id="2031" type="hr"/>
+    <part id="2031" type="hrb"/>
+    <part id="2032" type="hr"/>
+  </lib>
+  <lib id="Shoes_U_Slipons" revision="26096">
+    <part id="2044" type="sh"/>
+    <part id="2045" type="sh"/>
+  </lib>
+  <lib id="acc_waist_F_bow" revision="32775">
+    <part id="2289" type="wa"/>
+    <part id="2290" type="wa"/>
+  </lib>
+  <lib id="hair_F_longsmooth" revision="32704">
+    <part id="2263" type="hr"/>
+    <part id="2263" type="hrb"/>
+    <part id="2264" type="hr"/>
+  </lib>
+  <lib id="acc_chest_U_dogtag" revision="32699">
+    <part id="2284" type="ca"/>
+  </lib>
+  <lib id="trousers_U_kilt" revision="26096">
+    <part id="2025" type="lg"/>
+    <part id="2026" type="lg"/>
+  </lib>
+  <lib id="acc_chest_U_schooltie" revision="26274">
+    <part id="2139" type="ca"/>
+    <part id="2140" type="ca"/>
+  </lib>
+  <lib id="Shirt_M_Tshirt_Sleeved" revision="26096">
+    <part id="2052" type="ch"/>
+    <part id="2052" type="ls"/>
+    <part id="2052" type="rs"/>
+    <part id="2053" type="ch"/>
+  </lib>
+  <lib id="acc_head_U_snowflake" revision="30336">
+    <part id="2238" type="he"/>
+  </lib>
+  <lib id="jacket_M_jeans" revision="25717">
+    <part id="2000" type="cc"/>
+    <part id="2000" type="lc"/>
+    <part id="2000" type="rc"/>
+    <part id="2001" type="cc"/>
+  </lib>
+  <lib id="Shirt_F_Tshirt_Sleeved" revision="26096">
+    <part id="2054" type="ch"/>
+    <part id="2054" type="ls"/>
+    <part id="2054" type="rs"/>
+    <part id="2055" type="ch"/>
+  </lib>
+  <lib id="shirt_F_skull" revision="32826">
+    <part id="2298" type="ch"/>
+    <part id="2298" type="ls"/>
+    <part id="2298" type="rs"/>
+  </lib>
+  <lib id="hair_F_buns" revision="26274">
+    <part id="2038" type="hr"/>
+    <part id="2038" type="hrb"/>
+    <part id="2039" type="hr"/>
+  </lib>
+  <lib id="acc_waist_U_bulletbelt" revision="26174">
+    <part id="2117" type="wa"/>
+    <part id="2118" type="wa"/>
+  </lib>
+  <lib id="shoes_U_training" revision="25588">
+    <part id="2057" type="sh"/>
+    <part id="2058" type="sh"/>
+  </lib>
+  <lib id="trousers_F_longshorts" revision="26096">
+    <part id="2029" type="lg"/>
+    <part id="2030" type="lg"/>
+  </lib>
+  <lib id="acc_face_U_carrot" revision="30883">
+    <part id="2239" type="fa"/>
+  </lib>
+  <lib id="jacket_F_bolero" revision="32828">
+    <part id="0" type="cc"/>
+    <part id="0" type="lc"/>
+    <part id="0" type="rc"/>
+  </lib>
+  <lib id="shirt_F_football3" revision="26452">
+    <part id="2175" type="ch"/>
+    <part id="2176" type="ch"/>
+    <part id="2177" type="ch"/>
+  </lib>
+  <lib id="hair_M_parted" revision="32704">
+    <part id="2266" type="hr"/>
+    <part id="2266" type="hrb"/>
+    <part id="2267" type="hr"/>
+  </lib>
+  <lib id="acc_eye_U_heromask" revision="26274">
+    <part id="2138" type="ea"/>
+  </lib>
+  <lib id="trousers_F_metal" revision="32852">
+    <part id="2272" type="lg"/>
+  </lib>
+  <lib id="trousers_U_camo" revision="26096">
+    <part id="2037" type="lg"/>
+  </lib>
+  <lib id="jacket_M_quilted_vest" revision="30306">
+    <part id="2260" type="cc"/>
+    <part id="2260" type="lc"/>
+    <part id="2260" type="rc"/>
+  </lib>
+  <lib id="acc_print_U_number9" revision="26772">
+    <part id="2205" type="cp"/>
+    <part id="2206" type="cp"/>
+  </lib>
+  <lib id="Shirt_F_Cardigan" revision="26608">
+    <part id="2123" type="ch"/>
+    <part id="2123" type="ls"/>
+    <part id="2123" type="rs"/>
+    <part id="2124" type="ch"/>
+    <part id="2125" type="ch"/>
+  </lib>
+  <lib id="acc_chest_U_strands" revision="32734">
+    <part id="2287" type="ca"/>
+    <part id="2288" type="ca"/>
+  </lib>
+  <lib id="acc_chest_U_schoolbadge" revision="26274">
+    <part id="2141" type="ca"/>
+  </lib>
+  <lib id="trousers_U_bikinibottomstars" revision="27034">
+    <part id="2224" type="lg"/>
+    <part id="2225" type="lg"/>
+  </lib>
+  <lib id="shirt_F_bik_string_top" revision="34215">
+    <part id="2325" type="ch"/>
+  </lib>
+  <lib id="shirt_M_verticalstripes" revision="26096">
+    <part id="2035" type="ch"/>
+    <part id="2035" type="ls"/>
+    <part id="2035" type="rs"/>
+    <part id="2036" type="ch"/>
+  </lib>
+  <lib id="shirt_M_ssleeve_hood" revision="32846">
+    <part id="2301" type="ch"/>
+    <part id="2301" type="ls"/>
+    <part id="2301" type="rs"/>
+  </lib>
+  <lib id="hat_U_beanie" revision="26704">
+    <part id="2184" type="ha"/>
+  </lib>
+  <lib id="trousers_F_bik_string_bot" revision="34216">
+    <part id="2326" type="lg"/>
+  </lib>
+  <lib id="shirt_F_football2" revision="26452">
+    <part id="2173" type="ch"/>
+    <part id="2174" type="ch"/>
+  </lib>
+  <lib id="hat_U_woollycap" revision="30256">
+    <part id="2256" type="ha"/>
+    <part id="2257" type="ha"/>
+  </lib>
+  <lib id="shirt_F_metal" revision="32852">
+    <part id="2271" type="ch"/>
+    <part id="2271" type="ls"/>
+    <part id="2271" type="rs"/>
+  </lib>
+  <lib id="acc_head_U_spanishrose" revision="26421">
+    <part id="2131" type="he"/>
+    <part id="2132" type="he"/>
+    <part id="2142" type="he"/>
+  </lib>
+  <lib id="hair_F_ponytail" revision="30335">
+    <part id="2232" type="hr"/>
+    <part id="2232" type="hrb"/>
+  </lib>
+  <lib id="acc_head_U_ears_bear" revision="30256">
+    <part id="2255" type="he"/>
+  </lib>
+  <lib id="Hair_U_Multi_Colour" revision="26096">
+    <part id="2068" type="hr"/>
+    <part id="2068" type="hrb"/>
+    <part id="2069" type="hr"/>
+  </lib>
+  <lib id="shirt_F_bikinitop" revision="27029">
+    <part id="2220" type="ch"/>
+    <part id="2220" type="ls"/>
+    <part id="2220" type="rs"/>
+  </lib>
+  <lib id="acc_print_U_number1" revision="26772">
+    <part id="2189" type="cp"/>
+    <part id="2190" type="cp"/>
+  </lib>
+  <lib id="acc_print_U_number0" revision="26772">
+    <part id="2187" type="cp"/>
+    <part id="2188" type="cp"/>
+  </lib>
+  <lib id="acc_waist_U_hipbag" revision="26250">
+    <part id="2120" type="wa"/>
+    <part id="2121" type="wa"/>
+  </lib>
+  <lib id="trousers_U_bikinibottom" revision="32773">
+    <part id="2221" type="lg"/>
+  </lib>
+  <lib id="shirt_F_bikinitopdot" revision="27029">
+    <part id="2216" type="ch"/>
+    <part id="2216" type="ls"/>
+    <part id="2216" type="rs"/>
+    <part id="2217" type="ch"/>
+  </lib>
+  <lib id="acc_print_M_tattoo" revision="34263">
+    <part id="2336" type="cp"/>
+  </lib>
+  <lib id="jacket_M_winter_coat_long" revision="30243">
+    <part id="2250" type="cc"/>
+    <part id="2250" type="lc"/>
+    <part id="2250" type="rc"/>
+    <part id="2251" type="cc"/>
+  </lib>
+  <lib id="acc_chest_U_stripescarf" revision="30255">
+    <part id="2245" type="ca"/>
+    <part id="2246" type="ca"/>
+    <part id="2247" type="ca"/>
+  </lib>
+  <lib id="shirt_M_checks" revision="26616">
+    <part id="2100" type="ch"/>
+    <part id="2100" type="ls"/>
+    <part id="2100" type="rs"/>
+    <part id="2101" type="ch"/>
+  </lib>
+  <lib id="hair_F_curls" revision="25881">
+    <part id="2061" type="hr"/>
+    <part id="2061" type="hrb"/>
+    <part id="2062" type="hr"/>
+  </lib>
+  <lib id="trousers_F_bskirt" revision="32721">
+    <part id="2282" type="lg"/>
+    <part id="2283" type="lg"/>
+  </lib>
+  <lib id="trousers_U_football" revision="27009">
+    <part id="2181" type="lg"/>
+    <part id="2182" type="lg"/>
+    <part id="2183" type="lg"/>
+  </lib>
+  <lib id="Shirt_F_Tshirt_Plain" revision="26106">
+    <part id="2051" type="ch"/>
+    <part id="2051" type="ls"/>
+    <part id="2051" type="rs"/>
+  </lib>
+  <lib id="hair_F_swab" revision="32847">
+    <part id="2265" type="hr"/>
+    <part id="2265" type="hrb"/>
+  </lib>
+  <lib id="acc_print_U_number3" revision="26772">
+    <part id="2193" type="cp"/>
+    <part id="2194" type="cp"/>
+  </lib>
+  <lib id="jacket_M_general" revision="26096">
+    <part id="2064" type="cc"/>
+    <part id="2064" type="lc"/>
+    <part id="2064" type="rc"/>
+    <part id="2065" type="cc"/>
+  </lib>
+  <lib id="hat_U_general" revision="26704">
+    <part id="2207" type="ha"/>
+    <part id="2208" type="ha"/>
+  </lib>
+  <lib id="Trousers_U_runway" revision="26465">
+    <part id="2149" type="lg"/>
+    <part id="2150" type="lg"/>
+  </lib>
+  <lib id="shoes_U_flipflop" revision="34414">
+    <part id="2338" type="sh"/>
+  </lib>
+  <lib id="jacket_M_hippie" revision="25984">
+    <part id="2010" type="cc"/>
+    <part id="2010" type="lc"/>
+    <part id="2010" type="rc"/>
+    <part id="2011" type="cc"/>
+  </lib>
+  <lib id="hh_human_shirt" revision="33155">
+    <part id="1" type="ch"/>
+    <part id="1" type="rs"/>
+    <part id="1" type="ls"/>
+    <part id="2" type="ch"/>
+    <part id="3" type="ch"/>
+    <part id="4" type="ch"/>
+    <part id="5" type="ch"/>
+    <part id="6" type="ch"/>
+    <part id="8" type="ch"/>
+    <part id="9" type="ch"/>
+    <part id="10" type="ch"/>
+    <part id="15" type="ch"/>
+    <part id="16" type="ch"/>
+    <part id="17" type="ch"/>
+    <part id="18" type="ch"/>
+    <part id="20" type="ch"/>
+    <part id="21" type="ch"/>
+    <part id="22" type="ch"/>
+    <part id="23" type="ch"/>
+    <part id="100" type="ch"/>
+    <part id="101" type="ch"/>
+    <part id="105" type="ch"/>
+    <part id="106" type="ch"/>
+    <part id="200" type="ch"/>
+    <part id="201" type="ch"/>
+    <part id="202" type="ch"/>
+    <part id="203" type="ch"/>
+    <part id="204" type="ch"/>
+    <part id="205" type="ch"/>
+    <part id="206" type="ch"/>
+    <part id="207" type="ch"/>
+    <part id="208" type="ch"/>
+    <part id="209" type="ch"/>
+    <part id="210" type="ch"/>
+    <part id="501" type="ch"/>
+    <part id="502" type="ch"/>
+    <part id="503" type="ch"/>
+    <part id="504" type="ch"/>
+    <part id="505" type="ch"/>
+    <part id="506" type="ch"/>
+    <part id="507" type="ch"/>
+    <part id="800" type="cc"/>
+    <part id="800" type="rc"/>
+    <part id="800" type="lc"/>
+    <part id="801" type="cc"/>
+    <part id="802" type="cc"/>
+    <part id="803" type="cc"/>
+    <part id="1020" type="ch"/>
+    <part id="1021" type="ch"/>
+    <part id="1023" type="ch"/>
+    <part id="1100" type="ch"/>
+    <part id="1101" type="ch"/>
+    <part id="1200" type="ch"/>
+    <part id="1202" type="ch"/>
+    <part id="1204" type="ch"/>
+    <part id="1205" type="ch"/>
+    <part id="1206" type="ch"/>
+    <part id="1207" type="ch"/>
+    <part id="1208" type="ch"/>
+    <part id="1210" type="ch"/>
+    <part id="1507" type="ch"/>
+    <part id="1800" type="cc"/>
+    <part id="1801" type="cc"/>
+    <part id="1802" type="cc"/>
+  </lib>
+  <lib id="hh_human_acc_face" revision="24473">
+    <part id="1" type="fa"/>
+    <part id="2" type="fa"/>
+    <part id="3" type="fa"/>
+    <part id="4" type="fa"/>
+    <part id="5" type="fa"/>
+    <part id="6" type="fa"/>
+    <part id="7" type="fa"/>
+    <part id="8" type="fa"/>
+    <part id="9" type="fa"/>
+    <part id="10" type="fa"/>
+    <part id="11" type="fa"/>
+    <part id="12" type="fa"/>
+  </lib>
+  <lib id="hh_human_50_body" revision="27070">
+    <part id="rh" type="drk"/>
+    <part id="1" type="bd"/>
+    <part id="1" type="rh"/>
+    <part id="1" type="lh"/>
+    <part id="1" type="hd"/>
+    <part id="1" type="sd"/>
+  </lib>
+  <lib id="hh_human_face" revision="26617">
+    <part id="1" type="fc"/>
+    <part id="1" type="ey"/>
+    <part id="2" type="ey"/>
+    <part id="3" type="ey"/>
+    <part id="4" type="ey"/>
+    <part id="5" type="ey"/>
+    <part id="6" type="ey"/>
+    <part id="7" type="ey"/>
+    <part id="8" type="ey"/>
+    <part id="9" type="ey"/>
+    <part id="10" type="ey"/>
+    <part id="11" type="ey"/>
+  </lib>
+  <lib id="hh_human_50_acc_waist" revision="23512">
+    <part id="1" type="wa"/>
+    <part id="2" type="wa"/>
+    <part id="3" type="wa"/>
+    <part id="4" type="wa"/>
+    <part id="5" type="wa"/>
+    <part id="6" type="wa"/>
+    <part id="7" type="wa"/>
+    <part id="8" type="wa"/>
+    <part id="9" type="wa"/>
+    <part id="10" type="wa"/>
+    <part id="11" type="wa"/>
+    <part id="12" type="wa"/>
+  </lib>
+  <lib id="hh_human_50_fx" revision="34461">
+    <part id="sd" type="fx2"/>
+    <part id="a" type="fx7"/>
+    <part id="b" type="fx7"/>
+    <part id="sd" type="fx3"/>
+    <part id="sd" type="fx17"/>
+    <part id="sd" type="fx18"/>
+    <part id="0" type="fx7"/>
+    <part id="1" type="fx1"/>
+    <part id="1" type="fx4"/>
+    <part id="1" type="fx2"/>
+    <part id="1" type="fx5"/>
+    <part id="1" type="fx8"/>
+    <part id="1" type="fx9"/>
+    <part id="1" type="fx10"/>
+    <part id="1" type="fx6"/>
+    <part id="1" type="fx14"/>
+    <part id="1" type="fx15"/>
+    <part id="1" type="fx16"/>
+    <part id="1" type="fx21"/>
+    <part id="1" type="fx22"/>
+    <part id="1" type="fx23"/>
+    <part id="1" type="fx24"/>
+    <part id="1" type="fx25"/>
+    <part id="1" type="fx27"/>
+    <part id="1" type="fx28"/>
+    <part id="1" type="fx29"/>
+    <part id="1" type="fx30"/>
+    <part id="1" type="fx31"/>
+    <part id="1" type="fx32"/>
+    <part id="1" type="fx33"/>
+    <part id="1" type="fx34"/>
+    <part id="1" type="fx35"/>
+    <part id="1" type="fx36"/>
+    <part id="1" type="fx37"/>
+    <part id="1" type="fx38"/>
+    <part id="1" type="fx39"/>
+    <part id="1" type="fx40"/>
+    <part id="1" type="fx41"/>
+    <part id="1" type="fx42"/>
+    <part id="1" type="fx43"/>
+    <part id="1" type="fx44"/>
+    <part id="1" type="fx45"/>
+    <part id="1" type="fx47"/>
+    <part id="1" type="fx49"/>
+    <part id="1" type="fx53"/>
+    <part id="1" type="fx55"/>
+    <part id="1" type="fx56"/>
+    <part id="1" type="fx59"/>
+    <part id="1" type="fx60"/>
+    <part id="1" type="fx61"/>
+    <part id="1" type="fx62"/>
+    <part id="1" type="fx63"/>
+    <part id="1" type="fx64"/>
+    <part id="1" type="fx65"/>
+    <part id="1" type="fx66"/>
+    <part id="1" type="fx67"/>
+    <part id="1" type="fx68"/>
+    <part id="1" type="fx69"/>
+    <part id="1" type="fx70"/>
+    <part id="1" type="fx71"/>
+    <part id="1" type="fx72"/>
+    <part id="2" type="fx1"/>
+    <part id="2" type="fx19"/>
+    <part id="2" type="fx20"/>
+    <part id="2" type="fx48"/>
+    <part id="2" type="fx54"/>
+    <part id="3" type="fx5"/>
+    <part id="3" type="fx26"/>
+    <part id="4" type="fx5"/>
+  </lib>
+  <lib id="hh_human_leg" revision="25378">
+    <part id="1" type="lg"/>
+    <part id="2" type="lg"/>
+    <part id="3" type="lg"/>
+    <part id="4" type="lg"/>
+    <part id="5" type="lg"/>
+    <part id="6" type="lg"/>
+    <part id="7" type="lg"/>
+    <part id="200" type="lg"/>
+    <part id="201" type="lg"/>
+    <part id="1007" type="lg"/>
+  </lib>
+  <lib id="hh_human_50_hair" revision="23512">
+    <part id="1" type="hr"/>
+    <part id="1" type="hrb"/>
+    <part id="2" type="hr"/>
+    <part id="3" type="hr"/>
+    <part id="4" type="hr"/>
+    <part id="5" type="hr"/>
+    <part id="6" type="hr"/>
+    <part id="8" type="hr"/>
+    <part id="9" type="hr"/>
+    <part id="10" type="hr"/>
+    <part id="11" type="hr"/>
+    <part id="16" type="hr"/>
+    <part id="17" type="hr"/>
+    <part id="18" type="hr"/>
+    <part id="19" type="hr"/>
+    <part id="20" type="hr"/>
+    <part id="23" type="hr"/>
+    <part id="24" type="hr"/>
+    <part id="26" type="hr"/>
+    <part id="27" type="hr"/>
+    <part id="28" type="hr"/>
+    <part id="29" type="hr"/>
+    <part id="30" type="hr"/>
+    <part id="31" type="hr"/>
+    <part id="32" type="hr"/>
+    <part id="33" type="hr"/>
+    <part id="34" type="hrb"/>
+    <part id="35" type="hr"/>
+    <part id="36" type="hr"/>
+    <part id="200" type="hr"/>
+    <part id="201" type="hr"/>
+    <part id="202" type="hr"/>
+    <part id="203" type="hr"/>
+    <part id="501" type="hr"/>
+    <part id="503" type="hr"/>
+    <part id="504" type="hr"/>
+    <part id="506" type="hr"/>
+    <part id="507" type="hr"/>
+    <part id="508" type="hr"/>
+    <part id="509" type="hr"/>
+    <part id="700" type="hr"/>
+    <part id="800" type="hr"/>
+    <part id="900" type="hr"/>
+    <part id="994" type="hr"/>
+    <part id="995" type="hr"/>
+    <part id="997" type="hr"/>
+  </lib>
+  <lib id="hh_pets" revision="23512">
+    <part id="1" type="psd"/>
+    <part id="1" type="pbd"/>
+    <part id="2" type="phd"/>
+    <part id="2" type="ptl"/>
+    <part id="3" type="phd"/>
+  </lib>
+  <lib id="hh_human_50_hats" revision="23512">
+    <part id="1" type="ha"/>
+    <part id="2" type="ha"/>
+    <part id="3" type="ha"/>
+    <part id="4" type="ha"/>
+    <part id="5" type="ha"/>
+    <part id="6" type="ha"/>
+    <part id="7" type="ha"/>
+    <part id="8" type="ha"/>
+    <part id="9" type="ha"/>
+    <part id="10" type="ha"/>
+    <part id="11" type="ha"/>
+    <part id="12" type="ha"/>
+    <part id="13" type="ha"/>
+    <part id="14" type="ha"/>
+    <part id="15" type="ha"/>
+    <part id="16" type="ha"/>
+    <part id="17" type="ha"/>
+    <part id="18" type="ha"/>
+    <part id="19" type="ha"/>
+    <part id="20" type="ha"/>
+    <part id="21" type="ha"/>
+    <part id="22" type="ha"/>
+    <part id="23" type="ha"/>
+    <part id="24" type="ha"/>
+    <part id="25" type="ha"/>
+    <part id="26" type="ha"/>
+    <part id="27" type="ha"/>
+  </lib>
+  <lib id="hh_human_50_acc_face" revision="23512">
+    <part id="1" type="fa"/>
+    <part id="2" type="fa"/>
+    <part id="3" type="fa"/>
+    <part id="4" type="fa"/>
+    <part id="5" type="fa"/>
+    <part id="6" type="fa"/>
+    <part id="7" type="fa"/>
+    <part id="8" type="fa"/>
+    <part id="9" type="fa"/>
+    <part id="10" type="fa"/>
+    <part id="11" type="fa"/>
+    <part id="12" type="fa"/>
+  </lib>
+  <lib id="hh_human_50_leg" revision="23512">
+    <part id="1" type="lg"/>
+    <part id="2" type="lg"/>
+    <part id="3" type="lg"/>
+    <part id="4" type="lg"/>
+    <part id="5" type="lg"/>
+    <part id="6" type="lg"/>
+    <part id="7" type="lg"/>
+    <part id="200" type="lg"/>
+    <part id="201" type="lg"/>
+    <part id="999" type="lg"/>
+    <part id="1007" type="lg"/>
+  </lib>
+  <lib id="hh_human_50_shoe" revision="23512">
+    <part id="1" type="sh"/>
+    <part id="2" type="sh"/>
+    <part id="3" type="sh"/>
+    <part id="4" type="sh"/>
+    <part id="5" type="sh"/>
+    <part id="6" type="sh"/>
+    <part id="7" type="sh"/>
+    <part id="8" type="sh"/>
+  </lib>
+  <lib id="hh_human_fx" revision="34466">
+    <part id="sd" type="fx2"/>
+    <part id="sd" type="fx3"/>
+    <part id="a" type="fx7"/>
+    <part id="b" type="fx7"/>
+    <part id="1" type="fx1"/>
+    <part id="1" type="fx4"/>
+    <part id="1" type="fx2"/>
+    <part id="1" type="fx5"/>
+    <part id="1" type="fx8"/>
+    <part id="1" type="fx9"/>
+    <part id="1" type="fx10"/>
+    <part id="1" type="fx6"/>
+    <part id="1" type="fx14"/>
+    <part id="1" type="fx15"/>
+    <part id="1" type="fx16"/>
+    <part id="1" type="fx21"/>
+    <part id="1" type="fx22"/>
+    <part id="1" type="fx23"/>
+    <part id="1" type="fx24"/>
+    <part id="1" type="fx25"/>
+    <part id="1" type="fx27"/>
+    <part id="1" type="fx28"/>
+    <part id="1" type="fx29"/>
+    <part id="1" type="fx30"/>
+    <part id="1" type="fx31"/>
+    <part id="1" type="fx32"/>
+    <part id="1" type="fx33"/>
+    <part id="1" type="fx34"/>
+    <part id="1" type="fx35"/>
+    <part id="1" type="fx36"/>
+    <part id="1" type="fx37"/>
+    <part id="1" type="fx38"/>
+    <part id="1" type="fx39"/>
+    <part id="1" type="fx40"/>
+    <part id="1" type="fx41"/>
+    <part id="1" type="fx42"/>
+    <part id="1" type="fx43"/>
+    <part id="1" type="fx44"/>
+    <part id="1" type="fx45"/>
+    <part id="1" type="fx47"/>
+    <part id="1" type="fx49"/>
+    <part id="1" type="fx53"/>
+    <part id="1" type="fx55"/>
+    <part id="1" type="fx56"/>
+    <part id="1" type="fx59"/>
+    <part id="1" type="fx60"/>
+    <part id="1" type="fx61"/>
+    <part id="1" type="fx62"/>
+    <part id="1" type="fx63"/>
+    <part id="1" type="fx64"/>
+    <part id="1" type="fx65"/>
+    <part id="1" type="fx66"/>
+    <part id="1" type="fx67"/>
+    <part id="1" type="fx68"/>
+    <part id="1" type="fx69"/>
+    <part id="1" type="fx70"/>
+    <part id="1" type="fx71"/>
+    <part id="1" type="fx72"/>
+    <part id="2" type="fx1"/>
+    <part id="2" type="fx17"/>
+    <part id="2" type="fx18"/>
+    <part id="2" type="fx19"/>
+    <part id="2" type="fx20"/>
+    <part id="2" type="fx48"/>
+    <part id="2" type="fx54"/>
+    <part id="3" type="fx3"/>
+    <part id="3" type="fx26"/>
+    <part id="4" type="fx5"/>
+  </lib>
+  <lib id="hh_human_50_shirt" revision="25687">
+    <part id="1" type="ch"/>
+    <part id="1" type="rs"/>
+    <part id="1" type="ls"/>
+    <part id="2" type="ch"/>
+    <part id="3" type="ch"/>
+    <part id="4" type="ch"/>
+    <part id="5" type="ch"/>
+    <part id="6" type="ch"/>
+    <part id="8" type="ch"/>
+    <part id="9" type="ch"/>
+    <part id="10" type="ch"/>
+    <part id="15" type="ch"/>
+    <part id="16" type="ch"/>
+    <part id="17" type="ch"/>
+    <part id="18" type="ch"/>
+    <part id="20" type="ch"/>
+    <part id="21" type="ch"/>
+    <part id="22" type="ch"/>
+    <part id="23" type="ch"/>
+    <part id="100" type="ch"/>
+    <part id="101" type="ch"/>
+    <part id="105" type="ch"/>
+    <part id="106" type="ch"/>
+    <part id="200" type="ch"/>
+    <part id="201" type="ch"/>
+    <part id="202" type="ch"/>
+    <part id="203" type="ch"/>
+    <part id="204" type="ch"/>
+    <part id="205" type="ch"/>
+    <part id="206" type="ch"/>
+    <part id="207" type="ch"/>
+    <part id="208" type="ch"/>
+    <part id="209" type="ch"/>
+    <part id="210" type="ch"/>
+    <part id="501" type="ch"/>
+    <part id="502" type="ch"/>
+    <part id="503" type="ch"/>
+    <part id="504" type="ch"/>
+    <part id="505" type="ch"/>
+    <part id="506" type="ch"/>
+    <part id="507" type="ch"/>
+    <part id="700" type="ch"/>
+    <part id="800" type="cc"/>
+    <part id="800" type="rc"/>
+    <part id="800" type="lc"/>
+    <part id="801" type="cc"/>
+    <part id="802" type="cc"/>
+    <part id="803" type="cc"/>
+    <part id="900" type="ch"/>
+    <part id="995" type="ch"/>
+    <part id="997" type="ch"/>
+    <part id="999" type="ch"/>
+    <part id="1020" type="ch"/>
+    <part id="1021" type="ch"/>
+    <part id="1023" type="ch"/>
+    <part id="1100" type="ch"/>
+    <part id="1101" type="ch"/>
+    <part id="1200" type="ch"/>
+    <part id="1202" type="ch"/>
+    <part id="1204" type="ch"/>
+    <part id="1205" type="ch"/>
+    <part id="1206" type="ch"/>
+    <part id="1207" type="ch"/>
+    <part id="1208" type="ch"/>
+    <part id="1210" type="ch"/>
+    <part id="1506" type="ch"/>
+    <part id="1507" type="ch"/>
+    <part id="1800" type="cc"/>
+    <part id="1801" type="cc"/>
+    <part id="1802" type="cc"/>
+  </lib>
+  <lib id="hh_human_acc_chest" revision="23512">
+    <part id="1" type="ca"/>
+    <part id="2" type="ca"/>
+    <part id="3" type="ca"/>
+    <part id="4" type="ca"/>
+    <part id="5" type="ca"/>
+    <part id="6" type="ca"/>
+    <part id="7" type="ca"/>
+    <part id="8" type="ca"/>
+    <part id="9" type="ca"/>
+    <part id="10" type="ca"/>
+    <part id="11" type="ca"/>
+    <part id="12" type="ca"/>
+    <part id="13" type="ca"/>
+    <part id="14" type="ca"/>
+    <part id="15" type="ca"/>
+    <part id="16" type="ca"/>
+    <part id="17" type="ca"/>
+    <part id="18" type="ca"/>
+    <part id="19" type="ca"/>
+  </lib>
+  <lib id="hh_human_hats" revision="23512">
+    <part id="1" type="ha"/>
+    <part id="2" type="ha"/>
+    <part id="3" type="ha"/>
+    <part id="4" type="ha"/>
+    <part id="5" type="ha"/>
+    <part id="6" type="ha"/>
+    <part id="7" type="ha"/>
+    <part id="8" type="ha"/>
+    <part id="9" type="ha"/>
+    <part id="10" type="ha"/>
+    <part id="11" type="ha"/>
+    <part id="12" type="ha"/>
+    <part id="13" type="ha"/>
+    <part id="14" type="ha"/>
+    <part id="15" type="ha"/>
+    <part id="16" type="ha"/>
+    <part id="17" type="ha"/>
+    <part id="18" type="ha"/>
+    <part id="19" type="ha"/>
+    <part id="20" type="ha"/>
+    <part id="21" type="ha"/>
+    <part id="22" type="ha"/>
+    <part id="23" type="ha"/>
+    <part id="24" type="ha"/>
+    <part id="25" type="ha"/>
+    <part id="26" type="ha"/>
+    <part id="27" type="ha"/>
+  </lib>
+  <lib id="hh_human_50_acc_head" revision="23512">
+    <part id="1" type="he"/>
+    <part id="2" type="he"/>
+    <part id="3" type="he"/>
+    <part id="4" type="he"/>
+    <part id="5" type="he"/>
+    <part id="6" type="he"/>
+    <part id="7" type="he"/>
+    <part id="8" type="he"/>
+    <part id="9" type="he"/>
+    <part id="10" type="he"/>
+  </lib>
+  <lib id="hh_human_acc_waist" revision="23512">
+    <part id="1" type="wa"/>
+    <part id="2" type="wa"/>
+    <part id="3" type="wa"/>
+    <part id="4" type="wa"/>
+    <part id="5" type="wa"/>
+    <part id="6" type="wa"/>
+    <part id="7" type="wa"/>
+    <part id="8" type="wa"/>
+    <part id="9" type="wa"/>
+    <part id="10" type="wa"/>
+    <part id="11" type="wa"/>
+    <part id="12" type="wa"/>
+  </lib>
+  <lib id="hh_human_50_item" revision="34440">
+    <part id="1" type="ri"/>
+    <part id="2" type="ri"/>
+    <part id="3" type="ri"/>
+    <part id="4" type="ri"/>
+    <part id="5" type="ri"/>
+    <part id="6" type="ri"/>
+    <part id="9" type="ri"/>
+    <part id="33" type="ri"/>
+    <part id="43" type="ri"/>
+    <part id="44" type="ri"/>
+    <part id="45" type="ri"/>
+    <part id="46" type="ri"/>
+    <part id="47" type="ri"/>
+    <part id="48" type="ri"/>
+    <part id="50" type="ri"/>
+    <part id="51" type="ri"/>
+    <part id="52" type="ri"/>
+    <part id="53" type="ri"/>
+    <part id="54" type="ri"/>
+    <part id="55" type="ri"/>
+    <part id="56" type="ri"/>
+    <part id="57" type="ri"/>
+    <part id="58" type="ri"/>
+    <part id="59" type="ri"/>
+    <part id="60" type="ri"/>
+    <part id="61" type="ri"/>
+    <part id="62" type="ri"/>
+    <part id="63" type="ri"/>
+    <part id="64" type="ri"/>
+    <part id="65" type="ri"/>
+    <part id="66" type="ri"/>
+    <part id="67" type="ri"/>
+    <part id="68" type="ri"/>
+    <part id="69" type="ri"/>
+    <part id="70" type="ri"/>
+    <part id="71" type="ri"/>
+    <part id="72" type="ri"/>
+    <part id="73" type="ri"/>
+    <part id="74" type="ri"/>
+    <part id="450" type="ri"/>
+    <part id="667" type="ri"/>
+  </lib>
+  <lib id="hh_human_acc_head" revision="23512">
+    <part id="1" type="he"/>
+    <part id="2" type="he"/>
+    <part id="3" type="he"/>
+    <part id="4" type="he"/>
+    <part id="5" type="he"/>
+    <part id="6" type="he"/>
+    <part id="7" type="he"/>
+    <part id="8" type="he"/>
+    <part id="9" type="he"/>
+    <part id="10" type="he"/>
+  </lib>
+  <lib id="hh_human_shoe" revision="23512">
+    <part id="1" type="sh"/>
+    <part id="2" type="sh"/>
+    <part id="3" type="sh"/>
+    <part id="4" type="sh"/>
+    <part id="5" type="sh"/>
+    <part id="6" type="sh"/>
+    <part id="7" type="sh"/>
+    <part id="8" type="sh"/>
+  </lib>
+  <lib id="hh_human_50_acc_chest" revision="23512">
+    <part id="1" type="ca"/>
+    <part id="2" type="ca"/>
+    <part id="3" type="ca"/>
+    <part id="4" type="ca"/>
+    <part id="5" type="ca"/>
+    <part id="6" type="ca"/>
+    <part id="7" type="ca"/>
+    <part id="8" type="ca"/>
+    <part id="9" type="ca"/>
+    <part id="10" type="ca"/>
+    <part id="11" type="ca"/>
+    <part id="12" type="ca"/>
+    <part id="13" type="ca"/>
+    <part id="14" type="ca"/>
+    <part id="15" type="ca"/>
+    <part id="16" type="ca"/>
+    <part id="17" type="ca"/>
+    <part id="18" type="ca"/>
+    <part id="19" type="ca"/>
+  </lib>
+  <lib id="hh_pets_50" revision="23512">
+    <part id="1" type="psd"/>
+    <part id="1" type="pbd"/>
+    <part id="1" type="phd"/>
+    <part id="1" type="ptl"/>
+    <part id="2" type="phd"/>
+    <part id="3" type="phd"/>
+  </lib>
+  <lib id="hh_human_hair" revision="30618">
+    <part id="1" type="hr"/>
+    <part id="1" type="hrb"/>
+    <part id="2" type="hr"/>
+    <part id="3" type="hr"/>
+    <part id="4" type="hr"/>
+    <part id="5" type="hr"/>
+    <part id="6" type="hr"/>
+    <part id="8" type="hr"/>
+    <part id="9" type="hr"/>
+    <part id="10" type="hr"/>
+    <part id="11" type="hr"/>
+    <part id="16" type="hr"/>
+    <part id="17" type="hr"/>
+    <part id="18" type="hr"/>
+    <part id="19" type="hr"/>
+    <part id="20" type="hr"/>
+    <part id="23" type="hr"/>
+    <part id="24" type="hr"/>
+    <part id="26" type="hr"/>
+    <part id="27" type="hr"/>
+    <part id="28" type="hr"/>
+    <part id="29" type="hr"/>
+    <part id="30" type="hr"/>
+    <part id="31" type="hr"/>
+    <part id="32" type="hr"/>
+    <part id="33" type="hr"/>
+    <part id="34" type="hr"/>
+    <part id="35" type="hr"/>
+    <part id="36" type="hr"/>
+    <part id="200" type="hr"/>
+    <part id="201" type="hr"/>
+    <part id="202" type="hr"/>
+    <part id="203" type="hr"/>
+    <part id="501" type="hr"/>
+    <part id="503" type="hr"/>
+    <part id="504" type="hr"/>
+    <part id="506" type="hr"/>
+    <part id="507" type="hr"/>
+    <part id="508" type="hr"/>
+    <part id="509" type="hr"/>
+  </lib>
+  <lib id="hh_human_50_face" revision="23512">
+    <part id="1" type="fc"/>
+  </lib>
+  <lib id="hh_human_50_acc_eye" revision="23512">
+    <part id="1" type="ea"/>
+    <part id="2" type="ea"/>
+    <part id="3" type="ea"/>
+    <part id="4" type="ea"/>
+    <part id="5" type="ea"/>
+    <part id="6" type="ea"/>
+  </lib>
+  <lib id="hh_people_pool" revision="23512">
+    <part id="s03" type="ss"/>
+    <part id="s04" type="ss"/>
+    <part id="1" type="li"/>
+    <part id="2" type="li"/>
+    <part id="002" type="ls"/>
+    <part id="3" type="li"/>
+    <part id="003" type="ls"/>
+    <part id="4" type="li"/>
+    <part id="5" type="li"/>
+    <part id="6" type="li"/>
+    <part id="7" type="li"/>
+    <part id="8" type="li"/>
+    <part id="9" type="li"/>
+    <part id="10" type="li"/>
+    <part id="11" type="li"/>
+    <part id="12" type="li"/>
+    <part id="13" type="li"/>
+    <part id="14" type="li"/>
+    <part id="10001" type="sd"/>
+    <part id="10001" type="bds"/>
+    <part id="10001" type="rhs"/>
+    <part id="10001" type="lhs"/>
+    <part id="10002" type="ss"/>
+  </lib>
+  <lib id="hh_human_acc_eye" revision="24464">
+    <part id="1" type="ea"/>
+    <part id="2" type="ea"/>
+    <part id="3" type="ea"/>
+    <part id="4" type="ea"/>
+    <part id="5" type="ea"/>
+    <part id="6" type="ea"/>
+  </lib>
+  <lib id="hh_human_item" revision="34441">
+    <part id="1" type="ri"/>
+    <part id="2" type="ri"/>
+    <part id="3" type="ri"/>
+    <part id="5" type="ri"/>
+    <part id="6" type="ri"/>
+    <part id="9" type="ri"/>
+    <part id="33" type="ri"/>
+    <part id="42" type="ri"/>
+    <part id="43" type="ri"/>
+    <part id="44" type="ri"/>
+    <part id="45" type="ri"/>
+    <part id="46" type="ri"/>
+    <part id="47" type="ri"/>
+    <part id="48" type="ri"/>
+    <part id="50" type="ri"/>
+    <part id="51" type="ri"/>
+    <part id="52" type="ri"/>
+    <part id="53" type="ri"/>
+    <part id="54" type="ri"/>
+    <part id="55" type="ri"/>
+    <part id="56" type="ri"/>
+    <part id="57" type="ri"/>
+    <part id="58" type="ri"/>
+    <part id="59" type="ri"/>
+    <part id="60" type="ri"/>
+    <part id="61" type="ri"/>
+    <part id="62" type="ri"/>
+    <part id="63" type="ri"/>
+    <part id="64" type="ri"/>
+    <part id="65" type="ri"/>
+    <part id="66" type="ri"/>
+    <part id="67" type="ri"/>
+    <part id="68" type="ri"/>
+    <part id="69" type="ri"/>
+    <part id="70" type="ri"/>
+    <part id="71" type="ri"/>
+    <part id="72" type="ri"/>
+    <part id="73" type="ri"/>
+    <part id="74" type="ri"/>
+    <part id="667" type="ri"/>
+  </lib>
+  <lib id="hh_human_body" revision="26618">
+    <part id="1" type="bd"/>
+    <part id="1" type="rh"/>
+    <part id="1" type="lh"/>
+    <part id="1" type="hd"/>
+    <part id="1" type="sd"/>
+    <part id="2" type="hd"/>
+    <part id="3" type="hd"/>
+    <part id="4" type="hd"/>
+  </lib>
+</map>

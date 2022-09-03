@@ -1,0 +1,2 @@
+RewriteEngine On
+RewriteRule ^external_variables.txt external_variables.php

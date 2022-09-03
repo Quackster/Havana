@@ -1,0 +1,37 @@
+package org.alexdev.havana.messages.outgoing.games;
+
+import org.alexdev.havana.messages.types.MessageComposer;
+import org.alexdev.havana.server.netty.streams.NettyResponse;
+
+public class CREATEFAILED extends MessageComposer {
+    public enum FailedReason {
+        KICKED(6),
+        TICKETS_NEEDED(2);
+
+        private final int reasonId;
+
+        FailedReason(int reasonId) {
+            this.reasonId = reasonId;
+        }
+
+        public int getReasonId() {
+            return reasonId;
+        }
+    }
+
+    private final FailedReason failedReason;
+
+    public CREATEFAILED(FailedReason failedReason) {
+        this.failedReason = failedReason;
+    }
+
+    @Override
+    public void compose(NettyResponse response) {
+        response.writeInt(this.failedReason.getReasonId());
+    }
+
+    @Override
+    public short getHeader() {
+        return 236; // "Cl"
+    }
+}

@@ -1,0 +1,177 @@
+<animationSet>
+
+    <action id="wlk">
+
+         <part set-type="bd">
+             <frame number="0"/>
+             <frame number="1"/>
+             <frame number="2"/>
+             <frame number="3"/>
+         </part>
+
+         <part set-type="lg">
+             <frame number="0"/>
+             <frame number="1"/>
+             <frame number="2"/>
+             <frame number="3"/>
+         </part>
+
+         <part set-type="sh">
+             <frame number="0"/>
+             <frame number="1"/>
+             <frame number="2"/>
+             <frame number="3"/>
+         </part>
+
+         <part set-type="lh">
+             <frame number="0"/>
+             <frame number="1"/>
+             <frame number="2"/>
+             <frame number="3"/>
+         </part>
+
+         <part set-type="ls">
+             <frame number="0"/>
+             <frame number="1"/>
+             <frame number="2"/>
+             <frame number="3"/>
+         </part>
+
+         <part set-type="rh">
+             <frame number="0"/>
+             <frame number="1"/>
+             <frame number="2"/>
+             <frame number="3"/>
+         </part>
+
+         <part set-type="rs">
+             <frame number="0"/>
+             <frame number="1"/>
+             <frame number="2"/>
+             <frame number="3"/>
+         </part>
+
+    </action>
+
+
+    <action id="wav">
+
+         <part set-type="lh">
+             <frame number="0"/>
+             <frame number="1"/>
+         </part>
+
+         <part set-type="ls">
+             <frame number="0"/>
+             <frame number="1"/>
+         </part>
+
+    </action>
+
+
+    <action id="spk">
+
+         <part set-type="hd">
+             <frame number="0"/>
+             <frame number="1"/>
+         </part>
+
+         <part set-type="fc">
+             <frame number="0"/>
+             <frame number="1"/>
+         </part>
+
+         <part set-type="fa">
+             <frame number="0"/>
+             <frame number="1"/>
+         </part>
+
+    </action>
+
+
+    <action id="lsp">
+
+         <part set-type="hd">
+             <frame number="0"/>
+             <frame number="1"/>
+         </part>
+
+         <part set-type="fc">
+             <frame number="0"/>
+             <frame number="1"/>
+         </part>
+
+         <part set-type="fa">
+             <frame number="0"/>
+             <frame number="1"/>
+         </part>
+
+    </action>
+
+
+    <action id="swm">
+
+         <part set-type="bd">
+             <frame number="0"/>
+             <frame number="1"/>
+             <frame number="2"/>
+             <frame number="3"/>
+         </part>
+
+         <part set-type="lg">
+             <frame number="0"/>
+             <frame number="1"/>
+             <frame number="2"/>
+             <frame number="3"/>
+         </part>
+
+         <part set-type="lh">
+             <frame number="0"/>
+             <frame number="1"/>
+             <frame number="2"/>
+             <frame number="3"/>
+         </part>
+
+         <part set-type="rh">
+             <frame number="0"/>
+             <frame number="1"/>
+             <frame number="2"/>
+             <frame number="3"/>
+         </part>
+
+    </action>
+
+
+    <action id="sws">
+
+         <part set-type="bd">
+             <frame number="0"/>
+             <frame number="1"/>
+             <frame number="2"/>
+             <frame number="3"/>
+         </part>
+
+         <part set-type="lg">
+             <frame number="0"/>
+             <frame number="1"/>
+             <frame number="2"/>
+             <frame number="3"/>
+         </part>
+
+         <part set-type="lh">
+             <frame number="0"/>
+             <frame number="1"/>
+             <frame number="2"/>
+             <frame number="3"/>
+         </part>
+
+         <part set-type="rh">
+             <frame number="0"/>
+             <frame number="1"/>
+             <frame number="2"/>
+             <frame number="3"/>
+         </part>
+
+    </action>
+
+</animationSet>

@@ -1,0 +1,46 @@
+        if (command == "CHOOSETYPE") {
+            char sideChosen = args[0].ToCharArray()[0];
+
+            if (GetToken(sideChosen) == null) {
+                return;
+            }
+
+            if (GetPlayerBySide(sideChosen) != null) {
+                // Say that this side can't be picked as it's already chosen
+                player.Send(new ITEMMSG(new string[]{GameId, "TYPERESERVED"}));
+                return;
+            }
+
+            PlayerSides.Add(player, sideChosen);
+            player.Send(new ITEMMSG(new string[]{GameId, "SELECTTYPE " + sideChosen}));
+            
+            GameToken otherToken = null;
+
+            // Select the other side for the player (we do this by looping through possible tokens and selecting the first available)
+            foreach (var other in gameTokens) {
+                if (other.Token != sideChosen) {
+                    otherToken = other;
+                    break;
+                }
+            }
+
+            if (otherToken != null) {
+                foreach (var otherPlayer in Players) {
+                    if (otherPlayer != player) {
+                        // Broadcast the side the player chose to the other player
+                        otherPlayer.Send(new ITEMMSG(new string[]{GameId, "SELECTTYPE " + otherToken.Token}));
+                        PlayerSides.Add(otherPlayer, otherToken.Token);
+                        break;
+                    }
+                }
+            }
+
+            // Send the message to both opponents the current side/token (X or O) that each opponent had chosen
+            SendToEveryone(new ITEMMSG(new string[]{GameId, "OPPONENTS", CurrentlyPlaying[0], CurrentlyPlaying[1]}));
+        }
+
+        if (command == "RESTART") {
+            RestartMap();
+            BroadcastMap();
+            return;
+        }

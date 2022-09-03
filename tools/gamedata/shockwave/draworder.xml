@@ -1,0 +1,874 @@
+<actionSet>
+
+	<!-- Normal standing figure -->
+    <action id="std">
+    
+        <direction id="0">
+
+            <partList>
+                <part set-type="li"/>
+                <part set-type="lh"/>
+                <part set-type="ls"/>
+				
+                <part set-type="ri"/>
+				
+                <part set-type="bd"/>
+                <part set-type="sh"/>
+                <part set-type="lg"/>
+                <part set-type="ch"/>
+				
+				<part set-type="wa"/>				
+                <part set-type="ca"/>
+
+                <part set-type="rh"/>
+                <part set-type="rs"/>
+				
+				<part set-type="hd"/>
+                <part set-type="fc"/>
+                <part set-type="ey"/>
+                
+                
+				<part set-type="hr"/>
+                <part set-type="hrb"/>
+
+                <part set-type="fa"/>
+				<part set-type="ea"/>
+                <part set-type="ha"/>
+                <part set-type="he"/>
+				
+            </partList>    
+
+        </direction>
+
+        <direction id="1">
+
+            <partList>
+                <part set-type="li"/>
+                <part set-type="lh"/>
+                <part set-type="ls"/>
+				
+                <part set-type="bd"/>
+                <part set-type="sh"/>
+                <part set-type="lg"/>
+                <part set-type="ch"/>
+				
+				<part set-type="wa"/>				
+                <part set-type="ca"/>
+
+                <part set-type="ri"/>
+                <part set-type="rh"/>
+                <part set-type="rs"/>
+				
+                <part set-type="hd"/>
+                <part set-type="fc"/>
+                <part set-type="ey"/>
+
+                <part set-type="hr"/>
+                <part set-type="hrb"/>
+				
+                <part set-type="fa"/>
+                <part set-type="ea"/>
+                <part set-type="ha"/>
+                <part set-type="he"/>
+
+            </partList>    
+
+        </direction>
+
+        <direction id="2">
+
+            <partList>
+                <part set-type="li"/>
+                <part set-type="lh"/>
+                <part set-type="ls"/>
+				
+                <part set-type="bd"/>
+                <part set-type="sh"/>
+                <part set-type="lg"/>
+                <part set-type="ch"/>
+				
+				<part set-type="wa"/>				
+                <part set-type="ca"/>
+				
+                <part set-type="rh"/>
+                <part set-type="rs"/>
+				
+                <part set-type="hd"/>
+                <part set-type="fc"/>
+                <part set-type="ey"/>
+
+                <part set-type="hr"/>
+                <part set-type="hrb"/>
+
+                <part set-type="fa"/>
+                <part set-type="ea"/>
+                <part set-type="ha"/>
+                <part set-type="he"/>
+
+                <part set-type="ri"/>
+				
+            </partList>    
+
+        </direction>
+
+        <direction id="3">
+
+            <partList>
+                <part set-type="bd"/>
+                <part set-type="sh"/>
+                <part set-type="lg"/>
+                <part set-type="ch"/>
+				
+				<part set-type="wa"/>				
+                <part set-type="ca"/>
+
+				<part set-type="li"/>
+                <part set-type="lh"/>
+                <part set-type="ls"/>
+
+                <part set-type="rh"/>
+                <part set-type="rs"/>
+				
+                <part set-type="hd"/>
+                <part set-type="fc"/>
+                <part set-type="ey"/>
+
+                <part set-type="hr"/>
+                <part set-type="hrb"/>
+
+                <part set-type="fa"/>
+                <part set-type="ea"/>
+                <part set-type="ha"/>
+                <part set-type="he"/>
+                
+                <part set-type="ri"/>
+            </partList>    
+
+        </direction>
+
+        <direction id="4">
+
+            <partList>
+                <part set-type="rh"/>
+                <part set-type="rs"/>
+				
+                <part set-type="bd"/>
+                <part set-type="sh"/>
+                <part set-type="lg"/>
+                <part set-type="ch"/>
+				
+				<part set-type="wa"/>				
+                <part set-type="ca"/>
+ 
+                <part set-type="lh"/>
+                <part set-type="ls"/>
+                <part set-type="li"/>
+
+				<part set-type="hd"/>
+                <part set-type="fc"/>
+                <part set-type="ey"/>
+
+				<part set-type="hr"/>
+                <part set-type="hrb"/>
+
+                <part set-type="fa"/>
+                <part set-type="ea"/>
+                <part set-type="ha"/>
+                <part set-type="he"/>
+
+                <part set-type="ri"/>
+				
+            </partList>    
+
+        </direction>
+
+        <direction id="5">
+
+            <partList>
+                <part set-type="rh"/>
+                <part set-type="rs"/>
+                <part set-type="ri"/>
+				
+                <part set-type="bd"/>
+                <part set-type="sh"/>
+                <part set-type="lg"/>
+                <part set-type="ch"/>
+				
+				<part set-type="wa"/>				
+                <part set-type="ca"/>
+
+                <part set-type="li"/>
+                <part set-type="lh"/>
+                <part set-type="ls"/>
+				
+                <part set-type="hd"/>
+                <part set-type="fc"/>
+                <part set-type="ey"/>
+				
+                <part set-type="hr"/>
+                <part set-type="hrb"/>
+ 
+                <part set-type="fa"/>
+                <part set-type="ea"/>
+				<part set-type="ha"/>
+                <part set-type="he"/>
+				
+            </partList>    
+
+        </direction>
+
+        <direction id="6">
+
+            <partList>
+                <part set-type="rh"/>
+                <part set-type="rs"/>
+                <part set-type="ri"/>
+				
+                <part set-type="bd"/>
+                <part set-type="sh"/>
+                <part set-type="lg"/>
+                <part set-type="ch"/>
+				
+				<part set-type="wa"/>				
+                <part set-type="ca"/>
+
+                <part set-type="li"/>
+                <part set-type="lh"/>
+                <part set-type="ls"/>
+				
+                <part set-type="hd"/>
+                <part set-type="fc"/>
+                <part set-type="ey"/>
+				
+                <part set-type="hr"/>
+                <part set-type="hrb"/>
+
+                <part set-type="fa"/>
+                <part set-type="ea"/>
+                <part set-type="ha"/>
+                <part set-type="he"/>
+				
+            </partList>    
+
+        </direction>
+
+        <direction id="7">
+
+            <partList>
+                <part set-type="li"/>
+                <part set-type="lh"/>
+                <part set-type="ls"/>
+				
+                <part set-type="ri"/>
+                <part set-type="rh"/>
+                <part set-type="rs"/>
+				
+                <part set-type="bd"/>
+                <part set-type="sh"/>
+                <part set-type="lg"/>
+                <part set-type="ch"/>
+				
+				<part set-type="wa"/>				
+                <part set-type="ca"/>
+				
+                <part set-type="hd"/>
+                <part set-type="fc"/>
+                <part set-type="ey"/>
+				
+                <part set-type="hr"/>
+                <part set-type="hrb"/>
+
+                <part set-type="fa"/>
+                <part set-type="ea"/>
+                <part set-type="ha"/>
+                <part set-type="he"/>
+            </partList>    
+
+        </direction>
+
+    </action>
+
+	<!-- Standing figure with left hand up -->
+    <action id="lh-up">
+
+        <direction id="4">
+
+            <partList>
+                <part set-type="rh"/>
+                <part set-type="rs"/>
+				
+                <part set-type="bd"/>
+                <part set-type="sh"/>
+                <part set-type="lg"/>
+                <part set-type="ch"/>
+				
+				<part set-type="wa"/>				
+
+                <part set-type="ri"/>
+
+                <part set-type="ca"/>
+                
+				<part set-type="hd"/>
+                <part set-type="fc"/>
+                <part set-type="ey"/>
+
+				<part set-type="hr"/>
+                <part set-type="hrb"/>
+
+                <part set-type="fa"/>
+                <part set-type="ea"/>
+                <part set-type="ha"/>
+                <part set-type="he"/>
+				
+                <part set-type="lh"/>
+                <part set-type="ls"/>
+                <part set-type="li"/>
+				
+            </partList>    
+
+        </direction>
+
+        <direction id="5">
+
+            <partList>
+                <part set-type="rh"/>
+                <part set-type="rs"/>
+                <part set-type="ri"/>
+				
+                <part set-type="bd"/>
+                <part set-type="sh"/>
+                <part set-type="lg"/>
+                <part set-type="ch"/>
+				
+				<part set-type="wa"/>				
+                <part set-type="ca"/>
+				
+                <part set-type="hd"/>
+                <part set-type="fc"/>
+                <part set-type="ey"/>
+				
+                <part set-type="hr"/>
+                <part set-type="hrb"/>
+ 
+                <part set-type="fa"/>
+                <part set-type="ea"/>
+				<part set-type="ha"/>
+                <part set-type="he"/>
+				
+                <part set-type="li"/>
+                <part set-type="lh"/>
+                <part set-type="ls"/>
+				
+            </partList>    
+
+        </direction>
+
+        <direction id="6">
+
+            <partList>
+                <part set-type="rh"/>
+                <part set-type="rs"/>
+                <part set-type="ri"/>
+				
+                <part set-type="bd"/>
+                <part set-type="sh"/>
+                <part set-type="lg"/>
+                <part set-type="ch"/>
+				
+				<part set-type="wa"/>				
+                <part set-type="ca"/>
+				
+                <part set-type="hd"/>
+                <part set-type="fc"/>
+                <part set-type="ey"/>
+				
+                <part set-type="hr"/>
+                <part set-type="hrb"/>
+
+                <part set-type="fa"/>
+                <part set-type="ea"/>
+                <part set-type="ha"/>
+                <part set-type="he"/>
+				
+                <part set-type="li"/>
+                <part set-type="lh"/>
+                <part set-type="ls"/>
+				
+            </partList>    
+
+        </direction>
+
+    </action>
+	
+	
+	<!-- Standing figure with right hand up -->
+    <action id="rh-up">
+	
+        <direction id="0">
+
+            <partList>
+                <part set-type="li"/>
+                <part set-type="lh"/>
+                <part set-type="ls"/>
+				
+                <part set-type="ri"/>
+				
+                <part set-type="bd"/>
+                <part set-type="sh"/>
+                <part set-type="lg"/>
+                <part set-type="ch"/>
+				
+				<part set-type="wa"/>				
+				<part set-type="ca"/>
+
+				<part set-type="hd"/>
+                <part set-type="fc"/>
+                <part set-type="ey"/>
+                                
+				<part set-type="hr"/>
+                <part set-type="hrb"/>
+
+                <part set-type="fa"/>
+				<part set-type="ea"/>
+                <part set-type="ha"/>
+                <part set-type="he"/>
+				
+                <part set-type="rh"/>
+                <part set-type="rs"/>
+				
+            </partList>    
+
+        </direction>	
+	
+        <direction id="1">
+
+            <partList>
+                <part set-type="li"/>
+                <part set-type="lh"/>
+                <part set-type="ls"/>
+				
+                <part set-type="bd"/>
+                <part set-type="sh"/>
+                <part set-type="lg"/>
+                <part set-type="ch"/>
+				
+				<part set-type="wa"/>				
+
+                <part set-type="ca"/>
+				
+                <part set-type="hd"/>
+                <part set-type="fc"/>
+                <part set-type="ey"/>
+
+                <part set-type="hr"/>
+                <part set-type="hrb"/>
+				
+                <part set-type="fa"/>
+                <part set-type="ea"/>
+                <part set-type="ha"/>
+                <part set-type="he"/>
+
+                <part set-type="ri"/>
+                <part set-type="rh"/>
+                <part set-type="rs"/>
+				
+            </partList>    
+
+        </direction>	
+	
+        <direction id="2">
+
+            <partList>
+                <part set-type="li"/>
+                <part set-type="lh"/>
+                <part set-type="ls"/>
+				
+                <part set-type="bd"/>
+                <part set-type="sh"/>
+                <part set-type="lg"/>
+                <part set-type="ch"/>
+				
+				<part set-type="wa"/>				
+                <part set-type="ca"/>
+				
+                <part set-type="hd"/>
+                <part set-type="fc"/>
+                <part set-type="ey"/>
+
+                <part set-type="hr"/>
+                <part set-type="hrb"/>
+
+                <part set-type="fa"/>
+                <part set-type="ea"/>
+                <part set-type="ha"/>
+                <part set-type="he"/>
+
+                <part set-type="ri"/>
+                <part set-type="rh"/>
+                <part set-type="rs"/>
+				
+            </partList>    
+
+        </direction>
+
+        <direction id="3">
+
+            <partList>
+                <part set-type="bd"/>
+                <part set-type="sh"/>
+                <part set-type="lg"/>
+                <part set-type="ch"/>
+				
+				<part set-type="wa"/>				
+
+				<part set-type="li"/>
+                <part set-type="lh"/>
+                <part set-type="ls"/>
+
+
+                <part set-type="ca"/>
+
+                <part set-type="hd"/>
+                <part set-type="fc"/>
+                <part set-type="ey"/>
+
+                <part set-type="hr"/>
+                <part set-type="hrb"/>
+
+                <part set-type="fa"/>
+                <part set-type="ea"/>
+                <part set-type="ha"/>
+                <part set-type="he"/>
+                
+                <part set-type="ri"/>
+                <part set-type="rh"/>
+                <part set-type="rs"/>
+				
+            </partList>    
+
+        </direction>
+
+	
+    </action>
+
+	
+	<!-- Sitting action -->
+    <action id="sit">
+    
+        <direction id="2">
+
+            <partList>
+                <part set-type="li"/>
+                <part set-type="lh"/>
+                <part set-type="ls"/>
+				
+                <part set-type="bd"/>
+                <part set-type="lg"/>
+                <part set-type="ch"/>
+				
+				<part set-type="wa"/>				
+                <part set-type="ca"/>
+				
+                <part set-type="rh"/>
+                <part set-type="rs"/>
+				
+                <part set-type="hd"/>
+                <part set-type="fc"/>
+                <part set-type="ey"/>
+
+                <part set-type="hr"/>
+                <part set-type="hrb"/>
+
+                <part set-type="fa"/>
+                <part set-type="ea"/>
+                <part set-type="ha"/>
+                <part set-type="he"/>
+
+                <part set-type="ri"/>
+				
+                <part set-type="sh"/>
+            </partList>    
+
+        </direction>
+
+        <direction id="3">
+
+            <partList>
+                <part set-type="bd"/>
+                <part set-type="lg"/>
+                <part set-type="ch"/>
+				
+				<part set-type="wa"/>				
+                <part set-type="ca"/>
+
+				<part set-type="li"/>
+                <part set-type="lh"/>
+                <part set-type="ls"/>
+
+                <part set-type="rh"/>
+                <part set-type="rs"/>
+				
+                <part set-type="hd"/>
+                <part set-type="fc"/>
+                <part set-type="ey"/>
+
+                <part set-type="hr"/>
+                <part set-type="hrb"/>
+
+                <part set-type="fa"/>
+                <part set-type="ea"/>
+                <part set-type="ha"/>
+                <part set-type="he"/>
+
+                <part set-type="ri"/>
+                
+                <part set-type="sh"/>
+            </partList>    
+
+        </direction>
+
+        <direction id="4">
+
+            <partList>
+                <part set-type="rh"/>
+                <part set-type="rs"/>
+				
+                <part set-type="bd"/>
+                <part set-type="lg"/>
+                <part set-type="ch"/>
+				
+				<part set-type="wa"/>				
+                <part set-type="ca"/>
+ 
+                <part set-type="lh"/>
+                <part set-type="ls"/>
+                <part set-type="li"/>
+
+				<part set-type="hd"/>
+                <part set-type="fc"/>
+                <part set-type="ey"/>
+
+				<part set-type="hr"/>
+                <part set-type="hrb"/>
+
+                <part set-type="fa"/>
+                <part set-type="ea"/>
+                <part set-type="ha"/>
+                <part set-type="he"/>
+
+                <part set-type="ri"/>
+
+                <part set-type="sh"/>
+				
+            </partList>    
+
+        </direction>
+
+    </action>
+
+
+	<!-- Sitting figure with left hand up -->
+    <action id="sit.lh-up">
+
+        <direction id="4">
+
+            <partList>
+                <part set-type="rh"/>
+                <part set-type="rs"/>
+				
+                <part set-type="bd"/>
+                <part set-type="lg"/>
+                <part set-type="ch"/>
+				
+				<part set-type="wa"/>				
+
+                <part set-type="ri"/>
+
+                <part set-type="ca"/>
+                
+				<part set-type="hd"/>
+                <part set-type="fc"/>
+                <part set-type="ey"/>
+
+				<part set-type="hr"/>
+                <part set-type="hrb"/>
+
+                <part set-type="fa"/>
+                <part set-type="ea"/>
+                <part set-type="ha"/>
+                <part set-type="he"/>
+				
+                <part set-type="lh"/>
+                <part set-type="ls"/>
+                <part set-type="li"/>
+				
+                <part set-type="sh"/>
+            </partList>    
+
+        </direction>
+
+    </action>	
+
+	
+	<!-- Sitting figure with right hand up -->
+    <action id="sit.rh-up">
+	
+        <direction id="2">
+
+            <partList>
+                <part set-type="li"/>
+                <part set-type="lh"/>
+                <part set-type="ls"/>
+				
+                <part set-type="bd"/>
+                <part set-type="lg"/>
+                <part set-type="ch"/>
+				
+				<part set-type="wa"/>				
+                <part set-type="ca"/>
+				
+                <part set-type="hd"/>
+                <part set-type="fc"/>
+                <part set-type="ey"/>
+
+                <part set-type="hr"/>
+                <part set-type="hrb"/>
+
+                <part set-type="fa"/>
+                <part set-type="ea"/>
+                <part set-type="ha"/>
+                <part set-type="he"/>
+
+                <part set-type="ri"/>
+                <part set-type="rh"/>
+                <part set-type="rs"/>
+				
+                <part set-type="sh"/>
+            </partList>    
+
+        </direction>
+
+        <direction id="3">
+
+            <partList>
+                <part set-type="bd"/>
+                <part set-type="lg"/>
+                <part set-type="ch"/>
+				
+				<part set-type="wa"/>				
+
+				<part set-type="li"/>
+                <part set-type="lh"/>
+                <part set-type="ls"/>
+
+
+                <part set-type="ca"/>
+
+                <part set-type="hd"/>
+                <part set-type="fc"/>
+                <part set-type="ey"/>
+
+                <part set-type="hr"/>
+                <part set-type="hrb"/>
+
+                <part set-type="fa"/>
+                <part set-type="ea"/>
+                <part set-type="ha"/>
+                <part set-type="he"/>
+                
+                <part set-type="ri"/>
+                <part set-type="rh"/>
+                <part set-type="rs"/>
+				
+                <part set-type="sh"/>
+            </partList>    
+
+        </direction>
+
+	
+    </action>	
+	
+	
+
+	
+	<!-- Laying action -->
+    <action id="lay">
+    
+        <direction id="2">
+
+            <partList>
+			
+                <part set-type="lh"/>
+                <part set-type="ls"/>
+                <part set-type="li"/>
+				
+                <part set-type="bd"/>
+                <part set-type="lg"/>
+                <part set-type="sh"/>
+                <part set-type="ch"/>
+				
+				<part set-type="hd"/>
+                <part set-type="fc"/>
+                <part set-type="ey"/>
+
+				<part set-type="wa"/>				
+				
+				<part set-type="ri"/>
+                <part set-type="rh"/>
+                <part set-type="rs"/>
+				
+                <part set-type="ca"/>
+
+				
+                <part set-type="hr"/>
+                <part set-type="hrb"/>
+				
+                <part set-type="fa"/>
+                <part set-type="ea"/>
+                <part set-type="ha"/>
+                <part set-type="he"/>
+				
+            </partList>    
+
+        </direction>
+
+        <direction id="4">
+
+            <partList>
+                <part set-type="rh"/>
+                <part set-type="rs"/>
+                <part set-type="ri"/>
+				
+                <part set-type="bd"/>
+                <part set-type="lg"/>
+                <part set-type="sh"/>
+                <part set-type="ch"/>
+				
+				<part set-type="hd"/>
+                <part set-type="fc"/>
+                <part set-type="ey"/>
+
+				<part set-type="wa"/>				
+				
+				<part set-type="li"/>
+                <part set-type="lh"/>
+                <part set-type="ls"/>
+				
+                <part set-type="ca"/>
+
+				
+                <part set-type="hr"/>
+                <part set-type="hrb"/>
+				
+                <part set-type="fa"/>
+                <part set-type="ea"/>
+                <part set-type="ha"/>
+                <part set-type="he"/>
+            </partList>    
+
+        </direction>
+
+    </action>
+
+
+</actionSet>
