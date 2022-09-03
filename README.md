@@ -4,6 +4,8 @@
 
 Originally started as a fork from [Quackster/Kepler](Quackster/Kepler), this is a server created in Java designed to revive Habbo Hotel v31 from the 2009 era and its inception was in early 2018 as a side project. Havana is the most complete v31+ server to date, this was undertaken by various reverse engineering efforts of the Shockwave client throughout the years to achieve this.
 
+Havana has been an independent project, almost entirely developed by [myself](https://github.com/Quackster) for 4 years straight. This project means a lot to me, and was always going to be released as open-source work. I am a firm believer in open-source and free software for everybody.
+
 *Want to see this project live?* Visit [ClassicHabbo.com](https://classicHabbo.com/) where we have been running the hotel for 4+ years straight, reviving old memories and creating new ones.
 
 Sulake used the Adobe/Macromedia Shockwave as its multimedia platform for their game (Habbo Hotel) from 2001-2009. In the last year, Habbo made the move to the Adobe Flash client, and then in 2020 made the switch to the Unity engine, while still maintaining their flash client.
@@ -11,10 +13,6 @@ Sulake used the Adobe/Macromedia Shockwave as its multimedia platform for their 
 Nowadays, the Shockwave client cannot be played in modern browsers as they have removed NPAPI support due to deprecation, end of life support and therefore has security concerns, and therefore must be played on forks of browsers that still have the NPAPI enabled.
 
 The reason why Shockwave emulators exist is for multiple reasons, the first is that Habbo uses a virtual currency called credits which is spent using real money and makes it a pay to win game, our own faithful recreation of Habbo can make credits free for everybody. The second is the fact that modern Habbo still lacks features that were once available to the users that played during the Shockwave-era - and is thus, to be intended to be used for **educational purposes only** as a preservation effort for an old game.
-
-# Download
-
-Download the latest development build from the [releases page](https://github.com/Quackster/Havana/releases).
 
 # Features
 
@@ -169,6 +167,18 @@ Download the latest development build from the [releases page](https://github.co
 ![image](https://user-images.githubusercontent.com/1328523/188254211-c9f9bf21-4c60-444f-b3b6-a8713c72d9b0.png)
 
 ![image](https://user-images.githubusercontent.com/1328523/188254197-30a5b3d3-7854-403c-a863-508c2300a086.png)
+
+# Download
+
+Download the latest development build from the [releases page](https://github.com/Quackster/Havana/releases).
+
+### Requirements
+
+To be honest, this server doesn't require much. I'd argue that the MariaDB server is more resource demanding than the emulator itself. 
+
+- JDK >= 11
+- MariaDB server
+- libsodium support (this project uses [this library](https://github.com/terl/lazysodium-java))
 
 # Installation
 
