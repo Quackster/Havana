@@ -168,6 +168,8 @@ The reason why Shockwave emulators exist is for multiple reasons, the first is t
 
 ![image](https://user-images.githubusercontent.com/1328523/188254197-30a5b3d3-7854-403c-a863-508c2300a086.png)
 
+![image](https://user-images.githubusercontent.com/1328523/188258240-185c1233-0178-4ace-a9af-b3a22077e32d.png)
+
 # Download
 
 Download the latest development build from the [releases page](https://github.com/Quackster/Havana/releases).
