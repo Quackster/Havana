@@ -23,14 +23,6 @@ public class RoomManager {
     public RoomManager() {
         this.roomMap = new ConcurrentHashMap<>();
         this.roomEntryBadges = BadgeDao.getRoomBadges();
-
-        int stoutRoomId = GameConfiguration.getInstance().getInteger("stout.room");
-
-        if (stoutRoomId > 0) {
-            if (!this.roomEntryBadges.containsKey(stoutRoomId)) {
-                this.roomEntryBadges.put(stoutRoomId, List.of("STOUT"));
-            }
-        }
     }
 
     /**
