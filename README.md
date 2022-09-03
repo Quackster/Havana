@@ -182,6 +182,8 @@ To be honest, this server doesn't require much. I'd argue that the MariaDB serve
 - MariaDB server
 - libsodium support (this project uses [this library](https://github.com/terl/lazysodium-java))
 
+If you aim to use this for yourself, I recommend setting up your own 2009 figure image renderer with the project I've created [here](https://github.com/Quackster/Avatara) to render Habbo looks on the website.
+
 # Installation
 
 Install MariaDB server, connect to the database server and import havana.sql (located in /tools/havana.sql).
