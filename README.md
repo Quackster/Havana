@@ -12,6 +12,10 @@ Nowadays, the Shockwave client cannot be played in modern browsers as they have 
 
 The reason why Shockwave emulators exist is for multiple reasons, the first is that Habbo uses a virtual currency called credits which is spent using real money and makes it a pay to win game, our own faithful recreation of Habbo can make credits free for everybody. The second is the fact that modern Habbo still lacks features that were once available to the users that played during the Shockwave-era - and is thus, to be intended to be used for **educational purposes only** as a preservation effort for an old game.
 
+# Download
+
+Download the latest development build from the [releases page](https://github.com/Quackster/Havana/releases).
+
 # Features
 
 ### Server
@@ -170,7 +174,7 @@ The reason why Shockwave emulators exist is for multiple reasons, the first is t
 
 Install MariaDB server, connect to the database server and import havana.sql (located in /tools/havana.sql).
 
-Download the latest development build on the [releases page](https://github.com/Quackster/Havana/releases) and rename the files to remove the short build hash version, for convenience. 
+Download the latest development build from the [releases page](https://github.com/Quackster/Havana/releases) and rename the files to remove the short build hash version, for convenience. 
 
 Install any JDK version that is equal or above >= 11 to run the jar files.
 
@@ -195,6 +199,10 @@ java -jar Havana-Server.jar
 Your server should be up and running and accessible via http://localhost/
 
 I highly recommend [this browser](https://forum.ragezone.com/f353/portable-browser-with-flash-shockwave-1192727/) to be able to play Adobe Shockwave movies in the present day.
+
+❗ Once registered as an admin, I high recommend running [groups.sql](https://github.com/Quackster/Havana/blob/master/tools/groups.sql) against your database, it will create the Habbo Guides, SnowStorm, BattleBall, Wobble Squabble and Lido Diving gaming groups for the website.
+
+And then make yourself admin by setting your ``rank`` to 7 in the ``users`` table.
 
 ### Important for Linux users
 
