@@ -2,13 +2,8 @@ package org.alexdev.http.dao;
 
 import org.alexdev.havana.dao.Storage;
 import org.alexdev.havana.dao.mysql.GroupDao;
-import org.alexdev.havana.dao.mysql.ItemDao;
 import org.alexdev.havana.game.groups.Group;
-import org.alexdev.havana.game.item.Item;
-import org.alexdev.havana.game.item.Photo;
-import org.alexdev.http.game.CommunityPhoto;
 import org.alexdev.http.game.groups.DiscussionTopic;
-import org.alexdev.photorenderer.PhotoRenderer;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -116,38 +111,5 @@ public class CommunityDao {
         }
 
         return discussionList;
-    }
-
-    public static List<Photo> getPhotos(int userId) throws SQLException {
-        List<Photo> photoList = new ArrayList<>();
-
-        Connection sqlConnection = null;
-        PreparedStatement preparedStatement = null;
-        ResultSet resultSet = null;
-
-        try {
-            sqlConnection = Storage.getStorage().getConnection();
-            preparedStatement = Storage.getStorage().prepare("SELECT * FROM items_photos WHERE photo_user_id = ? ORDER BY timestamp DESC", sqlConnection);// (photo_id, photo_user_id, timestamp, photo_data, photo_checksum) VALUES (?, ?, ?, ?, ?)", sqlConnection);
-            preparedStatement.setInt(1, userId);
-            resultSet = preparedStatement.executeQuery();
-
-            while (resultSet.next()) {
-                Blob photoBlob = resultSet.getBlob("photo_data");
-                int blobLength = (int) photoBlob.length();
-
-                byte[] photoBlobBytes = photoBlob.getBytes(1, blobLength);
-                photoList.add(new Photo(resultSet.getInt("photo_id"), resultSet.getInt("photo_checksum"), photoBlobBytes, resultSet.getLong("timestamp")));
-            }
-
-        } catch (Exception e) {
-            Storage.logError(e);
-            throw e;
-        } finally {
-            Storage.closeSilently(preparedStatement);
-            Storage.closeSilently(sqlConnection);
-            Storage.closeSilently(resultSet);
-        }
-
-        return photoList;
     }
 }

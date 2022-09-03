@@ -279,7 +279,6 @@ public class Routes {
         // API
         RouteManager.addRoute("/api/advertisement/get_img", AdvertisementController::getImg);
         RouteManager.addRoute("/api/advertisement/get_url", AdvertisementController::getUrl);
-        RouteManager.addRoute("/photos/my_photos", PhotosController::viewphotos);
         RouteManager.addRoute("/api/verify/get/*", VerifyController::get);
         RouteManager.addRoute("/api/verify/clear/*", VerifyController::clear);
 
