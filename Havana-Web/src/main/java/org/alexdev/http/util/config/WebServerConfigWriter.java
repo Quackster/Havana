@@ -26,7 +26,7 @@ public class WebServerConfigWriter implements ConfigWriter {
         config.put("mysql.database", "havana");
 
         config.put("template.directory", "tools/www-tpl");
-        config.put("template.name", "default");
+        config.put("template.name", "default-en");
         return config;
     }
 
