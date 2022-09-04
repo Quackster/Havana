@@ -8,9 +8,9 @@
 <script type="text/javascript">
 var andSoItBegins = (new Date()).getTime();
 </script>
-    <link rel="shortcut icon" href="https://cdn.classichabbo.com/web-gallery/v2/favicon.ico" type="image/vnd.microsoft.icon" />
+    <link rel="shortcut icon" href="{{ site.staticContentPath }}/web-gallery/v2/favicon.ico" type="image/vnd.microsoft.icon" />
     <link rel="alternate" type="application/rss+xml" title="Habbo: RSS" href="https://classichabbo.com/articles/rss.xml" />
-<script src="https://cdn.classichabbo.com/web-gallery/static/js/libs2.js" type="text/javascript"></script>
+<script src="{{ site.staticContentPath }}/web-gallery/static/js/libs2.js" type="text/javascript"></script>
 <script src="{{ site.staticContentPath }}/web-gallery/static/js/visual.js" type="text/javascript"></script>
 <script src="{{ site.staticContentPath }}/web-gallery/static/js/libs.js" type="text/javascript"></script>
 <script src="{{ site.staticContentPath }}/web-gallery/static/js/common.js" type="text/javascript"></script>

@@ -2,7 +2,7 @@
 	<div class="avatar-info-basic clearfix">
 		<div class="avatar-list-info-close-container"><a href="#" class="avatar-list-info-close" id="avatar-list-info-close-3"></a></div>
 		<div class="avatar-info-image">
-						<img src="https://cdn.classichabbo.com/habbo-imaging/avatarimage?figure={{ avatar.getFigure() }}&size=b&direction=4&head_direction=4&crr=0&gesture=&frame=1" alt="test" />
+						<img src="{{ site.habboImagingPath }}/habbo-imaging/avatarimage?figure={{ avatar.getFigure() }}&size=b&direction=4&head_direction=4&crr=0&gesture=&frame=1" alt="test" />
 		</div>
 <h4><a href="{{ site.sitePath }}/home/{{ avatar.getName() }}">{{ avatar.getName() }}</a></h4>
 <p>

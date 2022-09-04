@@ -175,7 +175,7 @@ body { behavior: url({{ site.staticContentPath }}/web-gallery/js/csshover.htc); 
 						<div class="cbb clearfix lightgreen">
 
 <div class="welcome-intro clearfix">
-	<img alt="{{ site.playerName }}" src="https://cdn.classichabbo.com/habbo-imaging/avatarimage?figure={{ playerDetails.figure }}&size=b&direction=3&head_direction=3&crr=667&gesture=srp&frame=1" width="64" height="110" class="welcome-habbo" />
+	<img alt="{{ site.playerName }}" src="{{ site.habboImagingPath }}/habbo-imaging/avatarimage?figure={{ playerDetails.figure }}&size=b&direction=3&head_direction=3&crr=667&gesture=srp&frame=1" width="64" height="110" class="welcome-habbo" />
     <div id="welcome-intro-welcome-user"  >Welcome {{ playerDetails.getName() }}!</div>
     <div id="welcome-intro-welcome-party" class="box-content">When arriving to your room, you will be asked if you'd like to meet {{ site.siteName }} Guides. {{ site.siteName }} guides are experienced {{ site.siteName }} players.</div>
     </div>

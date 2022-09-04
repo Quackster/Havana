@@ -25,7 +25,7 @@
 					{% if members > 0 %}
 						{% for member in membersList %}
 						<li id="avatar-list-{{ sticker.getId() }}-{{ member.getUser().getId() }}" title="{{ member.getUser().getName() }}"><div class="avatar-list-open"><a href="#" id="avatar-list-open-link-{{ sticker.getId() }}-{{ member.getUser().getId() }}" class="avatar-list-open-link"></a></div>
-						<div class="avatar-list-avatar"><img src="https://cdn.classichabbo.com/habbo-imaging/avatarimage?figure={{ member.getUser().getFigure() }}&size=s&direction=4&head_direction=4&crr=0&gesture=&frame=1" alt="" /></div>
+						<div class="avatar-list-avatar"><img src="{{ site.habboImagingPath }}/habbo-imaging/avatarimage?figure={{ member.getUser().getFigure() }}&size=s&direction=4&head_direction=4&crr=0&gesture=&frame=1" alt="" /></div>
 						<h4><a href="{{ site.sitePath }}/home/{{ member.getUser().getName() }}">{{ member.getUser().getName() }}</a></h4>
 						<p class="avatar-list-birthday">{{ member.getUser().getCreatedAt() }}</p>
 						

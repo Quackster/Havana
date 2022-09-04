@@ -10,7 +10,7 @@
 		<div class="post-list-posts post-list-creator-info">Messages: {{ userReplies }}</div>
 		<div class="clearfix">
             <div class="post-list-creator-avatar">
-			<img src="https://cdn.classichabbo.com/habbo-imaging/avatarimage?figure={{ playerDetails.figure }}&size=b&direction=2&head_direction=2&crr=0&gesture=&frame=1" alt="" />
+			<img src="{{ site.habboImagingPath }}/habbo-imaging/avatarimage?figure={{ playerDetails.figure }}&size=b&direction=2&head_direction=2&crr=0&gesture=&frame=1" alt="" />
 			</div>
 			{% if hasGroup %}
             <div class="post-list-group-badge">

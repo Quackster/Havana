@@ -50,7 +50,7 @@ Event.observe("widget-{{ sticker.getId() }}-edit", "click", function(e) { openEd
 		{% endautoescape %}
 	</div>
 	<div class="profile-figure">
-			<img alt="{{ user.getName() }}" src="https://cdn.classichabbo.com/habbo-imaging/avatarimage?figure={{ user.figure }}&size=b&direction=4&head_direction=4&crr=0&gesture=&frame=1" />
+			<img alt="{{ user.getName() }}" src="{{ site.habboImagingPath }}/habbo-imaging/avatarimage?figure={{ user.figure }}&size=b&direction=4&head_direction=4&crr=0&gesture=&frame=1" />
 	</div>
 	{% autoescape 'html' %}
 		<div class="profile-motto">

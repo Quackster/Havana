@@ -1,7 +1,7 @@
 <ul class="guestbook-entries">
 	<li id="guestbook-entry--1" class="guestbook-entry">
 		<div class="guestbook-author">
-			<img src="https://cdn.classichabbo.com/habbo-imaging/avatarimage?figure={{ playerDetails.getFigure() }}&size=s&direction=4&head_direction=4&crr=0&gesture=&frame=1" alt="" title=""/>
+			<img src="{{ site.habboImagingPath }}/habbo-imaging/avatarimage?figure={{ playerDetails.getFigure() }}&size=s&direction=4&head_direction=4&crr=0&gesture=&frame=1" alt="" title=""/>
 		</div>
 		<div class="guestbook-message">
 					<div class="{% if playerDetails.isOnline() %}online{% else %}offline{% endif %}">
