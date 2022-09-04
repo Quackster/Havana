@@ -29,7 +29,7 @@
 					{% if habboTag.getUserId() > 0 %}
 					{% set player = habboTag.getUserData() %}
 					<td class="image" style="width:39px;">
-						<img src="https://cdn.classichabbo.com/habbo-imaging/avatarimage?figure={{ player.figure }}&size=s" alt="" align="left"/>
+						<img src="{{ site.habboImagingPath }}/habbo-imaging/avatarimage?figure={{ player.figure }}&size=s" alt="" align="left"/>
 					</td>
 					<td class="text">
 						<a href="{{ site.sitePath }}/home/{{ player.getName() }}" class="result-title">{{ player.getName() }}</a><br/>

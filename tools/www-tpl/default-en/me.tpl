@@ -146,7 +146,7 @@ body { behavior: url({{ site.staticContentPath }}/web-gallery/js/csshover.htc); 
 			{% if playerDetails.motto.toLowerCase() == "crikey" %}
 			<img src='{{ site.staticContentPath }}/web-gallery/images/sticker_croco.gif' style='margin-top: 57px'>
 			{% else %}
-			<img alt="{{ playerDetails.getName() }}" src="https://cdn.classichabbo.com/habbo-imaging/avatarimage?figure={{ playerDetails.figure }}&size=b&direction=3&head_direction=3&crr=0&gesture=sml&frame=1" width="64" height="110" />
+			<img alt="{{ playerDetails.getName() }}" src="{{ site.habboImagingPath }}/habbo-imaging/avatarimage?figure={{ playerDetails.figure }}&size=b&direction=3&head_direction=3&crr=0&gesture=sml&frame=1" width="64" height="110" />
 			{% endif %}
 		</a>
 	</div>

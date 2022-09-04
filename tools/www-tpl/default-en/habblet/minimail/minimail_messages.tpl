@@ -56,7 +56,7 @@
 				<span class="message-tstamp" isotime="{{ minimailMessage.getIsoDate() }}" title="{{ minimailMessage.getDate() }}">
 					{{ minimailMessage.getDate() }}
 				</span>
-				<img src="https://cdn.classichabbo.com/habbo-imaging/avatarimage?figure={{ minimailMessage.getAuthor().getFigure() }}&size=s&direction=9&head_direction=2&crr=0&gesture=sml&frame=1" />
+				<img src="{{ site.habboImagingPath }}/habbo-imaging/avatarimage?figure={{ minimailMessage.getAuthor().getFigure() }}&size=s&direction=9&head_direction=2&crr=0&gesture=sml&frame=1" />
 				{% if minimailLabel == "sent" %}
 				<span class="message-sender" title="To: {{ minimailMessage.getTarget().getName() }}">To: {{ minimailMessage.getTarget().getName() }}</span>
 				{% elseif minimailLabel == "inbox" %}

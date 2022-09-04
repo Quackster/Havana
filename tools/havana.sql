@@ -56040,7 +56040,7 @@ DELETE FROM `rooms`;
 /*!40000 ALTER TABLE `rooms` DISABLE KEYS */;
 INSERT INTO `rooms` (`id`, `owner_id`, `category`, `name`, `description`, `model`, `ccts`, `wallpaper`, `floor`, `landscape`, `showname`, `superusers`, `accesstype`, `password`, `visitors_now`, `visitors_max`, `rating`, `icon_data`, `group_id`, `is_hidden`, `created_at`, `updated_at`) VALUES
 	(1, '0', 3, 'Welcome Lounge', 'welcome_lounge', 'newbie_lobby', 'hh_room_nlobby', 0, 0, '0.0', 0, 0, 0, '', 0, 40, 0, '0|0|', 1000, 0, '2018-08-11 07:54:01', '2021-11-02 11:13:09'),
-	(2, '0', 5, 'Theatredome', 'theatredrome', 'theater', 'hh_room_theater_carneval', 0, 0, '0.0', 0, 0, 0, '', 0, 100, 0, '0|0|', 2398, 0, '2018-08-11 07:54:01', '2022-09-03 12:32:33'),
+	(2, '0', 5, 'Theatredome', 'theatredrome', 'theater', 'hh_room_theater', 0, 0, '0.0', 0, 0, 0, '', 0, 100, 0, '0|0|', 2398, 0, '2018-08-11 07:54:01', '2022-09-03 12:32:33'),
 	(3, '0', 5, 'Library', 'library', 'library', 'hh_room_library', 0, 0, '0.0', 0, 0, 0, '', 0, 30, 0, '0|0|', 6645, 0, '2018-08-11 07:54:01', '2021-11-02 11:13:32'),
 	(4, '0', 5, 'TV Studio', 'tv_studio', 'tv_studio', 'hh_room_tv_studio_general', 0, 0, '0.0', 0, 0, 0, '', 0, 20, 0, '0|0|', 0, 0, '2018-08-11 07:54:01', '2021-11-02 10:55:29'),
 	(5, '0', 5, 'Cinema', 'habbo_cinema', 'cinema_a', 'hh_room_cinema', 0, 0, '0.0', 0, 0, 0, '', 0, 50, 0, '0|0|', 0, 0, '2018-08-11 07:54:01', '2022-09-03 12:32:42'),
