@@ -65,7 +65,7 @@ public class GameConfigWriter implements ConfigWriter {
         config.put("battleball.ticket.charge", "2");
         config.put("battleball.increase.points", "true");
 
-        config.put("snowstorm.create.game.enabled", "false");
+        config.put("snowstorm.create.game.enabled", "true");
         config.put("snowstorm.start.minimum.active.teams", "2");
         config.put("snowstorm.preparing.game.seconds", "10"); // 5, 4, 3, 2, 1 - then destruction of 1
         config.put("snowstorm.game.lifetime.seconds", "0");
