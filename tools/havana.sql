@@ -2508,7 +2508,7 @@ CREATE TABLE IF NOT EXISTS `catalogue_sale_badges` (
   `badge_code` varchar(250) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Dumping data for table havana.catalogue_sale_badges: ~0 rows (approximately)
+-- Dumping data for table havana.catalogue_sale_badges: ~1 rows (approximately)
 DELETE FROM `catalogue_sale_badges`;
 /*!40000 ALTER TABLE `catalogue_sale_badges` DISABLE KEYS */;
 INSERT INTO `catalogue_sale_badges` (`sale_code`, `badge_code`) VALUES
@@ -4254,7 +4254,7 @@ CREATE TABLE IF NOT EXISTS `external_texts` (
   KEY `entry` (`entry`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
--- Dumping data for table havana.external_texts: ~45,716 rows (approximately)
+-- Dumping data for table havana.external_texts: ~45,430 rows (approximately)
 DELETE FROM `external_texts`;
 /*!40000 ALTER TABLE `external_texts` DISABLE KEYS */;
 INSERT INTO `external_texts` (`entry`, `text`) VALUES
@@ -50090,7 +50090,7 @@ CREATE TABLE IF NOT EXISTS `items_definitions` (
   KEY `id` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1909 DEFAULT CHARSET=utf8mb4 ROW_FORMAT=COMPACT;
 
--- Dumping data for table havana.items_definitions: ~1,938 rows (approximately)
+-- Dumping data for table havana.items_definitions: ~1,908 rows (approximately)
 DELETE FROM `items_definitions`;
 /*!40000 ALTER TABLE `items_definitions` DISABLE KEYS */;
 INSERT INTO `items_definitions` (`id`, `sprite`, `name`, `description`, `sprite_id`, `length`, `width`, `top_height`, `max_status`, `behaviour`, `interactor`, `is_tradable`, `is_recyclable`, `drink_ids`, `rental_time`, `allowed_rotations`, `heights`) VALUES
@@ -52154,7 +52154,7 @@ CREATE TABLE IF NOT EXISTS `public_items` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3464 DEFAULT CHARSET=utf8mb4 ROW_FORMAT=COMPACT;
 
--- Dumping data for table havana.public_items: ~3,474 rows (approximately)
+-- Dumping data for table havana.public_items: ~3,460 rows (approximately)
 DELETE FROM `public_items`;
 /*!40000 ALTER TABLE `public_items` DISABLE KEYS */;
 INSERT INTO `public_items` (`id`, `room_model`, `sprite`, `x`, `y`, `z`, `rotation`, `top_height`, `length`, `width`, `behaviour`, `current_program`, `teleport_to`, `swim_to`) VALUES
@@ -56027,7 +56027,7 @@ CREATE TABLE IF NOT EXISTS `rooms` (
   KEY `accesstype` (`accesstype`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1000 DEFAULT CHARSET=utf8mb4;
 
--- Dumping data for table havana.rooms: ~70 rows (approximately)
+-- Dumping data for table havana.rooms: ~69 rows (approximately)
 DELETE FROM `rooms`;
 /*!40000 ALTER TABLE `rooms` DISABLE KEYS */;
 INSERT INTO `rooms` (`id`, `owner_id`, `category`, `name`, `description`, `model`, `ccts`, `wallpaper`, `floor`, `landscape`, `showname`, `superusers`, `accesstype`, `password`, `visitors_now`, `visitors_max`, `rating`, `icon_data`, `group_id`, `is_hidden`, `created_at`, `updated_at`) VALUES
@@ -56212,7 +56212,7 @@ INSERT INTO `rooms_bots` (`id`, `name`, `mission`, `x`, `y`, `start_look`, `figu
 	(41, 'Laura', 'Keeps you cool', 15, 3, '4,4', 'sd=001&sh=002/148,98,32&lg=005/230,49,57&ch=911/255,255,255&lh=001/215,175,125&rh=001/215,175,125&hd=001/215,175,125&ey=001&fc=001/215,175,125&hr=017/103,78,59&rs=002/255,255,255&ls=002/255,255,255&bd=001/215,175,125', '14,3 15,3', 31, 'Has anyone seen my bikini? I need to cool down!#SHOUT', '', '', ''),
 	(42, 'Ray', 'Chill out and have a coconut!', 22, 26, '2,2', 'sd=001&hd=001/201,143,113&fc=001/201,143,113&bd=001/201,143,113&rh=001/201,143,113&lh=001/201,143,113&hr=504/223,218,190&lg=201/230,49,57&sh=002/246,172,49&rs=003/201,143,113&ls=003/201,143,113&ch=501/246,172,49look=2,2', '22,24 23,24 22,25 23,25 22,26 23,26 22,27 23,27 22,28 23,28 22,29 23,29 22,30 23,30', 25, 'Official Fansite are voted by YOU, the Habbo community!|Did you know the Official Fansites are changed every 3 months?|If they aren\'t listed once you click the billboard then they aren\'t Official!|Once refreshed, visit an Official Fansite!|Click the billboard now to visit our Official Fansites!|Official Fansites have great events, comps and radio shows!', 'Refreshing!|Here you are, with extra coconut milk, only for you ;)|Here you go, hope you like the umbrella.|You sure are thirsty, huh?|You can only have one at a time!|That\'s my name! As in the beams of golden sunshine and not the sunglasses.|Hi my name is what? my name is who? my name is...ray', '', 'Cola,Coke,Coconut Milk'),
 	(43, 'Tao', 'Tea is serenity', 10, 4, '4,4', 'sd=001&sh=001/36&lg=001&ch=002/163,20,20&lh=001/171,122,89&rh=001/171,122,89&hd=001/171,122,89&ey=001&fc=001/171,122,89&hr=791/255,255,255&rs=001/163,20,20&ls=001/163,20,20&bd=001/8', '8,2 9,2 10,2 11,2 8,3 9,3 10,3 11,3 8,4 9,4 10,4 11,4', 18, '', '', '', 'Tea,Drink'),
-	(44, 'Harry', 'Happy to help', 8, 21, '2,2', 'sd=001&sh=003/41,41,41&lg=006/51,51,51&ch=202/139,24,32&lh=001/255,210,179&rh=001/255,210,179&hd=001/255,204,153&ey=001&fc=001/255,204,153&hr=203/103,78,59&hrb=203/2,3,4&rs=001/255,255,255&ls=001/255,255,255&bd=001/255,204,153', '9,18 9,16 9,17 9,19 9,20 9,21 9,22 9,23 8,18 8,16 8,17 8,19 8,20 8,21 8,22 8,23', 1, 'Please keep it down people are trying to think!#SHOUT|Only use the Call for help in an emergency!|Want to know more about Habbo Hotel? Ask a Habbo Guide!|Is it me or is something BIG about to happen?|In Trouble? Call for Moderator assistance using the Blue Question Mark!|There\'s no such thing as a free lunch or free credits!', 'Why Hello there! *Shakes Habbo Hand* My name\'s Harry.|Hello, Hello, Hello!|Hello and welcome to Habbo Hotel! Enjoy your stay! :)', 'Why Hello there! *Shakes Habbo Hand* My name\'s Harry.|Hello, Hello, Hello!|\r\nHello and welcome to Habbo Hotel! Enjoy your stay! :)', 'Water'),
+	(44, 'Harry', 'Happy to help', 8, 21, '2,2', 'sd=001&sh=003/41,41,41&lg=006/51,51,51&ch=202/139,24,32&lh=001/255,210,179&rh=001/255,210,179&hd=001/255,204,153&ey=001&fc=001/255,204,153&hr=203/103,78,59&hrb=203/2,3,4&rs=001/255,255,255&ls=001/255,255,255&bd=001/255,204,153', '9,18 9,16 9,17 9,19 9,20 9,21 9,22 9,23 8,18 8,16 8,17 8,19 8,20 8,21 8,22 8,23', 1, 'Please keep it down people are trying to think!#SHOUT|Only use the Call for help in an emergency!|Want to know more about Habbo Hotel? Ask a Habbo Guide!|Is it me or is something BIG about to happen?|In Trouble? Call for Moderator assistance using the Blue Question Mark!|There\'s no such thing as a free lunch or free credits!', 'Why Hello there! *Shakes Habbo Hand* My name\'s Harry.|Hello, Hello, Hello!|Hello and welcome to Habbo Hotel! Enjoy your stay! :)', 'Why Hello there! *Shakes Habbo Hand* My name\'s Harry.|Hello, Hello, Hello!|Hello and welcome to Habbo Hotel! Enjoy your stay! :)', 'Water'),
 	(45, 'Miho', 'My katana thinks you\'re cute!', 14, 25, '2,2', 'sd=001&sh=001/36&lg=200/204,204,204&ch=204/204,204,204&lh=001/215,175,125&rh=001/215,175,125&hd=001/215,175,125&ey=001&fc=001/215,175,125&hr=504/50,91,106&rs=002/204,204,204&ls=002/204,204,204&bd=001/8', '14,24 14,25', 27, 'Zen Garden is the ultimate in relaxation|Listen to the breeze blowing through the leaves|Welcome to my garden a place of quiet reflection...|Listen to the breeze blowing through the leaves...', 'I hope you make peace with this|Relax with this|Relaxation can be achieved this this', 'That is my name.|Say again - it\'s a bit noisy in here#WHISPER|You bring confusion to my mind, and pain to my ears...#WHISPER|', 'Water');
 /*!40000 ALTER TABLE `rooms_bots` ENABLE KEYS */;
 
@@ -56785,7 +56785,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   KEY `is_online` (`is_online`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
--- Dumping data for table havana.users: ~1 rows (approximately)
+-- Dumping data for table havana.users: ~0 rows (approximately)
 DELETE FROM `users`;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
