@@ -157,7 +157,7 @@ body { behavior: url({{ site.staticContentPath }}/web-gallery/js/csshover.htc); 
 			<div>
 				{% autoescape 'html' %}
 				{% if playerDetails.motto == "" %}
-				<span title="Click to enter your motto/ status">Haz clic aquí para cambiar tu misión</span>
+				<span title="Click to enter your motto/ status">Haz clic aquí para cambiar tu misión...</span>
 				{% else %}
 				<span title="Click to enter your motto/ status">{{ playerDetails.motto }}</span>
 				{% endif %}
@@ -169,17 +169,17 @@ body { behavior: url({{ site.staticContentPath }}/web-gallery/js/csshover.htc); 
 	</div>
 
 	<ul id="link-bar" class="clearfix">
-        <li class="change-looks"><a href="{{ site.sitePath }}/profile">Cambiar look &raquo;</a></li>
+        <li class="change-looks"><a href="{{ site.sitePath }}/profile">Cambia tu 'look' &raquo;</a></li>
         <li class="credits">
             <a href="{{ site.sitePath }}/credits">{{ playerDetails.credits }}</a> Créditos		</li>
         <li class="club">
             {% if playerDetails.hasClubSubscription() %}
             <a href="{{ site.sitePath }}/club">{{ hcDays }} </a>Días restantes como HC		</li>
             {% else %}
-            <a href="{{ site.sitePath }}/club">Unirte al {{ site.siteName }} club &raquo;</a>		</li>
+            <a href="{{ site.sitePath }}/club">Unirse al {{ site.siteName }} club &raquo;</a>		</li>
             {% endif %}
         <li class="activitypoints">
-            <a href="{{ site.sitePath }}/credits/pixels">{{ playerDetails.pixels }}</a> Pixeles		    </li>
+            <a href="{{ site.sitePath }}/credits/pixels">{{ playerDetails.pixels }}</a> Píxeles		    </li>
     </ul>
 
     <div id="habbo-feed">
@@ -194,7 +194,7 @@ body { behavior: url({{ site.staticContentPath }}/web-gallery/js/csshover.htc); 
 		{% for alert in alerts %}	
 			{% if alert.getAlertType() == 'HC_EXPIRED' %}
 			<li id="feed-item-hc-reminder">
-				<a href="#" class="remove-feed-item" id="remove-hc-reminder" title="Remove notification">Remove notification</a>
+				<a href="#" class="remove-feed-item" id="remove-hc-reminder" title="Remove notification">Cerrar notificación</a>
 
 				<div>Ha expirado tu pertenencia al {{ site.siteName }} Club. ¿Deseas renovar?	</div>
 				<div class="clearfix">
@@ -251,7 +251,7 @@ body { behavior: url({{ site.staticContentPath }}/web-gallery/js/csshover.htc); 
 			
 			{% if unreadGuestbookMessages > 0 %}
 			<li class="small" id="feed-guestbook">
-			You have <a href="{{ site.sitePath }}/home/{{ playerDetails.getName() }}">tienes {{ unreadGuestbookMessages }} firmas nuevas</a> en tu home
+			Tienes <a href="{{ site.sitePath }}/home/{{ playerDetails.getName() }}">{{ unreadGuestbookMessages }} firmas nuevas</a> en tu home
 			</li>
 			{% endif %}
 			
@@ -272,7 +272,7 @@ body { behavior: url({{ site.staticContentPath }}/web-gallery/js/csshover.htc); 
 			{% set num = 1 %}
 			{% if newPostsAmount > 0 %}
 			<li class="small" id="feed-group-discussion">
-			<strong>{{ newPostsAmount }}</strong> de tus Grupos tienen nuevos mensajes en sus foros:
+			<strong>{{ newPostsAmount }}</strong> de tus Grupos tienen nuevos mensajes en sus Foros:
 			<span>
 			{% for group in newPosts.entrySet() %}	
 				{% set groupId = group.getKey() %}
@@ -353,7 +353,7 @@ body { behavior: url({{ site.staticContentPath }}/web-gallery/js/csshover.htc); 
               <div class="habblet-container " id="giftqueue">
                 <div class="cbb clearfix rooms">
                   <h2 class="title">
-                    Your next gift!
+                    ¡Tu siguiente regalo!
 					{% if newbieNextGift > 2 %}
                     <span class="habblet-close" id="habblet-close-giftqueue" onclick="GiftQueueHabblet.hide()"></span>
 					{% endif %}
@@ -368,25 +368,25 @@ body { behavior: url({{ site.staticContentPath }}/web-gallery/js/csshover.htc); 
 						<div class="cbb clearfix orange ">
 
 	
-							<h2 class="title">Novedades							</h2>
+							<h2 class="title">Noticiones							</h2>
 						<div id="hotcampaigns-habblet-list-container">
     <ul id="hotcampaigns-habblet-list">
 
         <li class="even">
             <div class="hotcampaign-container">
-                <a href="{{ site.sitePath }}/articles"><img src="{{ site.staticContentPath }}/c_images/hot_campaign_images_gb/beta.gif" align="left" alt="" /></a>
-                <h3>Under Construction</h3>
-                <p>Put interesting text in here, because this text is just useless sitting here otherwise!</p>
-                <p class="link"><a href="{{ site.sitePath }}">Go there &raquo;</a></p>
+                <a href="{{ site.sitePath }}/articles"><img src="{{ site.staticContentPath }}/c_images/hot_campaign_images_gb/misterioso.png" align="left" alt="" /></a>
+                <h3>¿Aun hay amor?</h3>
+                <p>Parece que no hay noticiones en este momento ¡Vuelve mas tarde!</p>
+                <p class="link"><a href="{{ site.sitePath }}">Ir &raquo;</a></p>
             </div>
         </li>
         
         <li class="odd">
             <div class="hotcampaign-container">
-                <a href="{{ site.sitePath }}/articles"><img src="{{ site.staticContentPath }}/c_images/hot_campaign_images_gb/habbobetahot.gif" align="left" alt="" /></a>
-                <h3>Under Construction</h3>
-                <p>Put interesting text in here, because this text is just useless sitting here otherwise!</p>
-                <p class="link"><a href="{{ site.sitePath }}">Go there &raquo;</a></p>
+                <a href="{{ site.sitePath }}/articles"><img src="{{ site.staticContentPath }}/c_images/hot_campaign_images_gb/homexpo.png" align="left" alt="" /></a>
+                <h3>¡Cuidado con la cabeza!</h3>
+                <p>Parece que no hay noticiones en este momento ¡Vuelve mas tarde!</p>
+                <p class="link"><a href="{{ site.sitePath }}">Ir &raquo;</a></p>
             </div>
         </li>
         
@@ -413,7 +413,7 @@ body { behavior: url({{ site.staticContentPath }}/web-gallery/js/csshover.htc); 
 <div class="habblet-container minimail" id="mail">
                         <div class="cbb clearfix blue ">
 
-                            <h2 class="title">bandeja de entrada                            </h2>
+                            <h2 class="title">Mis Mensajes                            </h2>
                         <div id="minimail">
 		<div class="minimail-contents">
 	    {% include "habblet/minimail/minimail_messages.tpl" %}
@@ -505,9 +505,9 @@ body { behavior: url({{ site.staticContentPath }}/web-gallery/js/csshover.htc); 
 
 </div>
 <script type="text/javascript">
-    L10N.put("habblet.search.error.search_string_too_long", "The search keyword was too long. Maximum length is 30 characters.");
-    L10N.put("habblet.search.error.search_string_too_short", "The search keyword was too short. 2 characters required.");
-    L10N.put("habblet.search.add_friend.title", "Add to friend list");
+    L10N.put("habblet.search.error.search_string_too_long", "La busqueda es muy larga, debe tener maximo 30 caracteres.");
+    L10N.put("habblet.search.error.search_string_too_short", "La busqueda es muy corta, debe tener almenos 2 caracteres");
+    L10N.put("habblet.search.add_friend.title", "Añadir Amig@");
 	new HabboSearchHabblet(2, 30);
 
 </script>
@@ -543,13 +543,13 @@ body { behavior: url({{ site.staticContentPath }}/web-gallery/js/csshover.htc); 
     <hr/>
     </div>
     <div id="invitation-link-container">
-        <h3>¡Disfruta de {{ site.siteName }} mas con amigos de la vida real!</h3>
+        <h3>¡Sácale más partido a {{ site.siteName }} con amigos reales!</h3>
 
         <div class="copytext">
-            <p>¡Invita a tus amigos a Habbo y obtén placas increíbles! Mándales el link y diles que se registren y confirmen su email. Si visitan Habbo de una manera activa serás recompensado con una placa.</p>
+            <p>¡Invita a tus amigos a {{ site.siteName }} y logra Placas espectaculares! Envía un link a tus amigos y pídeles que se registren y activen su email. Si se vuelven unos {{ site.siteName }}s activos, tú serás recompensado con una Placa.</p>
         </div>
         <div class="invitation-buttons clearfix"> 
-            <a  class="new-button" id="getlink-friend-invite-button" href="#"><b>¡Clic aquí para obtener el link!</b><i></i></a>
+            <a  class="new-button" id="getlink-friend-invite-button" href="#"><b>¡Haz clic para enviar invitaciones!</b><i></i></a>
         </div>
     </div>
 </div>
@@ -575,7 +575,7 @@ body { behavior: url({{ site.staticContentPath }}/web-gallery/js/csshover.htc); 
 							<h2 class="title">Eventos							</h2>
 						<div id="current-events">
 	<div class="category-selector">
-	<p>¡Mira los eventos del hotel por su categoria!</p>
+	<p>Echa un vistazo a los últimos eventos por categorías</p>
 	<select id="event-category">
 		<option value="1">Fiesta y Música</option>
 		<option value="2">Tradeos</option>
@@ -802,7 +802,7 @@ document.observe("dom:loaded", function() {
 <div class="box-tabs-container clearfix">
     <h2>Grupos</h2>
     <ul class="box-tabs">
-        <li id="tab-2-1"><a href="#">Grupos populares</a><span class="tab-spacer"></span></li>
+        <li id="tab-2-1"><a href="#">TOP Grupos</a><span class="tab-spacer"></span></li>
         <li id="tab-2-2" class="selected"><a href="#">Mis Grupos</a><span class="tab-spacer"></span></li>
     </ul>
 </div>
@@ -845,7 +845,7 @@ document.observe("dom:loaded", function() {
 				{% set i = i + 1 %}
 		{% endfor %}
     </ul>
-		<div class="habblet-button-row clearfix"><a class="new-button" id="purchase-group-button" href="#"><b>Create/buy a Group</b><i></i></a></div>
+		<div class="habblet-button-row clearfix"><a class="new-button" id="purchase-group-button" href="#"><b>Crear un Grupo</b><i></i></a></div>
     </div>
 
     <div id="groups-habblet-group-purchase-button" class="habblet-list-container"></div>
