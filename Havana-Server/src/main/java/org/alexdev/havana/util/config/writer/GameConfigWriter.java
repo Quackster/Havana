@@ -73,7 +73,7 @@ public class GameConfigWriter implements ConfigWriter {
         config.put("snowstorm.ticket.charge", "2");
         config.put("snowstorm.increase.points", "true");
 
-        config.put("tutorial.enabled", "false");
+        config.put("tutorial.enabled", "true");
         config.put("profile.editing", "false");
         config.put("vouchers.enabled", "true");
         config.put("shutdown.minutes", "1");
