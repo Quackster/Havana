@@ -1,5 +1,6 @@
 package org.alexdev.havana.game.player;
 
+import org.alexdev.havana.Havana;
 import org.alexdev.havana.dao.mysql.PlayerDao;
 import org.alexdev.havana.game.GameScheduler;
 import org.alexdev.havana.game.player.statistics.PlayerStatistic;
@@ -281,6 +282,26 @@ public class PlayerManager {
         }
 
         return activePlayers;
+    }
+
+    /**
+     * Create password hash
+     *
+     * @param password password to hash
+     * @return hashed password
+     * @throws Exception
+     */
+    public String createPassword(String password)  {
+        return Havana.getPasswordEncoder().encode(password);
+    }
+
+    /**
+     * Get whether the hash matches the entered password.
+     *
+     * @return true, if success
+     */
+    public boolean passwordMatches(String databasePassword, String enteredPassword) {
+        return Havana.getPasswordEncoder().matches(enteredPassword, databasePassword);
     }
 
     /**

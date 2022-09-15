@@ -6,6 +6,7 @@ import org.alexdev.havana.game.entity.Entity;
 import org.alexdev.havana.game.entity.EntityType;
 import org.alexdev.havana.game.player.Player;
 import org.alexdev.havana.game.player.PlayerDetails;
+import org.alexdev.havana.game.player.PlayerManager;
 import org.alexdev.havana.game.player.PlayerRank;
 import org.alexdev.havana.messages.outgoing.alerts.ALERT;
 
@@ -40,7 +41,7 @@ public class RecoverAccountCommand extends Command {
         }
 
         player.send(new ALERT(targetUser.getName() + "'s password has been reset to: changeme123"));
-        PlayerDao.setPassword(targetUser.getId(), PlayerDao.createPassword("changeme123"));
+        PlayerDao.setPassword(targetUser.getId(), PlayerManager.getInstance().createPassword("changeme123"));
     }
 
     @Override
