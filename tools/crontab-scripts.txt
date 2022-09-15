@@ -1,0 +1,2 @@
+@reboot screen -dmS web sh -c 'cd /root/hotel/; sh start_web.sh; exec bash'
+@reboot screen -dmS server sh -c 'cd /root/hotel/; sh start_server.sh; exec bash'
