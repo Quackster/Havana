@@ -14,9 +14,6 @@ repositories {
 }
 
 dependencies {
-    // https://mvnrepository.com/artifact/net.dv8tion/JDA
-    implementation 'net.dv8tion:JDA:5.0.0-alpha.12'
-
     // https://mvnrepository.com/artifact/com.zaxxer/HikariCP
     implementation group: 'com.zaxxer', name: 'HikariCP', version: '3.4.1'
 
