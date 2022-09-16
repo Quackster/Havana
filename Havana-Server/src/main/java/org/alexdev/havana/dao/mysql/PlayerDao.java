@@ -1,11 +1,9 @@
 package org.alexdev.havana.dao.mysql;
 
-import com.goterl.lazysodium.LazySodiumJava;
-import com.goterl.lazysodium.SodiumJava;
-import com.goterl.lazysodium.interfaces.PwHash;
 import org.alexdev.havana.dao.Storage;
 import org.alexdev.havana.game.player.Player;
 import org.alexdev.havana.game.player.PlayerDetails;
+import org.alexdev.havana.game.player.PlayerManager;
 import org.alexdev.havana.util.DateUtil;
 
 import java.nio.charset.StandardCharsets;
@@ -15,7 +13,6 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 public class PlayerDao {
-    public static final LazySodiumJava LIB_SODIUM = new LazySodiumJava(new SodiumJava());
     private static String figureBlacklist1 = "hd-180-1.hr-100-61.ch-210-66.lg-270-82.sh-290-80";
 
     public static void resetOnline() {
@@ -353,13 +350,10 @@ public class PlayerDao {
             resultSet = preparedStatement.executeQuery();
 
             if (resultSet.next()) {
-                byte[] hashedPassword = (resultSet.getString("password") + '\0').getBytes(StandardCharsets.UTF_8);
-                byte[] pass = password.getBytes(StandardCharsets.UTF_8);
+                String databasePassword = resultSet.getString("password");
 
-                success = ((PwHash.Native) LIB_SODIUM).cryptoPwHashStrVerify(hashedPassword, pass, pass.length);
-
-                if (success) {
-                    fill(playerDetails, resultSet);
+                if (PlayerManager.getInstance().passwordMatches(databasePassword, password)) {
+                    success = true;
                 }
             }
 
@@ -1009,24 +1003,5 @@ public class PlayerDao {
                 row.getInt("respect_points"), row.getInt("respect_given"), row.getBoolean("is_online"),
                 row.getLong("totem_effect_expiry"), row.getLong("trade_ban_expiration"), row.getInt("favourite_group"),
                 row.getString("created_at"));
-    }
-
-    public static String createPassword(String password) throws Exception {
-        byte[] pw = password.getBytes();
-        byte[] outputHash = new byte[PwHash.STR_BYTES];
-        PwHash.Native pwHash = (PwHash.Native) PlayerDao.LIB_SODIUM;
-        boolean success = pwHash.cryptoPwHashStr(
-                outputHash,
-                pw,
-                pw.length,
-                PwHash.OPSLIMIT_INTERACTIVE,
-                PwHash.MEMLIMIT_INTERACTIVE
-        );
-
-        if (!success) {
-            throw new Exception("Password creation was a failure!");
-        }
-
-        return new String(outputHash).replace((char)0 + "", "");
     }
 }

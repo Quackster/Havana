@@ -4,6 +4,7 @@ import org.alexdev.duckhttpd.server.connection.WebConnection;
 import org.alexdev.havana.dao.mysql.PlayerDao;
 import org.alexdev.havana.dao.mysql.PlayerStatisticsDao;
 import org.alexdev.havana.game.player.PlayerDetails;
+import org.alexdev.havana.game.player.PlayerManager;
 import org.alexdev.havana.game.player.statistics.PlayerStatistic;
 import org.alexdev.havana.util.DateUtil;
 import org.alexdev.havana.util.config.GameConfiguration;
@@ -137,7 +138,7 @@ public class RecoveryController {
                     webConnection.session().set("alertMessage", "Your password has been changed successfully.");
                     webConnection.session().set("alertColour", "green");
 
-                    PlayerDao.setPassword(userId, PlayerDao.createPassword(newPassword));
+                    PlayerDao.setPassword(userId, PlayerManager.getInstance().createPassword(newPassword));
                     EmailDao.removeRecoveryCode(userId);
                 }
             }

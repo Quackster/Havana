@@ -9,6 +9,7 @@ import org.alexdev.havana.dao.mysql.PlayerDao;
 import org.alexdev.havana.dao.mysql.PlayerStatisticsDao;
 import org.alexdev.havana.dao.mysql.ReferredDao;
 import org.alexdev.havana.game.misc.figure.FigureManager;
+import org.alexdev.havana.game.player.PlayerManager;
 import org.alexdev.havana.util.DateUtil;
 import org.alexdev.havana.util.FigureUtil;
 import org.alexdev.havana.util.config.GameConfiguration;
@@ -158,7 +159,7 @@ public class RegisterController {
                     return;
                 }
 
-                String hashedPassword = PlayerDao.createPassword(webConnection.session().getString("registerPassword"));
+                String hashedPassword = PlayerManager.getInstance().createPassword(webConnection.session().getString("registerPassword"));
                 int userId = RegisterDao.newUser(
                         webConnection.session().getString("registerUsername"),
                         hashedPassword,

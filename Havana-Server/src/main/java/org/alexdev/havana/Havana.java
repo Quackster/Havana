@@ -39,6 +39,7 @@ import org.alexdev.havana.util.config.writer.DefaultConfigWriter;
 import org.alexdev.havana.util.config.writer.GameConfigWriter;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.security.crypto.argon2.Argon2PasswordEncoder;
 
 import java.io.IOException;
 import java.net.UnknownHostException;
@@ -352,5 +353,15 @@ public class Havana {
      */
     public static Gson getGson() {
         return gson;
+    }
+
+    /**
+     * Get the Argon2 password encoder instance.
+     *
+     * @return
+     */
+    public static Argon2PasswordEncoder getPasswordEncoder() {
+        var encoder =new Argon2PasswordEncoder(16, 32, 1, 65536, 2);
+        return encoder;
     }
 }

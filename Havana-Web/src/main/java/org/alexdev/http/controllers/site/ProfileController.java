@@ -9,6 +9,7 @@ import org.alexdev.havana.dao.mysql.PlayerStatisticsDao;
 import org.alexdev.havana.dao.mysql.WardrobeDao;
 import org.alexdev.havana.game.misc.figure.FigureManager;
 import org.alexdev.havana.game.player.PlayerDetails;
+import org.alexdev.havana.game.player.PlayerManager;
 import org.alexdev.havana.game.player.Wardrobe;
 import org.alexdev.havana.game.player.statistics.PlayerStatistic;
 import org.alexdev.havana.game.player.statistics.PlayerStatisticManager;
@@ -229,7 +230,7 @@ public class ProfileController {
                 webConnection.session().set("alertMessage", "Your password has been changed successfully. You will need to login again.");
                 webConnection.session().set("alertColour", "green");
 
-                PlayerDao.setPassword(playerDetails.getId(), PlayerDao.createPassword(newPassword));
+                PlayerDao.setPassword(playerDetails.getId(), PlayerManager.getInstance().createPassword(newPassword));
                 logout = true;
             }
         }
