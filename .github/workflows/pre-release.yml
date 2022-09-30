@@ -49,6 +49,7 @@ jobs:
           sudo cp tools/scripts/run_server.sh ./Havana/
           sudo cp tools/scripts/run_web.bat ./Havana/
           sudo cp tools/scripts/run_web.sh ./Havana/
+          sudo cp tools/havana.sql ./Havana/
           sudo cp tools/scripts/README.txt ./Havana/
 
       - id: sha-short
