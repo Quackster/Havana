@@ -54,7 +54,7 @@ jobs:
           sudo cp tools/figuredata.xml ./Havana/
           sudo mkdir ./Havana/tools/www
           sudo mkdir ./Havana/tools/www-tpl
-          sudo cp tools/www-tpl/* ./Havana/tools/www-tpl/
+          sudo mv tools/www-tpl/* ./Havana/tools/www-tpl/
           sudo cp tools/scripts/README.txt ./Havana/
 
       - id: sha-short
