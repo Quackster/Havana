@@ -353,6 +353,7 @@ public class PlayerDao {
                 String databasePassword = resultSet.getString("password");
 
                 if (PlayerManager.getInstance().passwordMatches(databasePassword, password)) {
+                    fill(playerDetails, resultSet);
                     success = true;
                 }
             }
