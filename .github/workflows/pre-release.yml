@@ -41,6 +41,7 @@ jobs:
           sudo rm -rf ./release/Havana-Server/bin
           sudo mkdir ./Havana
           sudo mkdir ./Havana/lib
+          sudo mkdir ./Havana/tools
           sudo mv ./release/Havana-Web/lib/Havana-Server.jar ./Havana/Havana-Server.jar
           sudo mv ./release/Havana-Web/lib/Havana-Web.jar ./Havana/Havana-Web.jar
           sudo mv ./release/Havana-Web/lib/* ./Havana/lib
@@ -50,6 +51,10 @@ jobs:
           sudo cp tools/scripts/run_web.bat ./Havana/
           sudo cp tools/scripts/run_web.sh ./Havana/
           sudo cp tools/havana.sql ./Havana/
+          sudo cp tools/figuredata.xml ./Havana/
+          sudo mkdir ./Havana/tools/www
+          sudo mkdir ./Havana/tools/www-tpl
+          sudo cp tools/www-tpl/* ./Havana/tools/www-tpl/
           sudo cp tools/scripts/README.txt ./Havana/
 
       - id: sha-short
