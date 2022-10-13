@@ -111,7 +111,7 @@ public class ClientController {
         var ssoTicket = playerDetails.getSsoTicket();
 
         // Update sso ticket
-        if (GameConfiguration.getInstance().getBoolean("reset.sso.after.login") || ssoTicket.isBlank()) {
+        if (GameConfiguration.getInstance().getBoolean("reset.sso.after.login") || ssoTicket == null || ssoTicket.isBlank()) {
             ssoTicket = UUID.randomUUID().toString();
             PlayerDao.setTicket(webConnection.session().getInt("user.id"), ssoTicket);
         }
