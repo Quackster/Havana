@@ -202,10 +202,6 @@ Start Havana-Web via start_web.sh (Unix/Linux distros) or start_web.bat (Windows
 
 Start Havana-Server via start_server.sh (Unix/Linux distros) or start_server.bat (Windows)
 
-```
-java -jar Havana-Server.jar
-```
-
 Your server should be up and running and accessible via http://localhost/
 
 I highly recommend [this browser](https://forum.ragezone.com/f353/portable-browser-with-flash-shockwave-1192727/) to be able to play Adobe Shockwave movies in the present day.
