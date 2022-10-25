@@ -52,6 +52,10 @@ public class HavanaWeb {
         settings.setTemplateBase(TwigTemplate.class);
         settings.setSaveSessions(true);
 
+        if (ServerConfiguration.getString("page.encoding").length() > 0) {
+            settings.setPageEncoding(ServerConfiguration.getString("page.encoding"));
+        }
+
         // Spammers
         /*Settings.getInstance().getBlockIpv4().add("192.190");
         Settings.getInstance().getBlockIpv4().add("79.108");

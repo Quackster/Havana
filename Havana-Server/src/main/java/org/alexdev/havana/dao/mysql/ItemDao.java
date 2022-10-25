@@ -204,7 +204,7 @@ public class ItemDao {
 
         try {
             sqlConnection = Storage.getStorage().getConnection();
-            preparedStatement = Storage.getStorage().prepare("SELECT * FROM vw_items WHERE id = ?", sqlConnection);
+            preparedStatement = Storage.getStorage().prepare("SELECT * FROM items WHERE id = ?", sqlConnection);
             preparedStatement.setLong(1, itemId);
             resultSet = preparedStatement.executeQuery();
 

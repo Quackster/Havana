@@ -27,6 +27,8 @@ public class WebServerConfigWriter implements ConfigWriter {
 
         config.put("template.directory", "tools/www-tpl");
         config.put("template.name", "default-en");
+
+        config.put("page.encoding", "utf-8");
         return config;
     }
 
@@ -53,6 +55,8 @@ public class WebServerConfigWriter implements ConfigWriter {
         writer.println("[Template]");
         writer.println("template.directory=" + config.get("template.directory"));
         writer.println("template.name=" + config.get("template.name"));
+        writer.println("");
+        writer.println("page.encoding=" + config.get("page.encoding"));
         writer.flush();
         writer.close();
     }

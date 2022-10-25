@@ -158,7 +158,7 @@ public class ServerConfiguration {
      * @return value
      */
     public static String getString(String key) {
-        return config.getOrDefault(key, key);
+        return config.getOrDefault(key, "");
     }
 
     /**
