@@ -118,7 +118,7 @@ public class BanDao {
     public static List<Ban> getActiveBans(int page, String sortBy) {
         List<Ban> banList = new ArrayList<>();
 
-        int rows = 1;
+        int rows = 25;
         int nextOffset = page * rows;
 
         if (nextOffset >= 0) {
