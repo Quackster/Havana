@@ -6,8 +6,8 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <title>{{ site.siteName }}: {{ pageName }}</title>
-    <link href="{{ site.sitePath }}/public/hk/css/bootstrap.min.css" rel="stylesheet">
-	<link href="{{ site.sitePath }}/public/hk/css/simple-sidebar.css" rel="stylesheet">
+    <link href="{{ site.staticContentPath }}/public/hk/css/bootstrap.min.css" rel="stylesheet">
+	<link href="{{ site.staticContentPath }}/public/hk/css/simple-sidebar.css" rel="stylesheet">
   </head>
   
 
