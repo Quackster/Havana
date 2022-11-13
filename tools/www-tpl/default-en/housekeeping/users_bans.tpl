@@ -5,6 +5,7 @@
      <h1 class="mt-4">View and manage bans</h1>
 		{% include "housekeeping/base/alert.tpl" %}
 		<p>Manage all currently active bans on the hotel</p>
+			<div style="margin:10px">
 			{% if nextBans|length > 0 %}
 				{% set ourNextPage = page + 1 %}
 				<a href="{{ site.sitePath }}/{{ site.housekeepingPath }}/bans?page={{ ourNextPage }}&sort={{ sortBy }}"><button type="button" class="btn btn-info">Next Page</button></a>
@@ -13,6 +14,7 @@
 				{% set ourNextPage = page - 1 %}
 				<a href="{{ site.sitePath }}/{{ site.housekeepingPath }}/bans?page={{ ourNextPage }}&sort={{ sortBy }}"><button type="button" class="btn btn-warning">Go back</button></a>
 			{% endif %}
+			</div>
 		  <div class="table-responsive">
 		    <form method="post">
             <table class="table table-striped">
