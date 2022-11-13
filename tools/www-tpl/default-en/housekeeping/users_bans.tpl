@@ -21,8 +21,8 @@
 				  <th>Type</th>
 				  <th>Value</th>
 				  <th>Message</th>
-				  <th>Banned Util</th>
-				  <th>Banned At</th>
+				  <th><a href="{{ site.sitePath }}/{{ site.housekeepingPath }}/bans?page={{ page }}&sort=banned_until">Banned Util</a></th>
+				  <th><a href="{{ site.sitePath }}/{{ site.housekeepingPath }}/bans?page={{ page }}&sort=banned_at">Banned At</a></th>
 				  <th>Banned By</th>
                 </tr>
               </thead>
