@@ -13,6 +13,7 @@ import org.alexdev.havana.util.DateUtil;
 import org.alexdev.havana.util.config.GameConfiguration;
 import org.alexdev.http.util.RconUtil;
 
+import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.concurrent.TimeUnit;
 
@@ -39,7 +40,7 @@ public class HabboClubHabblet {
         template.render();
     }
 
-    public static void subscribe(WebConnection webConnection) {
+    public static void subscribe(WebConnection webConnection) throws SQLException {
         if (!webConnection.session().getBoolean("authenticated")) {
             return;
         }

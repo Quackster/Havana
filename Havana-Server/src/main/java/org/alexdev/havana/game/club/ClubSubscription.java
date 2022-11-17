@@ -80,7 +80,7 @@ public class ClubSubscription {
      * @param playerDetails the details of the player that subscribed
      * @param choice the subscription choice
      */
-    public static boolean subscribeClub(PlayerDetails playerDetails, int choice) {
+    public static boolean subscribeClub(PlayerDetails playerDetails, int choice) throws SQLException {
         var choiceData = getChoiceData(choice);
 
         int credits = choiceData.getKey();
@@ -123,6 +123,17 @@ public class ClubSubscription {
 
         PlayerDao.saveSubscription(playerDetails.getId(), playerDetails.getFirstClubSubscription(), playerDetails.getClubExpiration());
         CurrencyDao.decreaseCredits(playerDetails, credits);
+
+        TransactionDao.createTransaction(
+            playerDetails.getId(),
+            "0",
+            "0",
+            days,
+            "Habbo Club purchase",
+            credits,
+            0,
+            true
+        );
 
         return true;
     }
