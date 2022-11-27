@@ -198,17 +198,9 @@ Download the [havana_www.zip](https://www.mediafire.com/file/x94neh4qbu3l2s2/hav
 
 *(This is the default directory for static content within the Havana-Web project, but the directory where it looks for static images can be configured in the Housekeeping settings).*
 
-Open Havana-Web.jar via
+Start Havana-Web via start_web.sh (Unix/Linux distros) or start_web.bat (Windows)
 
-```
-java -jar Havana-Web.jar
-```
-
-Open Havana-Server.jar via
-
-```
-java -jar Havana-Server.jar
-```
+Start Havana-Server via start_server.sh (Unix/Linux distros) or start_server.bat (Windows)
 
 Your server should be up and running and accessible via http://localhost/
 

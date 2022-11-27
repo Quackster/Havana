@@ -115,28 +115,36 @@ public class BanDao {
         }
     }
 
-    public static List<Ban> getActiveBans() {
+    public static List<Ban> getActiveBans(int page, String sortBy) {
         List<Ban> banList = new ArrayList<>();
 
-        Connection sqlConnection = null;
-        PreparedStatement preparedStatement = null;
-        ResultSet resultSet = null;
+        int rows = 25;
+        int nextOffset = page * rows;
 
-        try {
-            sqlConnection = Storage.getStorage().getConnection();
-            preparedStatement = Storage.getStorage().prepare("SELECT * FROM users_bans WHERE is_active = 1 ORDER BY banned_at DESC", sqlConnection);
-            resultSet =  preparedStatement.executeQuery();
+        if (nextOffset >= 0) {
+            Connection sqlConnection = null;
+            PreparedStatement preparedStatement = null;
+            ResultSet resultSet = null;
 
-            while (resultSet.next()) {
-                banList.add(new Ban(BanType.valueOf(resultSet.getString("ban_type")), resultSet.getString("banned_value"), resultSet.getString("message"), resultSet.getTime("banned_until").getTime() / 1000L,
-                        resultSet.getTime("banned_at").getTime() / 1000L, resultSet.getInt("banned_by")));
+            try {
+                sqlConnection = Storage.getStorage().getConnection();
+                preparedStatement = Storage.getStorage().prepare("SELECT * FROM users_bans WHERE is_active = 1 ORDER BY " + sortBy + " DESC LIMIT ? OFFSET ?", sqlConnection);
+                preparedStatement.setInt(1, rows);
+                preparedStatement.setInt(2, nextOffset);
+
+                resultSet = preparedStatement.executeQuery();
+
+                while (resultSet.next()) {
+                    banList.add(new Ban(BanType.valueOf(resultSet.getString("ban_type")), resultSet.getString("banned_value"), resultSet.getString("message"), resultSet.getTime("banned_until").getTime() / 1000L,
+                            resultSet.getTime("banned_at").getTime() / 1000L, resultSet.getInt("banned_by")));
+                }
+            } catch (Exception e) {
+                Storage.logError(e);
+            } finally {
+                Storage.closeSilently(sqlConnection);
+                Storage.closeSilently(preparedStatement);
+                Storage.closeSilently(resultSet);
             }
-        } catch (Exception e) {
-            Storage.logError(e);
-        } finally {
-            Storage.closeSilently(sqlConnection);
-            Storage.closeSilently(preparedStatement);
-            Storage.closeSilently(resultSet);
         }
 
         return banList;

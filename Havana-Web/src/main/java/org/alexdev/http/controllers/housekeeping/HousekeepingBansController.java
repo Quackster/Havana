@@ -15,6 +15,21 @@ public class HousekeepingBansController {
             return;
         }
 
+        int currentPage = 0;
+
+        if (client.get().contains("page")) {
+            currentPage = Integer.parseInt(client.get().getString("page"));
+        }
+
+        String sortBy = "banned_at";
+
+        if (client.get().contains("sort")) {
+            if (client.get().getString("sort").equals("banned_at") ||
+                    client.get().getString("sort").equals("banned_until")) {
+                sortBy = client.get().getString("sort");
+            }
+        }
+
         Template tpl = client.template("housekeeping/users_bans");
         tpl.set("housekeepingManager", HousekeepingManager.getInstance());
 
@@ -25,7 +40,12 @@ public class HousekeepingBansController {
             return;
         }
 
-        tpl.set("bans", BanDao.getActiveBans());
+        tpl.set("pageName", "Bans");
+        tpl.set("bans", BanDao.getActiveBans(currentPage, sortBy));
+        tpl.set("nextBans", BanDao.getActiveBans(currentPage + 1, sortBy));
+        tpl.set("previousBans", BanDao.getActiveBans(currentPage - 1, sortBy));
+        tpl.set("page", currentPage);
+        tpl.set("sortBy", sortBy);
         tpl.render();
 
         // Delete alert after it's been rendered
