@@ -16,4 +16,28 @@ public class HousekeepingStats {
         this.petCount = petCount;
         this.photoCount = photoCount;
     }
+
+    public int getUserCount() {
+        return userCount;
+    }
+
+    public int getInventoryItemsCount() {
+        return inventoryItemsCount;
+    }
+
+    public int getRoomItemCount() {
+        return roomItemCount;
+    }
+
+    public int getGroupCount() {
+        return groupCount;
+    }
+
+    public int getPetCount() {
+        return petCount;
+    }
+
+    public int getPhotoCount() {
+        return photoCount;
+    }
 }
