@@ -56,7 +56,7 @@
                   <td>{{ player.id }}</td>
                   <td><a href="{{ site.sitePath }}/{{ site.housekeepingPath }}/users/edit?id={{ player.id }}">{{ player.name }}</a></td>
 				  <td>{{ player.email }}</td>
-				  <td><img src="https://www.habbo.com.tr/habbo-imaging/avatarimage?figure={{ player.figure }}&size=s"></td>
+				  <td><img src="{{ site.habboImagingPath }}/habbo-imaging/avatarimage?figure={{ player.figure }}&size=s"></td>
                   <td>{{ player.mission }}</td>
                   <td>{{ player.credits }}</td>
                   <td>{{ player.pixels }}</td>
