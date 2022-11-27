@@ -7,9 +7,9 @@
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
     <title>{{ site.siteName }}: Housekeeping</title>
-    <link href="{{ site.sitePath }}/public/hk/css/bootstrap.min.css" rel="stylesheet">
-	<link href="{{ site.sitePath }}/public/hk/css/bootstrap.login.override.css" rel="stylesheet">	
-	<link href="{{ site.sitePath }}/public/hk/css/sticky-footer.css" rel="stylesheet">
+    <link href="{{ site.staticContentPath }}/public/hk/css/bootstrap.min.css" rel="stylesheet">
+	<link href="{{ site.staticContentPath }}/public/hk/css/bootstrap.login.override.css" rel="stylesheet">
+	<link href="{{ site.staticContentPath }}/public/hk/css/sticky-footer.css" rel="stylesheet">
   </head>
   <body>
 	
@@ -40,6 +40,6 @@
         <span class="text-muted">&copy; Copyright 2018 - Alex Miller</span>
       </div>
     </footer>
-    <script src="{{ site.sitePath }}/public/hk/js/ie10-viewport-bug-workaround.js"></script>
+    <script src="{{ site.staticContentPath }}/public/hk/js/ie10-viewport-bug-workaround.js"></script>
   </body>
 </html>
