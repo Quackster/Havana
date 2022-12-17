@@ -580,7 +580,7 @@ public class ItemDao {
 
         try {
             sqlConnection = Storage.getStorage().getConnection();
-            preparedStatement = Storage.getStorage().prepare("DELETE items WHERE is_hidden = 0 AND is_trading = 0 AND room_id = 0 AND user_id = ?", sqlConnection);
+            preparedStatement = Storage.getStorage().prepare("DELETE FROM items WHERE is_hidden = 0 AND is_trading = 0 AND room_id = 0 AND user_id = ?", sqlConnection);
             preparedStatement.setInt(1, userId);
             preparedStatement.execute();
 
