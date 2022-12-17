@@ -1,5 +1,6 @@
 package org.alexdev.http.util;
 
+import org.alexdev.havana.util.config.GameConfiguration;
 import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.io.IOUtils;
 
@@ -74,7 +75,7 @@ public class HtmlUtil {
     }
 
     public static String createFigureLink(String figure, String sex) {
-        return "https://cdn.classichabbo.com/habbo-imaging/avatarimage?figure=" + figure + "&size=s&direction=4&head_direction=4&crr=0&gesture=sml&frame=1";
+        return GameConfiguration.getInstance().getString("site.imaging.path") + "/habbo-imaging/avatarimage?figure=" + figure + "&size=s&direction=4&head_direction=4&crr=0&gesture=sml&frame=1";
     }
 
     public static String encodeToString(BufferedImage image, String type) {
