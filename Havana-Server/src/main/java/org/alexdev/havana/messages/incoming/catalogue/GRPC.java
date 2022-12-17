@@ -147,13 +147,14 @@ public class GRPC implements MessageEvent {
                     return;
                 }
 
-                //if (item.getDefinition().hasBehaviour(ItemBehaviour.REDEEMABLE)) {
+                if (item.getDefinition().hasBehaviour(ItemBehaviour.REDEEMABLE)) {
                 if (!player.hasFuse(Fuseright.MUTE)
-                        && giftedUserDetails.getId() != player.getDetails().getId()) {
+                        && giftedUserDetails.getId() != player.getDetails().getId()
+                        && giftedUserDetails.getIpAddress().equals(player.getDetails().getIpAddress())) {
                     RoomTradeManager.addTradeBan(player);
                     return;
                 }
-                //}
+                }
             }
 
             String presentNote = reader.readString();

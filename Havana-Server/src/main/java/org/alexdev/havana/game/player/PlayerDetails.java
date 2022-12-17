@@ -538,4 +538,8 @@ public class PlayerDetails {
     public String getPreviousRespectDay() {
         return previousRespectDay;
     }
+
+    public String getIpAddress() {
+       return PlayerDao.getLatestIp(this.getId());
+    }
 }
