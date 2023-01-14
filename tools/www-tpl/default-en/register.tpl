@@ -399,25 +399,25 @@ if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine
                 <p><b>You don't have Flash installed. This is why we can only show you a selection of pre-generated {{ site.siteName }}s. If you install Flash, you'll be able to choose from the hundreds of different options!</b></p>
                 <h3>Girls</h3>
 				                <div class="register-avatars clearfix">
-						                <div class="register-avatar" style="background-image: url(https://cdn.classichabbo.com/habbo-imaging/avatarimage?figure={{ randomFemaleFigure1 }}&size=b&direction=4&head_direction=4&crr=0&gesture=sml&frame=1)">
+						                <div class="register-avatar" style="background-image: url({{ site.sitePath }}/habbo-imaging/avatarimage?figure={{ randomFemaleFigure1 }}&size=b&direction=4&head_direction=4&crr=0&gesture=sml&frame=1)">
 	                    <input type="radio" name="randomFigure" value="F-{{ randomFemaleFigure1 }}" checked />
 	                </div>
-						                <div class="register-avatar" style="background-image: url(https://cdn.classichabbo.com/habbo-imaging/avatarimage?figure={{ randomFemaleFigure2 }}&size=b&direction=4&head_direction=4&crr=0&gesture=sml&frame=1)">
+						                <div class="register-avatar" style="background-image: url({{ site.sitePath }}/habbo-imaging/avatarimage?figure={{ randomFemaleFigure2 }}&size=b&direction=4&head_direction=4&crr=0&gesture=sml&frame=1)">
 	                    <input type="radio" name="randomFigure" value="F-{{ randomFemaleFigure2 }}" />
 	                </div>
-						                <div class="register-avatar" style="background-image: url(https://cdn.classichabbo.com/habbo-imaging/avatarimage?figure={{ randomFemaleFigure3 }}&size=b&direction=4&head_direction=4&crr=0&gesture=sml&frame=1)">
+						                <div class="register-avatar" style="background-image: url({{ site.sitePath }}/habbo-imaging/avatarimage?figure={{ randomFemaleFigure3 }}&size=b&direction=4&head_direction=4&crr=0&gesture=sml&frame=1)">
 	                    <input type="radio" name="randomFigure" value="F-{{ randomFemaleFigure3 }}" />
 	                </div>
                 </div>
                 <h3>Boys</h3>
                 <div class="register-avatars clearfix">
-						                <div class="register-avatar" style="background-image: url(https://cdn.classichabbo.com/habbo-imaging/avatarimage?figure={{ randomMaleFigure1 }}&size=b&direction=4&head_direction=4&crr=0&gesture=sml&frame=1)">
+						                <div class="register-avatar" style="background-image: url({{ site.sitePath }}/habbo-imaging/avatarimage?figure={{ randomMaleFigure1 }}&size=b&direction=4&head_direction=4&crr=0&gesture=sml&frame=1)">
 	                    <input type="radio" name="randomFigure" value="M-{{ randomMaleFigure1 }}" />
 	                </div>
-						                <div class="register-avatar" style="background-image: url(https://cdn.classichabbo.com/habbo-imaging/avatarimage?figure={{ randomMaleFigure2 }}&size=b&direction=4&head_direction=4&crr=0&gesture=sml&frame=1)">
+						                <div class="register-avatar" style="background-image: url({{ site.sitePath }}/habbo-imaging/avatarimage?figure={{ randomMaleFigure2 }}&size=b&direction=4&head_direction=4&crr=0&gesture=sml&frame=1)">
 	                    <input type="radio" name="randomFigure" value="M-{{ randomMaleFigure2 }}" />
 	                </div>
-						                <div class="register-avatar" style="background-image: url(https://cdn.classichabbo.com/habbo-imaging/avatarimage?figure={{ randomMaleFigure3 }}&size=b&direction=4&head_direction=4&crr=0&gesture=sml&frame=1)">
+						                <div class="register-avatar" style="background-image: url({{ site.sitePath }}/habbo-imaging/avatarimage?figure={{ randomMaleFigure3 }}&size=b&direction=4&head_direction=4&crr=0&gesture=sml&frame=1)">
 	                    <input type="radio" name="randomFigure" value="M-{{ randomMaleFigure3 }}" />
 	                </div>
 	            </div>

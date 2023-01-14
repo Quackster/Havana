@@ -99,7 +99,7 @@ body { behavior: url({{ site.staticContentPath }}/web-gallery/js/csshover.htc); 
 
 						<div id="collectible-current-content" class="clearfix">
 {% if hasCollectable %}
-		<div id="collectibles-current-img" style="background-image: url(https://cdn.classichabbo.com/habbo-imaging/furni?sprite={{ collectableSprite }}&direction=2&canvas=transparent)"></div>
+		<div id="collectibles-current-img" style="background-image: url({{ site.sitePath }}/habbo-imaging/furni?sprite={{ collectableSprite }}&direction=2&canvas=transparent)"></div>
 		<h4>{{ collectableName }}</h4>
 		<p>March 2019</p>
 			<p class="last">{{ collectableDescription }}</p>
@@ -141,7 +141,7 @@ body { behavior: url({{ site.staticContentPath }}/web-gallery/js/csshover.htc); 
 	<li class="odd clearfix">
 	{% endif %}
 	
-	<div class="collectibles-prodimg" style="background-image: url(https://cdn.classichabbo.com/habbo-imaging/furni?sprite={{ entry.getSprite() }}&direction=2&icon=1&canvas=transparent);"></div>
+	<div class="collectibles-prodimg" style="background-image: url({{ site.sitePath }}/habbo-imaging/furni?sprite={{ entry.getSprite() }}&direction=2&icon=1&canvas=transparent);"></div>
 	<h4>{{ entry.getName() }}</h4>
 	<p class="collectibles-proddesc last">{{ entry.getDescription() }}</p>
 	

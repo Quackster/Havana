@@ -94,11 +94,11 @@
 		{% endif %}
 		<div class="post-list-posts post-list-creator-info">Messages: {{ reply.getForumMessages() }}</div>
 		<div class="clearfix">
-            <div class="post-list-creator-avatar"><img src="{{ site.habboImagingPath }}/habbo-imaging/avatarimage?figure={{ reply.getFigure() }}&size=b&direction=2&head_direction=2&crr=0&gesture=&frame=1" alt="" /></div>
+            <div class="post-list-creator-avatar"><img src="{{ site.sitePath }}/habbo-imaging/avatarimage?figure={{ reply.getFigure() }}&size=b&direction=2&head_direction=2&crr=0&gesture=&frame=1" alt="" /></div>
             <div class="post-list-group-badge">
 			{% if reply.hasGroupBadge() %}
 			<a href="{{ site.sitePath }}/groups/{{ reply.getGroupId() }}/id">
-				<img src="{{ site.habboImagingPath }}/habbo-imaging/badge/{{ reply.getGroupBadge() }}.gif" /></a>           
+				<img src="{{ site.sitePath }}/habbo-imaging/badge/{{ reply.getGroupBadge() }}.gif" /></a>           
 			</div>
 			{% endif %}
 			{% if reply.hasBadge() %}

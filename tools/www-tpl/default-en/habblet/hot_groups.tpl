@@ -21,7 +21,7 @@
 				{% else %}
 					{% set status = "even" %}
 				{% endif %}
-				<li class="{{ status }} {{ position }}" style="background-image: url({{ site.habboImagingPath }}/habbo-imaging/badge/{{ group.badge }}.gif)">
+				<li class="{{ status }} {{ position }}" style="background-image: url({{ site.sitePath }}/habbo-imaging/badge/{{ group.badge }}.gif)">
 						<a class="item" href="{{ group.generateClickLink() }}">{% autoescape 'html' %}{{ group.name }}{% endautoescape %}</a>
         </li>
 				{% set i = i + 1 %}

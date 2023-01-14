@@ -281,6 +281,7 @@ public class Routes {
         RouteManager.addRoute("/api/advertisement/get_url", AdvertisementController::getUrl);
         RouteManager.addRoute("/api/verify/get/*", VerifyController::get);
         RouteManager.addRoute("/api/verify/clear/*", VerifyController::clear);
+        RouteManager.addRoute("/habbo-imaging/*", ImagerController::imager_redirect);
 
         // Housekeeping
         RouteManager.addRoute("/" + HOUSEKEEPING_PATH + "", HousekeepingController::dashboard);

@@ -146,7 +146,7 @@ body { behavior: url({{ site.staticContentPath }}/web-gallery/js/csshover.htc); 
 			{% if playerDetails.motto.toLowerCase() == "crikey" %}
 			<img src='{{ site.staticContentPath }}/web-gallery/images/sticker_croco.gif' style='margin-top: 57px'>
 			{% else %}
-			<img alt="{{ playerDetails.getName() }}" src="{{ site.habboImagingPath }}/habbo-imaging/avatarimage?figure={{ playerDetails.figure }}&size=b&direction=3&head_direction=3&crr=0&gesture=sml&frame=1" width="64" height="110" />
+			<img alt="{{ playerDetails.getName() }}" src="{{ site.sitePath }}/habbo-imaging/avatarimage?figure={{ playerDetails.figure }}&size=b&direction=3&head_direction=3&crr=0&gesture=sml&frame=1" width="64" height="110" />
 			{% endif %}
 		</a>
 	</div>
@@ -702,7 +702,7 @@ body { behavior: url({{ site.staticContentPath }}/web-gallery/js/csshover.htc); 
 			{% endif %}
 	
 			{% set i = i + 1 %}
-			<li class="{{ status }} {{ position }}" style="background-image: url({{ site.habboImagingPath }}/habbo-imaging/badge/{{ group.badge }}.gif)">
+			<li class="{{ status }} {{ position }}" style="background-image: url({{ site.sitePath }}/habbo-imaging/badge/{{ group.badge }}.gif)">
 				<a class="item" href="{{ group.generateClickLink() }}">{{ group.getName }}</a>
 			</li>
 		{% endfor %}
@@ -741,7 +741,7 @@ body { behavior: url({{ site.staticContentPath }}/web-gallery/js/csshover.htc); 
 								{% else %}
 									{% set status = "odd" %}
 								{% endif %}
-								<li class="{{ status }} {{ position }}" style="background-image: url({{ site.habboImagingPath }}/habbo-imaging/badge/{{ group.badge }}.gif)">
+								<li class="{{ status }} {{ position }}" style="background-image: url({{ site.sitePath }}/habbo-imaging/badge/{{ group.badge }}.gif)">
 									{% if group.getRoomId() > 0 %}
 									<a href="{{ site.sitePath }}/client?forwardId=2&amp;roomId=1" onclick="HabboClient.roomForward(this, '1', 'private'); return false;" target="client" class="group-room"></a>     
 									{% endif %}
@@ -839,7 +839,7 @@ document.observe("dom:loaded", function() {
 				{% else %}
 					{% set status = "even" %}
 				{% endif %}
-				<li class="{{ status }} {{ position }}" style="background-image: url({{ site.habboImagingPath }}/habbo-imaging/badge/{{ group.badge }}.gif)">
+				<li class="{{ status }} {{ position }}" style="background-image: url({{ site.sitePath }}/habbo-imaging/badge/{{ group.badge }}.gif)">
 						<a class="item" href="{{ group.generateClickLink() }}">{% autoescape 'html' %}{{ group.name }}{% endautoescape %}</a>
         </li>
 				{% set i = i + 1 %}

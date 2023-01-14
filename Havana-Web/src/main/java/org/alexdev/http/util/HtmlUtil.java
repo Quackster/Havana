@@ -74,7 +74,7 @@ public class HtmlUtil {
     }
 
     public static String createFigureLink(String figure, String sex) {
-        return "https://cdn.classichabbo.com/habbo-imaging/avatarimage?figure=" + figure + "&size=s&direction=4&head_direction=4&crr=0&gesture=sml&frame=1";
+        return "{{ site.habboImagingPath }}/habbo-imaging/avatarimage?figure=" + figure + "&size=s&direction=4&head_direction=4&crr=0&gesture=sml&frame=1";
     }
 
     public static String encodeToString(BufferedImage image, String type) {

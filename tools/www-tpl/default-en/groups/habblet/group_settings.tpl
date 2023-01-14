@@ -3,7 +3,7 @@
   <div id="group-settings">
     <div id="group-settings-data" class="group-settings-pane">
       <div id="group-logo">
-        <img src="{{ site.habboImagingPath }}/habbo-imaging/badge/b0503Xs09114s05013s05015.gif" />
+        <img src="{{ site.sitePath }}/habbo-imaging/badge/b0503Xs09114s05013s05015.gif" />
       </div>
       <div id="group-identity-area">
         <div id="group-name-area">

@@ -16,7 +16,7 @@
 	<div class="widget-body">
 		<div class="widget-content">
 		{% autoescape 'html' %}
-<div class="group-info-icon"><img src="{{ site.habboImagingPath }}/habbo-imaging/badge/{{ group.getBadge() }}.gif" /></div>
+<div class="group-info-icon"><img src="{{ site.sitePath }}/habbo-imaging/badge/{{ group.getBadge() }}.gif" /></div>
 	    <img id="groupname-{{ group.id }}-report" class="report-button report-gn"
 			alt="report"
 			src="{{ site.staticContentPath }}/web-gallery/images/myhabbo/buttons/report_button.gif"

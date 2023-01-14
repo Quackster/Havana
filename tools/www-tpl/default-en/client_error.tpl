@@ -29,7 +29,7 @@ var habboName = "Alex";
 var ad_keywords = "";
 var habboReqPath = "{{ site.sitePath }}";
 var habboStaticFilePath = "{{ site.staticContentPath }}/web-gallery";
-var habboImagerUrl = "{{ site.habboImagingPath }}/habbo-imaging/";
+var habboImagerUrl = "{{ site.sitePath }}/habbo-imaging/";
 var habboPartner = "";
 window.name = "client";
 if (typeof HabboClient != "undefined") { HabboClient.windowName = "client"; }

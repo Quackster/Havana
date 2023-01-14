@@ -6,7 +6,7 @@
 	
 	<li id="guestbook-entry-{{ entry.getId() }}" class="guestbook-entry">
 		<div class="guestbook-author">
-			<img src="{{ site.habboImagingPath }}/habbo-imaging/avatarimage?figure={{ entry.getUser().getFigure() }}&size=s&direction=4&head_direction=4&crr=0&gesture=&frame=1" alt="Alex" title="Alex"/>
+			<img src="{{ site.sitePath }}/habbo-imaging/avatarimage?figure={{ entry.getUser().getFigure() }}&size=s&direction=4&head_direction=4&crr=0&gesture=&frame=1" alt="Alex" title="Alex"/>
 		</div>
 			{% if hasDeletePermission %}
 			<div class="guestbook-actions">
