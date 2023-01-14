@@ -1,7 +1,7 @@
 <div class="groups-info-basic">
 	<div class="groups-info-close-container"><a href="#" class="groups-info-close"></a></div>
 	
-	<div class="groups-info-icon"><a href="{{ group.generateClickLink() }}"><img src="{{ site.habboImagingPath }}/habbo-imaging/badge/{{ group.getBadge() }}.gif" /></a></div>
+	<div class="groups-info-icon"><a href="{{ group.generateClickLink() }}"><img src="{{ site.sitePath }}/habbo-imaging/badge/{{ group.getBadge() }}.gif" /></a></div>
 	<h4><a href="{{ group.generateClickLink() }}"></a></h4>
 	    <img id="groupname-{{ group.getId }}-report" class="report-button report-gn"
 			alt="report"

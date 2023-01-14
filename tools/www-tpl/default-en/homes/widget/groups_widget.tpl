@@ -25,7 +25,7 @@ You are not a member of any Groups</div>
 
 {% for group in groupsList %}
 <li title="{{ group.getName() }}" id="groups-list-{{ sticker.getId() }}-{{ group.getId() }}">
-		<div class="groups-list-icon"><a href="{{ group.generateClickLink() }}"><img src="{{ site.habboImagingPath }}/habbo-imaging/badge/{{ group.getBadge() }}.gif"/></a></div>
+		<div class="groups-list-icon"><a href="{{ group.generateClickLink() }}"><img src="{{ site.sitePath }}/habbo-imaging/badge/{{ group.getBadge() }}.gif"/></a></div>
 		<div class="groups-list-open"></div>
 		<h4>
 		{% autoescape 'html' %}

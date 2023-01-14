@@ -29,7 +29,7 @@
 					{% if habboTag.getUserId() > 0 %}
 					{% set player = habboTag.getUserData() %}
 					<td class="image" style="width:39px;">
-						<img src="{{ site.habboImagingPath }}/habbo-imaging/avatarimage?figure={{ player.figure }}&size=s" alt="" align="left"/>
+						<img src="{{ site.sitePath }}/habbo-imaging/avatarimage?figure={{ player.figure }}&size=s" alt="" align="left"/>
 					</td>
 					<td class="text">
 						<a href="{{ site.sitePath }}/home/{{ player.getName() }}" class="result-title">{{ player.getName() }}</a><br/>
@@ -45,7 +45,7 @@
 					{% if habboTag.getGroupId() > 0 %}
 					{% set group = habboTag.getGroupData() %}
 					<td class="image" style="width:39px;">
-						<img src="{{ site.habboImagingPath }}/habbo-imaging/badge/{{ group.getBadge() }}.gif" alt="" align="left"/>
+						<img src="{{ site.sitePath }}/habbo-imaging/badge/{{ group.getBadge() }}.gif" alt="" align="left"/>
 					</td>
 					<td class="text">
 						<a href="{{ group.generateClickLink() }}" class="result-title">{{ group.getName() }}</a><br/>

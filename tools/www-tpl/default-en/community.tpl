@@ -326,7 +326,7 @@ var discussionMoreDataHelper = new MoreDataHelper("discussions-toggle-more-data-
                     </div>
                 </div>
                 <input type="hidden" id="active-habbo-url-{{ num }}" value="{{ site.sitePath }}/home/{{ habbo.getName() }}"/>
-                <input type="hidden" id="active-habbo-image-{{ num }}" class="active-habbo-image" value="{{ site.habboImagingPath }}/habbo-imaging/avatarimage?figure={{ habbo.getFigure() }}&size=b&direction=4&head_direction=4&crr=0&gesture=sml&frame=1
+                <input type="hidden" id="active-habbo-image-{{ num }}" class="active-habbo-image" value="{{ site.sitePath }}/habbo-imaging/avatarimage?figure={{ habbo.getFigure() }}&size=b&direction=4&head_direction=4&crr=0&gesture=sml&frame=1
 " />
 {% set num = num + 1 %}
 {% endfor %}

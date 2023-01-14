@@ -27,7 +27,7 @@
 {% if friends > 0 %}
 	{% for friend in friendsList %}
 		<li id="avatar-list-{{ sticker.getId() }}-{{ friend.getUserId() }}" title="{{ friend.getUsername() }}"><div class="avatar-list-open"><a href="#" id="avatar-list-open-link-{{ sticker.getId() }}-{{ friend.getUserId() }}" class="avatar-list-open-link"></a></div>
-	<div class="avatar-list-avatar"><img src="{{ site.habboImagingPath }}/habbo-imaging/avatarimage?figure={{ friend.getFigure() }}&size=s&direction=4&head_direction=4&crr=0&gesture=&frame=1" alt="" /></div>
+	<div class="avatar-list-avatar"><img src="{{ site.sitePath }}/habbo-imaging/avatarimage?figure={{ friend.getFigure() }}&size=s&direction=4&head_direction=4&crr=0&gesture=&frame=1" alt="" /></div>
 	<h4><a href="{{ site.sitePath }}/home/{{ friend.getUsername() }}">{{ friend.getUsername() }}</a></h4>
 	<p class="avatar-list-birthday">{{ friend.getFormatLastOnline("dd-MM-yyyy") }}</p>
 	<p>

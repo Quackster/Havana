@@ -10,11 +10,11 @@
 		<div class="post-list-posts post-list-creator-info">Messages: {{ userReplies }}</div>
 		<div class="clearfix">
             <div class="post-list-creator-avatar">
-			<img src="{{ site.habboImagingPath }}/habbo-imaging/avatarimage?figure={{ playerDetails.figure }}&size=b&direction=2&head_direction=2&crr=0&gesture=&frame=1" alt="" />
+			<img src="{{ site.sitePath }}/habbo-imaging/avatarimage?figure={{ playerDetails.figure }}&size=b&direction=2&head_direction=2&crr=0&gesture=&frame=1" alt="" />
 			</div>
 			{% if hasGroup %}
             <div class="post-list-group-badge">
-                <a href="{{ site.sitePath }}/groups/{{ groupId }}/id"><img src="{{ site.habboImagingPath }}/habbo-imaging/badge/{{ groupBadge }}.gif" /></a>            </div>
+                <a href="{{ site.sitePath }}/groups/{{ groupId }}/id"><img src="{{ site.sitePath }}/habbo-imaging/badge/{{ groupBadge }}.gif" /></a>            </div>
 			{% endif %}
 			{% if hasBadge %}
             <div class="post-list-avatar-badge">

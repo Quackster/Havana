@@ -2,7 +2,7 @@
 <ul class="habblet-list">
 				{% set num = 0 %}
 					{% for details in searchResults %}
-						{% if num % 2 == 0 %}<li class="even {% else %}<li class="odd{% endif %} offline" homeurl="{{ site.sitePath }}/home/{{ details.getName() }}" style="background-image: url({{ site.habboImagingPath }}/habbo-imaging/avatarimage?figure={{ details.figure }}&size=s&direction=2&head_direction=2&crr=0&gesture=sml&frame=1)">
+						{% if num % 2 == 0 %}<li class="even {% else %}<li class="odd{% endif %} offline" homeurl="{{ site.sitePath }}/home/{{ details.getName() }}" style="background-image: url({{ site.sitePath }}/habbo-imaging/avatarimage?figure={{ details.figure }}&size=s&direction=2&head_direction=2&crr=0&gesture=sml&frame=1)">
 	            	    <div class="item">
 	            		    <b>{{ details.getName() }}</b><br />
 

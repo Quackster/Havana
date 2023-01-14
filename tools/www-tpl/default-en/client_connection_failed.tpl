@@ -31,7 +31,7 @@ document.habboLoggedIn = false;
 var habboName = null;
 var habboReqPath = "";
 var habboStaticFilePath = "{{ site.staticContentPath }}/web-gallery";
-var habboImagerUrl = "{{ site.habboImagingPath }}/habbo-imaging/";
+var habboImagerUrl = "{{ site.sitePath }}/habbo-imaging/";
 var habboPartner = "";
 window.name = "client";
 
