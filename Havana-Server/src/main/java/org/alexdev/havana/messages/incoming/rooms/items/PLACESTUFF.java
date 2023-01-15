@@ -4,8 +4,10 @@ import org.alexdev.havana.dao.mysql.ItemDao;
 import org.alexdev.havana.dao.mysql.TransactionDao;
 import org.alexdev.havana.game.fuserights.Fuseright;
 import org.alexdev.havana.game.item.Item;
+import org.alexdev.havana.game.item.ItemManager;
 import org.alexdev.havana.game.item.base.ItemBehaviour;
 import org.alexdev.havana.game.player.Player;
+import org.alexdev.havana.game.player.PlayerDetails;
 import org.alexdev.havana.game.player.PlayerManager;
 import org.alexdev.havana.game.room.Room;
 import org.alexdev.havana.game.room.managers.RoomTradeManager;
@@ -64,14 +66,17 @@ public class PLACESTUFF implements MessageEvent {
             }
         }
 
+        PlayerDetails ownerDetails = PlayerManager.getInstance().getPlayerData(room.getData().getOwnerId());
+
         // Giving credits to self on same IP is suspicious behaviour
-        //if (item.hasBehaviour(ItemBehaviour.REDEEMABLE) || ItemManager.getInstance().hasPresentBehaviour(item, ItemBehaviour.REDEEMABLE)) {
+        if (item.hasBehaviour(ItemBehaviour.REDEEMABLE) || ItemManager.getInstance().hasPresentBehaviour(item, ItemBehaviour.REDEEMABLE)) {
             if (!player.hasFuse(Fuseright.MUTE)
-                    && room.getData().getOwnerId() != player.getDetails().getId()) {
+                    && room.getData().getOwnerId() != player.getDetails().getId()
+                    && player.getDetails().getIpAddress().equals(ownerDetails.getIpAddress())) {
                 RoomTradeManager.addTradeBan(player);
                 return;
             }
-        //}
+        }
 
         var ownerData = PlayerManager.getInstance().getPlayerData(room.getData().getOwnerId());
 
