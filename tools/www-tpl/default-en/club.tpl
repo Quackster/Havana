@@ -26,7 +26,7 @@ var andSoItBegins = (new Date()).getTime();
 
 <script type="text/javascript">
 document.habboLoggedIn = {{ session.loggedIn }};
-var habboName = "{{ playerDetails.username }}";
+var habboName = "{{ playerDetails.getName() }}";
 var ad_keywords = "";
 var habboReqPath = "{{ site.sitePath }}";
 var habboStaticFilePath = "{{ site.staticContentPath }}/web-gallery";
@@ -96,7 +96,7 @@ body { behavior: url({{ site.staticContentPath }}/web-gallery/js/csshover.htc); 
 			<li class="">
 				<a href="{{ site.sitePath }}/me">Home</a>			</li>
     		<li class="">
-				<a href="{{ site.sitePath }}/home/{{ playerDetails.username }}">My Page</a>    		</li>
+				<a href="{{ site.sitePath }}/home/{{ playerDetails.getName() }}">My Page</a>    		</li>
 			<li class="">
 				<a href="{{ site.sitePath }}/profile">Account Settings</a>			</li>
 				<li class="selected{% if gameConfig.getInteger('guides.group.id') == 0 %} last{% endif %}">
