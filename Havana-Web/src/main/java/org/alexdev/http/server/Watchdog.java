@@ -82,14 +82,12 @@ public class Watchdog implements Runnable {
                     try {
                         URL url = new URL(imagerPath);
                         String hostname = url.getHost();
-                        int port = url.getPort();
+                        int port = url.getPort() == -1 ? url.getPort() : 80;
 
                         IS_IMAGER_ONLINE = isServerOnline(hostname, port);
                     } catch (MalformedURLException e) { }
 
                 }
-
-                IS_SERVER_ONLINE = isServerOnline(ServerConfiguration.getString("rcon.ip"), ServerConfiguration.getInteger("rcon.port"));
 
                 IS_SERVER_ONLINE = isServerOnline(ServerConfiguration.getString("rcon.ip"), ServerConfiguration.getInteger("rcon.port"));
                 USERS_ONLNE = Integer.parseInt(SettingsDao.getSetting("players.online"));
