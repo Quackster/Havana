@@ -42,7 +42,7 @@ public class WebSettingsConfigWriter implements ConfigWriter {
         config.put("discussions.replies.per.page", "10");
 
         config.put("alerts.gift.message", "A new gift has arrived. This time you received a %item_name%.");
-        config.put("homepage.template.file", "index");
+        config.put("homepage.template.file", "index_v32");
 
         config.put("free.month.hc.registration", "true");
 
