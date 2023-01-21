@@ -15,7 +15,9 @@ import org.alexdev.http.game.news.NewsDateKey;
 import org.alexdev.http.util.config.WebSettingsConfigWriter;
 import org.apache.commons.lang3.tuple.Pair;
 
+import java.net.MalformedURLException;
 import java.net.Socket;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -35,6 +37,7 @@ public class Watchdog implements Runnable {
     public static List<NewsArticle> NEWS_STAFF = new ArrayList<>();
 
     public static int USERS_ONLNE;
+    public static boolean IS_IMAGER_ONLINE;
     public static boolean IS_SERVER_ONLINE;
     public static int LAST_VISITS;
 
@@ -72,6 +75,21 @@ public class Watchdog implements Runnable {
 
         if (this.counter.get() % 30 == 0) {
             try {
+
+                String imagerPath = ServerConfiguration.getString("site.imager.path");
+
+                if (!imagerPath.isBlank()) {
+                    try {
+                        URL url = new URL(imagerPath);
+                        String hostname = url.getHost();
+                        int port = url.getPort();
+
+                        IS_IMAGER_ONLINE = isServerOnline(hostname, port);
+                    } catch (MalformedURLException e) { }
+
+                }
+
+                IS_SERVER_ONLINE = isServerOnline(ServerConfiguration.getString("rcon.ip"), ServerConfiguration.getInteger("rcon.port"));
 
                 IS_SERVER_ONLINE = isServerOnline(ServerConfiguration.getString("rcon.ip"), ServerConfiguration.getInteger("rcon.port"));
                 USERS_ONLNE = Integer.parseInt(SettingsDao.getSetting("players.online"));
