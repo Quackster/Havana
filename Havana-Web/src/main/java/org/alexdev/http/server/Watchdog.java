@@ -86,9 +86,7 @@ public class Watchdog implements Runnable {
                         int port = url.getPort() == -1 ? 80 : url.getPort();
 
                         IS_IMAGER_ONLINE = isServerOnline(hostname, port);
-                    } catch (MalformedURLException e) {
-                        e.printStackTrace();
-                    }
+                    } catch (MalformedURLException e) { }
 
                 }
 
