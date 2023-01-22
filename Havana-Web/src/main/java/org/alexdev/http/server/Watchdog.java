@@ -73,19 +73,22 @@ public class Watchdog implements Runnable {
         }
         }
 
+
         if (this.counter.get() % 30 == 0) {
             try {
 
-                String imagerPath = ServerConfiguration.getString("site.imaging.path");
+                String imagerPath =  GameConfiguration.getInstance().getString("site.imaging.path");
 
                 if (!imagerPath.isBlank()) {
                     try {
                         URL url = new URL(imagerPath);
                         String hostname = url.getHost();
-                        int port = url.getPort() == -1 ? url.getPort() : 80;
+                        int port = url.getPort() == -1 ? 80 : url.getPort();
 
                         IS_IMAGER_ONLINE = isServerOnline(hostname, port);
-                    } catch (MalformedURLException e) { }
+                    } catch (MalformedURLException e) {
+                        e.printStackTrace();
+                    }
 
                 }
 
