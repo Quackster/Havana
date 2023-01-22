@@ -51,7 +51,7 @@ public class BotCommand extends Command {
                 e.printStackTrace();
             }
 
-            Position bound = room.getMapping().getRandomWalkableBound(bot);
+            Position bound = room.getMapping().getRandomWalkableBound(bot, false);
 
             if (bound != null)
                 room.getEntityManager().enterRoom(bot, bound);
@@ -59,7 +59,7 @@ public class BotCommand extends Command {
 
         room.getTaskManager().scheduleTask("BotCommandTask", ()-> {
             for (Bot bot : room.getEntityManager().getEntitiesByClass(Bot.class)) {
-                Position newBound = room.getMapping().getRandomWalkableBound(bot);
+                Position newBound = room.getMapping().getRandomWalkableBound(bot, false);
 
                 if (newBound != null) {
                     bot.getRoomUser().walkTo(newBound.getX(), newBound.getY());
