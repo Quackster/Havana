@@ -290,4 +290,5 @@ ALTER TABLE `items` AUTO_INCREMENT=1;
 ALTER TABLE `users` AUTO_INCREMENT=1;
 ALTER TABLE `site_articles` AUTO_INCREMENT=1; 
 TRUNCATE `site_articles_categories`;
+TRUNCATE `settings`;
 SET FOREIGN_KEY_CHECKS = 1; 

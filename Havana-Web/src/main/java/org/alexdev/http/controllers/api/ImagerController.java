@@ -30,14 +30,14 @@ public class ImagerController {
 
         if (Watchdog.IS_IMAGER_ONLINE) {
             var reqConfig = RequestConfig.custom()
-                .setConnectTimeout(GameConfiguration.getInstance().getInteger("site.imaging.timeout"))
+                .setConnectTimeout(GameConfiguration.getInstance().getInteger("site.imaging.endpoint.timeout"))
                 .build();
 
             try (final var httpClient = HttpClientBuilder.create()
                     .setDefaultRequestConfig(reqConfig)
                     .build()) {
 
-                HttpGet request = new HttpGet(GameConfiguration.getInstance().getString("site.imaging.path") + webConnection.request().uri());
+                HttpGet request = new HttpGet(GameConfiguration.getInstance().getString("site.imaging.endpoint") + webConnection.request().uri());
                 request.addHeader(HttpHeaders.USER_AGENT, "Imager");
 
                 try (var r = httpClient.execute(request)) {
