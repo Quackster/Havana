@@ -1,8 +1,8 @@
 -- --------------------------------------------------------
 -- Host:                         127.0.0.1
--- Server version:               10.4.7-MariaDB - mariadb.org binary distribution
+-- Server version:               10.3.9-MariaDB - mariadb.org binary distribution
 -- Server OS:                    Win64
--- HeidiSQL Version:             10.2.0.5599
+-- HeidiSQL Version:             9.4.0.5125
 -- --------------------------------------------------------
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
@@ -2508,7 +2508,7 @@ CREATE TABLE IF NOT EXISTS `catalogue_sale_badges` (
   `badge_code` varchar(250) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Dumping data for table havana.catalogue_sale_badges: ~1 rows (approximately)
+-- Dumping data for table havana.catalogue_sale_badges: ~0 rows (approximately)
 DELETE FROM `catalogue_sale_badges`;
 /*!40000 ALTER TABLE `catalogue_sale_badges` DISABLE KEYS */;
 INSERT INTO `catalogue_sale_badges` (`sale_code`, `badge_code`) VALUES
@@ -4254,7 +4254,7 @@ CREATE TABLE IF NOT EXISTS `external_texts` (
   KEY `entry` (`entry`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
--- Dumping data for table havana.external_texts: ~45,430 rows (approximately)
+-- Dumping data for table havana.external_texts: ~45,716 rows (approximately)
 DELETE FROM `external_texts`;
 /*!40000 ALTER TABLE `external_texts` DISABLE KEYS */;
 INSERT INTO `external_texts` (`entry`, `text`) VALUES
@@ -50090,7 +50090,7 @@ CREATE TABLE IF NOT EXISTS `items_definitions` (
   KEY `id` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1909 DEFAULT CHARSET=utf8mb4 ROW_FORMAT=COMPACT;
 
--- Dumping data for table havana.items_definitions: ~1,908 rows (approximately)
+-- Dumping data for table havana.items_definitions: ~1,938 rows (approximately)
 DELETE FROM `items_definitions`;
 /*!40000 ALTER TABLE `items_definitions` DISABLE KEYS */;
 INSERT INTO `items_definitions` (`id`, `sprite`, `name`, `description`, `sprite_id`, `length`, `width`, `top_height`, `max_status`, `behaviour`, `interactor`, `is_tradable`, `is_recyclable`, `drink_ids`, `rental_time`, `allowed_rotations`, `heights`) VALUES
@@ -52154,7 +52154,7 @@ CREATE TABLE IF NOT EXISTS `public_items` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3464 DEFAULT CHARSET=utf8mb4 ROW_FORMAT=COMPACT;
 
--- Dumping data for table havana.public_items: ~3,460 rows (approximately)
+-- Dumping data for table havana.public_items: ~3,474 rows (approximately)
 DELETE FROM `public_items`;
 /*!40000 ALTER TABLE `public_items` DISABLE KEYS */;
 INSERT INTO `public_items` (`id`, `room_model`, `sprite`, `x`, `y`, `z`, `rotation`, `top_height`, `length`, `width`, `behaviour`, `current_program`, `teleport_to`, `swim_to`) VALUES
@@ -56450,158 +56450,9 @@ CREATE TABLE IF NOT EXISTS `settings` (
   PRIMARY KEY (`setting`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
--- Dumping data for table havana.settings: ~148 rows (approximately)
+-- Dumping data for table havana.settings: ~0 rows (approximately)
 DELETE FROM `settings`;
 /*!40000 ALTER TABLE `settings` DISABLE KEYS */;
-INSERT INTO `settings` (`setting`, `value`) VALUES
-	('afk.timer.seconds', '900'),
-	('alerts.gift.message', 'A new gift has arrived. This time you received a %item_name%.'),
-	('april.fools', 'false'),
-	('battleball.create.game.enabled', 'true'),
-	('battleball.game.lifetime.seconds', '180'),
-	('battleball.increase.points', 'true'),
-	('battleball.preparing.game.seconds', '10'),
-	('battleball.restart.game.seconds', '30'),
-	('battleball.start.minimum.active.teams', '2'),
-	('battleball.ticket.charge', '2'),
-	('carry.timer.seconds', '300'),
-	('catalogue.frontpage.input.1', 'topstory_habbo_beta.gif'),
-	('catalogue.frontpage.input.2', 'Server is in beta!'),
-	('catalogue.frontpage.input.3', 'Please bare with us while we sort out the final kinks and hitches'),
-	('catalogue.frontpage.input.4', ''),
-	('chat.spam.count', '10'),
-	('childline.group.id', '0'),
-	('club.gift.interval', '30'),
-	('club.gift.present.label', 'You have just received your monthly club gift!'),
-	('club.gift.timeunit', 'DAYS'),
-	('collectables.page', '51'),
-	('credits.scheduler.amount', '20'),
-	('credits.scheduler.interval', '15'),
-	('credits.scheduler.timeunit', 'MINUTES'),
-	('daily.credits.amount', '120'),
-	('daily.credits.wait.time', '300'),
-	('delete.chatlogs.after.x.age', '2592000'),
-	('delete.iplogs.after.x.age', '2592000'),
-	('delete.tradelogs.after.x.age', '2592000'),
-	('discussions.per.page', '10'),
-	('discussions.replies.per.page', '10'),
-	('email.smtp.enable', 'false'),
-	('email.smtp.from.email', ''),
-	('email.smtp.from.name', ''),
-	('email.smtp.host', ''),
-	('email.smtp.login.password', ''),
-	('email.smtp.login.username', ''),
-	('email.smtp.port', '465'),
-	('email.static.content.path', 'http://localhost'),
-	('enforce.strict.packet.policy', 'true'),
-	('events.category.count', '11'),
-	('events.expiry.minutes', '120'),
-	('free.month.hc.registration', 'true'),
-	('fuck.aaron', 'true'),
-	('group.default.badge', 'b0503Xs09114s05013s05015'),
-	('group.purchase.cost', '20'),
-	('groups.ids.permission.addcredits', ''),
-	('groups.ids.permission.ban', ''),
-	('groups.ids.permission.bot', ''),
-	('groups.ids.permission.checkbalance', ''),
-	('groups.ids.permission.coords', ''),
-	('groups.ids.permission.copyroom', ''),
-	('groups.ids.permission.dc', ''),
-	('groups.ids.permission.deletebadge', ''),
-	('groups.ids.permission.giftroom', ''),
-	('groups.ids.permission.givebadge', ''),
-	('groups.ids.permission.headrotate', ''),
-	('groups.ids.permission.hotelalert', ''),
-	('groups.ids.permission.itemdebug', ''),
-	('groups.ids.permission.mute', ''),
-	('groups.ids.permission.packet', ''),
-	('groups.ids.permission.reload', ''),
-	('groups.ids.permission.removecredits', ''),
-	('groups.ids.permission.resetpw', ''),
-	('groups.ids.permission.roomalert', ''),
-	('groups.ids.permission.roommute', ''),
-	('groups.ids.permission.setconfig', ''),
-	('groups.ids.permission.shutdown', ''),
-	('groups.ids.permission.talk', ''),
-	('groups.ids.permission.teleport', ''),
-	('groups.ids.permission.tradeban', ''),
-	('groups.ids.permission.unacceptable', ''),
-	('groups.ids.permission.unban', ''),
-	('groups.ids.permission.unmute', ''),
-	('guide.completion.minutes', '4320'),
-	('guide.search.timeout.minutes', '5'),
-	('guides.group.id', '1'),
-	('habbo.experts.group.id', '0'),
-	('happy.hour.weekday.end', '18:00:00'),
-	('happy.hour.weekday.start', '17:00:00'),
-	('happy.hour.weekend.end', '13:00:00'),
-	('happy.hour.weekend.start', '12:00:00'),
-	('homepage.template.file', 'index'),
-	('hot.groups.community.limit', '8'),
-	('hot.groups.limit', '10'),
-	('hotel.check.online', 'true'),
-	('loader.dcr', 'http://localhost/dcr/v31/habbo.dcr?'),
-	('loader.external.texts', 'http://localhost/dcr/v31/gamedata/external_texts.txt?'),
-	('loader.external.variables', 'http://localhost/dcr/v31/gamedata/external_variables.txt?'),
-	('loader.game.ip', '127.0.0.1'),
-	('loader.game.port', '12321'),
-	('loader.mus.ip', '127.0.0.1'),
-	('loader.mus.port', '12322'),
-	('maintenance', 'false'),
-	('max.connections.per.ip', '2'),
-	('max.tags.groups', '20'),
-	('max.tags.users', '8'),
-	('messenger.enable.official.update.speed', 'false'),
-	('messenger.max.friends.club', '600'),
-	('messenger.max.friends.nonclub', '100'),
-	('navigator.hide.empty.public.categories', 'true'),
-	('navigator.show.hidden.rooms', 'false'),
-	('normalise.input.strings', 'false'),
-	('pixels.max.tries.single.room.instance', '2147483647'),
-	('pixels.received.interval', '10'),
-	('pixels.received.timeunit', 'MINUTES'),
-	('players.all.time.peak', '0'),
-	('players.daily.peak', '0'),
-	('players.daily.peak.date', '04-09-2022'),
-	('players.online', '0'),
-	('profile.editing', 'false'),
-	('regenerate.map.enabled', 'true'),
-	('regenerate.map.interval', '1'),
-	('registration.disabled', 'false'),
-	('reset.sso.after.login', 'true'),
-	('reward.credits.loser.range', '0-4'),
-	('reward.credits.winner.range', '10-20'),
-	('roller.tick.default', '2000'),
-	('room.ads', 'true'),
-	('room.dispose.timer.enabled', 'true'),
-	('room.dispose.timer.seconds', '30'),
-	('room.intersitial.ads', 'true'),
-	('seasonal.items', 'false'),
-	('shutdown.minutes', '1'),
-	('site.imaging.path', 'http://localhost'),
-	('site.name', 'Habbo'),
-	('site.path', 'http://localhost'),
-	('sleep.timer.seconds', '300'),
-	('snowstorm.create.game.enabled', 'true'),
-	('snowstorm.game.lifetime.seconds', '0'),
-	('snowstorm.increase.points', 'true'),
-	('snowstorm.preparing.game.seconds', '10'),
-	('snowstorm.restart.game.seconds', '30'),
-	('snowstorm.start.minimum.active.teams', '2'),
-	('snowstorm.ticket.charge', '2'),
-	('stack.height.limit', '8'),
-	('static.content.path', 'http://localhost'),
-	('talk.bubble.timeout.seconds', '15'),
-	('talk.garbled.text', 'true'),
-	('trade.email.verification', 'false'),
-	('tutorial.enabled', 'false'),
-	('vouchers.enabled', 'true'),
-	('walk.spam.count', '10'),
-	('welcome.message.content', 'Hello, %username%! And welcome to the Havana server!'),
-	('welcome.message.enabled', 'false'),
-	('wordfilter.word.replacement', 'bobba'),
-	('wordfitler.enabled', 'true'),
-	('xp.monthly.expiry', '04-09');
 /*!40000 ALTER TABLE `settings` ENABLE KEYS */;
 
 -- Dumping structure for table havana.settings_effects
@@ -57220,7 +57071,7 @@ INSERT INTO `wordfilter` (`id`, `word`, `is_bannable`, `is_filterable`) VALUES
 -- Dumping structure for view havana.vw_users_hc_duplicates
 -- Removing temporary table and create final VIEW structure
 DROP TABLE IF EXISTS `vw_users_hc_duplicates`;
-CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `vw_users_hc_duplicates` AS select count(0) AS `gift_count`,`users_club_gifts`.`user_id` AS `user_id`,`users_club_gifts`.`sprite` AS `sprite`,`users_club_gifts`.`date_received` AS `date_received` from `users_club_gifts` group by `users_club_gifts`.`user_id`,`users_club_gifts`.`date_received`,`users_club_gifts`.`sprite` having count(0) > 1 order by count(0) desc ;
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` VIEW `vw_users_hc_duplicates` AS select count(0) AS `gift_count`,`users_club_gifts`.`user_id` AS `user_id`,`users_club_gifts`.`sprite` AS `sprite`,`users_club_gifts`.`date_received` AS `date_received` from `users_club_gifts` group by `users_club_gifts`.`user_id`,`users_club_gifts`.`date_received`,`users_club_gifts`.`sprite` having count(0) > 1 order by count(0) desc ;
 
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
 /*!40014 SET FOREIGN_KEY_CHECKS=IF(@OLD_FOREIGN_KEY_CHECKS IS NULL, 1, @OLD_FOREIGN_KEY_CHECKS) */;
