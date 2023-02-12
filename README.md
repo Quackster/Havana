@@ -181,7 +181,7 @@ To be honest, this server doesn't require much. I'd argue that the MariaDB serve
 - JDK >= 17
 - MariaDB server
 
-I recommend setting up your own 2009 figure image renderer with the project I've created [here](https://github.com/Quackster/Minerva) to render Habbo looks on the website - and then set the endpoint in settings for value ``site.imager.path``.
+I recommend setting up your own 2009 figure image renderer with the project I've created [here](https://github.com/Quackster/Minerva) to render Habbo looks on the website - and then set the endpoint in settings for value ``site.imager.endpoint``.
 
 # Installation
 

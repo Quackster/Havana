@@ -77,7 +77,7 @@ public class Watchdog implements Runnable {
         if (this.counter.get() % 30 == 0) {
             try {
 
-                String imagerPath =  GameConfiguration.getInstance().getString("site.imaging.path");
+                String imagerPath =  GameConfiguration.getInstance().getString("site.imaging.endpoint");
 
                 if (!imagerPath.isBlank()) {
                     try {

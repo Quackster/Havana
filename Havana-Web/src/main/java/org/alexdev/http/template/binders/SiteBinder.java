@@ -33,7 +33,6 @@ public class SiteBinder implements TemplateBinder {
     private int visits;
     private String housekeepingPath;
     private String staticContentPath;
-    private String habboImagingPath;
 
     private String loaderFlashBase;
     private String loaderFlashSwf;
@@ -63,8 +62,6 @@ public class SiteBinder implements TemplateBinder {
 
         this.emailStaticPath = GameConfiguration.getInstance().getString("email.static.content.path");
         this.emailHotelName = StringUtils.capitalise(GameConfiguration.getInstance().getString("site.path").replace("https://", "").replace("http://", "").replace("/", ""));
-
-        this.habboImagingPath = GameConfiguration.getInstance().getString("site.imaging.path");//"https://alex-dev.org";
 
         this.loaderGameIp = GameConfiguration.getInstance().getString("loader.game.ip");
         this.loaderGamePort = GameConfiguration.getInstance().getString("loader.game.port");
@@ -155,10 +152,6 @@ public class SiteBinder implements TemplateBinder {
 
     public String getStaticContentPath() {
         return staticContentPath;
-    }
-
-    public String getHabboImagingPath() {
-        return habboImagingPath;
     }
 
     public String getLoaderFlashBase() {
