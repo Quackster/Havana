@@ -14,10 +14,6 @@ public class CommunityController {
         XSSUtil.clear(webConnection);
         var template = webConnection.template("community");
 
-        if (!webConnection.session().contains("authenticated")) {
-            return;
-        }
-
         /*
         if (CacheManager.useCachePage(webConnection, "community")) {
             webConnection.send(CacheManager.getPage(webConnection, "community"));
