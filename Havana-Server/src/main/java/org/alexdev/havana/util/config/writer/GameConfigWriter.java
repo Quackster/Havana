@@ -85,6 +85,21 @@ public class GameConfigWriter implements ConfigWriter {
         config.put("events.category.count", "11");
         config.put("events.expiry.minutes", "120");
 
+        config.put("rare.cycle.page.text", "Okay this thing is fucking epic!<br><br>The time until the next rare is {rareCountdown}!");
+        config.put("rare.cycle.tick.time", "0");
+        config.put("rare.cycle.page.id", "143");
+        config.put("rare.cycle.refresh.timeunit", "DAYS");
+        config.put("rare.cycle.refresh.interval", "1");
+
+        config.put("rare.cycle.reuse.timeunit", "DAYS");
+        config.put("rare.cycle.reuse.interval", "7");
+
+        config.put("rare.cycle.reuse.throne.timeunit", "DAYS");
+        config.put("rare.cycle.reuse.throne.interval", "30");
+
+        // Catalogue pages for rare items, delimetered by pipe, first integer is page ID and second number is the amount of hours required for that rare to be affordable
+        config.put("rare.cycle.pages", "28,3|29,3|31,3|32,3|33,3|34,3|35,3|36,3|40,3|43,3|30,6|37,6|38,6|39,6|44,6");
+
         config.put("club.gift.timeunit", "DAYS");
         config.put("club.gift.interval", "30");
         config.put("club.gift.present.label", "You have just received your monthly club gift!");

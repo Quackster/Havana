@@ -3,6 +3,7 @@ package org.alexdev.havana.game;
 import org.alexdev.havana.dao.mysql.ClubGiftDao;
 import org.alexdev.havana.dao.mysql.CurrencyDao;
 import org.alexdev.havana.dao.mysql.EffectDao;
+import org.alexdev.havana.game.catalogue.RareManager;
 import org.alexdev.havana.game.catalogue.collectables.CollectablesManager;
 import org.alexdev.havana.game.club.ClubSubscription;
 import org.alexdev.havana.game.effects.Effect;
@@ -238,7 +239,7 @@ public class GameScheduler implements Runnable {
             }
 
             CollectablesManager.getInstance().checkExpiries();
-
+            RareManager.getInstance().performRareManagerJob(this.tickRate);
         } catch (Exception ex) {
             Log.getErrorLogger().error("GameScheduler crashed: ", ex);
         }

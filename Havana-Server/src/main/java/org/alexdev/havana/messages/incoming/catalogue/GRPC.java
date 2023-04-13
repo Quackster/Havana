@@ -3,10 +3,7 @@ package org.alexdev.havana.messages.incoming.catalogue;
 import org.alexdev.havana.dao.mysql.CurrencyDao;
 import org.alexdev.havana.dao.mysql.PlayerDao;
 import org.alexdev.havana.dao.mysql.TransactionDao;
-import org.alexdev.havana.game.catalogue.CatalogueItem;
-import org.alexdev.havana.game.catalogue.CatalogueManager;
-import org.alexdev.havana.game.catalogue.CataloguePackage;
-import org.alexdev.havana.game.catalogue.CataloguePage;
+import org.alexdev.havana.game.catalogue.*;
 import org.alexdev.havana.game.catalogue.collectables.CollectablesManager;
 import org.alexdev.havana.game.fuserights.Fuseright;
 import org.alexdev.havana.game.item.Item;
@@ -67,7 +64,7 @@ public class GRPC implements MessageEvent {
             item = seasonalItem;
         } else {
             // If the item is not a buyable special rare, then check if they can actually buy it
-            if (!CollectablesManager.getInstance().isCollectable(item)) {
+            if (!CollectablesManager.getInstance().isCollectable(item) || (RareManager.getInstance().getCurrentRare() != null && item != RareManager.getInstance().getCurrentRare())) {
                 CataloguePage page = CatalogueManager.getInstance().getCataloguePages().stream().filter(p -> finalItem.hasPage(p.getId())).findFirst().orElse(null);
 
                 if (page == null) {// || pageStream.get().getMinRole().getRankId() > player.getDetails().getRank().getRankId()) {
@@ -88,6 +85,14 @@ public class GRPC implements MessageEvent {
 
         int priceCoins = item.getPriceCoins();
         int pricePixels = item.getPricePixels();
+
+        var currentRare = RareManager.getInstance().getCurrentRare();
+
+        if (currentRare != null && currentRare == item) {
+            if (!player.hasFuse(Fuseright.CREDITS)) {
+                priceCoins = RareManager.getInstance().getRareCost().get(currentRare);
+            }
+        }
 
         if (!(player.getDetails().getRank().getRankId() >= PlayerRank.COMMUNITY_MANAGER.getRankId())) {
             if (CollectablesManager.getInstance().isCollectable(item)) {

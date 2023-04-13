@@ -8,6 +8,7 @@ import org.alexdev.havana.game.GameScheduler;
 import org.alexdev.havana.game.achievements.AchievementManager;
 import org.alexdev.havana.game.ads.AdManager;
 import org.alexdev.havana.game.catalogue.CatalogueManager;
+import org.alexdev.havana.game.catalogue.RareManager;
 import org.alexdev.havana.game.catalogue.collectables.CollectablesManager;
 import org.alexdev.havana.game.commands.CommandManager;
 import org.alexdev.havana.game.ecotron.EcotronManager;
@@ -122,6 +123,7 @@ public class Havana {
             WalkwaysManager.getInstance();
             ItemManager.getInstance();
             CatalogueManager.getInstance();
+            RareManager.getInstance();
             EcotronManager.getInstance();
             RoomModelManager.getInstance();
             RoomManager.getInstance();

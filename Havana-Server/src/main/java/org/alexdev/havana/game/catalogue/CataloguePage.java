@@ -159,6 +159,10 @@ public class CataloguePage {
         return texts;
     }
 
+    public void setTexts(List<String> texts) {
+        this.texts = texts;
+    }
+
     public String getSeasonalStartDate() {
         return seasonalStartDate;
     }
