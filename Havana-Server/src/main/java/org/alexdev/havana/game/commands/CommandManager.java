@@ -59,6 +59,7 @@ public class CommandManager {
         tempCommands.put(new String[] { "rgb", "rainbow" }, new RainbowDimmerCommand());
         tempCommands.put(new String[] { "afk", "idle" }, new AfkCommand());
         tempCommands.put(new String[] { "guidestatus" }, new GuideStatusCommand());
+        tempCommands.put(new String[] {"cl", "chatlog", "wys"}, new ChatlogCommand());
 
         // Staff commands
         tempCommands.put(new String[] { "copyroom" }, new CopyRoomCommand());

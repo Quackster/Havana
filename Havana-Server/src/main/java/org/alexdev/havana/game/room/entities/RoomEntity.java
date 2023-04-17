@@ -26,12 +26,10 @@ import org.alexdev.havana.game.wordfilter.WordfilterManager;
 import org.alexdev.havana.messages.outgoing.effects.USER_AVATAR_EFFECT;
 import org.alexdev.havana.messages.outgoing.rooms.user.*;
 import org.alexdev.havana.messages.types.MessageComposer;
+import org.alexdev.havana.util.DateUtil;
 import org.alexdev.havana.util.config.GameConfiguration;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.CopyOnWriteArrayList;
@@ -75,12 +73,15 @@ public abstract class RoomEntity {
     private int carryId;
     private String carryValue;
 
+    private long enteredRoomAt;
+
     public RoomEntity(Entity entity) {
         this.entity = entity;
         this.statuses = new ConcurrentHashMap<>();
         this.path = new LinkedList<>();
         this.packetQueueAfterRoomLeave = new LinkedBlockingQueue<MessageComposer>();
         this.timerManager = new RoomTimerManager(this);
+        this.enteredRoomAt = DateUtil.getCurrentTimeSeconds();
     }
 
     public void reset() {
@@ -103,6 +104,7 @@ public abstract class RoomEntity {
         this.pixelAvailableTick = new AtomicInteger(GameConfiguration.getInstance().getInteger("pixels.max.tries.single.room.instance"));
         this.chatMessages = new CopyOnWriteArrayList<>();
         this.timerManager.resetTimers();
+        this.enteredRoomAt = 0;
     }
 
     /**
@@ -1078,4 +1080,11 @@ public abstract class RoomEntity {
         return pixelAvailableTick;
     }
 
+    public long getEnteredRoomAt() {
+        return enteredRoomAt;
+    }
+
+    public void setEnteredRoomAt() {
+        this.enteredRoomAt = DateUtil.getCurrentTimeSeconds();
+    }
 }

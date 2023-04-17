@@ -183,6 +183,7 @@ public class RoomEntityManager {
         entity.getRoomUser().reset();
         entity.getRoomUser().setRoom(this.room);
         entity.getRoomUser().setInstanceId(this.generateUniqueId());
+        entity.getRoomUser().setEnteredRoomAt();
 
         Position entryPosition = this.room.getModel().getDoorLocation();
 
