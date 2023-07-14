@@ -4,9 +4,9 @@
 
 Originally started as a fork from [Quackster/Kepler](https://github.com/Quackster/Kepler), this is a server created in Java designed to revive Habbo Hotel v31 from the 2009 era and its inception was in early 2018 as a side project. Havana is the most complete v31+ server to date, this was undertaken by various reverse engineering efforts of the Shockwave client throughout the years to achieve this.
 
-Havana has been an independent project, almost entirely developed by [myself](https://github.com/Quackster) for 4 years straight. This project means a lot to me, and was always going to be released as open-source work. I am a firm believer in open-source and free software for everybody.
+**Join the Classic Habbo discord!** https://discord.gg/GEYbVpW
 
-*Want to see this project live?* Visit [ClassicHabbo.com](https://classicHabbo.com/) where we have been running the hotel for 4+ years straight, reviving old memories and creating new ones.
+Havana has been an independent project, almost entirely developed by [myself](https://github.com/Quackster) for 4 years straight. This project means a lot to me, and was always going to be released as open-source work. I am a firm believer in open-source and free software for everybody.
 
 Sulake used the Adobe/Macromedia Shockwave as its multimedia platform for their game (Habbo Hotel) from 2001-2009. In the last year, Habbo made the move to the Adobe Flash client, and then in 2020 made the switch to the Unity engine, while still maintaining their flash client.
 
@@ -180,8 +180,9 @@ To be honest, this server doesn't require much. I'd argue that the MariaDB serve
 
 - JDK >= 17
 - MariaDB server
+- At minimum 4 GB of RAM (to be safe)
 
-I recommend setting up your own 2009 figure image renderer with the project I've created [here](https://github.com/Quackster/Minerva) to render Habbo looks on the website - and then set the endpoint in settings for value ``site.imager.endpoint``.
+If you aim to use this for yourself, I recommend setting up your own 2009 figure image renderer with the project I've created [here](https://github.com/Quackster/Minerva) to render Habbo looks on the website.
 
 # Installation
 
@@ -189,7 +190,7 @@ Install MariaDB server, connect to the database server and import havana.sql (lo
 
 Download the latest development build from the [releases page](https://github.com/Quackster/Havana/releases) and rename the files to remove the short build hash version, for convenience. 
 
-Install any JDK version that is equal or above >= 11 to run the jar files.
+Install any JDK version that is equal or above >= 17 to run the jar files.
 
 Run both Havana-Server.jar and Havana-Web.jar at least once to generate the necessary configuration files, configure the MySQL attributes to connect to the MariaDB server.
 
@@ -207,7 +208,7 @@ I highly recommend [this browser](https://forum.ragezone.com/f353/portable-brows
 
 ❗ Once registered as an admin, I high recommend running [groups.sql](https://github.com/Quackster/Havana/blob/master/tools/groups.sql) against your database, it will create the Habbo Guides, SnowStorm, BattleBall, Wobble Squabble and Lido Diving gaming groups for the website.
 
-And then make yourself admin by setting your ``rank`` to 7 in the ``users`` table.
+And then make yourself admin by setting your ``rank`` to 8 in the ``users`` table.
 
 ### Important for Linux users
 
