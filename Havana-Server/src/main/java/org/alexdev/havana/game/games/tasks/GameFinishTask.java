@@ -24,12 +24,12 @@ import java.util.UUID;
 
 public class GameFinishTask implements Runnable {
     private final List<GamePlayer> players;
-    private final ArrayList<GameTeam> sortedTeamList;
+    private final List<GameTeam> sortedTeamList;
     private final GameType gameType;
     private final Game game;
     private final GameHistory gameHistory;
 
-    public GameFinishTask(Game game, GameHistory gameHistory, GameType gameType, ArrayList<GameTeam> sortedTeamList, List<GamePlayer> players) {
+    public GameFinishTask(Game game, GameHistory gameHistory, GameType gameType, List<GameTeam> sortedTeamList, List<GamePlayer> players) {
         this.game = game;
         this.gameHistory = gameHistory;
         this.gameType = gameType;
@@ -58,8 +58,8 @@ public class GameFinishTask implements Runnable {
 
         if (this.game.canIncreasePoints()) {
             if ((this.sortedTeamList.size() == 1 && this.sortedTeamList.get(0).getPlayers().size() > 1) || (this.sortedTeamList.size() > 1
-                    && this.sortedTeamList.get(0).getScore() > 0
-                    && this.sortedTeamList.get(0).getScore() != this.sortedTeamList.get(1).getScore()) &&
+                    && this.sortedTeamList.get(0).getPoints() > 0
+                    && this.sortedTeamList.get(0).getPoints() != this.sortedTeamList.get(1).getPoints()) &&
                     this.sortedTeamList.get(0).getPlayers().size() > 0 &&
                     this.sortedTeamList.get(1).getPlayers().size() > 0) {
 

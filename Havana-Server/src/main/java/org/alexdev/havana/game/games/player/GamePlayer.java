@@ -11,6 +11,8 @@ import org.alexdev.havana.game.pathfinder.Position;
 import org.alexdev.havana.game.player.Player;
 import org.alexdev.havana.game.games.snowstorm.util.SnowStormAttributes;
 
+import java.util.concurrent.atomic.AtomicInteger;
+
 public class GamePlayer {
     private Player player;
     private GameObject gameObject;
@@ -27,7 +29,7 @@ public class GamePlayer {
     private GamePlayer harlequinPlayer;
 
     private boolean assignedSpawn;
-    private int score;
+    private AtomicInteger score;
     private int xp;
 
     private SnowStormAttributes snowStormAttributes;
@@ -42,7 +44,7 @@ public class GamePlayer {
         this.enteringGame = false;
         this.clickedRestart = false;
         this.position = new Position();
-        this.score = 0;
+        this.score = new AtomicInteger(0);
         this.xp = 0;
         this.snowStormAttributes = new SnowStormAttributes();
     }
@@ -53,7 +55,7 @@ public class GamePlayer {
      * @param score the score
      */
     public void setScore(int score) {
-        this.score = score;
+        this.score.set(score);
     }
 
     /**
@@ -61,13 +63,15 @@ public class GamePlayer {
      *
      * @return the score
      */
-    public int getScore() {
+    public void calculateScore() {
         if (!this.inGame) {
-            return 0;
+            this.score.set(0);
+            return;
         }
 
         if (this.getGame() instanceof BattleBallGame) {
-            this.score = 0;
+            this.score.set(0);
+
             BattleBallGame battleBallGame = (BattleBallGame) this.getGame();
 
             for (BattleBallTile battleBallTile : battleBallGame.getTiles()) {
@@ -76,12 +80,14 @@ public class GamePlayer {
                         continue;
                     }
 
-                    this.score += scoreReference.getScore();
+                    this.score.addAndGet(scoreReference.getScore());
                 }
             }
         }
+    }
 
-        return this.score;
+    public int getScore() {
+        return score.get();
     }
 
     /**
