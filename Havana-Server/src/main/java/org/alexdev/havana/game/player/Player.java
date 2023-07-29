@@ -6,8 +6,8 @@ import org.alexdev.havana.game.achievements.user.UserAchievementManager;
 import org.alexdev.havana.game.badges.BadgeManager;
 import org.alexdev.havana.game.club.ClubSubscription;
 import org.alexdev.havana.game.effects.Effect;
+import org.alexdev.havana.game.encryption.Cryptography;
 import org.alexdev.havana.game.encryption.DiffieHellman;
-import org.alexdev.havana.game.encryption.RC4;
 import org.alexdev.havana.game.entity.Entity;
 import org.alexdev.havana.game.entity.EntityType;
 import org.alexdev.havana.game.fuserights.Fuseright;
@@ -33,12 +33,14 @@ import org.alexdev.havana.messages.outgoing.openinghours.INFO_HOTEL_CLOSING;
 import org.alexdev.havana.messages.outgoing.user.settings.HELP_ITEMS;
 import org.alexdev.havana.messages.types.MessageComposer;
 import org.alexdev.havana.server.netty.NettyPlayerNetwork;
+import org.alexdev.havana.server.netty.ServerHandlerType;
 import org.alexdev.havana.util.DateUtil;
 import org.alexdev.havana.util.StringUtil;
 import org.alexdev.havana.util.config.GameConfiguration;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.math.BigInteger;
 import java.util.*;
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.TimeUnit;
@@ -60,18 +62,16 @@ public class Player extends Entity {
 
     private CopyOnWriteArrayList<Effect> effects;
     private Set<String> ignoredList;
-
     private DiffieHellman diffieHellman;
-    private RC4 rc4;
 
     private boolean loggedIn;
     private boolean disconnected;
     private boolean pingOK;
-    private boolean hasGenerateKey;
     private long timeConnected;
     private boolean processLoginSteps;
     private List<Group> joinedGroups;
     private String lastGift;
+    private boolean hasEncryption;
 
     public Player(NettyPlayerNetwork nettyPlayerNetwork) {
         this.network = nettyPlayerNetwork;
@@ -494,6 +494,20 @@ public class Player extends Entity {
         return diffieHellman;
     }
 
+    /*
+     * Sets the rc4.
+     *
+     * @param sharedKey the new rc4
+     */
+    public void setDecoder(BigInteger sharedKey) {
+        this.hasEncryption = true;
+        this.network.registerHandler(ServerHandlerType.RC4, sharedKey);
+    }
+
+    public boolean hasEncryption() {
+        return hasEncryption;
+    }
+
     /**
      * Get the list of user activated effects.
      *
@@ -501,24 +515,6 @@ public class Player extends Entity {
      */
     public CopyOnWriteArrayList<Effect> getEffects() {
         return effects;
-    }
-
-    /**
-     * Get if the user has used the generate key
-     *
-     * @return true, if successful
-     */
-    public boolean hasGenerateKey() {
-        return hasGenerateKey;
-    }
-
-    /**
-     * Set whether the user has generated the key
-     *
-     * @param hasGenerateKey the flag
-     */
-    public void setHasGenerateKey(boolean hasGenerateKey) {
-        this.hasGenerateKey = hasGenerateKey;
     }
 
     /**
