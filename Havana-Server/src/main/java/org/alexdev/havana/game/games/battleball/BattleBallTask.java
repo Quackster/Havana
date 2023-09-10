@@ -10,6 +10,7 @@ import org.alexdev.havana.game.games.battleball.objects.PlayerUpdateObject;
 import org.alexdev.havana.game.games.battleball.objects.PowerUpUpdateObject;
 import org.alexdev.havana.game.games.enums.GameState;
 import org.alexdev.havana.game.games.player.GamePlayer;
+import org.alexdev.havana.game.games.player.GameTeam;
 import org.alexdev.havana.game.pathfinder.Position;
 import org.alexdev.havana.game.pathfinder.Rotation;
 import org.alexdev.havana.game.player.Player;
@@ -50,6 +51,7 @@ public class BattleBallTask implements Runnable {
             this.game.getObjectsQueue().drainTo(objects);
             this.game.getUpdateTilesQueue().drainTo(updateTiles);
             this.game.getFillTilesQueue().drainTo(fillTiles);
+            this.game.getTeams().values().forEach(GameTeam::calculateScore);
 
             for (GamePlayer gamePlayer : this.game.getActivePlayers()) {
                 Player player = gamePlayer.getPlayer();

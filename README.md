@@ -21,6 +21,7 @@ The reason why Shockwave emulators exist is for multiple reasons, the first is t
 - Handshake
   - Login via SSO ticket
   - Login via username/password
+  - Diffie-Hellman two-way client/server encryption (v28+)
 - Games
   - Battleball
   - Snowstorm
@@ -194,7 +195,7 @@ Install any JDK version that is equal or above >= 17 to run the jar files.
 
 Run both Havana-Server.jar and Havana-Web.jar at least once to generate the necessary configuration files, configure the MySQL attributes to connect to the MariaDB server.
 
-Download the [havana_www.zip](https://www.mediafire.com/file/x94neh4qbu3l2s2/havana_www.zip/file) file, and then extract it to /tools/www/ this directory is located where you ran Havana-Web.jar. 
+Download the [havana_www_10092023.7z](https://www.mediafire.com/file/jy8a96vleuzebe0/havana_www_10092023.7z/file) file, and then extract it to /tools/www/ this directory is located where you ran Havana-Web.jar. 
 
 *(This is the default directory for static content within the Havana-Web project, but the directory where it looks for static images can be configured in the Housekeeping settings).*
 

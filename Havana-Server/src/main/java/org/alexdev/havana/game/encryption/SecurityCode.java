@@ -1,61 +1,29 @@
 package org.alexdev.havana.game.encryption;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class SecurityCode {
-    // 366592457230440492243310979215656075163725460776
-
-    public static String assign(Object obj) {
-        List<String> pData_NxIhNARqldyJyY2PfT03dK8t9OLUR = new ArrayList<>();
-
-        if (obj instanceof String) {
-            String hex = (String) obj;
-            String tData = hex;
-
-            if (hex.toCharArray()[0] == '-') {
-                tData = hex.substring(1);
-            }
-
-            int i = tData.length();
-            int pDigits = "10000".length() - 1;
-
-            while (i > 0) {
-                String tCoef = tData.substring(Math.max(0, i - (pDigits)), i);
-                i = i - tCoef.length();
-                pData_NxIhNARqldyJyY2PfT03dK8t9OLUR.add("" + Integer.parseInt(tCoef));
-            }
+    public static int encode(int tPlain) {
+        int tSeed = 5678;
+        int[] tSBox = new int[]{7530, 6652, 4115, 1750, 3354, 3647, 5188, 2844, 818, 2026, 7133, 2592, 3578};
+        int tIterations = 54;
+        int tCipher = tPlain;
+        for (int i = 1; i <= tIterations; i++) {
+            tSeed = ((69069 * tSeed) + (139 * i) + 92541) % 10000;
+            tSeed = tSeed + (int) Math.pow(i, 3);
+            tSeed = ((tSBox[(i % tSBox.length)] * tSeed) + 2541) % 10000;
+            tCipher = (tSeed ^ tCipher);
+            tCipher = (1379 + tSBox[(i % tSBox.length)]) ^ tCipher;
+            tCipher = (((14 * tSBox[(i % tSBox.length)]) + 13) % 10000) ^ tCipher;
+            tCipher = tCipher * 2;
+            int tHighBit = tCipher & 32768;
+            tCipher = tCipher & 32767;
+            tCipher = tCipher | (tHighBit != 0 ? 1 : 0);
         }
-
-        if (obj instanceof int[]) {
-            int[] parameters = (int[]) obj;
-
-            int tLimit = parameters.length;
-
-            for (int tdata : parameters) {
-                pData_NxIhNARqldyJyY2PfT03dK8t9OLUR.add("");
-            }
-
-        /*int i = 0;
-        for (int tdata : parameters) {
-            pData_NxIhNARqldyJyY2PfT03dK8t9OLUR.add("" + decode(tdata));
-            i++;
-        }
-
-        Collections.reverse(pData_NxIhNARqldyJyY2PfT03dK8t9OLUR);*/
-            int i = 0;
-            for (int tdata : parameters) {
-                pData_NxIhNARqldyJyY2PfT03dK8t9OLUR.set(tLimit - i - 1, "" + decode(tdata));
-                i++;
-            }
-
-            //Collections.reverse(pData_NxIhNARqldyJyY2PfT03dK8t9OLUR);
-        }
-
-        return String.join("", pData_NxIhNARqldyJyY2PfT03dK8t9OLUR);//Arrays.toString(pData_NxIhNARqldyJyY2PfT03dK8t9OLUR.toArray());
+        tCipher = 7639 ^ tCipher;
+        return tCipher;
     }
 
-    private static int decode(int tInput) {
+
+    public static int decode(int tInput) {
         int tSeed = 5678;
         int[] tSBox = new int[]{7530, 6652, 4115, 1750, 3354, 3647, 5188, 2844, 818, 2026, 7133, 2592, 3578};
 
