@@ -9,7 +9,9 @@
         <div id="group-name-area">
           <div id="group_name_message_error" class="error"></div>
           <label for="group_name" id="group_name_text">Edit group name:</label>
+          {% autoescape 'html' %}
           <input type="text" name="group_name" id="group_name" onKeyUp="GroupUtils.validateGroupElements('group_name', 30, 'Maximum Group name length reached');" value="{{ group.getName }}"/><br />
+          {% endautoescape %}
         </div>
 
         <div id="group-url-area">
@@ -135,6 +137,7 @@
         <ul>
           <li><input type="radio" name="roomId" value="" {% if group.getRoomId() == 0 %}checked="checked" {% endif %}/><div>No room</div></li>
 
+    {% autoescape 'html' %}
 		{% set num = 0 %}
 		{% for room in rooms %}
 			{% if num % 2 == 0 %}
@@ -152,6 +155,7 @@
           </li>
 		  {% set num = num + 1 %}
 		  {% endfor %}
+      {% endautoescape %}
         </ul>
       </div>
     </div>

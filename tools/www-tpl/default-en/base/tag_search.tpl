@@ -8,12 +8,20 @@
 			{% else %}
 				<p class="search-result-count">{{ pageId }} - {{ totalTagUsers|length }} / {{ totalCount }}</p>
 			{% endif %}
-			{{ tagSearchAdd }}
+			{% autoescape 'html' %}
+			{% if tagSearchAdd != "" %}
+			<p id="tag-search-add" class="clearfix">
+				<span style="float:left">Tag yourself with:</span>
+				<a id="tag-search-tag-add" href="#" class="new-button" style="float:left" onclick="TagHelper.addThisTagToMe('{{ tagSearchAdd | replace({"'": "\'"}) }}',false);return false;">
+					<b>{{ tagSearchAdd }}</b>
+					<i></i>
+				</a>
+			</p>
+			{% endif %}
 			<p class="search-result-divider"></p>
 
 			<table border="0" cellpadding="0" cellspacing="0" width="100%" class="search-result">
 				<tbody>
-				{% autoescape 'html' %}
 				{% set num = 0 %}
 				{% if tagList.size() > 0 %}
 				{% for habboTag in tagList %}
@@ -61,9 +69,9 @@
 				</tr>
 				{% endfor %}
 				{% endif %}
-				{% endautoescape %}
 				</tbody>
 			</table>
+			{% endautoescape %}
 			<p class="search-result-navigation">
 			{% if showFirst %}
 			<a href="{{ site.sitePath }}/tag/{{ tag }}?pageNumber={{ showFirstPage }}"><<</a>

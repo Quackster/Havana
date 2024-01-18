@@ -4,7 +4,9 @@
 	    		<span class="topic-name-text" id="topic_name_text">Topic: (max 32 characters)</span>
 	    	</div>
 	    	<div class="topic-name-input">
+				{% autoescape 'html' %}
 	    		<input type="text" size="38" maxlength="32" name="topic_name" id="topic_name" onKeyUp="GroupUtils.validateGroupElements('topic_name', 32, 'myhabbo.topic.name.max.length.exceeded');" value="{{ topic.getTopicTitle() }}"/>
+				{% endautoescape %}
 			</div>
             <div id="topic-name-error"></div>
             <div id="topic_name_message_error" class="error"></div>

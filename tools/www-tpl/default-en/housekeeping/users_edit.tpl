@@ -4,6 +4,7 @@
      <h1 class="mt-4">Edit User</h1>
 		{% include "housekeeping/base/alert.tpl" %}
 		<p>Here you can edit user details.</p>
+		{% autoescape 'html' %}
 		<form class="table-responsive col-md-4" method="post">
 			<div class="form-group">
 				<label>Username:</label>
@@ -34,6 +35,7 @@
 				<button type="submit" class="btn btn-info">Save Details</button>
 			</div>
 		</form>
+		{% endautoescape %}
       </div>
     </div>
   </div>

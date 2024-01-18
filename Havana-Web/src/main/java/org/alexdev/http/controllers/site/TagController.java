@@ -115,7 +115,7 @@ public class TagController {
             boolean isValidTag = temporaryTag != null;
 
             if (isValidTag) {
-                tpl.set("tagSearchAdd", " <p id=\"tag-search-add\" class=\"clearfix\"><span style=\"float:left\">Tag yourself with:</span> <a id=\"tag-search-tag-add\" href=\"#\" class=\"new-button\" style=\"float:left\" onclick=\"TagHelper.addThisTagToMe('" + tag + "',false);return false;\"><b>" + tag + "</b><i></i></a></p>\n");
+                tpl.set("tagSearchAdd", tag);
             }
         }
 
