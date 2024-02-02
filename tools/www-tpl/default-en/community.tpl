@@ -322,7 +322,9 @@ var discussionMoreDataHelper = new MoreDataHelper("discussions-toggle-more-data-
 						{% endif %}
 						
                         {{ site.siteName }} created on: {{ habbo.getCreatedAt() }}
+												{% autoescape 'html' %}
                             <p class="motto">{{ habbo.getMotto() }}</p>
+												{% endautoescape %}
                     </div>
                 </div>
                 <input type="hidden" id="active-habbo-url-{{ num }}" value="{{ site.sitePath }}/home/{{ habbo.getName() }}"/>

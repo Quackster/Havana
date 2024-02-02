@@ -23,12 +23,12 @@ You are not a member of any Groups</div>
 <div class="groups-list-container">
 <ul class="groups-list">
 
+{% autoescape 'html' %}
 {% for group in groupsList %}
 <li title="{{ group.getName() }}" id="groups-list-{{ sticker.getId() }}-{{ group.getId() }}">
 		<div class="groups-list-icon"><a href="{{ group.generateClickLink() }}"><img src="{{ site.sitePath }}/habbo-imaging/badge/{{ group.getBadge() }}.gif"/></a></div>
 		<div class="groups-list-open"></div>
 		<h4>
-		{% autoescape 'html' %}
 		<a href="{{ group.generateClickLink() }}">{{ group.getName() }}</a>
 				</h4>
 		<p>
@@ -47,9 +47,9 @@ You are not a member of any Groups</div>
 		{% endif %}
 		</p>
 		<div class="clear"></div>
-		{% endautoescape %}
 	</li>
 {% endfor %}
+{% endautoescape %}
 
 </ul></div>
 		{% endif %}
