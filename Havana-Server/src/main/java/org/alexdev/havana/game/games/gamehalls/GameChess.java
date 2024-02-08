@@ -4,12 +4,15 @@ import com.github.bhlangonijr.chesslib.*;
 import com.github.bhlangonijr.chesslib.move.Move;
 import com.github.bhlangonijr.chesslib.move.MoveGenerator;
 import com.github.bhlangonijr.chesslib.move.MoveGeneratorException;
-import org.alexdev.havana.game.games.triggers.GameTrigger;
 import org.alexdev.havana.game.item.Item;
+import org.alexdev.havana.game.pathfinder.Position;
 import org.alexdev.havana.game.player.Player;
 import org.alexdev.havana.game.room.Room;
+import org.alexdev.havana.game.games.triggers.GameTrigger;
 import org.alexdev.havana.messages.outgoing.rooms.games.ITEMMSG;
+import org.alexdev.havana.messages.outgoing.rooms.user.CHAT_MESSAGE;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
@@ -30,11 +33,14 @@ public class GameChess extends GamehallGame {
 
     private Board board;
     private GameToken[] gameTokens;
+    private Player nextTurn;
     private HashMap<Player, GameToken> playerSides;
 
     public GameChess(List<int[]> chairs) {
         super(chairs);
     }
+
+
 
     @Override
     public void gameStart() {
@@ -112,9 +118,7 @@ public class GameChess extends GamehallGame {
         }
 
         if (command.equals("MOVEPIECE")) {
-            char currentSide = this.board.getSideToMove() == Side.BLACK ? 'b' : 'w';
-
-            if (currentSide != this.playerSides.get(player).getToken()) {
+            if (this.nextTurn != player) {
                 player.send(new ITEMMSG(new String[]{this.getGameId(), "TYPERESERVED"})); // Alert/error sound!
                 this.broadcastMap();
                 return;
@@ -140,7 +144,6 @@ public class GameChess extends GamehallGame {
             Square toSquare = Square.valueOf(args[1].toUpperCase());
 
             if (fromSquare == toSquare) {
-                player.getRoomUser().getTimerManager().resetRoomTimer();
                 return;
             }
 
@@ -149,8 +152,9 @@ public class GameChess extends GamehallGame {
 
             try {
                 var moveList = MoveGenerator.generateLegalMoves(this.board);
-                isLegalMove = moveList.contains(move);//.stream().anyMatch(m -> m.getFrom() == fromSquare && m.getTo() == toSquare);
+                isLegalMove = moveList.contains(move);
 
+                // Add pawn -> promotion
                 if (!isLegalMove && Board.isPromoRank(this.board.getSideToMove(), move)) { // if the move is not legal, check if pawn promotion is legal
                     move = new Move(fromSquare, toSquare, Piece.make(this.board.getSideToMove(), PieceType.QUEEN));
                     isLegalMove = moveList.contains(move);
@@ -160,7 +164,7 @@ public class GameChess extends GamehallGame {
             if (isLegalMove) {
                 this.board.doMove(move, true);
 
-                /*if (this.board.isDraw() || this.board.isInsufficientMaterial()) {
+                if (this.board.isDraw()) {
                     this.gameFinished = true;
                     this.showChat("The chess game has ended in a draw");
                     return;
@@ -172,9 +176,9 @@ public class GameChess extends GamehallGame {
                     this.gameFinished = true;
                     this.showChat(player.getDetails().getName() + " has won the chess game");
                     return;
-                } else if (this.board.isKingAttacked()) {
-                    this.showChat("The king is being attacked!");
-                }*/
+                }
+
+                this.swapTurns(player);
             }
 
             player.getRoomUser().getTimerManager().resetRoomTimer();
@@ -257,20 +261,41 @@ public class GameChess extends GamehallGame {
     private String[] getCurrentlyPlaying() {
         String[] playerNames = new String[]{"", ""};
 
-        if (this.board != null && this.board.getSideToMove() != null) {
         /*for (int i = 0; i < this.playersInGame.size(); i++) {
             Player player = this.playersInGame.get(i);
             playerNames[i] = Character.toUpperCase(this.playerSides.get(player).getToken()) + " " + player.getDetails().getName();
         }*/
 
-            char currentSide = this.board.getSideToMove() == Side.BLACK ? 'b' : 'w';
-
-            if (this.getPlayerBySide(currentSide) != null) {
-                playerNames[0] = Character.toUpperCase(currentSide) + " " + this.getPlayerBySide(currentSide).getDetails().getName();
-            }
+        if (this.nextTurn != null) {
+            playerNames[0] = Character.toUpperCase(this.playerSides.get(this.nextTurn).getToken()) + " " + this.nextTurn.getDetails().getName();
         }
 
         return playerNames;
+    }
+
+    private void showChat(String chat) {
+        for (Player p : this.getPlayers()) {
+            p.send(new CHAT_MESSAGE(CHAT_MESSAGE.ChatMessageType.CHAT, p.getRoomUser().getInstanceId(), chat, 0));
+        }
+    }
+
+    /**
+     * Swap who's turn it is to play.
+     *
+     * @param player the player to swap away from
+     */
+    private void swapTurns(Player player) {
+        Player nextPlayer = null;
+
+        if (this.nextTurn == player) {
+            for (Player p :  this.getPlayers()) {
+                if (p != player) {
+                    nextPlayer = p;
+                }
+            }
+        }
+
+        this.nextTurn = nextPlayer;
     }
 
     /**
@@ -281,6 +306,10 @@ public class GameChess extends GamehallGame {
                 new GameToken('w'),
                 new GameToken('b')
         };
+
+        if (this.getPlayers().size() > 0) {
+            this.nextTurn = this.getPlayerBySide('w'); // White always goes first, according to chess rules.
+        }
 
         this.gameFinished = false;
         this.board = new Board();
@@ -328,7 +357,7 @@ public class GameChess extends GamehallGame {
 
     @Override
     public int getMinimumPeopleRequired() {
-        return 1;
+        return 2;
     }
 
     @Override
