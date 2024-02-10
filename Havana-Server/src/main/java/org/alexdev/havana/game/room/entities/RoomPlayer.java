@@ -29,6 +29,7 @@ public class RoomPlayer extends RoomEntity {
 
     private int authenticateId;
     private long authenticateTelporterId;
+    private long authenticateTelporterRoomId;
     private int observingGameId;
 
     private boolean isTyping;
@@ -60,6 +61,7 @@ public class RoomPlayer extends RoomEntity {
         this.player = player;
         this.authenticateId = -1;
         this.authenticateTelporterId = -1;
+        this.authenticateTelporterRoomId = -1;
         this.tradeItems = new CopyOnWriteArrayList<>();
     }
 
@@ -223,6 +225,7 @@ public class RoomPlayer extends RoomEntity {
         // Remove authentications
         this.authenticateId = -1;
         this.authenticateTelporterId = -1;
+        this.authenticateTelporterRoomId = -1;
     }
 
     public void startObservingGame(int gameId) {
@@ -408,5 +411,13 @@ public class RoomPlayer extends RoomEntity {
 
     public void setLastLobbyRedirection(GameType lastLobbyRedirection) {
         this.lastLobbyRedirection = lastLobbyRedirection;
+    }
+
+    public long getAuthenticateTelporterRoomId() {
+        return authenticateTelporterRoomId;
+    }
+
+    public void setAuthenticateTelporterRoomId(long authenticateTelporterRoomId) {
+        this.authenticateTelporterRoomId = authenticateTelporterRoomId;
     }
 }

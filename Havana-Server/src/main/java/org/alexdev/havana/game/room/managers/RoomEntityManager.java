@@ -259,6 +259,7 @@ public class RoomEntityManager {
             }
 
             player.getRoomUser().setAuthenticateTelporterId(-1);
+            player.getRoomUser().setAuthenticateTelporterRoomId(-1);
         }
 
         GamePlayer gamePlayer = player.getRoomUser().getGamePlayer();

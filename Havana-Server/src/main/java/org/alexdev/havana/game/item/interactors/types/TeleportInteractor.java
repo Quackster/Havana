@@ -67,7 +67,9 @@ public class TeleportInteractor extends GenericTrigger {
         var resolved = ItemManager.getInstance().resolveItem(pairId);
 
         Item pairedTeleporter = resolved != null ? resolved : targetTeleporter;
+
         roomUser.setAuthenticateTelporterId(pairedTeleporter.getDatabaseId());
+        roomUser.setAuthenticateTelporterRoomId(pairedTeleporter.getRoomId());
 
         // Check if the user is inside the teleporter, if so, walk out. Useful if the user is stuck inside.
         if (item.getPosition().equals(roomUser.getPosition()) && !RoomTile.isValidTile(room, player, item.getPosition().getSquareInFront())) {
@@ -124,6 +126,7 @@ public class TeleportInteractor extends GenericTrigger {
                     }
 
                     roomUser.setAuthenticateTelporterId(-1);
+                    roomUser.setAuthenticateTelporterRoomId(-1);
 
                     pairedTeleporter.setCustomData(TELEPORTER_CLOSE);
                     pairedTeleporter.updateStatus();
@@ -169,6 +172,7 @@ public class TeleportInteractor extends GenericTrigger {
             GameScheduler.getInstance().getService().schedule(() -> {
                 if (roomUser.getRoom().getId() != room.getId()) {
                     roomUser.setAuthenticateTelporterId(-1);
+                    roomUser.setAuthenticateTelporterRoomId(-1);
                     return;
                 }
                 /*if (roomUser.getAuthenticateTelporterId() == -1) {
@@ -186,6 +190,7 @@ public class TeleportInteractor extends GenericTrigger {
             GameScheduler.getInstance().getService().schedule(() -> {
                 if (roomUser.getRoom().getId() != room.getId()) {
                     roomUser.setAuthenticateTelporterId(-1);
+                    roomUser.setAuthenticateTelporterRoomId(-1);
                     return;
                 }
                 /*if (roomUser.getAuthenticateTelporterId() == -1) {
@@ -193,6 +198,7 @@ public class TeleportInteractor extends GenericTrigger {
                 }*/
 
                 roomUser.setAuthenticateTelporterId(-1);
+                roomUser.setAuthenticateTelporterRoomId(-1);
 
                 if (pairedTeleporter.getRoomId() == item.getRoomId()) {
                     pairedTeleporter.setCustomData(TELEPORTER_CLOSE);

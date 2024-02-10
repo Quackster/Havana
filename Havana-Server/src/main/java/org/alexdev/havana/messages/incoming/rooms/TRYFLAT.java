@@ -77,6 +77,12 @@ public class TRYFLAT implements MessageEvent {
             }
         }
 
+        // User switched rooms, cancel teleportation
+        if (player.getRoomUser().getAuthenticateTelporterRoomId() != roomId) {
+            player.getRoomUser().setAuthenticateTelporterId(-1);
+            player.getRoomUser().setAuthenticateTelporterRoomId(-1);
+        }
+
         player.getRoomUser().setAuthenticateId(roomId);
         player.send(new FLAT_LETIN());
     }
