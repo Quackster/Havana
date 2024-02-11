@@ -183,7 +183,9 @@ To be honest, this server doesn't require much. I'd argue that the MariaDB serve
 - MariaDB server
 - At minimum 4 GB of RAM (to be safe)
 
-If you aim to use this for yourself, I recommend setting up your own 2009 figure image renderer with the project I've created [here](https://github.com/Quackster/Minerva) to render Habbo looks on the website.
+If you aim to use this for yourself, I recommend setting up your own 2009 figure image renderer with the project I've created [here](https://github.com/Quackster/Minerva) called **Minerva** to render figures and badges on the website.
+
+You run Minerva as a seperate instance, once it is running, take note how it listens on ``http://localhost:5000/``. The setting in the Havana ``settings`` table ``site.imaging.endpoint`` called has this variable set by default with that value already, so you should be good to go already with all badges and figures working as they should.
 
 # Installation
 
