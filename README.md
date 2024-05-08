@@ -4,7 +4,7 @@
 
 Originally started as a fork from [Quackster/Kepler](https://github.com/Quackster/Kepler), this is a server created in Java designed to revive Habbo Hotel v31 from the 2009 era and its inception was in early 2018 as a side project. Havana is the most complete v31+ server to date, this was undertaken by various reverse engineering efforts of the Shockwave client throughout the years to achieve this.
 
-**Join the Classic Habbo discord!** https://discord.gg/GEYbVpW
+**Join the Oldskooler Forum discord for retro developers!** https://discord.oldskooler.org/
 
 Havana has been an independent project, almost entirely developed by [myself](https://github.com/Quackster) for 4 years straight. This project means a lot to me, and was always going to be released as open-source work. I am a firm believer in open-source and free software for everybody.
 
@@ -207,7 +207,7 @@ Start Havana-Server via start_server.sh (Unix/Linux distros) or start_server.bat
 
 Your server should be up and running and accessible via http://localhost/
 
-I highly recommend [this browser](https://forum.ragezone.com/f353/portable-browser-with-flash-shockwave-1192727/) to be able to play Adobe Shockwave movies in the present day.
+I highly recommend [this browser]([https://forum.ragezone.com/f353/portable-browser-with-flash-shockwave-1192727/](https://forum.oldskooler.org/threads/portable-browser-with-flash-shockwave-basilisk.70/) to be able to play Adobe Shockwave movies in the present day.
 
 ❗ Once registered as an admin, I high recommend running [groups.sql](https://github.com/Quackster/Havana/blob/master/tools/groups.sql) against your database, it will create the Habbo Guides, SnowStorm, BattleBall, Wobble Squabble and Lido Diving gaming groups for the website.
 
