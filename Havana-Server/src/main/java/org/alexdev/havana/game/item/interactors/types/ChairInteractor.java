@@ -29,14 +29,6 @@ public class ChairInteractor extends GenericTrigger {
         int headRotation = roomEntity.getPosition().getHeadRotation();
         double topHeight = item.getDefinition().getTopHeight();
 
-        if (entity.getType() == EntityType.PET) {
-            topHeight = 0.5 + item.getTile().getWalkingHeight();
-
-            Pet pet = (Pet) entity;
-            pet.setAction(PetAction.SIT);
-            pet.setActionDuration(ThreadLocalRandom.current().nextInt(10, 30));
-        }
-
         roomEntity.getPosition().setRotation(item.getPosition().getRotation());
         roomEntity.stopDancing();
         roomEntity.setStatus(StatusType.SIT, StringUtil.format(topHeight));

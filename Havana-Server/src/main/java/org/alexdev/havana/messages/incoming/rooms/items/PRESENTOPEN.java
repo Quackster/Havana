@@ -70,7 +70,7 @@ public class PRESENTOPEN implements MessageEvent {
             CatalogueItem catalogueItem = CatalogueManager.getInstance().getCatalogueItem(saleCode);
 
             if (catalogueItem != null) {
-                room.getMapping().removeItem(player, item);
+                room.getMapping().removeItem(item);
 
                 item.setDefinitionId(catalogueItem.getDefinition().getId());
                 ItemDao.updateItem(item);
@@ -104,7 +104,7 @@ public class PRESENTOPEN implements MessageEvent {
             CatalogueItem catalogueItem = CatalogueManager.getInstance().getCatalogueItem(saleCode);
 
             if (catalogueItem == null) {
-                room.getMapping().removeItem(player, item);
+                room.getMapping().pickupItem(player, item);
                 item.delete();
                 return;
             }
@@ -117,7 +117,7 @@ public class PRESENTOPEN implements MessageEvent {
                     !catalogueItem.getDefinition().hasBehaviour(ItemBehaviour.DECORATION) &&
                     !catalogueItem.getDefinition().hasBehaviour(ItemBehaviour.POST_IT) &&
                     !catalogueItem.getDefinition().getSprite().equalsIgnoreCase("film")) {
-                room.getMapping().removeItem(player, item);
+                room.getMapping().pickupItem(player, item);
 
                 item.setDefinitionId(catalogueItem.getDefinition().getId());
                 item.setCustomData(extraData);
@@ -136,7 +136,7 @@ public class PRESENTOPEN implements MessageEvent {
                     player.getInventory().getView("new");
                 }
 
-                room.getMapping().removeItem(player, item);
+                room.getMapping().pickupItem(player, item);
                 item.delete();
             }
         }
@@ -178,7 +178,7 @@ public class PRESENTOPEN implements MessageEvent {
                 return;
             }
 
-            room.getMapping().removeItem(player, item);
+            room.getMapping().pickupItem(player, item);
 
             item.setDefinitionId(catalogueItem.getDefinition().getId());
             item.setCustomData("");

@@ -3,6 +3,7 @@ package org.alexdev.havana.game.room.tasks;
 import org.alexdev.havana.game.entity.Entity;
 import org.alexdev.havana.game.entity.EntityType;
 import org.alexdev.havana.game.pathfinder.Position;
+import org.alexdev.havana.game.pets.Pet;
 import org.alexdev.havana.game.player.Player;
 import org.alexdev.havana.game.room.Room;
 import org.alexdev.havana.game.room.RoomUserStatus;
@@ -52,6 +53,13 @@ public class StatusTask implements Runnable {
 
                 processHeadRotation(entity);
                 processPoolQueue(entity);
+            }
+
+            if (entity.getType() == EntityType.PET) {
+                Pet pet = (Pet) entity;
+
+                if (pet.getRoomUser().getTask() != null)
+                    pet.getRoomUser().getTask().tick();
             }
 
             if (entity.getType() == EntityType.PLAYER) {

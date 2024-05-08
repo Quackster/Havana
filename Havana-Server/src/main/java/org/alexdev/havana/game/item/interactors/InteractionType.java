@@ -25,6 +25,10 @@ public enum  InteractionType {
     FORTUNE(new FortuneInteractor()),
     PET_NEST(new PetNestInteractor()),
 
+    PET_FOOD(new PetFoodInteractor()),
+    PET_WATER_BOWL(new PetWaterBowlInteractor()),
+    PET_TOY(new PetToyInteractor()),
+
     POOL_BOOTH(new PoolBoothInteractor()),
     POOL_LADDER(new PoolLadderInteractor()),
     POOL_EXIT(new PoolExitInteractor()),

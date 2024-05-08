@@ -664,6 +664,10 @@ public abstract class RoomEntity {
      * @param towards the coordinate direction to look towards
      */
     public void look(Position towards) {
+        this.look(towards, false);
+    }
+
+    public void look(Position towards, boolean body) {
         if (this.isWalking) {
             return;
         }
@@ -676,7 +680,19 @@ public abstract class RoomEntity {
             }
         }
 
-        this.position.setHeadRotation(Rotation.getHeadRotation(this.position.getRotation(), this.position, towards));
+        if (body) {
+            int rotation = Rotation.calculateHumanDirection(
+                    this.getPosition().getX(),
+                    this.getPosition().getY(),
+                    towards.getX(),
+                    towards.getY());
+
+            this.position.setHeadRotation(rotation);
+            this.position.setBodyRotation(rotation);
+        } else {
+            this.timerManager.beginLookTimer();
+        }
+
         this.timerManager.beginLookTimer();
         this.needsUpdate = true;
     }

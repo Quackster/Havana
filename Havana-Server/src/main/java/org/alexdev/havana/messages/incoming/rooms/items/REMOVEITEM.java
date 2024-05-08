@@ -41,7 +41,7 @@ public class REMOVEITEM implements MessageEvent {
             }
         }
 
-        room.getMapping().removeItem(player, item);
+        room.getMapping().pickupItem(player, item);
         item.delete();
 
         player.getRoomUser().getTimerManager().resetRoomTimer();

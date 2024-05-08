@@ -114,7 +114,7 @@ public class ItemManager {
             if (item != null) {
                 // Item is currently loaded in room, remove it!
                 if (item.getRoom() != null) {
-                    item.getRoom().getMapping().removeItem(PlayerManager.getInstance().getPlayerById(item.getOwnerId()), item);
+                    item.getRoom().getMapping().pickupItem(PlayerManager.getInstance().getPlayerById(item.getOwnerId()), item);
                 } else {
                     // Item is in players' hands, remove it!
                     Player itemOwner = PlayerManager.getInstance().getPlayerById(item.getOwnerId());

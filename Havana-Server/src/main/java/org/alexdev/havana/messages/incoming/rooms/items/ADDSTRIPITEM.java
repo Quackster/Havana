@@ -44,7 +44,7 @@ public class ADDSTRIPITEM implements MessageEvent {
             ItemDao.updateItemOwnership(item);
         }
 
-        room.getMapping().removeItem(player, item);
+        room.getMapping().pickupItem(player, item);
 
         player.getInventory().addItem(item);
         player.getInventory().getView("update");

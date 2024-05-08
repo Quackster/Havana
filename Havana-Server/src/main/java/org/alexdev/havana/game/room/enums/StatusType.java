@@ -19,11 +19,13 @@ public enum StatusType {
     TRADE("trd"),
     DANCE("dance"),
 
-    SIGN("sign"),
     DEAD("ded"),
     JUMP("jmp"),
-    SLEEP("slp"),
-    EAT("eat");
+    PET_SLEEP("slp"),
+    EAT("eat"),
+    SMILE("sml"),
+    PLAY("pla"),
+    SIGN("sign");
 
     private String statusCode;
 

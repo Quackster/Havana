@@ -68,7 +68,7 @@ public class CONVERT_FURNI_TO_CREDITS implements MessageEvent {
                 amount, 0, false);
 
         // Notify room of item removal and set credits of player
-        room.getMapping().removeItem(player, item);
+        room.getMapping().pickupItem(player, item);
         player.getDetails().setCredits(currentAmount);
 
         // Send new credit amount

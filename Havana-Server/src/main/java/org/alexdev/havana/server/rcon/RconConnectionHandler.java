@@ -293,7 +293,7 @@ public class RconConnectionHandler extends ChannelInboundHandlerAdapter {
                         Room room = item.getRoom();
 
                         if (room != null) {
-                            room.getMapping().removeItem(null, item);
+                            room.getMapping().removeItem(item);
                         }
 
                         item.delete();

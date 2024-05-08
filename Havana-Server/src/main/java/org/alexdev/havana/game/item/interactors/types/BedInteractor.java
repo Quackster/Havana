@@ -45,18 +45,7 @@ public class BedInteractor extends GenericTrigger {
             roomEntity.stopCarrying();
             roomEntity.stopDancing();
 
-            roomEntity.getPosition().setRotation(item.getPosition().getRotation());
-
             double topHeight = item.getDefinition().getTopHeight();
-
-            if (entity.getType() == EntityType.PET) {
-                topHeight = 0.5 + item.getTile().getWalkingHeight();
-
-                Pet pet = (Pet) entity;
-                pet.setAction(PetAction.LAY);
-                pet.setActionDuration(ThreadLocalRandom.current().nextInt(10, 30));
-            }
-
             roomEntity.getPosition().setRotation(item.getPosition().getRotation());
             roomEntity.setStatus(StatusType.LAY, StringUtil.format(topHeight));
         }
