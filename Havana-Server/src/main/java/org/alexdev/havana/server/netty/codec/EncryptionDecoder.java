@@ -39,7 +39,7 @@ public class EncryptionDecoder extends ByteToMessageDecoder {
             byte[] tHeaderMsg = new byte[6];
             buffer.readBytes(tHeaderMsg);
 
-            tHeader = new String(tHeaderMsg, StringUtil.getCharset());
+            tHeader = new String(tHeaderMsg);
             tHeader = this.pHeaderDecoder.kg4R6Jo5xjlqtFGs1klMrK4ZTzb3R(tHeader);
 
             int tByte1 = ((int) tHeader.charAt(3)) & 63;
@@ -60,14 +60,14 @@ public class EncryptionDecoder extends ByteToMessageDecoder {
             byte[] tBodyMsg = new byte[pMsgSize];
             buffer.readBytes(tBodyMsg);
 
-            tBody = new String(tBodyMsg, StringUtil.getCharset());
+            tBody = new String(tBodyMsg);
             tBody = this.pDecoder.kg4R6Jo5xjlqtFGs1klMrK4ZTzb3R(tBody);
             tBody = NettyPlayerNetwork.removePadding(tBody, player.getNetwork().getTx() % 5);
 
             ByteBuf result = Unpooled.buffer();
 
             result.writeBytes(Base64Encoding.encode(tBody.length(), 3));
-            result.writeBytes(tBody.getBytes(StringUtil.getCharset()));
+            result.writeBytes(tBody.getBytes());
 
             out.add(result);
         }
