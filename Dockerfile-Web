@@ -1,0 +1,16 @@
+FROM eclipse-temurin:17-jdk AS builder
+
+WORKDIR /sources
+COPY . /sources
+
+RUN ./gradlew build
+RUN cd Havana-Web/build/distributions && tar xf Havana-Web.tar
+RUN cd Havana-Web/build/distributions/Havana-Web/bin && ./Havana-Web
+
+FROM eclipse-temurin:17-jre
+COPY --from=builder /sources/Havana-Web/build/distributions/Havana-Web /havana-web
+COPY --from=builder /sources/figuredata.xml /havana-web/bin
+COPY --from=builder /sources/tools/docker/web-entrypoint.sh /havana-web/bin/run.sh
+WORKDIR /havana-web/bin
+RUN chmod +x run.sh
+ENTRYPOINT ["/havana-web/bin/run.sh"]
