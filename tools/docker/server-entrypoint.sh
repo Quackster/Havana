@@ -12,5 +12,7 @@ sed -i -E "s/(mysql.username=)(.*)/\1$MYSQL_USERNAME/g" server.ini
 sed -i -E "s/(mysql.password=)(.*)/\1$MYSQL_PASSWORD/g" server.ini
 sed -i -E "s/(mysql.database=)(.*)/\1$MYSQL_DATABASE/g" server.ini
 sed -i -E "s/(rcon.bind=)(.*)/\10.0.0.0/g" server.ini
+sed -i -E "s/(server.bind=)(.*)/\10.0.0.0/g" server.ini
+sed -i -E "s/(mus.bind=)(.*)/\10.0.0.0/g" server.ini
 
 ./Havana-Server
