@@ -19,7 +19,6 @@ services:
       dockerfile: Dockerfile-Server
     ports:
       - "12321:12321"
-      - "12309:12309"
       - "12322:12322"
     environment:
       <<: *havana-variables
