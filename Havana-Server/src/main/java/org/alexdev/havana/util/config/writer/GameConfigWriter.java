@@ -13,8 +13,8 @@ public class GameConfigWriter implements ConfigWriter {
         Map<String, String> config = new HashMap<>();
         config.put("site.path", "http://localhost");
 
-        config.put("room.ads", "true");
-        config.put("room.intersitial.ads", "true");
+        config.put("room.ads", "false");
+        config.put("room.intersitial.ads", "false");
 
         /*
         config.put("bot.connection.allow", "false");
