@@ -20,6 +20,8 @@ services:
     ports:
       - "12321:12321"
       - "12322:12322"
+    networks:
+      - havana
     environment:
       <<: *havana-variables
     restart: on-failure
@@ -32,6 +34,8 @@ services:
       dockerfile: Dockerfile-Web
     ports:
       - "80:80"
+    networks:
+      - havana
     volumes:
       - ./tools:/havana-web/bin/tools
     environment:
@@ -41,6 +45,8 @@ services:
     image: "mariadb:latest"
     ports:
       - "3306:3306"
+    networks:
+      - havana
     environment:
       <<: *mariadb-variables
     volumes:
@@ -53,5 +59,9 @@ services:
       timeout: 5s
       retries: 3
     restart: on-failure
+
 volumes:
   data:
+
+networks:
+  havana:
