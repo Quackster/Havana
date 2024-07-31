@@ -4,7 +4,7 @@ WORKDIR /sources
 COPY ./gradle /sources/gradle
 COPY ./gradlew /sources
 COPY ./figuredata.xml /sources
-COPY ./tools/docker /sources/tools/docker
+COPY ./tools/docker/server-entrypoint.sh /sources/tools/docker/server-entrypoint.sh
 COPY ./Havana-Server/ /sources/Havana-Server
 COPY ./settings.gradle /sources
 

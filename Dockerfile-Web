@@ -1,7 +1,13 @@
 FROM eclipse-temurin:17-jdk AS builder
 
 WORKDIR /sources
-COPY . /sources
+COPY ./gradle /sources/gradle
+COPY ./gradlew /sources
+COPY ./figuredata.xml /sources
+COPY ./tools/docker/web-entrypoint.sh /sources/tools/docker/web-entrypoint.sh
+COPY ./Havana-Server/ /sources/Havana-Server
+COPY ./Havana-Web/ /sources/Havana-Web
+COPY ./settings.gradle /sources
 
 RUN ./gradlew build
 RUN cd Havana-Web/build/distributions && tar xf Havana-Web.tar
