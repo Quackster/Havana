@@ -221,6 +221,22 @@ Install the font manager, to enable the captcha to work on the website.
 apt-get install font-manager
 ```
 
+# Quick start using Docker
+
+Install Docker, update ``docker-compose.yaml`` to use strong passwords for MariaDB.
+
+❗ Variables values between ``x-mariadb-variables`` and ``x-havana-variables`` must match if you edit usernames and passwords.
+
+Download the [havana_www_28_07_2024.zip](https://www.mediafire.com/file/6kn4ghtb37lfc1p/havana_www_28_07_2024.zip/file) file, and then extract it to tools/www/ this directory is located in the repository you just cloned.
+
+Start the stack using ``docker-compose up``
+
+You can access the MariaDB instance that is running in Docker on ``localhost:3306``
+
+You can access Havana that is running in Docker on ``localhost:80``
+
+Follow the instructions above for setting yourself as an admin.
+
 ## License
 
 This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
