@@ -1,7 +1,12 @@
 FROM eclipse-temurin:17-jdk AS builder
 
 WORKDIR /sources
-COPY . /sources
+COPY ./gradle /sources/gradle
+COPY ./gradlew /sources
+COPY ./figuredata.xml /sources
+COPY ./tools/docker /sources/tools/docker
+COPY ./Havana-Server/ /sources/Havana-Server
+COPY ./settings.gradle /sources
 
 RUN ./gradlew build
 RUN cd Havana-Server/build/distributions && tar xf Havana-Server.tar
