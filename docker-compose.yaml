@@ -1,0 +1,67 @@
+x-mariadb-variables: &mariadb-variables
+  MARIADB_USER: havana
+  MARIADB_PASSWORD: goldfish
+  MARIADB_ROOT_PASSWORD: yourstrongpassword
+  MARIADB_DATABASE: havana
+
+x-havana-variables: &havana-variables
+  MYSQL_USERNAME: havana
+  MYSQL_PASSWORD: goldfish
+  MYSQL_DATABASE: havana
+
+services:
+  havana-server:
+    depends_on: 
+      mariadb:
+        condition: service_healthy
+    build:
+      context: .
+      dockerfile: Dockerfile-Server
+    ports:
+      - "12321:12321"
+      - "12322:12322"
+    networks:
+      - havana
+    environment:
+      <<: *havana-variables
+    restart: on-failure
+  havana-web:
+    depends_on: 
+      mariadb:
+        condition: service_healthy
+    build:
+      context: .
+      dockerfile: Dockerfile-Web
+    ports:
+      - "80:80"
+    networks:
+      - havana
+    volumes:
+      - ./tools:/havana-web/bin/tools
+    environment:
+      <<: *havana-variables
+    restart: on-failure
+  mariadb:
+    image: "mariadb:latest"
+    ports:
+      - "3306:3306"
+    networks:
+      - havana
+    environment:
+      <<: *mariadb-variables
+    volumes:
+      - data:/var/lib/mysql
+      - ./tools/havana.sql:/docker-entrypoint-initdb.d/havana.sql
+    healthcheck:
+      test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
+      start_period: 10s
+      interval: 10s
+      timeout: 5s
+      retries: 3
+    restart: on-failure
+
+volumes:
+  data:
+
+networks:
+  havana:
