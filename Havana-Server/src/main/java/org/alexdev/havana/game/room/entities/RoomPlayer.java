@@ -285,6 +285,10 @@ public class RoomPlayer extends RoomEntity {
         // Send refresh to room if inside room
         if (this.getRoom() != null) {
             this.getRoom().send(new FIGURE_CHANGE(this.getInstanceId(), this.player.getDetails()));
+
+            if (this.player.getNetwork().isFlashConnection()) {
+                this.player.send(new FIGURE_CHANGE(-1, this.player.getDetails()));
+            }
         }
     }
 

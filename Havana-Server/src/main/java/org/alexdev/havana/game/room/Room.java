@@ -91,6 +91,21 @@ public class Room {
     }
 
     /**
+     * Sends a packet to flash clients in room only.
+     *
+     * @param composer the composer to send
+     */
+    public void sendFlashClients(MessageComposer composer) {
+        for (Player player : this.roomEntityManager.getPlayers()) {
+            if (!player.getNetwork().isFlashConnection()) {
+                continue;
+            }
+
+            player.send(composer);
+        }
+    }
+
+    /**
      * Checks if the user id is the owner of the room.
      *
      * @param ownerId the owner id to check for
@@ -259,8 +274,10 @@ public class Room {
             }
         }
 
-        if (isPublic) {
-            roomId = roomId + RoomManager.PUBLIC_ROOM_OFFSET;
+        if (!player.getNetwork().isFlashConnection()) {
+            if (isPublic) {
+                roomId = roomId + RoomManager.PUBLIC_ROOM_OFFSET;
+            }
         }
 
         player.send(new ROOMFORWARD(isPublic, roomId));

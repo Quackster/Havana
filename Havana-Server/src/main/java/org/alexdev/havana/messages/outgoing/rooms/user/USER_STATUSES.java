@@ -88,7 +88,11 @@ public class USER_STATUSES extends PlayerMessageComposer {
 
                         if (states.getPosition().getX() == 8 &&
                                 states.getPosition().getY() == 24) {
-                            response.writeString(StringUtil.format(7.0));
+                            if (player.getNetwork().isFlashConnection()) {
+                                response.writeString(StringUtil.format(4.0));
+                            } else {
+                                response.writeString(StringUtil.format(7.0));
+                            }
                         } else {
                             response.write(status.getValue());
                         }

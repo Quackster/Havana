@@ -33,6 +33,13 @@ public class TRADE_CONFIRM_ACCEPT implements MessageEvent {
         if (player.getRoomUser().isTradeConfirmed() &&
                 player.getRoomUser().getTradePartner().getRoomUser().isTradeConfirmed()) {
 
+            /*
+            if (RoomTradeManager.isTradeBannable(player)) {
+                RoomTradeManager.close(player.getRoomUser(), true);
+                return;
+            }
+            */
+
             player.send(new TRADE_COMPLETED());
             player.getRoomUser().getTradePartner().send(new TRADE_COMPLETED());
 

@@ -90,6 +90,12 @@ public class G_STAT implements MessageEvent {
             if (roomEntity.getRoomUser().isSleeping()) {
                 player.send(new USER_SLEEP(roomEntity.getRoomUser().getInstanceId(), roomEntity.getRoomUser().isSleeping()));
             }
+
+            if (player.getNetwork().isFlashConnection()) {
+                if (roomEntity.getRoomUser().isCarrying()) {
+                    player.send(new USER_CARRY_OBJECT(roomEntity.getRoomUser().getInstanceId(), roomEntity.getRoomUser().getCarryId(), roomEntity.getRoomUser().getCarryValue()));
+                }
+            }
         }
 
         for (Item item : room.getItems()) {

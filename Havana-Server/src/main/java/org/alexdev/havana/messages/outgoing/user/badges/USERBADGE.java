@@ -17,7 +17,12 @@ public class USERBADGE extends PlayerMessageComposer {
 
     @Override
     public void compose(NettyResponse response) {
-        response.writeString(this.userId);
+        if (this.getPlayer().getNetwork().isFlashConnection()) {
+            response.writeInt(this.userId);
+        } else {
+            response.writeString(this.userId);
+        }
+
          response.writeInt(this.equippedBadges.size());
 
         for (Badge badge : this.equippedBadges) {

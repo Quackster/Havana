@@ -6,9 +6,11 @@ import org.alexdev.havana.game.fuserights.Fuseright;
 import org.alexdev.havana.game.player.Player;
 import org.alexdev.havana.game.player.PlayerManager;
 import org.alexdev.havana.game.room.Room;
+import org.alexdev.havana.messages.flash.outgoing.rooms.FLASH_EDITDATA;
 import org.alexdev.havana.messages.types.MessageEvent;
 import org.alexdev.havana.server.netty.streams.NettyRequest;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class REMOVERIGHTS implements MessageEvent {
@@ -25,7 +27,18 @@ public class REMOVERIGHTS implements MessageEvent {
         }
 
 
-        List<Integer> targets = List.of(PlayerDao.getId(reader.contents()));
+        List<Integer> targets = null;
+
+        if (!player.getNetwork().isFlashConnection()) {
+            targets = List.of(PlayerDao.getId(reader.contents()));
+        } else {
+            targets = new ArrayList<>();// = PlayerManager.getInstance().getPlayerById(reader.readInt());
+
+            int remove = reader.readInt();
+            for (int i = 0; i < remove; i++) {
+                targets.add(reader.readInt());
+            }
+        }
 
         for (int targetId : targets) {
             if (!room.getRights().contains(targetId)) {
@@ -35,7 +48,7 @@ public class REMOVERIGHTS implements MessageEvent {
             var target = PlayerManager.getInstance().getPlayerById(targetId);
 
             if (target != null) {
-                if (target.getRoomUser().getRoom() == null || target.getRoomUser().getRoom().getId() != room.getId()) {
+                if (target == null || target.getRoomUser().getRoom() == null || target.getRoomUser().getRoom().getId() != room.getId()) {
                     continue;
                 }
 
@@ -44,6 +57,10 @@ public class REMOVERIGHTS implements MessageEvent {
 
             room.getRights().remove(Integer.valueOf(targetId));
             RoomRightsDao.removeRights(targetId, room.getData());
+        }
+
+        if (player.getNetwork().isFlashConnection()) {
+            player.send(new FLASH_EDITDATA(room));
         }
     }
 }

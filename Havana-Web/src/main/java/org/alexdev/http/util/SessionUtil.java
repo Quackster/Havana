@@ -1,6 +1,5 @@
 package org.alexdev.http.util;
 
-import com.goterl.lazysodium.interfaces.PwHash;
 import org.alexdev.duckhttpd.server.connection.WebConnection;
 import org.alexdev.havana.dao.mysql.PlayerDao;
 import org.alexdev.havana.game.player.PlayerDetails;

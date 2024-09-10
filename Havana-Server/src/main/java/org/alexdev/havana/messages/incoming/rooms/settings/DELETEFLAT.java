@@ -8,6 +8,7 @@ import org.alexdev.havana.game.player.Player;
 import org.alexdev.havana.game.room.Room;
 import org.alexdev.havana.game.room.RoomManager;
 import org.alexdev.havana.log.Log;
+import org.alexdev.havana.messages.flash.incoming.navigator.FLASH_USERFLATS;
 import org.alexdev.havana.messages.types.MessageEvent;
 import org.alexdev.havana.server.netty.streams.NettyRequest;
 
@@ -20,6 +21,10 @@ public class DELETEFLAT implements MessageEvent {
     public void handle(Player player, NettyRequest reader) throws Exception {
         int roomId = reader.readInt();
         delete(roomId, player.getDetails().getId());
+
+        if (player.getNetwork().isFlashConnection()) {
+            new FLASH_USERFLATS().handle(player, null);
+        }
     }
 
     public static void delete(int roomId, int userId) throws SQLException {

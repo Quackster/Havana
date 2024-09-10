@@ -44,6 +44,10 @@ public class REMOVEITEM implements MessageEvent {
         room.getMapping().pickupItem(player, item);
         item.delete();
 
+        if (player.getNetwork().isFlashConnection()) {
+            player.getInventory().getView("new");
+        }
+
         player.getRoomUser().getTimerManager().resetRoomTimer();
     }
 }

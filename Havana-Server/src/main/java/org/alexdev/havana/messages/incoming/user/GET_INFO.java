@@ -13,6 +13,14 @@ public class GET_INFO implements MessageEvent {
             return;
         }
 
+        if (player.isProcessLoginSteps()) {
+            if (player.getNetwork().isFlashConnection()) {
+                player.getBadgeManager().refreshBadges();
+                player.getAchievementManager().processAchievements(player, true);
+                player.setProcessLoginSteps(false);
+            }
+        }
+
         player.send(new USER_OBJECT(player.getDetails()));
     }
 }

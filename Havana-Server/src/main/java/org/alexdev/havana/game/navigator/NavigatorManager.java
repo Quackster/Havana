@@ -9,9 +9,11 @@ import java.util.*;
 public class NavigatorManager {
     private static NavigatorManager instance;
     private final HashMap<Integer, NavigatorCategory> categoryMap;
+    private final Map<Integer, NavigatorStyle> navigatorStyles;
 
     private NavigatorManager() {
         this.categoryMap = NavigatorDao.getCategories();
+        this.navigatorStyles = NavigatorDao.getNavigatorStyles();
         //NavigatorDao.resetBadPrivateRoomCategories();
     }
 
@@ -70,6 +72,20 @@ public class NavigatorManager {
      */
     public HashMap<Integer, NavigatorCategory> getCategories() {
         return this.categoryMap;
+    }
+
+    /**
+     * Get the navigator style by room id, will give default style if the room id doesn't exist.
+     *
+     * @param roomId the room id
+     * @return the style
+     */
+    public NavigatorStyle getNavigatorStyle(int roomId) {
+        if (this.navigatorStyles.containsKey(roomId)) {
+            return this.navigatorStyles.get(roomId);
+        }
+
+        return null;//new NavigatorStyle(-1, "officialrooms_fr/percy_jackson_nav.png", 1);
     }
 
     /**

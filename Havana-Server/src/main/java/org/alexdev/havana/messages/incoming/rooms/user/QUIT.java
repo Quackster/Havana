@@ -15,6 +15,12 @@ public class QUIT implements MessageEvent {
         player.getRoomUser().setAuthenticateTelporterId(-1);
         player.getRoomUser().setAuthenticateId(-1);
 
-        player.getRoomUser().getRoom().getEntityManager().leaveRoom(player, false);
+        boolean hotelView = false;
+
+        if (player.getNetwork().isFlashConnection()) {
+            hotelView = true;
+        }
+
+        player.getRoomUser().getRoom().getEntityManager().leaveRoom(player, hotelView);
     }
 }

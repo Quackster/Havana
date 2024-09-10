@@ -65,14 +65,32 @@ public class NettyServer  {
      * Bind the server to its address that's been specified
      */
     public void bind() {
-        this.bootstrap.bind(new InetSocketAddress(this.getIp(), this.getPort())).addListener(objectFuture -> {
+        int[] ports = new int[] { this.port, this.getFlashPort() /*, this.port + 4*/}; // R34 client: deprecated
+
+        for (int gamePort : ports) {
+            this.bootstrap.bind(new InetSocketAddress(this.getIp(), gamePort)).addListener(objectFuture -> {
+                if (!objectFuture.isSuccess()) {
+                    Log.getErrorLogger().error("Failed to start server on address: {}:{}", this.getIp(), gamePort);
+                    Log.getErrorLogger().error("Please double check there's no programs using the same game port, and you have set the correct IP address to listen on.");
+                } else {
+                    if (gamePort == this.port + 2) {
+                        log.info("Flash game server is listening on {}:{}", this.getIp(), gamePort);
+                    /*} else if (gamePort == this.port + 4) {
+                        log.info("Flash R34 game server is listening on {}:{}", this.getIp(), gamePort);*/
+                    } else {
+                        log.info("Shockwave game server is listening on {}:{}", this.getIp(), gamePort);
+                    }
+                }
+            });
+        }
+        /*this.bootstrap.bind(new InetSocketAddress(this.getIp(), this.getPort())).addListener(objectFuture -> {
             if (!objectFuture.isSuccess()) {
-                Log.getErrorLogger().error("Failed to start server on address: {}:{}", this.getIp(), this.port);
-                Log.getErrorLogger().error("Please double check there's no programs using the same game port, and you have set the correct IP address to listen on.");
+                Log.getErrorLogger().error("Failed to start server on address: {}:{}", this.getIp(), this.getPort());
+                Log.getErrorLogger().error("Please double check there's no programs using the same gamePort, and you have set the correct IP address to listen on.", this.getIp(), this.getPort());
             } else {
                 log.info("Shockwave game server is listening on {}:{}", this.getIp(), this.getPort());
             }
-        });
+        });*/
     }
 
     public int getFlashPort() {

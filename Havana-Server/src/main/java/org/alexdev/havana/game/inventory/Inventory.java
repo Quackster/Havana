@@ -101,6 +101,14 @@ public class Inventory {
     private Map<Integer,Item> getCasts() {
         LinkedHashMap<Integer, Item> casts = new LinkedHashMap<>();
 
+        if (this.player.getNetwork().isFlashConnection()) {
+            int stripSlotId = 0;
+
+            for (Item item : this.displayedItems) {
+                addItemCast(casts, stripSlotId++, item);
+            }
+        }
+
         if (this.paginatedItems.containsKey(this.handStripPageIndex)) {
             int stripSlotId = this.handStripPageIndex * MAX_ITEMS_PER_PAGE;
 

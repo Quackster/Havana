@@ -99,6 +99,24 @@ public class MessengerUser {
         }
 
         Room room = player.getRoomUser().getRoom();
+
+        // Don't allow follow into rooms that you cannot gain entry into normally
+        if (friend.getNetwork().isFlashConnection()) {
+            int roomId = room.getId();
+
+            if (WalkwaysManager.getInstance().getWalkways().stream().anyMatch(walkway -> walkway.getRoomTargetId() == room.getId())) {
+                var roomData = WalkwaysManager.getInstance().getWalkways().stream().filter(walkway -> walkway.getRoomTargetId() == room.getId()).findFirst().orElse(null);
+
+                if (roomData != null) {
+                    roomId = roomData.getRoomId();
+                }
+            }
+
+            if (room.isPublicRoom() && NavigatorManager.getInstance().getNavigatorStyle(roomId) == null) {
+                return false;
+            }
+        }
+
         return (!room.getModel().getName().startsWith("bb_") && !room.getModel().getName().equals("snowwar"));
     }
 

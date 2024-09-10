@@ -23,6 +23,14 @@ public class ROOMEEVENT_INFO extends PlayerMessageComposer {
             response.writeString(this.event.getName());
             response.writeString(this.event.getDescription());
             response.writeString(this.event.getStartedDate());
+
+            if (getPlayer().getNetwork().isFlashConnection()) {
+                response.writeInt(this.event.getTags().size());
+
+                for (String tag : this.event.getTags()) {
+                    response.writeString(tag);
+                }
+            }
         }
     }
 

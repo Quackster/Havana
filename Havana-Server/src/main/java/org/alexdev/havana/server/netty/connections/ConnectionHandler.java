@@ -60,7 +60,9 @@ public class ConnectionHandler extends SimpleChannelInboundHandler<NettyRequest>
             return;
         }
 
-        player.send(new HELLO());
+        if (!player.getNetwork().isFlashConnection()) {
+            player.send(new HELLO());
+        }
 
         if (ServerConfiguration.getBoolean("log.connections")) {
             log.info("[{}] Connection from {} ", player.getNetwork().getConnectionId(), NettyPlayerNetwork.getIpAddress(ctx.channel()));

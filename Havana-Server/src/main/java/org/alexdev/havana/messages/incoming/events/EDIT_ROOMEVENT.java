@@ -50,6 +50,23 @@ public class EDIT_ROOMEVENT implements MessageEvent {
         event.setName(name);
         event.setDescription(description);
 
+        List<String> tags = new ArrayList<>();
+
+        if (player.getNetwork().isFlashConnection()) {
+            int amount = reader.readInt();
+
+            for (int i = 0; i < amount; i++) {
+                if (i > 1) {
+                    break;
+                }
+
+                tags.add(StringUtil.filterInput(reader.readString(), true).replace(",", " "));
+            }
+
+            event.getTags().clear();
+            event.getTags().addAll(tags);
+        }
+
         room.send(new ROOMEEVENT_INFO(event));
         EventsDao.save(event);
     }

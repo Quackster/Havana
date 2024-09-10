@@ -54,6 +54,38 @@ public class NavigatorDao {
     }
 
     /**
+     * Get the styles for the public rooms
+     *
+     * @return the list of recent rooms
+     */
+    public static Map<Integer, NavigatorStyle> getNavigatorStyles() {
+        Map<Integer, NavigatorStyle> style = new HashMap<>();
+
+        Connection sqlConnection = null;
+        PreparedStatement preparedStatement = null;
+        ResultSet resultSet = null;
+
+        try {
+            sqlConnection = Storage.getStorage().getConnection();
+            preparedStatement = Storage.getStorage().prepare("SELECT * FROM navigator_styles", sqlConnection);
+            resultSet = preparedStatement.executeQuery();
+
+            while (resultSet.next()) {
+                style.put(resultSet.getInt("room_id"), new NavigatorStyle(resultSet.getInt("room_id"), resultSet.getString("description"), resultSet.getString("thumbnail_url"), resultSet.getInt("thumbnail_layout")));
+            }
+
+        } catch (Exception e) {
+            Storage.logError(e);
+        } finally {
+            Storage.closeSilently(resultSet);
+            Storage.closeSilently(preparedStatement);
+            Storage.closeSilently(sqlConnection);
+        }
+
+        return style;
+    }
+
+    /**
      * Get the list of recent rooms from database set by limit and category id.
      *
      * @param limit      the maximum amount of usrs

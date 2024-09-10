@@ -20,7 +20,12 @@ import org.alexdev.havana.game.messenger.Messenger;
 import org.alexdev.havana.game.player.guides.PlayerGuideManager;
 import org.alexdev.havana.game.player.statistics.PlayerStatistic;
 import org.alexdev.havana.game.player.statistics.PlayerStatisticManager;
+import org.alexdev.havana.game.room.RoomManager;
 import org.alexdev.havana.game.room.entities.RoomPlayer;
+import org.alexdev.havana.messages.flash.outgoing.HOME_ROOM;
+import org.alexdev.havana.messages.flash.outgoing.modtool.FLASH_MODTOOL;
+import org.alexdev.havana.messages.flash.outgoing.navigator.FLASH_FAVOURITES;
+import org.alexdev.havana.messages.incoming.navigator.ADD_FAVORITE_ROOM;
 import org.alexdev.havana.messages.outgoing.alerts.ALERT;
 import org.alexdev.havana.messages.outgoing.alerts.HOTEL_LOGOUT;
 import org.alexdev.havana.messages.outgoing.alerts.HOTEL_LOGOUT.LogoutReason;
@@ -188,6 +193,17 @@ public class Player extends Entity {
         this.send(new LOGIN());
         this.send(new AVATAR_EFFECTS(this.effects));
 
+        if (this.network.isFlashConnection()) {
+            int roomId = PlayerDao.getHomeRoom(this.details.getId());
+
+            if (RoomDao.getRoomById(roomId) == null) {
+                PlayerDao.saveHomeRoom(this.details.getId(), 0);
+                roomId = 0;
+            }
+
+            this.send(new HOME_ROOM(roomId));
+        }
+
         if (GameConfiguration.getInstance().getBoolean("welcome.message.enabled")) {
             String alertMessage = GameConfiguration.getInstance().getString("welcome.message.content");
             alertMessage = StringUtil.replaceAlertMessage(alertMessage, this);
@@ -264,6 +280,14 @@ public class Player extends Entity {
         }
 
         ClubSubscription.countMemberDays(this);
+
+        if (this.network.isFlashConnection()) {
+            this.send(new FLASH_FAVOURITES(ADD_FAVORITE_ROOM.MAX_FAVOURITES, RoomManager.getInstance().getFavouriteRooms(this.getDetails().getId(), true)));
+
+            if (this.getDetails().getRank().getRankId() >= PlayerRank.MODERATOR.getRankId()) {
+                this.send(new FLASH_MODTOOL());
+            }
+        }
     }
 
     /**

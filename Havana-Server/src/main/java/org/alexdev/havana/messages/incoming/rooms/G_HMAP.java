@@ -40,5 +40,15 @@ public class G_HMAP implements MessageEvent {
 
             return;
         }
+
+        if (player.getNetwork().isFlashConnection()) {
+            player.send(new FLOOR_MAP(player.getRoomUser().getRoom().getModel()));
+
+            if (!player.getRoomUser().getRoom().isPublicRoom()) {
+                player.send(new HEIGHTMAP_UPDATE(player.getRoomUser().getRoom(), player.getRoomUser().getRoom().getModel()));
+            }
+
+            player.send(new USER_OBJECTS(List.of()));
+        }
     }
 }

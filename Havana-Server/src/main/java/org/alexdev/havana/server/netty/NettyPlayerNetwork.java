@@ -1,6 +1,8 @@
 package org.alexdev.havana.server.netty;
 
 import io.netty.channel.Channel;
+import org.alexdev.havana.Havana;
+import org.alexdev.havana.game.player.Player;
 import org.alexdev.havana.server.netty.codec.EncryptionDecoder;
 import org.alexdev.havana.server.netty.codec.EncryptionEncoder;
 import org.apache.commons.validator.routines.InetAddressValidator;
@@ -19,10 +21,12 @@ public class NettyPlayerNetwork {
     private String pToken;
     private int pTx;
     private int pRx;
+    private final boolean isFlashConnected;
 
     public NettyPlayerNetwork(Channel channel, int connectionId) {
         this.channel = channel;
         this.connectionId = connectionId;
+        this.isFlashConnected = (Integer.parseInt(channel.localAddress().toString().split(":")[1]) == Havana.getServer().getFlashPort());
     }
 
     public static String removePadding(String tBody, int i) {
@@ -159,9 +163,28 @@ public class NettyPlayerNetwork {
 
     public void registerHandler(ServerHandlerType type, Object object) {
         if (type == ServerHandlerType.RC4) {
+            Player player = this.channel.attr(Player.PLAYER_KEY).get();
+
+            if (player.getNetwork().isFlashConnection()) {
+                return;
+            }
+
             this.channel.pipeline().addBefore("networkDecoder", "encryptionDecoder", new EncryptionDecoder((BigInteger) object));
             this.channel.pipeline().addBefore("networkEncoder", "encryptionEncoder", new EncryptionEncoder((BigInteger) object));
             // this.channel.pipeline().remove("gameDecoder");
         }
+    }
+
+    public boolean isBetaConnected() {
+        return false;
+    }
+
+    public boolean isFlashClient() {
+        return isFlashConnected;
+    }
+
+
+    public boolean isFlashConnection() {
+        return /*isBetaConnected || */isFlashConnected;
     }
 }

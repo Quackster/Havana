@@ -28,7 +28,21 @@ public class CREATE_ROOMEVENT implements MessageEvent {
         String name = WordfilterManager.filterSentence(StringUtil.filterInput(reader.readString(), true));
         String description = WordfilterManager.filterSentence(StringUtil.filterInput(reader.readString(), true));
 
-        Event event = EventsManager.getInstance().createEvent(player, category, name, description, new ArrayList<>());
+        List<String> tags = new ArrayList<>();
+
+        if (player.getNetwork().isFlashConnection()) {
+            int amount = reader.readInt();
+
+            for (int i = 0; i < amount; i++) {
+                if (i > 1) {
+                    break;
+                }
+
+                tags.add(StringUtil.filterInput(reader.readString(), true).replace(",", " "));
+            }
+        }
+
+        Event event = EventsManager.getInstance().createEvent(player, category, name, description, tags);
         player.getRoomUser().getRoom().send(new ROOMEEVENT_INFO(event));
     }
 }

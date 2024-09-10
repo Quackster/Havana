@@ -6,6 +6,12 @@ import org.alexdev.havana.game.player.Player;
 import org.alexdev.havana.game.room.Room;
 import org.alexdev.havana.game.room.RoomManager;
 import org.alexdev.havana.log.Log;
+import org.alexdev.havana.messages.flash.incoming.SET_HOME_ROOM;
+import org.alexdev.havana.messages.flash.incoming.modtool.FLASH_MODTOOL_ROOMINFO;
+import org.alexdev.havana.messages.flash.incoming.modtool.FLASH_MODTOOL_ROOM_CHATLOG;
+import org.alexdev.havana.messages.flash.incoming.navigator.*;
+import org.alexdev.havana.messages.flash.incoming.navigator.beta.FLASH_GETGUESTROOMS;
+import org.alexdev.havana.messages.flash.incoming.rooms.*;
 import org.alexdev.havana.messages.incoming.catalogue.GET_ALIAS_LIST;
 import org.alexdev.havana.messages.incoming.catalogue.GET_CATALOGUE_PAGE;
 import org.alexdev.havana.messages.incoming.catalogue.GET_CATALOG_INDEX;
@@ -108,6 +114,7 @@ public class MessageHandler {
         registerJukeboxPackets();
         registerPollPackets();
         registerTutorPackets();
+        registerFlashModTool();
 
         registerEvent(230, (player, reader) -> {
             if (player.getRoomUser().getRoom() == null) {
@@ -203,6 +210,7 @@ public class MessageHandler {
         registerEvent(1817, new GET_SESSION_PARAMETERS());
         registerEvent(813, new UNIQUEID());
         registerEvent(1170, new VERSIONCHECK());
+        registerEvent(251, new GET_FURNI_VERSIONS());
     }
 
     /**
@@ -247,6 +255,24 @@ public class MessageHandler {
         registerEvent(18, new GETFVRF());
         registerEvent(19, new ADD_FAVORITE_ROOM());
         registerEvent(20, new DEL_FAVORITE_ROOM());
+
+        // Flash
+        registerEvent(434, new FLASH_USERFLATS());
+        registerEvent(382, new FLASH_POPULARTAGS());
+        registerEvent(437, new FLASH_SEARCH());
+        registerEvent(438, new FLASH_SEARCH_TAGS());
+        registerEvent(430, new FLASH_POPULARROOMS());
+        registerEvent(431, new FLASH_HIGHESTVOTEDROOMS());
+        registerEvent(380, new FLASH_PUBLICROOMS());
+        registerEvent(387, new FLASH_CANCREATEROOM());
+        registerEvent(439, new FLASH_EVENTROOMS());
+        registerEvent(433, new FLASH_FRIENDS_IN_ROOM());
+        registerEvent(432, new FLASH_ROOMS_FRIENDS_OWN());
+        registerEvent(436, new FLASH_ROOMS_RECENTLY_VISTED());
+        registerEvent(435, new FLASH_FAVOURITE_ROOMS());
+
+        // Flash r34
+        registerEvent(381, new FLASH_GETGUESTROOMS());
     }
 
     /**
@@ -266,6 +292,20 @@ public class MessageHandler {
         registerEvent(63, new G_ITEMS());
         registerEvent(98, new LETUSERIN());
         registerEvent(261, new RATEFLAT());
+
+        // Flash
+        registerEvent(385, new FLASH_ROOM_INFO());
+        registerEvent(391, new TRYFLAT());
+        //registerEvent(390, new GET_ROOM_INFO());
+        registerEvent(390, new GETROOMAD());
+        registerEvent(390, new G_HMAP());
+
+        registerEvent(388, new FLASH_GETPUBLICROOMDATA());
+        registerEvent(400, new FLASH_ROOMEDITDATA());
+        registerEvent(401, new FLASH_ROOMSAVEDATA());
+        registerEvent(386, new FLASH_ROOMICONDATA());
+        registerEvent(375, new FLASH_GETWARDROBE());
+        registerEvent(376, new FLASH_SAVEWARDROBE());
     }
 
     /**
@@ -291,6 +331,8 @@ public class MessageHandler {
         registerEvent(371, new RESPECT_USER());
         registerEvent(114, new PTM());
         registerEvent(263, new GET_USER_TAGS());
+        registerEvent(44, new CHANGE_LOOKS());
+        registerEvent(384, new SET_HOME_ROOM());
     }
 
 
@@ -533,6 +575,11 @@ public class MessageHandler {
         registerEvent(358, new MSG_REJECT_TUTOR_INVITATION());
         registerEvent(359, new MSG_CANCEL_TUTOR_INVITATIONS());
         registerEvent(249, new RESET_TUTORIAL());
+    }
+
+    private void registerFlashModTool() {
+        registerEvent(459, new FLASH_MODTOOL_ROOMINFO());
+        registerEvent(456, new FLASH_MODTOOL_ROOM_CHATLOG());
     }
 
     /**

@@ -214,7 +214,11 @@ public class PlayerManager {
 
         // Notify all users of shutdown timeout
         for (Player p : this.players) {
-            p.send(new INFO_HOTEL_CLOSING(maintenanceAt));
+            if (p.getNetwork().isFlashConnection()) {
+                p.send(new ALERT("The hotel is currently closing in " + Math.toIntExact(maintenanceAt.toMinutes()) + " minutes!"));
+            } else {
+                p.send(new INFO_HOTEL_CLOSING(maintenanceAt));
+            }
         }
     }
 

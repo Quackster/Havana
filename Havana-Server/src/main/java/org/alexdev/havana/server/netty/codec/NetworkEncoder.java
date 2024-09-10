@@ -40,9 +40,44 @@ public class NetworkEncoder extends MessageToMessageEncoder<Object> {
             NettyResponse response = new NettyResponse(msg.getHeader(), buffer);
 
             try {
+                if (msg instanceof ALERT) {
+                    ALERT alert = (ALERT)msg;
+
+                    if (player.getNetwork().isFlashConnection()) {
+                        alert.setMessage(alert.getMessage().replace("<br>", "\r"));
+                    }
+                }
+
+                // Fix "thumbs up" between Flash/Shockwave clients (ALT+7)
+                if (msg instanceof MESSENGER_MSG) {
+                    MESSENGER_MSG messengerMsg = (MESSENGER_MSG)msg;
+
+                    if (player.getNetwork().isFlashConnection()) {
+                        messengerMsg.getMessage().setMessage(messengerMsg.getMessage().getMessage().replace(Character.toString((char)149), Character.toString((char)8226)));
+                    } else {
+                        messengerMsg.getMessage().setMessage(messengerMsg.getMessage().getMessage().replace(Character.toString((char)8226), Character.toString((char)149)));
+                    }
+                }
+
+                if (msg instanceof CHAT_MESSAGE) {
+                    CHAT_MESSAGE chatMsg = (CHAT_MESSAGE)msg;
+
+                    if (player.getNetwork().isFlashConnection()) {
+                        chatMsg.setMessage(chatMsg.getMessage().replace(Character.toString((char)149), Character.toString((char)8226)));
+                    } else {
+                        chatMsg.setMessage(chatMsg.getMessage().replace(Character.toString((char)8226), Character.toString((char)149)));
+                    }
+                }
+
                 msg.compose(response);
             } catch (Exception ex) {
-                Log.getErrorLogger().error("Error occurred when composing (" + response.getHeader() + "):", ex);
+                String name = "";
+
+                if (player != null && player.isLoggedIn()) {
+                    name = player.getDetails().getName();
+                }
+
+                Log.getErrorLogger().error("Error occurred when composing (" + response.getHeader() + ") for user (" + name + "):", ex);
                 return;
             }
 

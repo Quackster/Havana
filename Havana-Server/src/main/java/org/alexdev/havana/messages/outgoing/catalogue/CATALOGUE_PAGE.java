@@ -33,10 +33,29 @@ public class CATALOGUE_PAGE extends PlayerMessageComposer {
             response.writeString(image);
         }
 
-        response.writeInt(this.texts.size());
+        if (this.page.getLayout().equalsIgnoreCase("frontpage3") && this.getPlayer().getNetwork().isFlashConnection()) {
+            List<String> texts = new ArrayList<>(this.texts);
+            texts = texts.subList(0, texts.size() - 6);
 
-        for (String text : this.texts) {
-            response.writeString(text);
+            texts.add("1. Always ask permission from the bill payer first.\r\n" +
+                    "2. Send HABBO in a UK SMS to 78881. You'll get an SMS back with a voucher code and will be charged Â£3 plus your standard UK SMS rate, normally 10p.\r\n" +
+                    "3. Enter the code below to redeem 35 Credits.");
+            texts.add("Redeem a Habbo Voucher code here:");
+            texts.add("#FAF8CC");
+            texts.add("#FAF8CC");
+
+
+            response.writeInt(texts.size());
+
+            for (String text : texts) {
+                response.writeString(text);
+            }
+        } else {
+            response.writeInt(this.texts.size());
+
+            for (String text : this.texts) {
+                response.writeString(text);
+            }
         }
 
         response.writeInt(this.catalogueItems.size());

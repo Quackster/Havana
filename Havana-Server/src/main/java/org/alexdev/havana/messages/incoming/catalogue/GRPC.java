@@ -210,7 +210,7 @@ public class GRPC implements MessageEvent {
             if (items.size() == 0 && !(itemDefinition != null && (itemDefinition.hasBehaviour(ItemBehaviour.EFFECT) || itemDefinition.getSprite().equals("film"))))
                 return;
 
-            boolean showItemDelivered = player.getRoomUser().getRoom() != null;
+            boolean showItemDelivered = player.getNetwork().isFlashConnection() || player.getRoomUser().getRoom() != null;
 
             // Don't send item delivered if they just buy film
             if (item.getDefinition() != null && item.getDefinition().getSprite().equals("film")) {

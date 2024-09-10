@@ -120,18 +120,17 @@ body { behavior: url({{ site.staticContentPath }}/web-gallery/js/csshover.htc); 
 	{% if site.serverOnline %}
     <div class="enter-hotel-btn">
         <div class="open enter-btn">
-            <a href="{{ site.sitePath }}/client" target="client" onclick="openOrFocusHabbo(this); return false;">Enter {{ site.siteName }} Hotel<i></i></a>
+            <a href="{{ site.sitePath }}/shockwave_client" target="shockwave_client" onclick="openOrFocusHabbo(this); return false;">Enter<i></i></a>
             <b></b>
         </div>
     </div>
-    <!-- 
+
     <div class="enter-beta-btn">
         <div class="open enter-btn">
-            <a href="{{ site.sitePath }}/client" target="client" onclick="openOrFocusHabbo(this); return false;">Enter {{ site.siteName }} Hotel<i></i></a>
+            <a href="{{ site.sitePath }}/flash_client" target="flash_client" onclick="openOrFocusHabbo(this); return false;">Enter Flash {{ site.siteName }}<i></i></a>
             <b></b>
         </div>
     </div>
-    -->
 	{% else %}
 	<div class="enter-hotel-btn">
 		<div class="closed enter-btn">

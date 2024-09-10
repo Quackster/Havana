@@ -42,7 +42,13 @@ public class AVATAR_EFFECTS extends PlayerMessageComposer {
         for (Effect effect : this.effects) {
             response.writeInt(effect.getEffectId());
             response.writeInt(effect.getTimeDuration());
-            response.writeInt((int) this.effects.stream().filter(e -> e.getEffectId() == effect.getEffectId()).count());
+
+            if (this.getPlayer().getNetwork().isFlashConnection()) {
+                response.writeBool(!effect.isActivated());
+            } else {
+                response.writeInt((int) this.effects.stream().filter(e -> e.getEffectId() == effect.getEffectId()).count());
+            }
+
             response.writeInt(effect.isActivated() ? effect.getTimeLeft() : -1);
         }
     }

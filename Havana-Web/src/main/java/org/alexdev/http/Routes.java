@@ -70,10 +70,13 @@ public class Routes {
         RouteManager.addRoute("/client", ClientController::client);
         RouteManager.addRoute("/clientlog/update", ClientController::blank);
         RouteManager.addRoute("/cacheCheck", ClientController::blank);
+        RouteManager.addRoute("/shockwave_client", ClientController::shockwaveclient);
+        RouteManager.addRoute("/flash_client", ClientController::flashClient);
         //RouteManager.addRoute("/beta_client", ClientController::betaClient); // R34 client: deprecated
         RouteManager.addRoute("/client_popup/install_shockwave", ClientController::clientInstallShockwave);
         RouteManager.addRoute("/client_error", ClientController::client_error);
         RouteManager.addRoute("/client_connection_failed", ClientController::client_connection_failed);
+
 
         // Account
         RouteManager.addRoute("/account/banned", AccountController::banned);

@@ -5,6 +5,7 @@ import org.alexdev.havana.game.fuserights.Fuseright;
 import org.alexdev.havana.game.player.Player;
 import org.alexdev.havana.game.room.Room;
 import org.alexdev.havana.game.room.RoomManager;
+import org.alexdev.havana.messages.flash.outgoing.rooms.FLASH_EDITDATA;
 import org.alexdev.havana.messages.types.MessageEvent;
 import org.alexdev.havana.server.netty.streams.NettyRequest;
 
@@ -30,5 +31,9 @@ public class REMOVEALLRIGHTS implements MessageEvent {
         }
 
         RoomRightsDao.deleteRoomRights(room.getData());
+
+        if (player.getNetwork().isFlashConnection()) {
+            player.send(new FLASH_EDITDATA(room));
+        }
     }
 }

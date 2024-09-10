@@ -204,6 +204,10 @@ public class StringUtil {
         newString = newString.replace("\r", "<br>");
         newString = newString.replace("\n", "<br>");
 
+        if (player.getNetwork().isFlashConnection()) {
+            newString = newString.replace("<br>", "\r");
+        }
+
         newString = newString.replace("%username%", player.getDetails().getName());
         return newString;
     }

@@ -251,6 +251,22 @@ public class Item {
      * @return true, if successful.
      */
     public boolean isWalkable(Entity entity, Position selectedPosition) {
+        if (entity != null) {
+            if (entity.getType() == EntityType.PLAYER) {
+                Player player = (Player) entity;
+
+                if (player.getNetwork().isFlashConnection()) {
+                    if (this.getDefinition().getInteractionType() == InteractionType.IDOL_SCOREBOARD) {
+                        return false;
+                    }
+
+                    if (this.getDefinition().getInteractionType() == InteractionType.IDOL_VOTE_CHAIR) {
+                        return false;
+                    }
+                }
+            }
+        }
+
         if (entity == null && this.hasBehaviour(ItemBehaviour.CAN_NOT_STACK_ON_TOP))
             return false;
 

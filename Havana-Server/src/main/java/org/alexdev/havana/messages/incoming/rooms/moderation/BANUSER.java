@@ -17,13 +17,18 @@ import java.util.concurrent.TimeUnit;
 public class BANUSER implements MessageEvent {
     @Override
     public void handle(Player player, NettyRequest reader) throws Exception {
+        Player target = null;//PlayerManager.getInstance().getPlayerByName(playerName);
         Room room = player.getRoomUser().getRoom();
 
         if (room == null) {
             return;
         }
 
-        Player target = PlayerManager.getInstance().getPlayerByName(reader.contents());
+        if (!player.getNetwork().isFlashConnection()) {
+            target = PlayerManager.getInstance().getPlayerByName(reader.contents());
+        } else {
+            target = PlayerManager.getInstance().getPlayerById(reader.readInt());
+        }
 
         if (target == null || target.getRoomUser().getRoom() == null || target.getRoomUser().getRoom().getId() != room.getId()) {
             return;
