@@ -173,7 +173,9 @@ The reason why Shockwave emulators exist is for multiple reasons, the first is t
 
 ![image](https://user-images.githubusercontent.com/1328523/188258240-185c1233-0178-4ace-a9af-b3a22077e32d.png)
 
-![image]()
+### (Habbo version 39 dual client support) 
+
+![image](https://github.com/user-attachments/assets/fbda50c7-76a7-421a-a145-4d406d35977b)
 
 # Download
 
