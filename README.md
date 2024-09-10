@@ -18,6 +18,8 @@ The reason why Shockwave emulators exist is for multiple reasons, the first is t
 
 ### Server
 
+- Dual Flash/Shockwave connection for RELEASE39-22643-22891-200911110035_07c3a2a30713fd5bea8a8caf07e33438.
+
 - Handshake
   - Login via SSO ticket
   - Login via username/password
@@ -171,6 +173,8 @@ The reason why Shockwave emulators exist is for multiple reasons, the first is t
 
 ![image](https://user-images.githubusercontent.com/1328523/188258240-185c1233-0178-4ace-a9af-b3a22077e32d.png)
 
+![image]()
+
 # Download
 
 Download the latest development build from the [releases page](https://github.com/Quackster/Havana/releases).
@@ -197,7 +201,7 @@ Install any JDK version that is equal or above >= 17 to run the jar files.
 
 Run both Havana-Server.jar and Havana-Web.jar at least once to generate the necessary configuration files, configure the MySQL attributes to connect to the MariaDB server.
 
-Download the [havana_www_28_07_2024.zip](https://www.mediafire.com/file/6kn4ghtb37lfc1p/havana_www_28_07_2024.zip/file) file, and then extract it to /tools/www/ this directory is located where you ran Havana-Web.jar. 
+Download the [havana_www_10_09_2024.7z](https://www.mediafire.com/file/xzjfsvb3k2962xo/havana_www_10_09_2024.7z/file) file, and then extract it to /tools/www/ this directory is located where you ran Havana-Web.jar. 
 
 *(This is the default directory for static content within the Havana-Web project, but the directory where it looks for static images can be configured in the Housekeeping settings).*
 
