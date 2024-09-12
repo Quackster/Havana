@@ -20,6 +20,7 @@ services:
     ports:
       - "12321:12321"
       - "12322:12322"
+      - "12323:12323"
     networks:
       - havana
     environment:
