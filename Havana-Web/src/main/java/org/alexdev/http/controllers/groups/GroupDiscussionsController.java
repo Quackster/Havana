@@ -50,6 +50,24 @@ public class GroupDiscussionsController {
             return;
         }
 
+        if (group.getAlias() != null) {
+            if (group.getAlias().equalsIgnoreCase("battleball_rebound")) {
+                webConnection.session().set("page", "games");
+            }
+
+            if (group.getAlias().equalsIgnoreCase("lido")) {
+                webConnection.session().set("page", "games");
+            }
+
+            if (group.getAlias().equalsIgnoreCase("snow_storm")) {
+                webConnection.session().set("page", "games");
+            }
+
+            if (group.getAlias().equalsIgnoreCase("wobble_squabble")) {
+                webConnection.session().set("page", "games");
+            }
+        }
+
         var template = webConnection.template("groups/view_discussions");
         template.set("group", group);
         render(webConnection, group, template, 1);
@@ -95,6 +113,24 @@ public class GroupDiscussionsController {
             page = Integer.parseInt(webConnection.getMatches().get(1));
         } catch (Exception ex) {
 
+        }
+
+        if (group.getAlias() != null) {
+            if (group.getAlias().equalsIgnoreCase("battleball_rebound")) {
+                webConnection.session().set("page", "games");
+            }
+
+            if (group.getAlias().equalsIgnoreCase("lido")) {
+                webConnection.session().set("page", "games");
+            }
+
+            if (group.getAlias().equalsIgnoreCase("snow_storm")) {
+                webConnection.session().set("page", "games");
+            }
+
+            if (group.getAlias().equalsIgnoreCase("wobble_squabble")) {
+                webConnection.session().set("page", "games");
+            }
         }
 
         var template = webConnection.template("groups/view_discussions");
