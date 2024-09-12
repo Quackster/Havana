@@ -96,7 +96,7 @@ INSERT INTO `cms_stickers` (`id`, `user_id`, `x`, `y`, `z`, `sticker_id`, `skin_
 	(42, 1, '85', '383', '94', 13, 0, 2, '[b][color=#ffce00]Power Drill: [/color][/b][color=#fe6301]Bounce on any tile in \rthe field to clear it. [/color]', 1, ''),
 	(43, 1, '369', '317', '20', 13, 4, 2, '[b]Free Battleball[/b]\r\rYes until further notice we\'re letting you play both SnowStorm and Battleball for free - no tickets required.\r\r[b]Please note:[/b]\r* skill levels don\'t apply for the free games - everyone can play everyone', 1, ''),
 	(44, 1, '86', '318', '100', 13, 0, 2, '[b][color=#ffce00]Battle Bomb: [/color][/b][color=#fe6301]Clears all tiles \raround it- even yours![/color]', 1, ''),
-	(45, 1, '30', '30', '16', 13, 2, 2, '[b]Want to know how to play?\r\rRead the instructions in our [url=https://classichabbo.com/groups/1/id/discussions]discussion forum[/url][/b]', 1, ''),
+	(45, 1, '30', '30', '16', 13, 2, 2, '[b]Want to know how to play?\r\rRead the instructions in our [url=/groups/2/id/discussions]discussion forum[/url][/b]', 1, ''),
 	(46, 1, '84', '452', '83', 13, 0, 2, '[b][color=#ffce00]Light Bulb: [/color][/b][color=#fe6301]Turns all the tiles in a \rsmall area your colour.[/color]', 1, ''),
 	(47, 1, '84', '584', '96', 13, 0, 2, '[b][color=#ffce00]Flashlight: [/color][/b][color=#fe6301]Colours all the tiles in a\r straight line in front of you[/color]', 1, ''),
 	(48, 1, '85', '255', '89', 13, 0, 2, '[b][color=#ffce00]Box of pins: [/color][/b][color=#fe6301]Bouncing on these\rwill burst your ball![/color]', 1, ''),
@@ -157,7 +157,7 @@ INSERT INTO `cms_stickers` (`id`, `user_id`, `x`, `y`, `z`, `sticker_id`, `skin_
 	(103, 0, '644', '11', '19', 11000, 5, 5, '', 1, ''),
 	(104, 0, '0', '0', '0', 11200, 1, 5, '', 0, ''),
 	(105, 0, '0', '0', '0', 11300, 1, 5, '', 0, ''),
-	(106, 1, '69', '194', '6', 13, 2, 5, '[b]Hey dude! Don\'t you know the rules? Check out the How to Play thread in the [url=https://classichabbo.com/groups/snowstorm/discussions]discussion forum[/url][/b]', 1, ''),
+	(106, 1, '69', '194', '6', 13, 2, 5, '[b]Hey dude! Don\'t you know the rules? Check out the How to Play thread in the [url=/groups/5/id/discussions]discussion forum[/url][/b]', 1, ''),
 	(107, 1, '516', '1083', '1', 13, 2, 5, '[b]Not again...[/b]', 1, ''),
 	(108, 1, '556', '317', '4', 183, 0, 5, '', 1, '');
 /*!40000 ALTER TABLE `cms_stickers` ENABLE KEYS */;
