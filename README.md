@@ -213,8 +213,6 @@ Start Havana-Server via start_server.sh (Unix/Linux distros) or start_server.bat
 
 Your server should be up and running and accessible via http://localhost/
 
-I highly recommend [this browser](https://forum.oldskooler.org/threads/portable-browser-with-flash-shockwave-basilisk.70/) to be able to play Adobe Shockwave movies in the present day.
-
 ❗ Once registered as an admin, I high recommend running [groups.sql](https://github.com/Quackster/Havana/blob/master/tools/groups.sql) against your database, it will create the Habbo Guides, SnowStorm, BattleBall, Wobble Squabble and Lido Diving gaming groups for the website.
 
 And then make yourself admin by setting your ``rank`` to 8 in the ``users`` table.
