@@ -97,18 +97,50 @@ body { behavior: url({{ site.staticContentPath }}/web-gallery/js/csshover.htc); 
 
 <div id="content-container">
 
-<div id="navi2-container" class="pngbg">
-    <div id="navi2" class="pngbg clearfix">
+	{% if session.currentPage == "games" %}
+	<div id="navi2-container" class="pngbg">
+		<div id="navi2" class="pngbg clearfix">
 		<ul>
-    		<li class="">
-				<a href="{{ site.sitePath }}/community">Community</a>    		</li>
-    		<li class="">
-				<a href="{{ site.sitePath }}/articles">News</a>    		</li>
-    		<li class=" last">
-				<a href="{{ site.sitePath }}/tag">Tags</a>    		</li>
+				<li class="">
+					<a href="/games">Games</a>
+				</li>
+				<li class="{% if group.getAlias() == 'battleball_rebound' %}selected{% endif %}">
+					<a href="/groups/battleball_rebound">BattleBall: Rebound!</a>
+				</li>
+				<li class="{% if group.getAlias() == 'snow_storm' %}selected{% endif %}">
+					<a href="/groups/snow_storm">SnowStorm</a>
+				</li>
+				<li class="{% if group.getAlias() == 'wobble_squabble' %}selected{% endif %}">
+					<a href="/groups/wobble_squabble">Wobble Squabble</a>
+				</li>
+				<li class="{% if group.getAlias() == 'lido' %}selected{% endif %} last">
+					<a href="/groups/lido">Lido Diving</a>
+				</li>
 		</ul>
-    </div>
-</div>
+		</div>
+	</div>
+	{% endif %}
+	
+	{% if session.currentPage == "community" %}
+	<div id="navi2-container" class="pngbg">
+		<div id="navi2" class="pngbg clearfix">
+			<ul>
+				<li class="">
+					<a href="{{ site.sitePath }}/community">Community</a>    		</li>
+				<li class="">
+					<a href="{{ site.sitePath }}/articles">News</a>    		</li>
+				<li class="">
+					<a href="{{ site.sitePath }}/tag">Tags</a>    		</li>
+				<!-- <li class="">
+					<a href="{{ site.sitePath }}/community/photos">Photos</a>    		</li> -->
+				<li class="">
+					<a href="{{ site.sitePath }}/community/events">Events</a>    		</li>
+				<li class=" last">
+					<a href="{{ site.sitePath }}/community/fansites">Fansites</a>    		</li>
+			</ul>
+		</div>
+	</div>
+	{% endif %}
 
 <div id="container">
 	<div id="content" style="position: relative" class="clearfix">
