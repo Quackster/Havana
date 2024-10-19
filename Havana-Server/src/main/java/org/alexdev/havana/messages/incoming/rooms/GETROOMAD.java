@@ -78,6 +78,7 @@ public class GETROOMAD implements MessageEvent {
                 player.send(new USER_OBJECTS(List.of()));
             }
 
+            new G_USRS().handle(player, null);
             new G_STAT().handle(player, null);
         }
 
