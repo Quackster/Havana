@@ -36,6 +36,7 @@ public class BotDao {
                         Integer.parseInt(resultSet.getString("start_look").split(",")[0]),
                         Integer.parseInt(resultSet.getString("start_look").split(",")[1]),
                         resultSet.getString("figure"),
+                        resultSet.getString("figure_flash"),
                         resultSet.getString("walkspace"),
                         resultSet.getString("speech"),
                         resultSet.getString("response"),

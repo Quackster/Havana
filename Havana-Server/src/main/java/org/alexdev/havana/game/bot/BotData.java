@@ -13,6 +13,7 @@ public class BotData {
     private String mission;
     private Position startPosition;
     private String figure;
+    private String figureFlash;
 
     private List<Position> walkspace;
     private List<BotSpeech> speeches;
@@ -32,12 +33,13 @@ public class BotData {
         this.drinks = new ArrayList<>();
     }
 
-    public BotData(String name, String mission, int x, int y, int headRotation, int bodyRotation, String figure, String walkspaceData,
+    public BotData(String name, String mission, int x, int y, int headRotation, int bodyRotation, String figure, String figureFlash, String walkspaceData,
                    String speech, String responses, String unrecognisedResponses, String drinks) {
         this.name = name;
         this.mission = mission;
         this.startPosition = new Position(x, y, 0, headRotation, bodyRotation);
         this.figure = figure;
+        this.figureFlash = figureFlash;
         this.walkspace = new ArrayList<>();
 
         for (String positionDatas : walkspaceData.split(" ")) {
@@ -85,6 +87,10 @@ public class BotData {
 
     public String getFigure() {
         return figure;
+    }
+
+    public String getFigureFlash() {
+        return figureFlash;
     }
 
     public List<Position> getWalkspace() {

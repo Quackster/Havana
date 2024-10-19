@@ -1,11 +1,12 @@
 package org.alexdev.havana.messages.outgoing.rooms.user;
 
+import org.alexdev.havana.game.bot.Bot;
 import org.alexdev.havana.game.entity.Entity;
 import org.alexdev.havana.game.entity.EntityState;
 import org.alexdev.havana.game.entity.EntityType;
 import org.alexdev.havana.game.player.Player;
 import org.alexdev.havana.game.player.statistics.PlayerStatistic;
-import org.alexdev.havana.messages.types.MessageComposer;
+import org.alexdev.havana.messages.types.PlayerMessageComposer;
 import org.alexdev.havana.server.netty.streams.NettyResponse;
 import org.alexdev.havana.util.StringUtil;
 
@@ -13,7 +14,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ConcurrentLinkedQueue;
 
-public class USER_OBJECTS extends MessageComposer {
+public class USER_OBJECTS extends PlayerMessageComposer {
     private List<EntityState> states;
 
     public USER_OBJECTS(ConcurrentLinkedQueue<Entity> entities) {
@@ -52,7 +53,17 @@ public class USER_OBJECTS extends MessageComposer {
             response.writeInt(states.getEntityId());
             response.writeString(states.getDetails().getName());
             response.writeString(states.getDetails().getMotto() + " ");
-            response.writeString(states.getDetails().getFigure());
+
+            if (states.getEntityType() == EntityType.BOT) {
+                if (this.getPlayer().getNetwork().isFlashConnection()) {
+                    response.writeString(((Bot) states.getEntity()).getBotData().getFigureFlash());
+                } else {
+                    response.writeString(states.getDetails().getFigure());
+                }
+            }
+            else {
+                response.writeString(states.getDetails().getFigure());
+            }
             response.writeInt(states.getInstanceId());
             response.writeInt(states.getPosition().getX());
             response.writeInt(states.getPosition().getY());
