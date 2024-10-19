@@ -116,6 +116,8 @@ public class TagDao {
 
                 if (tags > 0) {
                     for (var kvp : list) {
+                        weight = 0;
+
                         if (counter == (bits)) {
                             weight = 3;
                         }
