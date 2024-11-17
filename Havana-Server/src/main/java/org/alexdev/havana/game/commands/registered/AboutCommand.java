@@ -27,7 +27,7 @@ public class AboutCommand extends Command {
                 "<br>" +
                 "<br>Contributors:" +
                 "<br> - ThuGie, Copyright, Raptosaur, Hoshiko, TOMYSSHADOW, Elijah " + // Call for help
-                "<br>   Romuald, Glaceon, Nillus, Holo Team, Meth0d, office.boy, bbadzz" +
+                "<br>   Romuald, Glaceon, Nillus, Jeppe, Meth0d, office.boy, bbadzz" +
                 "<br>" +
                 "<br>   Big thanks to Sefhriloff & Ascii for assisting with SnowStorm." +
                 "<br>" +
