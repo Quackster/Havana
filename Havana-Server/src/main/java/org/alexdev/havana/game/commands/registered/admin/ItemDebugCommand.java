@@ -33,6 +33,6 @@ public class ItemDebugCommand extends Command {
 
     @Override
     public String getDescription() {
-        return "<seconds> - Cycles through the rainbow in your very own room!";
+        return "Enable/disable item debug";
     }
 }

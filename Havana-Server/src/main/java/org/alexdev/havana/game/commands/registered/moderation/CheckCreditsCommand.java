@@ -50,6 +50,6 @@ public class CheckCreditsCommand extends Command {
 
     @Override
     public String getDescription() {
-        return "Add badge to user";
+        return "Checks the credit amount for an user";
     }
 }

@@ -59,6 +59,6 @@ public class GuideStatusCommand extends Command {
 
     @Override
     public String getDescription() {
-        return "View the current loaded groups";
+        return "View guide statistics";
     }
 }

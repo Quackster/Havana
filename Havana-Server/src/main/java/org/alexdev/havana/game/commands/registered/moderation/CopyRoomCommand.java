@@ -107,6 +107,6 @@ public class CopyRoomCommand extends Command {
 
     @Override
     public String getDescription() {
-        return "Remove badge from user";
+        return "Creates a copy of the room";
     }
 }
