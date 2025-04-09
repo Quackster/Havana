@@ -72,6 +72,6 @@ public class GiveCreditsCommand extends Command {
 
     @Override
     public String getDescription() {
-        return "Add badge to user";
+        return "Add credits to user";
     }
 }

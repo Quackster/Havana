@@ -53,6 +53,6 @@ public class GiftRoomCommand extends Command {
 
     @Override
     public String getDescription() {
-        return "Shows the coordinates in the room";
+        return "Sends a gift from catalogue to users in the room";
     }
 }

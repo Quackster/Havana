@@ -50,6 +50,6 @@ public class BanCommand extends Command {
 
     @Override
     public String getDescription() {
-        return "Sets trade ban time of user";
+        return "Temporarily bans a given user";
     }
 }

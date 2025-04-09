@@ -37,6 +37,6 @@ public class RoomAlertCommand extends Command {
 
     @Override
     public String getDescription() {
-        return "Sends an alert hotel-wide";
+        return "Sends an alert room-wide";
     }
 }

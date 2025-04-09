@@ -72,6 +72,6 @@ public class RemoveCreditsCommand extends Command {
 
     @Override
     public String getDescription() {
-        return "Add badge to user";
+        return "Remove credits from user";
     }
 }
