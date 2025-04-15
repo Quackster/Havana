@@ -39,7 +39,7 @@ public class EncryptionEncoder extends MessageToMessageEncoder<ByteBuf> {
         byte[] tOriginalMsgBytes = new byte[buffer.readableBytes()];
         buffer.readBytes(tOriginalMsgBytes);
 
-        String tOriginalMsg = new String(tOriginalMsgBytes);
+        String tOriginalMsg = new String(tOriginalMsgBytes, StringUtil.getCharset());
 
         String tHeader;
         String tMsg;
@@ -57,8 +57,8 @@ public class EncryptionEncoder extends MessageToMessageEncoder<ByteBuf> {
 
         var tEncryptedMsg = Unpooled.buffer();
 
-        tEncryptedMsg.writeBytes(tHeader.getBytes());
-        tEncryptedMsg.writeBytes(tMsg.getBytes());
+        tEncryptedMsg.writeBytes(tHeader.getBytes(StringUtil.getCharset()));
+        tEncryptedMsg.writeBytes(tMsg.getBytes(StringUtil.getCharset()));
 
         out.add(tEncryptedMsg);
     }
