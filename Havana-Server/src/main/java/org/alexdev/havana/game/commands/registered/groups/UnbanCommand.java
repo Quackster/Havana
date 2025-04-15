@@ -88,6 +88,6 @@ public class UnbanCommand extends Command {
     
     @Override
     public String getDescription() {
-        return "Permanently bans a given user";
+        return "Removes a ban for the given user";
     }
 }

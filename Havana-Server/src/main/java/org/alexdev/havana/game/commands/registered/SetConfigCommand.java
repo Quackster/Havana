@@ -49,6 +49,6 @@ public class SetConfigCommand extends Command {
 
     @Override
     public String getDescription() {
-        return "In-game housekeeping for the catalogue item prices.";
+        return "Allows to update server configs.";
     }
 }
