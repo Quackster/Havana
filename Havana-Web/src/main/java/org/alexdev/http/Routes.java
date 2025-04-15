@@ -70,10 +70,13 @@ public class Routes {
         RouteManager.addRoute("/client", ClientController::client);
         RouteManager.addRoute("/clientlog/update", ClientController::blank);
         RouteManager.addRoute("/cacheCheck", ClientController::blank);
+        RouteManager.addRoute("/shockwave_client", ClientController::shockwaveclient);
+        RouteManager.addRoute("/flash_client", ClientController::flashClient);
         //RouteManager.addRoute("/beta_client", ClientController::betaClient); // R34 client: deprecated
         RouteManager.addRoute("/client_popup/install_shockwave", ClientController::clientInstallShockwave);
         RouteManager.addRoute("/client_error", ClientController::client_error);
         RouteManager.addRoute("/client_connection_failed", ClientController::client_connection_failed);
+
 
         // Account
         RouteManager.addRoute("/account/banned", AccountController::banned);
@@ -279,6 +282,8 @@ public class Routes {
         // API
         RouteManager.addRoute("/api/advertisement/get_img", AdvertisementController::getImg);
         RouteManager.addRoute("/api/advertisement/get_url", AdvertisementController::getUrl);
+        RouteManager.addRoute("/api/ticket", TicketController::get);
+        RouteManager.addRoute("/api/login", TicketController::login);
         RouteManager.addRoute("/api/verify/get/*", VerifyController::get);
         RouteManager.addRoute("/api/verify/clear/*", VerifyController::clear);
         RouteManager.addRoute("/habbo-imaging/*", ImagerController::imager_redirect);
