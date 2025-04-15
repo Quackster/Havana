@@ -91,7 +91,17 @@ public class Havana {
             log = LoggerFactory.getLogger(Havana.class);
             ResourceLeakDetector.setLevel(ResourceLeakDetector.Level.ADVANCED);
 
-            log.info("Havana - Habbo Hotel V31 Emulation");
+            System.out.println("HAVANA EMULATOR");
+            System.out.println("THE FREE AND OPEN SOURCE HABBO HOTEL EMULATOR");
+            System.out.println("COPYRIGHT (C) 2025 BY QUACKSTER");
+            System.out.println("FOR MORE DETAILS CHECK LICENSE.TXT");
+            System.out.println();
+            System.out.println("BUILD");
+            System.out.println(" CORE: Java 17");
+            System.out.println(" CLIENT: V31+");
+            System.out.println();
+            
+            log.info("Starting Havana...");
 
             if (Storage.connect()) {
                 Storage.getLogger().info("Connection to MySQL was a success");
