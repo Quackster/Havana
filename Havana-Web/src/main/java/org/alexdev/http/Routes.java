@@ -282,6 +282,8 @@ public class Routes {
         // API
         RouteManager.addRoute("/api/advertisement/get_img", AdvertisementController::getImg);
         RouteManager.addRoute("/api/advertisement/get_url", AdvertisementController::getUrl);
+        RouteManager.addRoute("/api/ticket", TicketController::get);
+        RouteManager.addRoute("/api/login", TicketController::login);
         RouteManager.addRoute("/api/verify/get/*", VerifyController::get);
         RouteManager.addRoute("/api/verify/clear/*", VerifyController::clear);
         RouteManager.addRoute("/habbo-imaging/*", ImagerController::imager_redirect);
