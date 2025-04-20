@@ -393,6 +393,8 @@ public abstract class RoomEntity {
 
         this.carryId = carryId;
         this.carryValue = carryValue;
+
+        this.room.sendFlashClients(new USER_CARRY_OBJECT(this.instanceId, carryId, carryValue));
     }
 
     /**
