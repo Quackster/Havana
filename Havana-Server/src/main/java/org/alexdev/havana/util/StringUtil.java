@@ -136,7 +136,7 @@ public class StringUtil {
      * @return the encoding
      */
     public static Charset getCharset() {
-        return StandardCharsets.UTF_8;
+        return StandardCharsets.ISO_8859_1;
     }
 
     public static String isValidTag(String tag, int userId, int roomId, int groupId) {
