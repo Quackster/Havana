@@ -54,14 +54,12 @@ public class GameChess extends GamehallGame {
         this.board = null;
     }
 
-    @Override
-    public void joinGame(Player player) { }
-
+    /*
     @Override
     public void leaveGame(Player player) {
         this.playerSides.remove(player);
     }
-
+*/
     @Override
     public void handleCommand(Player player, Room room, Item item, String command, String[] args) {
         GameTrigger trigger = (GameTrigger) item.getDefinition().getInteractionType().getTrigger();

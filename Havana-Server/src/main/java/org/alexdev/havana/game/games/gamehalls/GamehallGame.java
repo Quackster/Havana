@@ -50,16 +50,10 @@ public abstract class GamehallGame {
     public abstract void handleCommand(Player player, Room room, Item item, String command, String[] args);
 
     /**
-     * Join game handler for player
-     * @param player the player that join
-     */
-    public abstract void joinGame(Player player);
-
-    /**
      * Leave game handler for player
      * @param player the player that leaves
      */
-    public abstract void leaveGame(Player player);
+    // public abstract void leaveGame(Player player);
 
     /**
      * Gets the unique game ID instance for this pair. Will

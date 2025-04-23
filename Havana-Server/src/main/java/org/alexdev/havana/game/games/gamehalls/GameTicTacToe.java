@@ -44,6 +44,7 @@ public class GameTicTacToe extends GamehallGame {
         this.gameMap = null;
     }
 
+    /*
     @Override
     public void joinGame(Player p) { }
 
@@ -51,7 +52,7 @@ public class GameTicTacToe extends GamehallGame {
     public void leaveGame(Player player) {
         this.playerSides.remove(player);
     }
-
+    */
     @Override
     public void handleCommand(Player player, Room room, Item item, String command, String[] args) {
         GameTrigger trigger = (GameTrigger) item.getDefinition().getInteractionType().getTrigger();

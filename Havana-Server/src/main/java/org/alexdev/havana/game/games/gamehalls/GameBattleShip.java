@@ -51,6 +51,7 @@ public class GameBattleShip extends GamehallGame {
         this.gameEnded = false;
     }
 
+    /*
     @Override
     public void joinGame(Player player) {
         if (!this.gameStarted) {
@@ -78,7 +79,8 @@ public class GameBattleShip extends GamehallGame {
         this.sendToEveryone(new ITEMMSG(new String[]{this.getGameId(), "OPPONENTS", String.join(Character.toString((char) 13), opponentData)}));
         this.sendMarkedMap();
     }
-
+*/
+    /*
     @Override
     public void leaveGame(Player player) {
         if (this.nextTurn == getPlayerNum(player)) {
@@ -91,6 +93,8 @@ public class GameBattleShip extends GamehallGame {
             }
         }
     }
+
+     */
 
     @Override
     public void handleCommand(Player player, Room room, Item item, String command, String[] args) {
