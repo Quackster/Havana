@@ -18,7 +18,7 @@ The reason why Shockwave emulators exist is for multiple reasons, the first is t
 
 ### Server
 
-- Dual Flash/Shockwave connection for RELEASE39-22643-22891-200911110035_07c3a2a30713fd5bea8a8caf07e33438.
+- Dual Flash/Shockwave connection for RELEASE39-22643-22891-200911110035_07c3a2a30713fd5bea8a8caf07e33438 and Habbo Hotel v31+ and older.
 
 - Handshake
   - Login via SSO ticket
@@ -31,6 +31,7 @@ The reason why Shockwave emulators exist is for multiple reasons, the first is t
   - Tic Tac Toe (available in Cunningfox Gamehall)
   - Battle Ships (available in Cunningfox Gamehall)
   - Chess (available in Cunningfox Gamehall)
+  - Poker (available in Cunningfox Gamehall)
 - Catalogue
   - Main/sub category page support
   - Catalogue pages
