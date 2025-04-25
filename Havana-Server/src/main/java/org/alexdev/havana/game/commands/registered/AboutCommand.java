@@ -29,9 +29,9 @@ public class AboutCommand extends Command {
                 "<br> - ThuGie, Copyright, Raptosaur, Hoshiko, TOMYSSHADOW, Elijah " + // Call for help
                 "<br>   Romuald, Glaceon, Nillus, Jeppe, Meth0d, office.boy, bbadzz" +
                 "<br>" +
-                "<br>   Big thanks to Sefhriloff & Ascii for assisting with SnowStorm." +
-                "<br>" +
-                "<br>" +
+                //"<br>   Big thanks to Sefhriloff & Ascii for assisting with SnowStorm." +
+                //"<br>" +
+                //"<br>" +
                 "Made by Quackster from RaGEZONE"));
     }
 
