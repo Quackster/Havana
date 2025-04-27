@@ -202,15 +202,15 @@ Download the latest development build from the [releases page](https://github.co
 
 Install any JDK version that is equal or above >= 17 to run the jar files.
 
-Run both Havana-Server.jar and Havana-Web.jar at least once to generate the necessary configuration files, configure the MySQL attributes to connect to the MariaDB server.
-
-Download the [havana_www_10_09_2024.7z](https://www.mediafire.com/file/xzjfsvb3k2962xo/havana_www_10_09_2024.7z/file) file, and then extract it to /tools/www/ this directory is located where you ran Havana-Web.jar. 
-
-*(This is the default directory for static content within the Havana-Web project, but the directory where it looks for static images can be configured in the Housekeeping settings).*
+Run both Havana-Server sh/bat and Havana-Web sh/bat at least once to generate the necessary configuration files, configure the MySQL attributes to connect to the MariaDB server.
 
 Start Havana-Web via start_web.sh (Unix/Linux distros) or start_web.bat (Windows)
 
 Start Havana-Server via start_server.sh (Unix/Linux distros) or start_server.bat (Windows)
+
+Download the [havana_www_10_09_2024.7z](https://www.mediafire.com/file/xzjfsvb3k2962xo/havana_www_10_09_2024.7z/file) file, and then extract it to /tools/www/ this directory is located where you ran Havana-Web.jar. 
+
+*(This is the default directory for static content within the Havana-Web project, but the directory where it looks for static images can be configured in the Housekeeping settings).*
 
 Your server should be up and running and accessible via http://localhost/
 
