@@ -57,20 +57,20 @@ jobs:
           sudo mv tools/www-tpl/* ./Havana/tools/www-tpl/
           sudo cp tools/scripts/README.txt ./Havana/
 
-      - id: sha-short
-        name: Get short SHA
-        run: echo "::set-output name=sha-short::$(git rev-parse --short HEAD)"
-        
+      - id: get-tag
+        name: Get tag version
+        run: echo "tag=${GITHUB_REF##*/}" >> $GITHUB_OUTPUT
+
       - name: Compress release files
         uses: montudor/action-zip@v1
         with:
-          args: zip -qq -r ./Havana-${{ steps.sha-short.outputs.sha-short }}.zip ./Havana
+          args: zip -qq -r ./Havana-${{ steps.get-tag.outputs.tag }}.zip ./Havana
           
       - uses: "marvinpinto/action-automatic-releases@latest"
         with:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
-          automatic_release_tag: "latest"
+          automatic_release_tag: "${{ steps.get-tag.outputs.tag }}"
           prerelease: true
-          title: "Development Build ${{ steps.sha-short.outputs.sha-short }}"
+          title: "Pre-release ${{ steps.get-tag.outputs.tag }}"
           files: |
-            Havana-${{ steps.sha-short.outputs.sha-short }}.zip
+            Havana-${{ steps.get-tag.outputs.tag }}.zip
