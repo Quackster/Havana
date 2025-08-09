@@ -35,3 +35,4 @@ Havana-Server/src/main/java/META-INF/MANIFEST.MF
 Havana-Web/src/main/java/META-INF/MANIFEST.MF
 Havana-Server/META-INF/MANIFEST.MF
 .DS_Store
+tools/www-tpl/default-de/ELF-docs/desktop.ini

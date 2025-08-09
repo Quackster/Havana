@@ -1,0 +1,1 @@
+Dein Gruppenalias lautet {{ site.sitePath }}/groups/{{ url }}. Du kannst ihn später nicht mehr ändern.
