@@ -38,9 +38,6 @@ dependencies {
     // https://mvnrepository.com/artifact/org.apache.commons/commons-lang3
     implementation group: 'org.apache.commons', name: 'commons-lang3', version: '3.9'
 
-    // https://mvnrepository.com/artifact/commons-lang/commons-lang
-    implementation group: 'commons-lang', name: 'commons-lang', version: '2.6'
-
     // https://mvnrepository.com/artifact/commons-validator/commons-validator
     implementation group: 'commons-validator', name: 'commons-validator', version: '1.6'
 

@@ -10,7 +10,6 @@ import org.alexdev.havana.game.player.Player;
 import org.alexdev.havana.game.room.Room;
 import org.alexdev.havana.game.room.entities.RoomEntity;
 import org.alexdev.havana.game.triggers.GenericTrigger;
-import org.apache.commons.lang.StringUtils;
 
 public class PetWaterBowlInteractor extends GenericTrigger {
     public void onInteract(Player player, Room room, Item item, int status) {

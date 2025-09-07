@@ -12,7 +12,7 @@ import org.alexdev.havana.game.room.enums.StatusType;
 import org.alexdev.havana.messages.outgoing.rooms.user.CHAT_MESSAGE;
 import org.alexdev.havana.util.DateUtil;
 import org.alexdev.havana.util.StringUtil;
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 
 import java.util.List;
 import java.util.concurrent.ThreadLocalRandom;

@@ -10,7 +10,7 @@ import org.alexdev.havana.game.player.guides.GuidingData;
 import org.alexdev.havana.messages.outgoing.alerts.ALERT;
 import org.alexdev.havana.util.DateUtil;
 import org.alexdev.havana.util.config.GameConfiguration;
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 
 import java.util.Comparator;
 import java.util.concurrent.TimeUnit;
