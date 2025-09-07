@@ -37,7 +37,6 @@ public class Watchdog implements Runnable {
     public static List<NewsArticle> NEWS_STAFF = new ArrayList<>();
 
     public static int USERS_ONLNE;
-    public static boolean IS_IMAGER_ONLINE;
     public static boolean IS_SERVER_ONLINE;
     public static int LAST_VISITS;
 
@@ -76,7 +75,7 @@ public class Watchdog implements Runnable {
 
         if (this.counter.get() % 30 == 0) {
             try {
-
+/*
                 String imagerPath =  GameConfiguration.getInstance().getString("site.imaging.endpoint");
 
                 if (!imagerPath.isBlank()) {
@@ -89,7 +88,7 @@ public class Watchdog implements Runnable {
                     } catch (MalformedURLException e) { }
 
                 }
-
+*/
                 IS_SERVER_ONLINE = isServerOnline(ServerConfiguration.getString("rcon.ip"), ServerConfiguration.getInteger("rcon.port"));
                 USERS_ONLNE = Integer.parseInt(SettingsDao.getSetting("players.online"));
                 LAST_VISITS = SiteDao.getLastVisits();

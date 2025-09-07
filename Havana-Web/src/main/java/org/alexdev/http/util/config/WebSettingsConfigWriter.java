@@ -14,8 +14,8 @@ public class WebSettingsConfigWriter implements ConfigWriter {
         config.put("site.name", "Habbo");
         config.put("site.path", "http://localhost");
         config.put("static.content.path", "http://localhost");
-        config.put("site.imaging.endpoint", "http://localhost:5000");
-        config.put("site.imaging.endpoint.timeout", "30000");
+        // config.put("site.imaging.endpoint", "http://localhost:5000");
+        // config.put("site.imaging.endpoint.timeout", "30000");
 
         config.put("hotel.check.online", "true");
 
