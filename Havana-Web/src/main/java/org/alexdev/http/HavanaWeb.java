@@ -2,6 +2,9 @@ package org.alexdev.http;
 
 import com.google.gson.Gson;
 import io.netty.util.ResourceLeakDetector;
+import net.h4bbo.avatara4j.figure.readers.FiguredataReader;
+import net.h4bbo.avatara4j.figure.readers.LegacyFiguredataReader;
+import net.h4bbo.avatara4j.figure.readers.ManifestReader;
 import org.alexdev.duckhttpd.routes.RouteManager;
 import org.alexdev.duckhttpd.server.WebServer;
 import org.alexdev.duckhttpd.util.config.Settings;
@@ -89,6 +92,8 @@ public class HavanaWeb {
         ItemManager.getInstance();
         NewsManager.getInstance();
 
+        loadFigureData();
+
         executor = Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors());
         scheduler = Executors.newScheduledThreadPool(Runtime.getRuntime().availableProcessors());
         scheduler.scheduleWithFixedDelay(new Watchdog(), 1, 1, TimeUnit.SECONDS);
@@ -104,6 +109,16 @@ public class HavanaWeb {
 
         WebServer instance = new WebServer(port);
         instance.start();
+    }
+
+    private static void loadFigureData() {
+        logger.info("Loading figuredata for Avatara4j");
+
+        FiguredataReader.getInstance().load();
+        LegacyFiguredataReader.getInstance().load();
+        ManifestReader.getInstance().load();
+
+        logger.info("Loaded " + ManifestReader.getInstance().getParts().size() + " figure offsets!");
     }
 
     /**

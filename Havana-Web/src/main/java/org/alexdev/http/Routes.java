@@ -286,7 +286,10 @@ public class Routes {
         RouteManager.addRoute("/api/login", TicketController::login);
         RouteManager.addRoute("/api/verify/get/*", VerifyController::get);
         RouteManager.addRoute("/api/verify/clear/*", VerifyController::clear);
-        RouteManager.addRoute("/habbo-imaging/*", ImagerController::imager_redirect);
+        // RouteManager.addRoute("/habbo-imaging/*", ImagerController::imager_redirect);
+        RouteManager.addRoute("/habbo-imaging/avatarimage", ImagerController::avatarimage);
+        RouteManager.addRoute("/habbo-imaging/badge/*", ImagerController::badge);
+        RouteManager.addRoute("/habbo-imaging/badge-fill/*", ImagerController::badgefill);
 
         // Housekeeping
         RouteManager.addRoute("/" + HOUSEKEEPING_PATH + "", HousekeepingController::dashboard);
