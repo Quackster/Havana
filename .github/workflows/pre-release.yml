@@ -23,29 +23,13 @@ jobs:
       - name: Build distribution with Gradle
         run: ./gradlew distZip
         
-      - name: Decompress web distribution file
-        uses: montudor/action-zip@v1
-        with:
-          args: unzip -qq Havana-Web/build/distributions/Havana-Web.zip -d ./release
-          
-      - name: Decompress server distribution file
-        uses: montudor/action-zip@v1
-        with:
-          args: unzip -qq Havana-Server/build/distributions/Havana-Server.zip -d ./release
-          
       - name: File release preparation
         run: |
-          sudo rm -rf ./release/Havana-Web/bin/*
-          sudo rm -rf ./release/Havana-Web/bin
-          sudo rm -rf ./release/Havana-Server/bin/*
-          sudo rm -rf ./release/Havana-Server/bin
           sudo mkdir ./Havana
           sudo mkdir ./Havana/lib
           sudo mkdir ./Havana/tools
-          sudo mv ./release/Havana-Web/lib/Havana-Server.jar ./Havana/Havana-Server.jar
-          sudo mv ./release/Havana-Web/lib/Havana-Web.jar ./Havana/Havana-Web.jar
-          sudo mv ./release/Havana-Web/lib/* ./Havana/lib
-          sudo mv ./release/Havana-Server/lib/* ./Havana/lib
+          sudo mv ./Havana-Server/build/Havana-Server-unspecified.jar ./Havana/Havana-Server.jar
+          sudo mv ./Havana-Server/build/Havana-Web-unspecified.jar ./Havana/Havana-Web.jar
           sudo cp tools/scripts/run_server.bat ./Havana/
           sudo cp tools/scripts/run_server.sh ./Havana/
           sudo cp tools/scripts/run_web.bat ./Havana/

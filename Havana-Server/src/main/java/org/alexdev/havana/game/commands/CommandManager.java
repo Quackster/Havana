@@ -251,8 +251,6 @@ public class CommandManager {
 
     /**
      * Reset the instance
-     *
-     * @return the instance
      */
     public static void reset() {
         instance = null;

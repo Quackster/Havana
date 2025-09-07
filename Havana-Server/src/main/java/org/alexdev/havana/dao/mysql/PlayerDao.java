@@ -374,7 +374,6 @@ public class PlayerDao {
      *
      * @param userId the id of the player to set
      * @param password password
-     * @return true, if successful
      */
     public static void setPassword(int userId, String password) {
         Connection sqlConnection = null;

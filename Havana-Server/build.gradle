@@ -1,16 +1,25 @@
-apply plugin: 'java'
-apply plugin: 'application'
-
-java {
-    sourceCompatibility = JavaVersion.toVersion("1.17")
-    targetCompatibility = JavaVersion.toVersion("1.17")
+plugins {
+    id 'java'
+    id 'application'
+    id 'com.github.johnrengelman.shadow' version '8.1.1' // For Java 8
 }
 
+group = 'org.oldskooler'
+// version = '1.5'
 mainClassName = 'org.alexdev.havana.Havana'
 
 repositories {
+    flatDir {
+        dirs 'libs'
+    }
     maven { url 'https://jitpack.io' }
     mavenCentral()
+}
+
+java {
+    withSourcesJar()
+    withJavadocJar()
+    toolchain { languageVersion = JavaLanguageVersion.of(17) }
 }
 
 dependencies {
@@ -54,28 +63,14 @@ dependencies {
     implementation 'com.github.bhlangonijr:chesslib:1.1.1'
 }
 
-// Create fat jar with libraries inside of it.
-task fatJar(type: Jar) {
-    zip64 true
-    duplicatesStrategy 'exclude'
-    manifest {
-        attributes 'Main-Class': mainClassName
-    }
-    baseName = project.name + '-all'
-    from { configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) } }
-    with jar
+// Configure the shadow jar (fat jar). Defaults to classifier "all".
+// The below sets the file name to the expected output
+tasks.shadowJar {
+    // Produces <project.name>-<project.version>.jar (no "-all" suffix).
+    archiveClassifier.set("")
+    archiveFileName.set("${project.name}-${project.version}.jar")
 }
 
-// Create jar with no libraries inside of it, used when creating with "gradle distZip" and
-// libraries are then to be stored in the folder next to it called 'dependency-jars'
-// https://vocon-it.com/2016/11/15/how-to-build-a-lean-jar-file-with-gradle/
-/*jar {
-    manifest {
-        attributes (
-                'Main-Class': mainClassName,
-                "Class-Path": '. dependency-jars/' + configurations.compile.collect {
-                    it.getName()
-                }.join(' dependency-jars/')
-        )
-    }
-}*/
+artifacts {
+    archives tasks.named("shadowJar")
+}
