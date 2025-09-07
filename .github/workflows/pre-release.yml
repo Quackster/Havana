@@ -27,8 +27,8 @@ jobs:
         run: |
           sudo mkdir ./Havana
           sudo mkdir ./Havana/tools
-          sudo mv ./Havana-Server/build/Havana-Server-unspecified.jar ./Havana/Havana-Server.jar
-          sudo mv ./Havana-Server/build/Havana-Web-unspecified.jar ./Havana/Havana-Web.jar
+          sudo mv ./Havana-Server/build/libs/Havana-Server-unspecified.jar ./Havana/Havana-Server.jar
+          sudo mv ./Havana-Web/build/libs/Havana-Web-unspecified.jar ./Havana/Havana-Web.jar
           sudo cp tools/scripts/run_server.bat ./Havana/
           sudo cp tools/scripts/run_server.sh ./Havana/
           sudo cp tools/scripts/run_web.bat ./Havana/
