@@ -12,9 +12,8 @@ import io.netty.channel.group.DefaultChannelGroup;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
 import io.netty.util.concurrent.GlobalEventExecutor;
-import org.alexdev.havana.log.Log;
+import org.oldskooler.simplelogger4j.SimpleLog;
 import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import java.net.InetSocketAddress;
 import java.util.concurrent.atomic.AtomicInteger;
@@ -22,7 +21,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 public class RconServer {
     final private static int BACK_LOG = 20;
     final private static int BUFFER_SIZE = 2048;
-    final private static Logger log = LoggerFactory.getLogger(RconServer.class);
+    final private static SimpleLog<RconServer> log = SimpleLog.of(RconServer.class);
 
     private final String ip;
     private final int port;
@@ -67,10 +66,10 @@ public class RconServer {
     public void bind() {
         this.bootstrap.bind(new InetSocketAddress(this.getIp(), this.getPort())).addListener(objectFuture -> {
             if (!objectFuture.isSuccess()) {
-                Log.getErrorLogger().error("Failed to start RCON server on address: {}:{}", this.getIp(), this.getPort());
-                Log.getErrorLogger().error("Please double check there's no programs using the same port, and you have set the correct IP address to listen on.", this.getIp(), this.getPort());
+                SimpleLog.of(RconServer.class).error("Failed to start RCON server on address: " + this.getIp() + ":" + this.getPort());
+                SimpleLog.of(RconServer.class).error("Please double check there's no programs using the same port, and you have set the correct IP address to listen on.");
             } else {
-                log.info("RCON (remote connection) is listening on {}:{}", this.getIp(), this.getPort());
+                log.info("RCON (remote connection) is listening on " + this.getIp() + ":" + this.getPort());
             }
         });
     }

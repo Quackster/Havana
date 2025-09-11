@@ -1,66 +1,88 @@
 package org.alexdev.havana.util.config;
 
-import org.apache.commons.configuration2.INIConfiguration;
-import org.apache.commons.configuration2.SubnodeConfiguration;
-import org.apache.commons.configuration2.ex.ConfigurationException;
-
 import java.io.*;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
-import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.Iterator;
 import java.util.Map;
-import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 
 public class Configuration {
-    public static Map<String, String> load(String configPath) throws IOError, IOException, ConfigurationException {
+    public static Map<String, String> load(String configPath) throws IOException {
         Map<String, String> config = new ConcurrentHashMap<>();
-        Path path = Paths.get(configPath);
 
-        INIConfiguration ini = new INIConfiguration();
-        BufferedReader reader = Files.newBufferedReader(path, StandardCharsets.UTF_8);
-        ini.read(reader);
+        File file = new File(configPath);
+        if (!file.exists()) {
+            return config;
+        }
 
-        Set<String> sectionNames = ini.getSections();
-        //System.out.printf("Section names: %s", sectionNames.toString());
+        try (BufferedReader reader = Files.newBufferedReader(Paths.get(configPath), StandardCharsets.UTF_8)) {
+            String line;
+            String currentSection = "";
 
-        for (String sectionName : sectionNames) {
-            SubnodeConfiguration section = ini.getSection(sectionName);
+            while ((line = reader.readLine()) != null) {
+                line = line.trim();
 
-            if (section != null) {
-                Iterator<String> keys = section.getKeys();
+                // Skip empty lines and comments
+                if (line.isEmpty() || line.startsWith(";") || line.startsWith("#")) {
+                    continue;
+                }
 
-                while (keys.hasNext()) {
-                    String key = keys.next();
-                    String value = section.getString(key);
-
-                    if (value != null) {
-                        key = key.replace("..", "."); // TODO: find a better way than this hack
-                        config.put(key, value);
+                // Handle sections [section_name]
+                if (line.startsWith("[") && line.endsWith("]")) {
+                    currentSection = line.substring(1, line.length() - 1).trim();
+                    if (!currentSection.isEmpty()) {
+                        currentSection += "."; // Add dot separator for section prefix
                     }
+                    continue;
+                }
+
+                // Handle key=value pairs
+                int equalIndex = line.indexOf('=');
+                if (equalIndex > 0) {
+                    String key = line.substring(0, equalIndex).trim();
+                    String value = line.substring(equalIndex + 1).trim();
+
+                    // Remove quotes from value if present
+                    if ((value.startsWith("\"") && value.endsWith("\"")) ||
+                            (value.startsWith("'") && value.endsWith("'"))) {
+                        value = value.substring(1, value.length() - 1);
+                    }
+
+                    // Store with section prefix if we're in a section
+                    // String fullKey = currentSection + key;
+
+                    config.put(key, value);
                 }
             }
         }
-
-        reader.close();
 
         return config;
     }
 
     /**
-     * Create config file
-     * @throws IOException the exception if the file couldn't be read/written to
+     * Get a configuration value by key
+     */
+    public static String getValue(Map<String, String> config, String key) {
+        return config.get(key);
+    }
+
+    /**
+     * Get a configuration value from a specific section with default value
+     */
+    public static String getValue(Map<String, String> config, String section, String key, String defaultValue) {
+        return config.getOrDefault(section + "." + key, defaultValue);
+    }
+
+    /**
+     * Create config file if it doesn't exist; returns a PrintWriter you can use to write it.
+     * Returns null if the file already exists.
      */
     public static PrintWriter createConfigurationFile(String configPath) throws IOException {
         File file = new File(configPath);
-
         if (!file.isFile() && file.createNewFile()) {
-            return new PrintWriter(file.getAbsoluteFile());
+            return new PrintWriter(file.getAbsoluteFile(), StandardCharsets.UTF_8.name());
         }
-
         return null;
     }
-
 }

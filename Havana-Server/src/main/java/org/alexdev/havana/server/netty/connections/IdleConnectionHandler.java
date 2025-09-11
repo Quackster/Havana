@@ -7,11 +7,12 @@ import io.netty.handler.timeout.IdleStateEvent;
 import org.alexdev.havana.game.player.Player;
 import org.alexdev.havana.messages.outgoing.user.PING;
 import org.alexdev.havana.util.config.ServerConfiguration;
+import org.oldskooler.simplelogger4j.SimpleLog;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class IdleConnectionHandler extends ChannelDuplexHandler {
-    private static Logger logger = LoggerFactory.getLogger(IdleConnectionHandler.class);
+    private static SimpleLog<IdleConnectionHandler> logger = SimpleLog.of(IdleConnectionHandler.class);
 
     @Override
     public void userEventTriggered(ChannelHandlerContext ctx, Object event) {
@@ -27,9 +28,9 @@ public class IdleConnectionHandler extends ChannelDuplexHandler {
                 } else {
                     if (ServerConfiguration.getBoolean("log.connections")) {
                         if (player.isLoggedIn()) {
-                            logger.info("Player {} has timed out", player.getDetails().getName());
+                            logger.info("Player " + player.getDetails().getName() + " has timed out");
                         } else {
-                            logger.info("Connection {} has timed out", player.getNetwork().getConnectionId());
+                            logger.info("Connection " + player.getNetwork().getConnectionId() + " has timed out");
                         }
                     }
 

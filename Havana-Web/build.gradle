@@ -9,9 +9,6 @@ group = 'org.oldskooler'
 mainClassName = 'org.alexdev.http.HavanaWeb'
 
 repositories {
-    flatDir {
-        dirs 'libs'
-    }
     maven { url 'https://jitpack.io' }
     mavenCentral()
 }
@@ -44,18 +41,13 @@ dependencies {
     // https://mvnrepository.com/artifact/org.apache.httpcomponents/httpclient
     implementation group: 'org.apache.httpcomponents', name: 'httpclient', version: '4.5'
 
-    // https://github.com/Quackster/duckHTTPD/
-    implementation name: 'duckHTTPD-all'
-
-
-    // https://mvnrepository.com/artifact/org.slf4j/slf4j-log4j12
-    implementation group: 'org.slf4j', name: 'slf4j-log4j12', version: '1.7.25'
-
     // https://mvnrepository.com/artifact/javax.mail/mail
     implementation group: 'javax.mail', name: 'mail', version: '1.4.7'
 
     // https://github.com/Quackster/Kepler/Kepler-Server
     implementation project(':Havana-Server')
+
+    implementation 'com.github.Quackster:duckHTTPD:v1.0.0'
     implementation 'com.github.Quackster:Avatara4j:v1.0.2'
 }
 

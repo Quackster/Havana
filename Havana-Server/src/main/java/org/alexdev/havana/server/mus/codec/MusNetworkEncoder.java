@@ -8,13 +8,14 @@ import org.alexdev.havana.server.mus.streams.MusMessage;
 import org.alexdev.havana.server.mus.streams.MusTypes;
 import org.alexdev.havana.server.netty.codec.NetworkEncoder;
 import org.alexdev.havana.util.DateUtil;
+import org.oldskooler.simplelogger4j.SimpleLog;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.util.List;
 
 public class MusNetworkEncoder extends MessageToMessageEncoder<MusMessage> {
-    final private static Logger log = LoggerFactory.getLogger(NetworkEncoder.class);
+    final private static SimpleLog<NetworkEncoder> log = SimpleLog.of(NetworkEncoder.class);
 
     @Override
     protected void encode(ChannelHandlerContext ctx, MusMessage msg, List<Object> out) throws Exception {

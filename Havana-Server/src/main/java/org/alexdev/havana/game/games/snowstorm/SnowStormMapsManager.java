@@ -3,7 +3,7 @@ package org.alexdev.havana.game.games.snowstorm;
 import org.alexdev.havana.game.games.snowstorm.mapping.SnowStormItem;
 import org.alexdev.havana.game.games.snowstorm.mapping.SnowStormMap;
 import org.alexdev.havana.game.games.snowstorm.util.SnowStormSpawn;
-import org.alexdev.havana.log.Log;
+import org.oldskooler.simplelogger4j.SimpleLog;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -89,7 +89,7 @@ public class SnowStormMapsManager {
 
             this.snowStormMapMaps.put(mapId, new SnowStormMap(mapId, mapData, itemList, getHeightMap(mapId), spawnClusters));
         } catch (IOException ex) {
-            Log.getErrorLogger().error("Error when parsing map " + mapId + ": ", ex);
+            SimpleLog.of(SnowStormMapsManager.class).error("Error when parsing map " + mapId + ": ", ex);
         }
     }
 

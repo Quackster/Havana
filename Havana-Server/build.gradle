@@ -32,23 +32,11 @@ dependencies {
     // https://mvnrepository.com/artifact/io.netty/netty-all
     implementation group: 'io.netty', name: 'netty-all', version: '4.1.33.Final'
 
-    // https://mvnrepository.com/artifact/org.slf4j/slf4j-api
-    implementation group: 'org.slf4j', name: 'slf4j-api', version: '1.7.25'
-
-    // https://mvnrepository.com/artifact/org.slf4j/slf4j-log4j12
-    implementation group: 'org.slf4j', name: 'slf4j-log4j12', version: '1.7.25'
-
-    // https://mvnrepository.com/artifact/log4j/log4j/1.2.17
-    implementation group: 'log4j', name: 'log4j', version: '1.2.17'
-
-    // https://mvnrepository.com/artifact/org.apache.commons/commons-configuration2
-    implementation group: 'org.apache.commons', name: 'commons-configuration2', version: '2.2'
+    // https://mvnrepository.com/artifact/commons-validator/commons-validator
+    implementation group: 'commons-validator', name: 'commons-validator', version: '1.6'
 
     // https://mvnrepository.com/artifact/org.apache.commons/commons-lang3
     implementation group: 'org.apache.commons', name: 'commons-lang3', version: '3.9'
-
-    // https://mvnrepository.com/artifact/commons-validator/commons-validator
-    implementation group: 'commons-validator', name: 'commons-validator', version: '1.6'
 
     // https://mvnrepository.com/artifact/com.google.code.gson/gson
     implementation group: 'com.google.code.gson', name: 'gson', version: '2.8.0'
@@ -61,6 +49,7 @@ dependencies {
 
     implementation 'com.maxmind.geoip2:geoip2:2.12.0'
     implementation 'com.github.bhlangonijr:chesslib:1.1.1'
+    implementation 'com.github.lovepigeons:SimpleLogger4j:v1.0.1'
 }
 
 // Configure the shadow jar (fat jar). Defaults to classifier "all".

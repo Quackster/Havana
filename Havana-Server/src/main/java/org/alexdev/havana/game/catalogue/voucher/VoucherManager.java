@@ -1,5 +1,6 @@
 package org.alexdev.havana.game.catalogue.voucher;
 
+import org.alexdev.havana.dao.Storage;
 import org.alexdev.havana.dao.mysql.CurrencyDao;
 import org.alexdev.havana.dao.mysql.PlayerStatisticsDao;
 import org.alexdev.havana.dao.mysql.VoucherDao;
@@ -9,8 +10,8 @@ import org.alexdev.havana.game.item.Item;
 import org.alexdev.havana.game.misc.purse.Voucher;
 import org.alexdev.havana.game.player.PlayerDetails;
 import org.alexdev.havana.game.player.statistics.PlayerStatistic;
-import org.alexdev.havana.log.Log;
 import org.alexdev.havana.util.DateUtil;
+import org.oldskooler.simplelogger4j.SimpleLog;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -48,7 +49,7 @@ public class VoucherManager {
             var catalogueItem = CatalogueManager.getInstance().getCatalogueItem(catalogueSaleCode);
 
             if (catalogueItem == null) {
-                Log.getErrorLogger().error("Could not redeem voucher " + voucherCode + " with sale code: " + catalogueSaleCode);
+                SimpleLog.of(VoucherManager.class).error("Could not redeem voucher " + voucherCode + " with sale code: " + catalogueSaleCode);
                 continue;
             }
 

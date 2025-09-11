@@ -6,10 +6,9 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-import org.alexdev.havana.log.Log;
+import org.alexdev.havana.game.room.mapping.RoomMapping;
 import org.alexdev.havana.util.config.ServerConfiguration;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.oldskooler.simplelogger4j.SimpleLog;
 
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
@@ -19,7 +18,7 @@ public class Storage {
     private boolean isConnected;
 
     private static Storage storage;
-    private static Logger log = LoggerFactory.getLogger(Storage.class);
+    private static SimpleLog<Storage> log = SimpleLog.of(Storage.class);
 
     private Storage(String host, int port, String username, String password, String db) {
         try {
@@ -80,7 +79,7 @@ public class Storage {
      * @param ex the exception to log
      */
     public static void logError(Exception ex) {
-        Log.getErrorLogger().error("Error when executing MySQL query: ", ex);
+        SimpleLog.of(Storage.class).error("Error when executing MySQL query: ", ex);
     }
 
     /**
@@ -239,7 +238,7 @@ public class Storage {
         return storage;
     }
 
-    public static Logger getLogger() {
+    public static SimpleLog<Storage> getLogger() {
         return log;
     }
 }

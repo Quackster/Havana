@@ -7,11 +7,10 @@ import org.alexdev.havana.game.pets.Pet;
 import org.alexdev.havana.game.player.Player;
 import org.alexdev.havana.game.room.Room;
 import org.alexdev.havana.game.room.RoomUserStatus;
-import org.alexdev.havana.game.room.entities.RoomEntity;
 import org.alexdev.havana.game.room.enums.StatusType;
-import org.alexdev.havana.log.Log;
 import org.alexdev.havana.messages.outgoing.rooms.user.TYPING_STATUS;
 import org.alexdev.havana.util.DateUtil;
+import org.oldskooler.simplelogger4j.SimpleLog;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -130,7 +129,7 @@ public class StatusTask implements Runnable {
             }
 
         } catch (Exception ex) {
-            Log.getErrorLogger().error("StatusTask crashed: ", ex);
+            SimpleLog.of(StatusTask.class).error("StatusTask crashed: ", ex);
         }
     }
 

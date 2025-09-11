@@ -9,9 +9,9 @@ import org.alexdev.havana.game.item.roller.ItemRollingAnalysis;
 import org.alexdev.havana.game.item.roller.RollerEntry;
 import org.alexdev.havana.game.pathfinder.Position;
 import org.alexdev.havana.game.room.Room;
-import org.alexdev.havana.log.Log;
 import org.alexdev.havana.messages.outgoing.rooms.items.SLIDEOBJECTBUNDLE;
 import org.apache.commons.lang3.tuple.Pair;
+import org.oldskooler.simplelogger4j.SimpleLog;
 
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
@@ -135,7 +135,7 @@ public class RollerTask implements Runnable {
                 GameScheduler.getInstance().getService().schedule(new RollerCompleteTask(itemsRolling.keySet(), entitiesRolling.keySet(), this.room), 800, TimeUnit.MILLISECONDS);
             }
         } catch (Exception ex) {
-            Log.getErrorLogger().error("RollerTask crashed: ", ex);
+            SimpleLog.of(RollerTask.class).error("RollerTask crashed: ", ex);
         }
     }
 }

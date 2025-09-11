@@ -82,7 +82,7 @@ public class TwigTemplate extends Template {
             if (this.webConnection != null) {
                 Settings.getInstance().getDefaultResponses().getErrorResponse(this.webConnection, ex);
             } else {
-                Log.getErrorLogger().error("Error: ", ex);
+                SimpleLog.of(SnowStormGameTask.class).error("Error: ", ex);
             }
         }
     }

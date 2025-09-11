@@ -5,7 +5,6 @@ import io.netty.buffer.Unpooled;
 import org.alexdev.havana.game.player.Player;
 import org.alexdev.havana.game.room.Room;
 import org.alexdev.havana.game.room.RoomManager;
-import org.alexdev.havana.log.Log;
 import org.alexdev.havana.messages.flash.incoming.SET_HOME_ROOM;
 import org.alexdev.havana.messages.flash.incoming.modtool.FLASH_MODTOOL_ROOMINFO;
 import org.alexdev.havana.messages.flash.incoming.modtool.FLASH_MODTOOL_ROOM_CHATLOG;
@@ -68,8 +67,7 @@ import org.alexdev.havana.server.netty.NettyPlayerNetwork;
 import org.alexdev.havana.server.netty.streams.NettyRequest;
 import org.alexdev.havana.server.util.MalformedPacketException;
 import org.alexdev.havana.util.config.ServerConfiguration;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.oldskooler.simplelogger4j.SimpleLog;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -79,7 +77,7 @@ import java.util.concurrent.ConcurrentHashMap;
 public class MessageHandler {
     private ConcurrentHashMap<Integer, List<MessageEvent>> messages;
 
-    private static final Logger log = LoggerFactory.getLogger(MessageHandler.class);
+    private static final SimpleLog<MessageHandler> log = SimpleLog.of(MessageHandler.class);
     private static MessageHandler instance;
 
     private MessageHandler() {
@@ -606,9 +604,9 @@ public class MessageHandler {
         if (ServerConfiguration.getBoolean("log.received.packets")) {
             if (this.messages.containsKey(message.getHeaderId())) {
                 MessageEvent event = this.messages.get(message.getHeaderId()).get(0);
-                player.getLogger().info("Received ({}): {} / {}", event.getClass().getSimpleName(), message.getHeaderId(), message.getMessageBody());
+                player.getLogger().info("Received (" + event.getClass().getSimpleName() + "): " + message.getHeaderId() + " / " + message.getMessageBody());
             } else {
-                player.getLogger().info("Received ({}): {} / {}", "Unknown", message.getHeaderId(), message.getMessageBody());
+                player.getLogger().info("Received (Unknown): " + message.getHeaderId() + " / " + message.getMessageBody());
             }
         }
 
@@ -668,8 +666,8 @@ public class MessageHandler {
 
         if (ex instanceof MalformedPacketException) {
             ex.printStackTrace();
-            //Log.getErrorLogger().error("An invalid packet was sent to the server by " + name + ", kicking off client.");
-            //Log.getErrorLogger().error("Packet contents: " + message.getHeaderId() + " / " + message.getMessageBody());
+            //SimpleLog.of(SnowStormGameTask.class).error("An invalid packet was sent to the server by " + name + ", kicking off client.");
+            //SimpleLog.of(SnowStormGameTask.class).error("Packet contents: " + message.getHeaderId() + " / " + message.getMessageBody());
             /*if (GameConfiguration.getInstance().getBoolean("enforce.strict.packet.policy")) {
                 long banExpiry = DateUtil.getCurrentTimeSeconds() + TimeUnit.MINUTES.toSeconds(60);
                 BanDao.addBan(BanType.USER_ID, String.valueOf(player.getDetails().getId()), banExpiry, "Automatic ban for scripting (temporary 1 hr / 60 minute ban)");
@@ -683,8 +681,8 @@ public class MessageHandler {
             return;
         }
 
-        Log.getErrorLogger().error("Error occurred when handling (" + message.getHeaderId() + ") for user (" + name + "):", ex);
-        //Log.getErrorLogger().error("Packet contents: " + message.getHeaderId() + " / " + message.getHeader() + " / " + message.getMessageBody());
+        SimpleLog.of(MessageHandler.class).error("Error occurred when handling (" + message.getHeaderId() + ") for user (" + name + "):", ex);
+        //SimpleLog.of(SnowStormGameTask.class).error("Packet contents: " + message.getHeaderId() + " / " + message.getHeader() + " / " + message.getMessageBody());
     }
 
     /**

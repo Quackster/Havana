@@ -11,7 +11,6 @@ import org.alexdev.havana.game.item.ItemManager;
 import org.alexdev.havana.game.item.Photo;
 import org.alexdev.havana.game.player.Player;
 import org.alexdev.havana.game.player.PlayerManager;
-import org.alexdev.havana.log.Log;
 import org.alexdev.havana.messages.outgoing.user.currencies.FILM;
 import org.alexdev.havana.server.mus.connection.MusClient;
 import org.alexdev.havana.server.mus.streams.MusMessage;
@@ -21,14 +20,13 @@ import org.alexdev.havana.server.netty.NettyPlayerNetwork;
 import org.alexdev.havana.util.DateUtil;
 import org.alexdev.havana.util.StringUtil;
 import org.apache.commons.lang3.StringUtils;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.oldskooler.simplelogger4j.SimpleLog;
 
 import java.io.IOException;
 
 public class MusConnectionHandler extends SimpleChannelInboundHandler<MusMessage> {
     final private static AttributeKey<MusClient> MUS_CLIENT_KEY = AttributeKey.valueOf("MusClient");
-    final private static Logger log = LoggerFactory.getLogger(MusConnectionHandler.class);
+    final private static SimpleLog<MusConnectionHandler> log = SimpleLog.of(MusConnectionHandler.class);
 
     public MusConnectionHandler() { }
 
@@ -175,7 +173,7 @@ public class MusConnectionHandler extends SimpleChannelInboundHandler<MusMessage
             }
 
         } catch (Exception ex) {
-            Log.getErrorLogger().error("Exception occurred when handling MUS message: ", ex);
+            SimpleLog.of(MusConnectionHandler.class).error("Exception occurred when handling MUS message: ", ex);
         }
     }
 
@@ -183,7 +181,7 @@ public class MusConnectionHandler extends SimpleChannelInboundHandler<MusMessage
     public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) {
         if (cause instanceof Exception) {
             if (!(cause instanceof IOException)) {
-                Log.getErrorLogger().error("[MUS] Netty error occurred: ", cause);
+                SimpleLog.of(MusConnectionHandler.class).error("[MUS] Netty error occurred: ", cause);
             }
         }
 

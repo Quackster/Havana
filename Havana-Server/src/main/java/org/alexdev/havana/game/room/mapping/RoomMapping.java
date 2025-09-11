@@ -16,10 +16,10 @@ import org.alexdev.havana.game.player.Player;
 import org.alexdev.havana.game.room.Room;
 import org.alexdev.havana.game.room.handlers.PoolHandler;
 import org.alexdev.havana.game.room.models.RoomModel;
-import org.alexdev.havana.log.Log;
 import org.alexdev.havana.messages.outgoing.rooms.HEIGHTMAP_UPDATE;
 import org.alexdev.havana.messages.outgoing.rooms.items.*;
 import org.alexdev.havana.util.config.GameConfiguration;
+import org.oldskooler.simplelogger4j.SimpleLog;
 
 import java.util.ArrayList;
 import java.util.Comparator;
@@ -90,7 +90,7 @@ public class RoomMapping {
             }
 
         } catch (Exception ex) {
-            Log.getErrorLogger().error(String.format("Generate collision map failed for room %s", this.room.getId()), ex);
+            SimpleLog.of(RoomMapping.class).error(String.format("Generate collision map failed for room %s", this.room.getId()), ex);
         }
 
         try {
@@ -105,7 +105,7 @@ public class RoomMapping {
             }
 
         } catch (Exception ex) {
-            Log.getErrorLogger().error(String.format("Generate entity map failed for room %s", this.room.getId()), ex);
+            SimpleLog.of(RoomMapping.class).error(String.format("Generate entity map failed for room %s", this.room.getId()), ex);
         }
 
         refreshRoomItems();
@@ -157,7 +157,7 @@ public class RoomMapping {
         try {
             this.room.send(new HEIGHTMAP_UPDATE(this.room, this.roomModel));
         } catch (Exception ex) {
-            Log.getErrorLogger().error(String.format("Send heightmap failed for room %s", this.room.getId()), ex);
+            SimpleLog.of(RoomMapping.class).error(String.format("Send heightmap failed for room %s", this.room.getId()), ex);
         }
     }
 

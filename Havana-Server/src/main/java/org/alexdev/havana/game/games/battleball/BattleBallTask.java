@@ -1,5 +1,6 @@
 package org.alexdev.havana.game.games.battleball;
 
+import org.alexdev.havana.dao.Storage;
 import org.alexdev.havana.game.entity.Entity;
 import org.alexdev.havana.game.games.Game;
 import org.alexdev.havana.game.games.GameEvent;
@@ -18,9 +19,9 @@ import org.alexdev.havana.game.room.Room;
 import org.alexdev.havana.game.room.entities.RoomEntity;
 import org.alexdev.havana.game.room.enums.StatusType;
 import org.alexdev.havana.game.room.mapping.RoomTile;
-import org.alexdev.havana.log.Log;
 import org.alexdev.havana.messages.outgoing.games.GAMESTATUS;
 import org.alexdev.havana.util.StringUtil;
+import org.oldskooler.simplelogger4j.SimpleLog;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -79,7 +80,7 @@ public class BattleBallTask implements Runnable {
 
             this.game.send(new GAMESTATUS(this.game, this.game.getTeams().values(), objects, events, updateTiles, fillTiles));
         } catch (Exception ex) {
-            Log.getErrorLogger().error("GameTask crashed: ", ex);
+            SimpleLog.of(BattleBallTask.class).error("GameTask crashed: ", ex);
         }
     }
 

@@ -3,10 +3,8 @@ package org.alexdev.havana.server.netty.codec;
 import io.netty.buffer.ByteBuf;
 import io.netty.buffer.Unpooled;
 import io.netty.channel.ChannelHandlerContext;
-import io.netty.handler.codec.MessageToByteEncoder;
 import io.netty.handler.codec.MessageToMessageEncoder;
 import org.alexdev.havana.game.player.Player;
-import org.alexdev.havana.log.Log;
 import org.alexdev.havana.messages.outgoing.alerts.ALERT;
 import org.alexdev.havana.messages.outgoing.messenger.MESSENGER_MSG;
 import org.alexdev.havana.messages.outgoing.rooms.user.CHAT_MESSAGE;
@@ -15,14 +13,12 @@ import org.alexdev.havana.messages.types.PlayerMessageComposer;
 import org.alexdev.havana.server.netty.streams.NettyResponse;
 import org.alexdev.havana.util.StringUtil;
 import org.alexdev.havana.util.config.ServerConfiguration;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.oldskooler.simplelogger4j.SimpleLog;
 
-import java.nio.Buffer;
 import java.util.List;
 
 public class NetworkEncoder extends MessageToMessageEncoder<Object> {
-    final private static Logger log = LoggerFactory.getLogger(NetworkEncoder.class);
+    final private static SimpleLog<NetworkEncoder> log = SimpleLog.of(NetworkEncoder.class);
 
     @Override
     protected void encode(ChannelHandlerContext ctx, Object outgoing, List<Object> out) throws Exception {
@@ -77,7 +73,7 @@ public class NetworkEncoder extends MessageToMessageEncoder<Object> {
                     name = player.getDetails().getName();
                 }
 
-                Log.getErrorLogger().error("Error occurred when composing (" + response.getHeader() + ") for user (" + name + "):", ex);
+                SimpleLog.of(NetworkEncoder.class).error("Error occurred when composing (" + response.getHeader() + ") for user (" + name + "):", ex);
                 return;
             }
 
@@ -87,7 +83,7 @@ public class NetworkEncoder extends MessageToMessageEncoder<Object> {
             }
 
             if (ServerConfiguration.getBoolean("log.sent.packets")) {
-                log.info("SENT 1: {} / {}", msg.getHeader(), response.getBodyString());
+                log.info("SENT: " + msg.getHeader() + " / " + response.getBodyString());
             }
         }
 

@@ -12,8 +12,6 @@ import org.alexdev.havana.game.catalogue.collectables.CollectablesManager;
 import org.alexdev.havana.game.commands.CommandManager;
 import org.alexdev.havana.game.ecotron.EcotronManager;
 import org.alexdev.havana.game.effects.EffectsManager;
-import org.alexdev.havana.game.encryption.Cryptography;
-import org.alexdev.havana.game.encryption.HugeInt15;
 import org.alexdev.havana.game.events.EventsManager;
 import org.alexdev.havana.game.fuserights.FuserightsManager;
 import org.alexdev.havana.game.games.GameManager;
@@ -31,26 +29,20 @@ import org.alexdev.havana.game.texts.TextsManager;
 import org.alexdev.havana.game.wordfilter.WordfilterManager;
 import org.alexdev.havana.messages.MessageHandler;
 import org.alexdev.havana.server.mus.MusServer;
-import org.alexdev.havana.server.netty.NettyPlayerNetwork;
 import org.alexdev.havana.server.netty.NettyServer;
 import org.alexdev.havana.server.rcon.RconServer;
 import org.alexdev.havana.util.DateUtil;
-import org.alexdev.havana.util.StringUtil;
 import org.alexdev.havana.util.config.GameConfiguration;
-import org.alexdev.havana.util.config.LoggingConfiguration;
 import org.alexdev.havana.util.config.ServerConfiguration;
 import org.alexdev.havana.util.config.writer.DefaultConfigWriter;
 import org.alexdev.havana.util.config.writer.GameConfigWriter;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.oldskooler.simplelogger4j.SimpleLog;
 import org.springframework.security.crypto.argon2.Argon2PasswordEncoder;
 
 import java.io.IOException;
-import java.math.BigInteger;
 import java.net.UnknownHostException;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
-import java.util.Arrays;
 import java.util.Calendar;
 import java.util.Locale;
 
@@ -73,7 +65,7 @@ public class Havana {
     private static MusServer musServer;
     private static RconServer rconServer;
 
-    private static Logger log;
+    private static SimpleLog<Havana> log;
 
     /**
      * Main call of Java application
@@ -83,12 +75,10 @@ public class Havana {
         startupTime = DateUtil.getCurrentTimeSeconds();
 
         try {
-            LoggingConfiguration.checkLoggingConfig();
-
             ServerConfiguration.setWriter(new DefaultConfigWriter());
             ServerConfiguration.load("server.ini");
 
-            log = LoggerFactory.getLogger(Havana.class);
+            log = SimpleLog.of(Havana.class);
             ResourceLeakDetector.setLevel(ResourceLeakDetector.Level.ADVANCED);
 
             System.out.println("HAVANA EMULATOR");

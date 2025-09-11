@@ -11,12 +11,12 @@ import org.alexdev.havana.game.player.statistics.PlayerStatistic;
 import org.alexdev.havana.game.room.Room;
 import org.alexdev.havana.game.room.enums.StatusType;
 import org.alexdev.havana.game.room.managers.RoomTradeManager;
-import org.alexdev.havana.log.Log;
 import org.alexdev.havana.messages.outgoing.user.currencies.TICKET_BALANCE;
 import org.alexdev.havana.messages.outgoing.wobblesquabble.*;
 import org.alexdev.havana.messages.types.MessageComposer;
 import org.alexdev.havana.server.netty.NettyPlayerNetwork;
 import org.alexdev.havana.util.DateUtil;
+import org.oldskooler.simplelogger4j.SimpleLog;
 
 import java.util.List;
 import java.util.concurrent.ThreadLocalRandom;
@@ -117,7 +117,7 @@ public class WobbleSquabbleGame implements Runnable {
                 this.endGame(winner);
             }
         } catch (Exception ex) {
-            Log.getErrorLogger().error("Wobble Squabble task crashed: ", ex);
+            SimpleLog.of(WobbleSquabbleGame.class).error("Wobble Squabble task crashed: ", ex);
         }
     }
 

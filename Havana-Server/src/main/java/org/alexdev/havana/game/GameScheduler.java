@@ -8,6 +8,7 @@ import org.alexdev.havana.game.club.ClubSubscription;
 import org.alexdev.havana.game.effects.Effect;
 import org.alexdev.havana.game.events.EventsManager;
 import org.alexdev.havana.game.games.GameManager;
+import org.alexdev.havana.game.games.snowstorm.tasks.SnowStormGameTask;
 import org.alexdev.havana.game.item.Item;
 import org.alexdev.havana.game.item.ItemManager;
 import org.alexdev.havana.game.moderation.ChatManager;
@@ -15,13 +16,13 @@ import org.alexdev.havana.game.moderation.cfh.CallForHelpManager;
 import org.alexdev.havana.game.player.Player;
 import org.alexdev.havana.game.player.PlayerDetails;
 import org.alexdev.havana.game.player.PlayerManager;
-import org.alexdev.havana.log.Log;
 import org.alexdev.havana.messages.incoming.catalogue.GET_CATALOG_INDEX;
 import org.alexdev.havana.messages.outgoing.effects.AVATAR_EFFECT_EXPIRED;
 import org.alexdev.havana.messages.outgoing.user.currencies.ActivityPointNotification;
 import org.alexdev.havana.messages.outgoing.user.currencies.CREDIT_BALANCE;
 import org.alexdev.havana.util.DateUtil;
 import org.alexdev.havana.util.config.GameConfiguration;
+import org.oldskooler.simplelogger4j.SimpleLog;
 
 import java.util.*;
 import java.util.concurrent.*;
@@ -240,7 +241,7 @@ public class GameScheduler implements Runnable {
             CollectablesManager.getInstance().checkExpiries();
 
         } catch (Exception ex) {
-            Log.getErrorLogger().error("GameScheduler crashed: ", ex);
+            SimpleLog.of(SnowStormGameTask.class).error("GameScheduler crashed: ", ex);
         }
 
         this.tickRate.incrementAndGet();

@@ -1,0 +1,147 @@
+[17:46:24    ] [INFO    ] (org.alexdev.havana.Havana) #0 Starting Havana...
+[17:46:24    ] [INFO    ] (org.alexdev.havana.dao.Storage) #1 Connecting to MySQL server
+[17:46:24    ] [ERROR   ] (org.alexdev.havana.dao.Storage) #2 Error when executing MySQL query: 
+com.zaxxer.hikari.pool.HikariPool$PoolInitializationException: Failed to initialize pool: Could not connect to address=(host=)(port=0)(type=master) : Cannot assign requested address: connect
+	at com.zaxxer.hikari.pool.HikariPool.throwPoolInitializationException(HikariPool.java:597)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:576)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115)
+	at com.zaxxer.hikari.HikariDataSource.<init>(HikariDataSource.java:81)
+	at org.alexdev.havana.dao.Storage.<init>(Storage.java:50)
+	at org.alexdev.havana.dao.Storage.connect(Storage.java:71)
+	at org.alexdev.havana.Havana.main(Havana.java:98)
+Caused by: java.sql.SQLNonTransientConnectionException: Could not connect to address=(host=)(port=0)(type=master) : Cannot assign requested address: connect
+	at org.mariadb.jdbc.internal.util.exceptions.ExceptionMapper.get(ExceptionMapper.java:234)
+	at org.mariadb.jdbc.internal.util.exceptions.ExceptionMapper.connException(ExceptionMapper.java:95)
+	at org.mariadb.jdbc.internal.protocol.AbstractConnectProtocol.connectWithoutProxy(AbstractConnectProtocol.java:1203)
+	at org.mariadb.jdbc.internal.util.Utils.retrieveProxy(Utils.java:560)
+	at org.mariadb.jdbc.MariaDbConnection.newConnection(MariaDbConnection.java:174)
+	at org.mariadb.jdbc.Driver.connect(Driver.java:92)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:353)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:201)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:473)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:562)
+	... 5 more
+Caused by: java.net.BindException: Cannot assign requested address: connect
+	at java.base/sun.nio.ch.Net.connect0(Native Method)
+	at java.base/sun.nio.ch.Net.connect(Net.java:579)
+	at java.base/sun.nio.ch.Net.connect(Net.java:568)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:593)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at org.mariadb.jdbc.internal.protocol.AbstractConnectProtocol.connect(AbstractConnectProtocol.java:501)
+	at org.mariadb.jdbc.internal.protocol.AbstractConnectProtocol.connectWithoutProxy(AbstractConnectProtocol.java:1195)
+	... 13 more
+[17:46:24    ] [ERROR   ] (org.alexdev.havana.dao.Storage) #3 Could not connect
+[17:46:33    ] [INFO    ] (org.alexdev.havana.Havana) Starting Havana...
+[17:46:33    ] [INFO    ] (org.alexdev.havana.dao.Storage) Connecting to MySQL server
+[17:46:33    ] [ERROR   ] (org.alexdev.havana.dao.Storage) Error when executing MySQL query: 
+com.zaxxer.hikari.pool.HikariPool$PoolInitializationException: Failed to initialize pool: Could not connect to address=(host=)(port=0)(type=master) : Cannot assign requested address: connect
+	at com.zaxxer.hikari.pool.HikariPool.throwPoolInitializationException(HikariPool.java:597)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:576)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115)
+	at com.zaxxer.hikari.HikariDataSource.<init>(HikariDataSource.java:81)
+	at org.alexdev.havana.dao.Storage.<init>(Storage.java:50)
+	at org.alexdev.havana.dao.Storage.connect(Storage.java:71)
+	at org.alexdev.havana.Havana.main(Havana.java:98)
+Caused by: java.sql.SQLNonTransientConnectionException: Could not connect to address=(host=)(port=0)(type=master) : Cannot assign requested address: connect
+	at org.mariadb.jdbc.internal.util.exceptions.ExceptionMapper.get(ExceptionMapper.java:234)
+	at org.mariadb.jdbc.internal.util.exceptions.ExceptionMapper.connException(ExceptionMapper.java:95)
+	at org.mariadb.jdbc.internal.protocol.AbstractConnectProtocol.connectWithoutProxy(AbstractConnectProtocol.java:1203)
+	at org.mariadb.jdbc.internal.util.Utils.retrieveProxy(Utils.java:560)
+	at org.mariadb.jdbc.MariaDbConnection.newConnection(MariaDbConnection.java:174)
+	at org.mariadb.jdbc.Driver.connect(Driver.java:92)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:353)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:201)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:473)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:562)
+	... 5 more
+Caused by: java.net.BindException: Cannot assign requested address: connect
+	at java.base/sun.nio.ch.Net.connect0(Native Method)
+	at java.base/sun.nio.ch.Net.connect(Net.java:579)
+	at java.base/sun.nio.ch.Net.connect(Net.java:568)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:593)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at org.mariadb.jdbc.internal.protocol.AbstractConnectProtocol.connect(AbstractConnectProtocol.java:501)
+	at org.mariadb.jdbc.internal.protocol.AbstractConnectProtocol.connectWithoutProxy(AbstractConnectProtocol.java:1195)
+	... 13 more
+[17:46:33    ] [ERROR   ] (org.alexdev.havana.dao.Storage) Could not connect
+[17:48:43    ] [INFO    ] (org.alexdev.havana.Havana) Starting Havana...
+[17:48:43    ] [INFO    ] (org.alexdev.havana.dao.Storage) Connecting to MySQL server
+[17:48:43    ] [ERROR   ] (org.alexdev.havana.dao.Storage) Error when executing MySQL query: 
+com.zaxxer.hikari.pool.HikariPool$PoolInitializationException: Failed to initialize pool: Could not connect to address=(host=)(port=0)(type=master) : Cannot assign requested address: connect
+	at com.zaxxer.hikari.pool.HikariPool.throwPoolInitializationException(HikariPool.java:597)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:576)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115)
+	at com.zaxxer.hikari.HikariDataSource.<init>(HikariDataSource.java:81)
+	at org.alexdev.havana.dao.Storage.<init>(Storage.java:50)
+	at org.alexdev.havana.dao.Storage.connect(Storage.java:71)
+	at org.alexdev.havana.Havana.main(Havana.java:98)
+Caused by: java.sql.SQLNonTransientConnectionException: Could not connect to address=(host=)(port=0)(type=master) : Cannot assign requested address: connect
+	at org.mariadb.jdbc.internal.util.exceptions.ExceptionMapper.get(ExceptionMapper.java:234)
+	at org.mariadb.jdbc.internal.util.exceptions.ExceptionMapper.connException(ExceptionMapper.java:95)
+	at org.mariadb.jdbc.internal.protocol.AbstractConnectProtocol.connectWithoutProxy(AbstractConnectProtocol.java:1203)
+	at org.mariadb.jdbc.internal.util.Utils.retrieveProxy(Utils.java:560)
+	at org.mariadb.jdbc.MariaDbConnection.newConnection(MariaDbConnection.java:174)
+	at org.mariadb.jdbc.Driver.connect(Driver.java:92)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:353)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:201)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:473)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:562)
+	... 5 more
+Caused by: java.net.BindException: Cannot assign requested address: connect
+	at java.base/sun.nio.ch.Net.connect0(Native Method)
+	at java.base/sun.nio.ch.Net.connect(Net.java:579)
+	at java.base/sun.nio.ch.Net.connect(Net.java:568)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:593)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at org.mariadb.jdbc.internal.protocol.AbstractConnectProtocol.connect(AbstractConnectProtocol.java:501)
+	at org.mariadb.jdbc.internal.protocol.AbstractConnectProtocol.connectWithoutProxy(AbstractConnectProtocol.java:1195)
+	... 13 more
+[17:48:43    ] [ERROR   ] (org.alexdev.havana.dao.Storage) Could not connect
+[17:49:37    ] [INFO    ] (org.alexdev.havana.Havana) Starting Havana...
+[17:49:45    ] [INFO    ] (org.alexdev.havana.Havana) Starting Havana...
+[17:49:45    ] [INFO    ] (org.alexdev.havana.dao.Storage) Connecting to MySQL server
+[17:49:45    ] [INFO    ] (org.alexdev.havana.dao.Storage) Connection to MySQL was a success
+[17:49:45    ] [INFO    ] (org.alexdev.havana.Havana) Setting up game
+[17:49:45    ] [INFO    ] (org.alexdev.havana.game.commands.CommandManager) Loaded 39 commands
+[17:49:46    ] [INFO    ] (org.alexdev.havana.server.rcon.RconServer) RCON (remote connection) is listening on 127.0.0.1:12309
+[17:49:46    ] [INFO    ] (org.alexdev.havana.server.mus.MusServer) Multi User Server (MUS) is listening on 127.0.0.1:12322
+[17:49:46    ] [INFO    ] (org.alexdev.havana.server.netty.NettyServer) Shockwave game server is listening on: 127.0.0.1:12321
+[17:49:46    ] [INFO    ] (org.alexdev.havana.server.netty.NettyServer) Flash game server is listening on: 127.0.0.1:12323
+[17:50:16    ] [INFO    ] (org.alexdev.havana.Havana) Starting Havana...
+[17:50:16    ] [INFO    ] (org.alexdev.havana.dao.Storage) Connecting to MySQL server
+[17:50:16    ] [INFO    ] (org.alexdev.havana.dao.Storage) Connection to MySQL was a success
+[17:50:16    ] [INFO    ] (org.alexdev.havana.Havana) Setting up game
+[17:50:16    ] [INFO    ] (org.alexdev.havana.game.commands.CommandManager) Loaded 39 commands
+[17:50:16    ] [INFO    ] (org.alexdev.havana.server.rcon.RconServer) RCON (remote connection) is listening on 127.0.0.1:12309
+[17:50:16    ] [INFO    ] (org.alexdev.havana.server.mus.MusServer) Multi User Server (MUS) is listening on 127.0.0.1:12322
+[17:50:16    ] [INFO    ] (org.alexdev.havana.server.netty.NettyServer) Shockwave game server is listening on: 127.0.0.1:12321
+[17:50:16    ] [INFO    ] (org.alexdev.havana.server.netty.NettyServer) Flash game server is listening on: 127.0.0.1:12323
+[2025-09-11 17:51:06] [INFO    ] (org.alexdev.havana.Havana) Starting Havana...
+[2025-09-11 17:51:06] [INFO    ] (org.alexdev.havana.dao.Storage) Connecting to MySQL server
+[2025-09-11 17:51:06] [INFO    ] (org.alexdev.havana.dao.Storage) Connection to MySQL was a success
+[2025-09-11 17:51:06] [INFO    ] (org.alexdev.havana.Havana) Setting up game
+[2025-09-11 17:51:06] [INFO    ] (org.alexdev.havana.game.commands.CommandManager) Loaded 39 commands
+[2025-09-11 17:51:06] [INFO    ] (org.alexdev.havana.server.rcon.RconServer) RCON (remote connection) is listening on 127.0.0.1:12309
+[2025-09-11 17:51:06] [INFO    ] (org.alexdev.havana.server.mus.MusServer) Multi User Server (MUS) is listening on 127.0.0.1:12322
+[2025-09-11 17:51:06] [INFO    ] (org.alexdev.havana.server.netty.NettyServer) Flash game server is listening on: 127.0.0.1:12323
+[2025-09-11 17:51:06] [INFO    ] (org.alexdev.havana.server.netty.NettyServer) Shockwave game server is listening on: 127.0.0.1:12321
+[2025-09-11 17:51:23] [INFO    ] (org.alexdev.havana.Havana) Starting Havana...
+[2025-09-11 17:51:24] [INFO    ] (org.alexdev.havana.Havana) Starting Havana...
+[2025-09-11 17:51:24] [INFO    ] (org.alexdev.havana.dao.Storage) Connecting to MySQL server
+[2025-09-11 17:51:24] [INFO    ] (org.alexdev.havana.dao.Storage) Connection to MySQL was a success
+[2025-09-11 17:51:24] [INFO    ] (org.alexdev.havana.Havana) Setting up game
+[2025-09-11 17:51:25] [INFO    ] (org.alexdev.havana.game.commands.CommandManager) Loaded 39 commands
+[2025-09-11 17:51:25] [ERROR   ] (org.alexdev.havana.server.rcon.RconServer) Failed to start RCON server on address: 127.0.0.1:12309
+[2025-09-11 17:51:25] [ERROR   ] (org.alexdev.havana.server.rcon.RconServer) Please double check there's no programs using the same port, and you have set the correct IP address to listen on.
+[2025-09-11 17:51:25] [ERROR   ] (org.alexdev.havana.server.mus.MusServer) Failed to start MUS server on address: 127.0.0.1:12322
+[2025-09-11 17:51:25] [ERROR   ] (org.alexdev.havana.server.mus.MusServer) Please double check there's no programs using the same port, and you have set the correct IP address to listen on.
+[2025-09-11 17:51:25] [ERROR   ] (org.alexdev.havana.server.netty.NettyServer) Failed to start server on address 127.0.0.1:12321
+[2025-09-11 17:51:25] [ERROR   ] (org.alexdev.havana.server.netty.NettyServer) Please double check there's no programs using the same game port, and you have set the correct IP address to listen on.
+[2025-09-11 17:51:25] [ERROR   ] (org.alexdev.havana.server.netty.NettyServer) Failed to start server on address 127.0.0.1:12323
+[2025-09-11 17:51:25] [ERROR   ] (org.alexdev.havana.server.netty.NettyServer) Please double check there's no programs using the same game port, and you have set the correct IP address to listen on.

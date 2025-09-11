@@ -4,27 +4,21 @@ import org.alexdev.havana.game.entity.Entity;
 import org.alexdev.havana.game.entity.EntityType;
 import org.alexdev.havana.game.pathfinder.Position;
 import org.alexdev.havana.game.pathfinder.Rotation;
-import org.alexdev.havana.game.pets.Pet;
-import org.alexdev.havana.game.pets.PetAction;
-import org.alexdev.havana.game.pets.PetManager;
 import org.alexdev.havana.game.player.Player;
 import org.alexdev.havana.game.room.Room;
 import org.alexdev.havana.game.room.entities.RoomEntity;
 import org.alexdev.havana.game.room.enums.StatusType;
 import org.alexdev.havana.game.room.mapping.RoomTile;
-import org.alexdev.havana.log.Log;
-import org.alexdev.havana.messages.outgoing.rooms.user.CHAT_MESSAGE;
 import org.alexdev.havana.messages.outgoing.rooms.user.USER_STATUSES;
 import org.alexdev.havana.messages.types.MessageComposer;
 import org.alexdev.havana.util.StringUtil;
 import org.alexdev.havana.util.config.GameConfiguration;
+import org.oldskooler.simplelogger4j.SimpleLog;
 
 import java.util.ArrayList;
-import java.util.Comparator;
 import java.util.List;
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.LinkedBlockingQueue;
-import java.util.concurrent.ThreadLocalRandom;
 
 public class EntityTask implements Runnable {
     private final Room room;
@@ -63,7 +57,7 @@ public class EntityTask implements Runnable {
                 try {
                     this.processEntity(entity);
                 } catch (Exception ex) {
-                    Log.getErrorLogger().error("EntityTask crashed: ", ex);
+                    SimpleLog.of(EntityTask.class).error("EntityTask crashed: ", ex);
                 }
 
                 RoomEntity roomEntity = entity.getRoomUser();
@@ -94,7 +88,7 @@ public class EntityTask implements Runnable {
                 this.room.send(messageComposer);
             }
         } catch (Exception ex) {
-            Log.getErrorLogger().error("EntityTask crashed: ", ex);
+            SimpleLog.of(EntityTask.class).error("EntityTask crashed: ", ex);
         }
     }
 

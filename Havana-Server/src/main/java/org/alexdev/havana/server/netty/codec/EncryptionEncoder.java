@@ -9,6 +9,7 @@ import org.alexdev.havana.game.encryption.HugeInt15;
 import org.alexdev.havana.game.player.Player;
 import org.alexdev.havana.server.netty.NettyPlayerNetwork;
 import org.alexdev.havana.util.StringUtil;
+import org.oldskooler.simplelogger4j.SimpleLog;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -18,7 +19,7 @@ import java.util.List;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class EncryptionEncoder extends MessageToMessageEncoder<ByteBuf> {
-    private static final Logger log = LoggerFactory.getLogger(EncryptionEncoder.class);
+    private static final SimpleLog<EncryptionEncoder> log = SimpleLog.of(EncryptionEncoder.class);
 
     private Cryptography pHeaderEncoder;
     private Cryptography pEncoder;

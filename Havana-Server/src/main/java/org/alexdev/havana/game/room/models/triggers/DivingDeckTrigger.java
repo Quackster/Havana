@@ -6,8 +6,8 @@ import org.alexdev.havana.game.player.Player;
 import org.alexdev.havana.game.room.Room;
 import org.alexdev.havana.game.room.enums.StatusType;
 import org.alexdev.havana.game.triggers.GenericTrigger;
-import org.alexdev.havana.log.Log;
 import org.alexdev.havana.messages.outgoing.rooms.items.SHOWPROGRAM;
+import org.oldskooler.simplelogger4j.SimpleLog;
 
 import java.util.List;
 import java.util.concurrent.ThreadLocalRandom;
@@ -49,7 +49,7 @@ public class DivingDeckTrigger extends GenericTrigger {
                     }
                 }
             } catch (Exception ex) {
-                Log.getErrorLogger().error("PoolCamera crashed: ", ex);
+                SimpleLog.of(DivingDeckTrigger.class).error("PoolCamera crashed: ", ex);
             }
         }
 
@@ -76,7 +76,7 @@ public class DivingDeckTrigger extends GenericTrigger {
                     this.room.send(new SHOWPROGRAM(new String[]{"cam1", "targetcamera", String.valueOf(this.player.getRoomUser().getInstanceId())}));
                 }
             } catch (Exception ex) {
-                Log.getErrorLogger().error("Error when trying to find player to spectate: ", ex);
+                SimpleLog.of(DivingDeckTrigger.class).error("Error when trying to find player to spectate: ", ex);
             }
         }
 

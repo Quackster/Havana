@@ -18,7 +18,6 @@ import org.alexdev.havana.game.player.PlayerDetails;
 import org.alexdev.havana.game.player.PlayerManager;
 import org.alexdev.havana.game.room.Room;
 import org.alexdev.havana.game.room.RoomManager;
-import org.alexdev.havana.log.Log;
 import org.alexdev.havana.messages.incoming.catalogue.GET_CATALOG_INDEX;
 import org.alexdev.havana.messages.outgoing.alerts.ALERT;
 import org.alexdev.havana.messages.outgoing.handshake.RIGHTS;
@@ -28,14 +27,13 @@ import org.alexdev.havana.messages.outgoing.user.currencies.CREDIT_BALANCE;
 import org.alexdev.havana.server.rcon.messages.RconMessage;
 import org.alexdev.havana.util.config.GameConfiguration;
 import org.alexdev.havana.util.config.writer.GameConfigWriter;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.oldskooler.simplelogger4j.SimpleLog;
 
 import java.io.IOException;
 import java.util.HashMap;
 
 public class RconConnectionHandler extends ChannelInboundHandlerAdapter {
-    final private static Logger log = LoggerFactory.getLogger(RconConnectionHandler.class);
+    final private static SimpleLog<RconConnectionHandler> log = SimpleLog.of(RconConnectionHandler.class);
 
     private final RconServer server;
 
@@ -46,7 +44,7 @@ public class RconConnectionHandler extends ChannelInboundHandlerAdapter {
     @Override
     public void channelRegistered(ChannelHandlerContext ctx) {
         if (!this.server.getChannels().add(ctx.channel()) || Havana.isShuttingdown()) {
-            //Log.getErrorLogger().error("Could not accept RCON connection from {}", ctx.channel().remoteAddress().toString().replace("/", "").split(":")[0]);
+            //SimpleLog.of(SnowStormGameTask.class).error("Could not accept RCON connection from {}", ctx.channel().remoteAddress().toString().replace("/", "").split(":")[0]);
             ctx.close();
         }
 
@@ -314,7 +312,7 @@ public class RconConnectionHandler extends ChannelInboundHandlerAdapter {
                     break;
             }
         } catch (Exception ex) {
-            Log.getErrorLogger().error("[RCON] Error occurred when handling RCON message: ", ex);
+            SimpleLog.of(RconConnectionHandler.class).error("[RCON] Error occurred when handling RCON message: ", ex);
         }
     }
 
@@ -322,7 +320,7 @@ public class RconConnectionHandler extends ChannelInboundHandlerAdapter {
     public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) {
         if (cause instanceof Exception) {
             if (!(cause instanceof IOException)) {
-                Log.getErrorLogger().error("[RCON] Error occurred: ", cause);
+                SimpleLog.of(RconConnectionHandler.class).error("[RCON] Error occurred: ", cause);
             }
         }
 

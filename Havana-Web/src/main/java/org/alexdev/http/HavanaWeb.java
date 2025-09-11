@@ -33,7 +33,7 @@ import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
 public class HavanaWeb {
-    private static Logger logger = LoggerFactory.getLogger(HavanaWeb.class);
+    private static Logger logger = SimpleLog.of(HavanaWeb.class);
 
     private static final Gson gson = new Gson();
     private static ScheduledExecutorService scheduler;
@@ -69,7 +69,7 @@ public class HavanaWeb {
         */
 
         if (!Storage.connect()) {
-            Log.getErrorLogger().error("Could not connect to MySQL");
+            SimpleLog.of(SnowStormGameTask.class).error("Could not connect to MySQL");
             return;
         }
 

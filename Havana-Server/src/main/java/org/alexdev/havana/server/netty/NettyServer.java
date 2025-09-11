@@ -12,9 +12,7 @@ import io.netty.channel.group.DefaultChannelGroup;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
 import io.netty.util.concurrent.GlobalEventExecutor;
-import org.alexdev.havana.log.Log;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.oldskooler.simplelogger4j.SimpleLog;
 
 import java.net.InetSocketAddress;
 import java.util.concurrent.atomic.AtomicInteger;
@@ -22,7 +20,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 public class NettyServer  {
     final private static int BACK_LOG = 20;
     final private static int BUFFER_SIZE = 2048;
-	final private static Logger log = LoggerFactory.getLogger(NettyServer.class);
+	final private static SimpleLog<NettyServer> log = SimpleLog.of(NettyServer.class);
 
     private final String ip;
     private final int port;
@@ -70,23 +68,23 @@ public class NettyServer  {
         for (int gamePort : ports) {
             this.bootstrap.bind(new InetSocketAddress(this.getIp(), gamePort)).addListener(objectFuture -> {
                 if (!objectFuture.isSuccess()) {
-                    Log.getErrorLogger().error("Failed to start server on address: {}:{}", this.getIp(), gamePort);
-                    Log.getErrorLogger().error("Please double check there's no programs using the same game port, and you have set the correct IP address to listen on.");
+                    log.error("Failed to start server on address " + this.getIp() + ":" + gamePort);
+                    log.error("Please double check there's no programs using the same game port, and you have set the correct IP address to listen on.");
                 } else {
                     if (gamePort == this.port + 2) {
-                        log.info("Flash game server is listening on {}:{}", this.getIp(), gamePort);
+                        log.info("Flash game server is listening on: " + this.getIp() + ":" + gamePort);
                     /*} else if (gamePort == this.port + 4) {
                         log.info("Flash R34 game server is listening on {}:{}", this.getIp(), gamePort);*/
                     } else {
-                        log.info("Shockwave game server is listening on {}:{}", this.getIp(), gamePort);
+                        log.info("Shockwave game server is listening on: " + this.getIp() + ":" + gamePort);
                     }
                 }
             });
         }
         /*this.bootstrap.bind(new InetSocketAddress(this.getIp(), this.getPort())).addListener(objectFuture -> {
             if (!objectFuture.isSuccess()) {
-                Log.getErrorLogger().error("Failed to start server on address: {}:{}", this.getIp(), this.getPort());
-                Log.getErrorLogger().error("Please double check there's no programs using the same gamePort, and you have set the correct IP address to listen on.", this.getIp(), this.getPort());
+                SimpleLog.of(SnowStormGameTask.class).error("Failed to start server on address: {}:{}", this.getIp(), this.getPort());
+                SimpleLog.of(SnowStormGameTask.class).error("Please double check there's no programs using the same gamePort, and you have set the correct IP address to listen on.", this.getIp(), this.getPort());
             } else {
                 log.info("Shockwave game server is listening on {}:{}", this.getIp(), this.getPort());
             }

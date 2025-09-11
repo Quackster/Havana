@@ -11,7 +11,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class BaseController implements Route {
-    private static Logger logger = LoggerFactory.getLogger(BaseController.class);
+    private static Logger logger = SimpleLog.of(BaseController.class);
 
     @Override
     public void handleRoute(WebConnection webConnection) throws Exception {

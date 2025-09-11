@@ -13,6 +13,7 @@ import org.alexdev.havana.game.texts.TextsManager;
 import org.alexdev.havana.messages.outgoing.alerts.ALERT;
 import org.alexdev.havana.util.config.GameConfiguration;
 import org.apache.commons.lang3.tuple.Pair;
+import org.oldskooler.simplelogger4j.SimpleLog;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -27,7 +28,7 @@ import java.util.stream.Stream;
 public class CommandManager {
     private Map<String[], Command> commands;
     
-    private static final Logger log = LoggerFactory.getLogger(CommandManager.class);
+    private static final SimpleLog<CommandManager> log = SimpleLog.of(CommandManager.class);
     private static CommandManager instance;
 
     public CommandManager() {
@@ -37,7 +38,7 @@ public class CommandManager {
             addCommand(set.getKey(), set.getValue());
         }
 
-        log.info("Loaded {} commands", commands.size());
+        log.info("Loaded " + commands.size() + " commands");
     }
 
     /**

@@ -4,13 +4,14 @@ import org.alexdev.havana.dao.mysql.GroupDao;
 import org.alexdev.havana.dao.mysql.RoomDao;
 import org.alexdev.havana.dao.mysql.TagDao;
 import org.alexdev.havana.game.entity.Entity;
+import org.alexdev.havana.game.games.snowstorm.tasks.SnowStormGameTask;
 import org.alexdev.havana.game.player.Player;
 import org.alexdev.havana.game.room.Room;
 import org.alexdev.havana.game.room.RoomManager;
-import org.alexdev.havana.log.Log;
 import org.alexdev.havana.messages.flash.incoming.navigator.FLASH_USERFLATS;
 import org.alexdev.havana.messages.types.MessageEvent;
 import org.alexdev.havana.server.netty.streams.NettyRequest;
+import org.oldskooler.simplelogger4j.SimpleLog;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -49,7 +50,7 @@ public class DELETEFLAT implements MessageEvent {
         }
 
         if (!room.tryDispose()) {
-            Log.getErrorLogger().error("Room " + roomId + " did not want to get disposed by player id " + userId);
+            SimpleLog.of(DELETEFLAT.class).error("Room " + roomId + " did not want to get disposed by player id " + userId);
         }
 
         TagDao.removeTags(0, roomId, 0);

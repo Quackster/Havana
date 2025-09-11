@@ -3,9 +3,9 @@ package org.alexdev.havana.messages.incoming.club;
 import org.alexdev.havana.game.club.ClubSubscription;
 import org.alexdev.havana.game.player.Player;
 import org.alexdev.havana.game.player.statistics.PlayerStatistic;
-import org.alexdev.havana.log.Log;
 import org.alexdev.havana.messages.types.MessageEvent;
 import org.alexdev.havana.server.netty.streams.NettyRequest;
+import org.oldskooler.simplelogger4j.SimpleLog;
 
 import java.sql.SQLException;
 
@@ -20,7 +20,7 @@ public class SCR_GIFT_APPROVAL implements MessageEvent {
                 }
 
             } catch (SQLException e) {
-                Log.getErrorLogger().error("Error trying to process club gift for user (" + player.getDetails().getName() + "): ", e);
+                SimpleLog.of(SCR_GIFT_APPROVAL.class).error("Error trying to process club gift for user (" + player.getDetails().getName() + "): ", e);
             }
         }
     }

@@ -11,8 +11,8 @@ import org.alexdev.havana.game.player.PlayerManager;
 import org.alexdev.havana.game.room.Room;
 import org.alexdev.havana.game.room.RoomManager;
 import org.alexdev.havana.game.song.Song;
-import org.alexdev.havana.log.Log;
 import org.alexdev.havana.util.DateUtil;
+import org.oldskooler.simplelogger4j.SimpleLog;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -163,7 +163,8 @@ public class ItemManager {
                 ItemDao.updateItems(itemList);
             }
         } catch (Exception ex) {
-            Log.getErrorLogger().error("Error when attempting to save items: ", ex);
+
+            SimpleLog.of(ItemManager.class).error("Error when attempting to save items: ", ex);
         }
     }
 
@@ -185,7 +186,7 @@ public class ItemManager {
                 ItemDao.deleteItems(itemList);
             }
         } catch (Exception ex) {
-            Log.getErrorLogger().error("Error when attempting to save items: ", ex);
+            SimpleLog.of(ItemManager.class).error("Error when attempting to save items: ", ex);
         }
     }
 

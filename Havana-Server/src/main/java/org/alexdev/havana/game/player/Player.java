@@ -6,7 +6,6 @@ import org.alexdev.havana.game.achievements.user.UserAchievementManager;
 import org.alexdev.havana.game.badges.BadgeManager;
 import org.alexdev.havana.game.club.ClubSubscription;
 import org.alexdev.havana.game.effects.Effect;
-import org.alexdev.havana.game.encryption.Cryptography;
 import org.alexdev.havana.game.encryption.DiffieHellman;
 import org.alexdev.havana.game.entity.Entity;
 import org.alexdev.havana.game.entity.EntityType;
@@ -42,8 +41,7 @@ import org.alexdev.havana.server.netty.ServerHandlerType;
 import org.alexdev.havana.util.DateUtil;
 import org.alexdev.havana.util.StringUtil;
 import org.alexdev.havana.util.config.GameConfiguration;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.oldskooler.simplelogger4j.SimpleLog;
 
 import java.math.BigInteger;
 import java.util.*;
@@ -57,7 +55,7 @@ public class Player extends Entity {
     private final PlayerDetails details;
     private final RoomPlayer roomEntity;
 
-    private Logger log;
+    private SimpleLog<Player> log;
     private Messenger messenger;
     private Inventory inventory;
     private BadgeManager badgeManager;
@@ -89,7 +87,7 @@ public class Player extends Entity {
         this.achievementManager = new UserAchievementManager();
         this.effects = new CopyOnWriteArrayList<>();
         this.ignoredList = new HashSet<>();
-        this.log = LoggerFactory.getLogger("Connection " + this.network.getConnectionId());
+        this.log = SimpleLog.of(Player.class);
         this.pingOK = true;
         this.disconnected = false;
         this.processLoginSteps = true;
@@ -99,7 +97,7 @@ public class Player extends Entity {
      * Login handler for player
      */
     public void login() {
-        this.log = LoggerFactory.getLogger("Player " + this.details.getName()); // Update logger to show name
+        this.log = SimpleLog.of(Player.class); // Update logger to show name
         this.loggedIn = true;
         this.pingOK = true;
         this.timeConnected = DateUtil.getCurrentTimeSeconds();
@@ -403,7 +401,7 @@ public class Player extends Entity {
      *
      * @return the logger
      */
-    public Logger getLogger() {
+    public SimpleLog<Player> getLogger() {
         return this.log;
     }
 

@@ -5,7 +5,6 @@ import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
 import org.alexdev.havana.Havana;
 import org.alexdev.havana.game.player.Player;
-import org.alexdev.havana.log.Log;
 import org.alexdev.havana.messages.MessageHandler;
 import org.alexdev.havana.messages.outgoing.handshake.HELLO;
 import org.alexdev.havana.server.netty.NettyPlayerNetwork;
@@ -13,13 +12,12 @@ import org.alexdev.havana.server.netty.NettyServer;
 import org.alexdev.havana.server.netty.streams.NettyRequest;
 import org.alexdev.havana.util.config.GameConfiguration;
 import org.alexdev.havana.util.config.ServerConfiguration;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.oldskooler.simplelogger4j.SimpleLog;
 
 import java.io.IOException;
 
 public class ConnectionHandler extends SimpleChannelInboundHandler<NettyRequest> {
-    final private static Logger log = LoggerFactory.getLogger(ConnectionHandler.class);
+    final private static SimpleLog<ConnectionHandler> log = SimpleLog.of(ConnectionHandler.class);
     private static final int MAX_CONNECTIONS = 1000;
     final private NettyServer server;
 
@@ -65,7 +63,7 @@ public class ConnectionHandler extends SimpleChannelInboundHandler<NettyRequest>
         }
 
         if (ServerConfiguration.getBoolean("log.connections")) {
-            log.info("[{}] Connection from {} ", player.getNetwork().getConnectionId(), NettyPlayerNetwork.getIpAddress(ctx.channel()));
+            log.info("[" + player.getNetwork().getConnectionId() + "] Connection from " + NettyPlayerNetwork.getIpAddress(ctx.channel()));
         }
     }
 
@@ -84,7 +82,7 @@ public class ConnectionHandler extends SimpleChannelInboundHandler<NettyRequest>
             player.dispose();
 
             if (ServerConfiguration.getBoolean("log.connections")) {
-                log.info("[{}] Disconnection from {} ", player.getNetwork().getConnectionId(), NettyPlayerNetwork.getIpAddress(ctx.channel()));
+                log.info("[" + player.getNetwork().getConnectionId() + "] Disconnection from " + NettyPlayerNetwork.getIpAddress(ctx.channel()));
             }
         }
     }
@@ -94,12 +92,12 @@ public class ConnectionHandler extends SimpleChannelInboundHandler<NettyRequest>
         Player player = ctx.channel().attr(Player.PLAYER_KEY).get();
 
         if (player == null) {
-            Log.getErrorLogger().error("Player was null from {}", ctx.channel().remoteAddress().toString().replace("/", "").split(":")[0]);
+            SimpleLog.of(ConnectionHandler.class).error(String.format("Player was null from %s", ctx.channel().remoteAddress().toString().replace("/", "").split(":")[0]));
             return;
         }
 
         if (message == null) {
-            Log.getErrorLogger().error("Receiving message was null from {}", ctx.channel().remoteAddress().toString().replace("/", "").split(":")[0]);
+            SimpleLog.of(ConnectionHandler.class).error(String.format("Receiving message was null from {}", ctx.channel().remoteAddress().toString().replace("/", "").split(":")[0]));
             return;
         }
 
@@ -108,7 +106,7 @@ public class ConnectionHandler extends SimpleChannelInboundHandler<NettyRequest>
         try {
             message.dispose();
         } catch (Exception ex) {
-            Log.getErrorLogger().error("Error when disposing message:", ex);
+            SimpleLog.of(ConnectionHandler.class).error("Error when disposing message:", ex);
         }
     }
 
@@ -116,7 +114,7 @@ public class ConnectionHandler extends SimpleChannelInboundHandler<NettyRequest>
     public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) throws Exception {
         //if (cause instanceof Exception) {
         if (!(cause instanceof IOException)) {
-            Log.getErrorLogger().error("Netty error occurred: ", cause); //ctx.close();
+            SimpleLog.of(ConnectionHandler.class).error("Netty error occurred: ", cause); //ctx.close();
         }
         //}
     }

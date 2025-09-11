@@ -1,5 +1,6 @@
 package org.alexdev.havana.game.games;
 
+import org.alexdev.havana.dao.Storage;
 import org.alexdev.havana.dao.mysql.GameDao;
 import org.alexdev.havana.game.games.battleball.BattleBallMap;
 import org.alexdev.havana.game.games.enums.GameState;
@@ -9,9 +10,9 @@ import org.alexdev.havana.game.games.player.GameRank;
 import org.alexdev.havana.game.player.Player;
 import org.alexdev.havana.game.player.statistics.PlayerStatistic;
 import org.alexdev.havana.game.room.models.RoomModel;
-import org.alexdev.havana.log.Log;
 import org.alexdev.havana.util.DateUtil;
 import org.alexdev.havana.util.config.GameConfiguration;
+import org.oldskooler.simplelogger4j.SimpleLog;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -72,7 +73,7 @@ public class GameManager {
             minCredits = Integer.parseInt(rangeData[0]);
             maxCredits = Integer.parseInt(rangeData[1]);
         } catch (Exception ex) {
-            Log.getErrorLogger().error("Error when handling give random credits: " + ex);
+            SimpleLog.of(GameManager.class).error("Error when handling give random credits: " + ex);
         }
 
         if (minCredits == maxCredits) {

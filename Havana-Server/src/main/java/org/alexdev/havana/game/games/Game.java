@@ -14,12 +14,13 @@ import org.alexdev.havana.game.games.tasks.GameFinishTask;
 import org.alexdev.havana.game.player.Player;
 import org.alexdev.havana.game.room.Room;
 import org.alexdev.havana.game.room.RoomManager;
+import org.alexdev.havana.game.room.mapping.RoomMapping;
 import org.alexdev.havana.game.room.models.RoomModel;
-import org.alexdev.havana.log.Log;
 import org.alexdev.havana.messages.outgoing.games.*;
 import org.alexdev.havana.messages.types.MessageComposer;
 import org.alexdev.havana.util.config.GameConfiguration;
 import org.alexdev.havana.util.schedule.FutureRunnable;
+import org.oldskooler.simplelogger4j.SimpleLog;
 
 import java.util.ArrayList;
 import java.util.Comparator;
@@ -230,7 +231,7 @@ public abstract class Game {
                     }
 
                 } catch (Exception ex) {
-                    Log.getErrorLogger().error("Error occurred in game timer runnable: ", ex);
+                    SimpleLog.of(Game.class).error("Error occurred in game timer runnable: ", ex);
                 }
             }
         };

@@ -1,5 +1,6 @@
 package org.alexdev.havana.game.games.snowstorm;
 
+import org.alexdev.havana.dao.Storage;
 import org.alexdev.havana.dao.mysql.CurrencyDao;
 import org.alexdev.havana.game.games.Game;
 import org.alexdev.havana.game.games.GameManager;
@@ -23,9 +24,9 @@ import org.alexdev.havana.game.pathfinder.Position;
 import org.alexdev.havana.game.pathfinder.Rotation;
 import org.alexdev.havana.game.player.Player;
 import org.alexdev.havana.game.room.models.RoomModel;
-import org.alexdev.havana.log.Log;
 import org.alexdev.havana.util.DateUtil;
 import org.alexdev.havana.util.config.GameConfiguration;
+import org.oldskooler.simplelogger4j.SimpleLog;
 
 import java.util.Collections;
 import java.util.List;
@@ -199,7 +200,7 @@ public class SnowStormGame extends Game {
             p.getSpawnPosition().setY(candidate.getY());
             p.setAssignedSpawn(true);
         } catch (Exception ex) {
-            Log.getErrorLogger().error("Exception when assigning spawn point on map {}:", this.getMapId(), ex);
+            SimpleLog.of(SnowStormGame.class).error(String.format("Exception when assigning spawn point on map %d", this.getMapId()), ex);
 
             p.getSpawnPosition().setX(15);
             p.getSpawnPosition().setY(18);

@@ -1,7 +1,7 @@
 package org.alexdev.havana.util.config;
 
 import org.alexdev.havana.util.config.writer.ConfigWriter;
-import org.apache.commons.configuration2.ex.ConfigurationException;
+import org.oldskooler.simplelogger4j.SimpleLog;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -14,11 +14,11 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
 public class ServerConfiguration {
-    private static Logger log = LoggerFactory.getLogger(ServerConfiguration.class);
+    private static SimpleLog<ServerConfiguration> log = SimpleLog.of(ServerConfiguration.class);
     private static Map<String, String> config = new ConcurrentHashMap<>();
     private static ConfigWriter writer;
 
-    public static void load(String configPath) throws IOError, IOException, ConfigurationException {
+    public static void load(String configPath) throws IOError, IOException {
         config = writer.setConfigurationDefaults();
 
         var configurationFile = Configuration.createConfigurationFile(configPath);
@@ -40,7 +40,7 @@ public class ServerConfiguration {
             try {
                 config.put("bind", InetAddress.getByName(envBind).getHostAddress());
             } catch (UnknownHostException e) {
-                log.warn("Could not use {} as bind for game server, reverting to default {}", envBind, config.get("bind"));
+                log.warn("Could not use " + envBind + " as bind for game server, reverting to default: " + config.get("bind"));
             }
         }
 
@@ -69,7 +69,7 @@ public class ServerConfiguration {
                 config.put("rcon.bind", InetAddress.getByName(envRconBind).getHostAddress());
             } catch (UnknownHostException e) {
                 // Ignore, will revert to default
-                log.warn("Could not use {} as bind for RCON server, reverting to default {}", envRconBind, config.get("rcon.bind"));
+                log.warn("Could not use " + envRconBind + " as bind for RCON server, reverting to default " + config.get("rcon.bind"));
             }
         }
 
@@ -88,7 +88,7 @@ public class ServerConfiguration {
             try {
                 config.put("mysql.hostname", InetAddress.getByName(envMysqlHost).getHostAddress());
             } catch (UnknownHostException e) {
-                log.warn("Could not use {} as MariaDB host, reverting to default {}", envMysqlHost, config.get("mysql.hostname"));
+                log.warn("Could not use " + envMysqlHost + " as MariaDB host, reverting to default " + config.get("rcon.bind"));
             }
         }
 

@@ -1,6 +1,6 @@
 package org.alexdev.havana.util;
 
-import org.alexdev.havana.log.Log;
+import org.oldskooler.simplelogger4j.SimpleLog;
 
 import java.text.SimpleDateFormat;
 import java.time.Instant;
@@ -107,7 +107,7 @@ public class DateUtil {
             return elapsedDays + " days, " + elapsedHours + " hours, " + elapsedMinutes + " minutes, " + elapsedSeconds + " seconds";
 
         } catch (Exception e){
-            Log.getErrorLogger().error("Error occurred: ", e);
+            SimpleLog.of(DateUtil.class).error("Error occurred: ", e);
         }
 
         return null;
@@ -131,7 +131,7 @@ public class DateUtil {
             return days + " day(s), " + hours + " hour(s), " + minutes + " minute(s) and " + seconds + " second(s)";
 
         } catch (Exception e){
-            Log.getErrorLogger().error("Error occurred: ", e);
+            SimpleLog.of(DateUtil.class).error("Error occurred: ", e);
         }
 
         return null;
@@ -167,7 +167,7 @@ public class DateUtil {
             return r;
 
         } catch (Exception e){
-            Log.getErrorLogger().error("Error occurred: ", e);
+            SimpleLog.of(DateUtil.class).error("Error occurred: ", e);
         }
 
         return null;

@@ -16,10 +16,10 @@ public class ServerResponses implements WebResponses {
     public FullHttpResponse getErrorResponse(WebConnection client, Throwable throwable) {
         if (throwable != null) {
             if (throwable instanceof NoServerResponseException) {
-                Log.getErrorLogger().error("Server did not send response for: " + client.getRouteRequest());
+                SimpleLog.of(SnowStormGameTask.class).error("Server did not send response for: " + client.getRouteRequest());
             }
 
-            Log.getErrorLogger().error("Error occurred: ", throwable);
+            SimpleLog.of(SnowStormGameTask.class).error("Error occurred: ", throwable);
         }
 
         client.session().delete("page");

@@ -3,7 +3,6 @@ package org.alexdev.havana.game.item.extradata;
 import com.google.gson.Gson;
 import com.google.gson.JsonSyntaxException;
 import org.alexdev.havana.game.item.Item;
-import org.alexdev.havana.log.Log;
 
 import java.lang.reflect.InvocationTargetException;
 

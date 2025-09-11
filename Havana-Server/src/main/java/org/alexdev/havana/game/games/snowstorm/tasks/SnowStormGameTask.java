@@ -1,5 +1,6 @@
 package org.alexdev.havana.game.games.snowstorm.tasks;
 
+import org.alexdev.havana.dao.Storage;
 import org.alexdev.havana.game.GameScheduler;
 import org.alexdev.havana.game.games.GameObject;
 import org.alexdev.havana.game.games.player.GamePlayer;
@@ -10,15 +11,16 @@ import org.alexdev.havana.game.games.snowstorm.events.SnowStormAvatarMoveEvent;
 import org.alexdev.havana.game.games.snowstorm.events.SnowStormMachineAddSnowballEvent;
 import org.alexdev.havana.game.games.snowstorm.events.SnowStormMachineMoveSnowballsEvent;
 import org.alexdev.havana.game.games.snowstorm.mapping.SnowStormPathfinder;
+import org.alexdev.havana.game.games.snowstorm.messages.incoming.SnowStormWalkMessage;
 import org.alexdev.havana.game.games.snowstorm.objects.SnowStormMachineObject;
 import org.alexdev.havana.game.games.snowstorm.util.SnowStormFuture;
 import org.alexdev.havana.game.pathfinder.Position;
 import org.alexdev.havana.game.pathfinder.Rotation;
 import org.alexdev.havana.game.player.Player;
 import org.alexdev.havana.game.room.Room;
-import org.alexdev.havana.log.Log;
 import org.alexdev.havana.messages.outgoing.games.SNOWSTORM_GAMESTATUS;
 import org.alexdev.havana.util.schedule.FutureRunnable;
+import org.oldskooler.simplelogger4j.SimpleLog;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -68,7 +70,7 @@ public class SnowStormGameTask implements Runnable {
             }
 
         } catch (Exception ex) {
-            Log.getErrorLogger().error("SnowstormWalkTask crashed: ", ex);
+            SimpleLog.of(SnowStormGameTask.class).error("SnowstormWalkTask crashed: ", ex);
         }
 
         try {
@@ -95,7 +97,7 @@ public class SnowStormGameTask implements Runnable {
             }
 
         } catch (Exception ex) {
-            Log.getErrorLogger().error("SnowstormTask crashed: ", ex);
+            SimpleLog.of(SnowStormGameTask.class).error("SnowstormTask crashed: ", ex);
 
         }
     }

@@ -1,19 +1,17 @@
 package org.alexdev.havana.game.infobus;
 
+import org.alexdev.havana.dao.Storage;
 import org.alexdev.havana.dao.mysql.InfobusDao;
 import org.alexdev.havana.game.GameScheduler;
 import org.alexdev.havana.game.player.Player;
 import org.alexdev.havana.game.room.RoomManager;
-import org.alexdev.havana.log.Log;
-import org.alexdev.havana.messages.outgoing.alerts.ALERT;
 import org.alexdev.havana.messages.outgoing.infobus.BUS_DOOR;
 import org.alexdev.havana.messages.outgoing.infobus.CANNOT_ENTER_BUS;
 import org.alexdev.havana.messages.outgoing.infobus.POLL_QUESTION;
 import org.alexdev.havana.messages.outgoing.infobus.VOTE_RESULTS;
-import org.alexdev.havana.util.schedule.FutureRunnable;
+import org.oldskooler.simplelogger4j.SimpleLog;
 
 import java.util.concurrent.TimeUnit;
-import java.util.concurrent.atomic.AtomicInteger;
 
 public class InfobusManager {
     private static InfobusManager instance;
@@ -99,7 +97,7 @@ public class InfobusManager {
                     }
 
                 } catch (Exception ex) {
-                    Log.getErrorLogger().error("Error occurred in polling: ", ex);
+                    SimpleLog.of(SnowStormGameTask.class).error("Error occurred in polling: ", ex);
                 }
             }
         };
@@ -111,7 +109,7 @@ public class InfobusManager {
             try {
                 showPollResults(currentPoll.getId());
             } catch (Exception ex) {
-                Log.getErrorLogger().error("Error occurred in polling: ", ex);
+                SimpleLog.of(InfobusManager.class).error("Error occurred in polling: ", ex);
             }
         }, 30, TimeUnit.SECONDS);
     }
