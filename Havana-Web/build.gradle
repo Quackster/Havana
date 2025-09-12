@@ -61,13 +61,7 @@ tasks.shadowJar {
     // Produces <project.name>-<project.version>.jar (no "-all" suffix).
     archiveClassifier.set("")
     archiveFileName.set("${project.name}-${project.version}.jar")
-    minimize()
 }
-
-tasks.named("startScripts").configure { dependsOn("shadowJar") }
-
-tasks.named("startShadowScripts").configure { dependsOn("jar") }
-
 
 artifacts {
     archives tasks.named("shadowJar")

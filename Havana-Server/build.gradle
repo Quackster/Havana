@@ -69,7 +69,6 @@ tasks.shadowJar {
     // Produces <project.name>-<project.version>.jar (no "-all" suffix).
     archiveClassifier.set("")
     archiveFileName.set("${project.name}-${project.version}.jar")
-    minimize()
 }
 
 artifacts {
