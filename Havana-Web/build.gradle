@@ -51,7 +51,7 @@ dependencies {
     implementation project(':Havana-Server')
 
     implementation 'com.github.Quackster:Avatara4j:v1.0.2'
-    implementation 'com.github.Quackster:duckHTTPD:v1.0.0'
+    implementation 'com.github.Quackster:duckHTTPD:v1.0.1'
 }
 
 
@@ -61,6 +61,7 @@ tasks.shadowJar {
     // Produces <project.name>-<project.version>.jar (no "-all" suffix).
     archiveClassifier.set("")
     archiveFileName.set("${project.name}-${project.version}.jar")
+    minimize()
 }
 
 tasks.named("startScripts").configure { dependsOn("shadowJar") }

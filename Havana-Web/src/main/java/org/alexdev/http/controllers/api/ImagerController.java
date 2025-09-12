@@ -1,5 +1,7 @@
 package org.alexdev.http.controllers.api;
 
+import io.netty.handler.codec.http.FullHttpResponse;
+import io.netty.handler.codec.http.HttpResponseStatus;
 import net.h4bbo.avatara4j.badges.Badge;
 import net.h4bbo.avatara4j.badges.BadgeSettings;
 import net.h4bbo.avatara4j.badges.RenderType;
