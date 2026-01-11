@@ -1,12 +1,14 @@
 plugins {
     id 'java'
     id 'application'
-    id 'com.github.johnrengelman.shadow' version '8.1.1' // For Java 8
+    id 'com.github.johnrengelman.shadow' version '8.1.1'
+    id 'org.springframework.boot' version '3.2.0'
+    id 'io.spring.dependency-management' version '1.1.4'
 }
 
 group = 'org.oldskooler'
 // version = '1.5'
-mainClassName = 'org.alexdev.http.HavanaWeb'
+mainClassName = 'org.alexdev.http.HavanaWebApplication'
 
 repositories {
     maven { url 'https://jitpack.io' }
@@ -20,8 +22,14 @@ java {
 }
 
 dependencies {
-    // https://mvnrepository.com/artifact/io.pebbletemplates/pebble
-    implementation group: 'io.pebbletemplates', name: 'pebble', version: '3.1.5'
+    // Spring Boot
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+
+    // Pebble template engine with Spring Boot integration
+    implementation 'io.pebbletemplates:pebble-spring-boot-starter:3.2.1'
+
+    // Gson for JSON serialization
+    implementation 'com.google.code.gson:gson:2.10.1'
 
     // https://mvnrepository.com/artifact/com.zaxxer/HikariCP
     implementation group: 'com.zaxxer', name: 'HikariCP', version: '3.4.1'
@@ -41,9 +49,6 @@ dependencies {
     // https://mvnrepository.com/artifact/org.apache.httpcomponents/httpclient
     implementation group: 'org.apache.httpcomponents', name: 'httpclient', version: '4.5'
 
-    // https://mvnrepository.com/artifact/org.slf4j/slf4j-log4j12
-    implementation group: 'org.slf4j', name: 'slf4j-log4j12', version: '1.7.25'
-
     // https://mvnrepository.com/artifact/javax.mail/mail
     implementation group: 'javax.mail', name: 'mail', version: '1.4.7'
 
@@ -51,7 +56,6 @@ dependencies {
     implementation project(':Havana-Server')
 
     implementation 'com.github.Quackster:Avatara4j:v1.0.2'
-    implementation 'com.github.Quackster:duckHTTPD:v1.0.2'
 }
 
 
