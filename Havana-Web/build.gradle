@@ -1,7 +1,8 @@
 plugins {
     id 'java'
     id 'application'
-    id 'com.github.johnrengelman.shadow' version '8.1.1' // For Java 8
+    id 'com.github.johnrengelman.shadow' version '8.1.1'
+    id 'org.graalvm.buildtools.native'
 }
 
 group = 'org.oldskooler'
@@ -16,7 +17,10 @@ repositories {
 java {
     withSourcesJar()
     withJavadocJar()
-    toolchain { languageVersion = JavaLanguageVersion.of(17) }
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(21)
+        vendor = JvmVendorSpec.GRAAL_VM
+    }
 }
 
 dependencies {
@@ -53,4 +57,54 @@ tasks.shadowJar {
 
 artifacts {
     archives tasks.named("shadowJar")
+}
+
+graalvmNative {
+    toolchainDetection = true
+
+    binaries {
+        main {
+            imageName = 'havana-web'
+            mainClass = 'org.alexdev.http.HavanaWeb'
+            javaLauncher = javaToolchains.launcherFor {
+                languageVersion = JavaLanguageVersion.of(21)
+                vendor = JvmVendorSpec.GRAAL_VM
+            }
+
+            buildArgs.addAll(
+                // Initialize at runtime (required for Netty, crypto, logging, templates, etc.)
+                '--initialize-at-run-time=io.netty',
+                '--initialize-at-run-time=org.bouncycastle',
+                '--initialize-at-run-time=org.springframework.security.crypto',
+                '--initialize-at-run-time=com.zaxxer.hikari',
+                '--initialize-at-run-time=org.mariadb',
+                '--initialize-at-run-time=org.slf4j',
+                '--initialize-at-run-time=org.apache.log4j',
+                '--initialize-at-run-time=com.google.gson',
+                '--initialize-at-run-time=io.pebbletemplates',
+                '--initialize-at-run-time=com.maxmind',
+                // Enable HTTP/HTTPS protocols
+                '--enable-url-protocols=http,https',
+                // Report stack traces on errors
+                '-H:+ReportExceptionStackTraces',
+                // Install exit handlers
+                '--install-exit-handlers'
+                // Note: Havana-Web requires --force-fallback on GraalVM CE 21 due to ScopedMemoryAccess linker bug
+            )
+
+            // Use tracing agent config if available
+            configurationFileDirectories.from(file('src/main/resources/META-INF/native-image'))
+        }
+    }
+
+    agent {
+        enabled = true
+        defaultMode = 'standard'
+
+        metadataCopy {
+            inputTaskNames.add('run')
+            outputDirectories.add('src/main/resources/META-INF/native-image')
+            mergeWithExisting = true
+        }
+    }
 }
