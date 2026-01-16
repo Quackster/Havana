@@ -1,13 +1,10 @@
 package org.alexdev.http.util;
 
 import org.apache.commons.codec.binary.Base64;
-import org.apache.commons.io.IOUtils;
 
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
 import java.io.*;
-import java.net.URL;
-import java.nio.charset.Charset;
 
 import org.alexdev.havana.util.config.GameConfiguration;
 
@@ -94,19 +91,5 @@ public class HtmlUtil {
             e.printStackTrace();
         }
         return imageString;
-    }
-
-    public static String getResponse(String url) {
-        InputStream in = null;
-        String val = null;
-
-        try {
-            in = new URL(url).openStream();
-            val = IOUtils.toString( in, Charset.defaultCharset());
-        } catch (Exception ignored) {
-            IOUtils.closeQuietly(in);
-        }
-
-        return val;
     }
 }
