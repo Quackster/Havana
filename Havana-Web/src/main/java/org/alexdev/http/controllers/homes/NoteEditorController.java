@@ -16,7 +16,7 @@ import org.alexdev.http.game.stickers.StickerManager;
 import org.alexdev.http.game.stickers.StickerType;
 import org.alexdev.http.util.BBCode;
 import org.alexdev.http.util.HtmlUtil;
-import org.apache.commons.lang3.tuple.Pair;
+import org.alexdev.havana.util.Pair;
 
 import java.util.ArrayList;
 import java.util.Comparator;

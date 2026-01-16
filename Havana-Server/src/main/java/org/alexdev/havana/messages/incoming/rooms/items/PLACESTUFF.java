@@ -16,7 +16,7 @@ import org.alexdev.havana.messages.types.MessageEvent;
 import org.alexdev.havana.server.netty.NettyPlayerNetwork;
 import org.alexdev.havana.server.netty.streams.NettyRequest;
 import org.alexdev.havana.server.util.MalformedPacketException;
-import org.apache.commons.lang3.StringUtils;
+import org.alexdev.havana.util.StringUtil;
 
 import java.sql.SQLException;
 
@@ -41,7 +41,7 @@ public class PLACESTUFF implements MessageEvent {
         }
 
         // Make sure provided data is numeric
-        if (!StringUtils.isNumeric(data[0])) {
+        if (!StringUtil.isNumeric(data[0])) {
             return;
         }
 
@@ -116,11 +116,11 @@ public class PLACESTUFF implements MessageEvent {
                 room.getMapping().addItem(player, sticky);
 
                 // Set custom data as 1 for 1 post-it, if for some reason they have no number for the post-it.
-                if (!StringUtils.isNumeric(item.getCustomData())) {
+                if (!StringUtil.isNumeric(item.getCustomData())) {
                     item.setCustomData("1");
                 }
 
-                if (StringUtils.isNumeric(item.getCustomData())) {
+                if (StringUtil.isNumeric(item.getCustomData())) {
                     int totalStickies = Integer.parseInt(item.getCustomData()) - 1;
 
                     if (totalStickies <= 0) {

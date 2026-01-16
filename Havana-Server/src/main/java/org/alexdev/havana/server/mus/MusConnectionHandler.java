@@ -20,7 +20,6 @@ import org.alexdev.havana.server.mus.streams.MusTypes;
 import org.alexdev.havana.server.netty.NettyPlayerNetwork;
 import org.alexdev.havana.util.DateUtil;
 import org.alexdev.havana.util.StringUtil;
-import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -68,7 +67,7 @@ public class MusConnectionHandler extends SimpleChannelInboundHandler<MusMessage
             if (message.getSubject().equals("LOGIN")) {
                 String[] credentials = message.getContentString().split(" ", 2);
 
-                if (!StringUtils.isNumeric(credentials[0])) {
+                if (!StringUtil.isNumeric(credentials[0])) {
                     return;
                 }
 

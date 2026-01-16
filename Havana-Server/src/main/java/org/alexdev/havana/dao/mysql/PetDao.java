@@ -5,7 +5,7 @@ import org.alexdev.havana.game.navigator.NavigatorCategory;
 import org.alexdev.havana.game.pets.PetDetails;
 import org.alexdev.havana.game.player.PlayerRank;
 import org.alexdev.havana.util.DateUtil;
-import org.apache.commons.lang3.tuple.Pair;
+import org.alexdev.havana.util.Pair;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

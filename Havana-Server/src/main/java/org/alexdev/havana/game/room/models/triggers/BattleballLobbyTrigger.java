@@ -12,7 +12,7 @@ import org.alexdev.havana.game.triggers.GameLobbyTrigger;
 import org.alexdev.havana.messages.outgoing.games.LOUNGEINFO;
 import org.alexdev.havana.messages.outgoing.games.GAMEPLAYERINFO;
 import org.alexdev.havana.util.config.GameConfiguration;
-import org.apache.commons.lang3.StringUtils;
+import org.alexdev.havana.util.StringUtil;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -76,7 +76,7 @@ public class BattleballLobbyTrigger extends GameLobbyTrigger {
         String powerUps = (String) gameParameters.get("allowedPowerups");
 
         for (String powerUp : powerUps.split(",")) {
-            if (StringUtils.isNumeric(powerUp)) {
+            if (StringUtil.isNumeric(powerUp)) {
                 allowedPowerUps.add(Integer.parseInt(powerUp));
             }
         }

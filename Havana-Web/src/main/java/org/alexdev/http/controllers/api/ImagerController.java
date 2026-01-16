@@ -10,7 +10,7 @@ import net.h4bbo.avatara4j.figure.readers.FiguredataReader;
 import org.alexdev.duckhttpd.response.ResponseBuilder;
 import org.alexdev.duckhttpd.server.connection.WebConnection;
 import org.alexdev.duckhttpd.util.MimeType;
-import org.apache.commons.lang3.StringUtils;
+import org.alexdev.havana.util.StringUtil;
 
 import java.util.Optional;
 
@@ -65,11 +65,11 @@ public class ImagerController {
             Optional<Boolean> carryDrinkOpt = Optional.of(webConnection.get().getBoolean("drk"));
             action = carryDrinkOpt.get() ? "drk" : action;
 
-            if (StringUtils.isEmpty(action)) {
+            if (StringUtil.isEmpty(action)) {
                 action = "std";
             }
 
-            if (StringUtils.isEmpty(gesture)) {
+            if (StringUtil.isEmpty(gesture)) {
                 gesture = "std";
             }
 

@@ -9,7 +9,7 @@ import org.alexdev.havana.game.room.RoomManager;
 import org.alexdev.havana.messages.flash.outgoing.navigator.FLASH_FLAT_RESULTS;
 import org.alexdev.havana.messages.types.MessageEvent;
 import org.alexdev.havana.server.netty.streams.NettyRequest;
-import org.apache.commons.lang3.StringUtils;
+import org.alexdev.havana.util.StringUtil;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,7 +26,7 @@ public class FLASH_POPULARROOMS implements MessageEvent {
 
         List<Room> roomList = new ArrayList<>();
 
-        if (StringUtils.isNumeric(value)) {
+        if (StringUtil.isNumeric(value)) {
             mode = Integer.parseInt(value);
 
             NavigatorCategory navigatorCategory = NavigatorManager.getInstance().getCategoryById(mode);

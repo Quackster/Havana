@@ -9,8 +9,8 @@ import org.alexdev.havana.game.player.PlayerRank;
 import org.alexdev.havana.game.player.guides.GuidingData;
 import org.alexdev.havana.messages.outgoing.alerts.ALERT;
 import org.alexdev.havana.util.DateUtil;
+import org.alexdev.havana.util.StringUtil;
 import org.alexdev.havana.util.config.GameConfiguration;
-import org.apache.commons.lang3.StringUtils;
 
 import java.util.Comparator;
 import java.util.concurrent.TimeUnit;
@@ -42,15 +42,15 @@ public class GuideStatusCommand extends Command {
         StringBuilder alert = new StringBuilder();
         alert.append("You are guiding " + guiding.size() + " users. Remember a user needs an online time for at least " + TimeUnit.MINUTES.toDays(GameConfiguration.getInstance().getInteger("guide.completion.minutes")) + " days to be guided.<br><br>");
 
-        alert.append(StringUtils.rightPad("Username", 20, " "));
-        alert.append(StringUtils.rightPad("Time Online", 58, " "));
-        alert.append(StringUtils.rightPad("Last Online", 15, " "));
+        alert.append(StringUtil.rightPad("Username", 20, " "));
+        alert.append(StringUtil.rightPad("Time Online", 58, " "));
+        alert.append(StringUtil.rightPad("Last Online", 15, " "));
         alert.append("<br>");
 
         for (var guideData : guiding) {
-            alert.append(StringUtils.rightPad(guideData.getUsername(), 20, " "));
-            alert.append(StringUtils.rightPad(DateUtil.getReadableSeconds(guideData.getTimeOnline()), 58, " "));
-            alert.append(StringUtils.rightPad(DateUtil.getDate(guideData.getLastOnline(), DateUtil.SHORT_DATE), 15, " "));
+            alert.append(StringUtil.rightPad(guideData.getUsername(), 20, " "));
+            alert.append(StringUtil.rightPad(DateUtil.getReadableSeconds(guideData.getTimeOnline()), 58, " "));
+            alert.append(StringUtil.rightPad(DateUtil.getDate(guideData.getLastOnline(), DateUtil.SHORT_DATE), 15, " "));
             alert.append("<br>");
         }
 

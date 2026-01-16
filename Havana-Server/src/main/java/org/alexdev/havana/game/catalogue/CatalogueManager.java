@@ -25,7 +25,6 @@ import org.alexdev.havana.util.DateUtil;
 import org.alexdev.havana.util.HexValidator;
 import org.alexdev.havana.util.StringUtil;
 import org.alexdev.havana.util.config.GameConfiguration;
-import org.apache.commons.lang3.StringUtils;
 
 import java.sql.SQLException;
 import java.util.*;
@@ -382,7 +381,7 @@ public class CatalogueManager {
 
                 String[] petData = extraData.split(Character.toString((char) 10));
 
-                if (petData.length != 3 || !StringUtils.isNumeric(petData[1])) {
+                if (petData.length != 3 || !StringUtil.isNumeric(petData[1])) {
                     return null;
                 }
 

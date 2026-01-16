@@ -12,7 +12,7 @@ import org.alexdev.havana.game.player.PlayerManager;
 import org.alexdev.havana.game.texts.TextsManager;
 import org.alexdev.havana.messages.outgoing.alerts.ALERT;
 import org.alexdev.havana.util.config.GameConfiguration;
-import org.apache.commons.lang3.tuple.Pair;
+import org.alexdev.havana.util.Pair;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

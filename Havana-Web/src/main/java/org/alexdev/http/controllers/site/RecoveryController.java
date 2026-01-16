@@ -11,7 +11,7 @@ import org.alexdev.havana.util.config.GameConfiguration;
 import org.alexdev.http.dao.EmailDao;
 import org.alexdev.http.util.EmailUtil;
 import org.alexdev.http.util.SessionUtil;
-import org.apache.commons.validator.routines.EmailValidator;
+import org.alexdev.havana.util.ValidationUtil;
 
 import java.util.UUID;
 
@@ -29,7 +29,7 @@ public class RecoveryController {
                 var email = webConnection.post().getString("ownerEmailAddress");
 
                 if (!webConnection.post().contains("ownerEmailAddress")
-                        || !EmailValidator.getInstance().isValid(email)
+                        || !ValidationUtil.isValidEmail(email)
                         || !EmailDao.getDetailsByEmail(webConnection.post().getString("ownerEmailAddress"))) {
                     template.set("invalidForgetName", true);
                     template.render();
@@ -59,7 +59,7 @@ public class RecoveryController {
 
                 var details = EmailDao.getDetails(webConnection.post().getString("forgottenpw-username"), webConnection.post().getString("forgottenpw-email"));
 
-                if (!EmailValidator.getInstance().isValid(email) || details == null) {
+                if (!ValidationUtil.isValidEmail(email) || details == null) {
                     template.set("invalidForgetPassword", true);
                     template.render();
                     return;

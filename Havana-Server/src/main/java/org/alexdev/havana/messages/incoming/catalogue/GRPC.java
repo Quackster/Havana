@@ -34,7 +34,6 @@ import org.alexdev.havana.util.DateUtil;
 import org.alexdev.havana.util.HexValidator;
 import org.alexdev.havana.util.StringUtil;
 import org.alexdev.havana.util.config.GameConfiguration;
-import org.apache.commons.lang3.StringUtils;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -166,7 +165,7 @@ public class GRPC implements MessageEvent {
             extraData = extraData.replace(Item.PRESENT_DELIMETER, "");
             presentNote = presentNote.replace(Item.PRESENT_DELIMETER, "");
 
-            if (!item.getItemSpecialId().isBlank() && StringUtils.isNumeric(item.getItemSpecialId())) {
+            if (!item.getItemSpecialId().isBlank() && StringUtil.isNumeric(item.getItemSpecialId())) {
                 extraData = item.getItemSpecialId();
             }
 

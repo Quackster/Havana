@@ -16,7 +16,7 @@ import org.alexdev.http.game.minimail.MinimailMessage;
 import org.alexdev.http.util.BBCode;
 import org.alexdev.http.util.HtmlUtil;
 import org.alexdev.http.util.XSSUtil;
-import org.apache.commons.lang3.StringUtils;
+import org.alexdev.havana.util.StringUtil;
 
 import java.util.*;
 
@@ -245,7 +245,7 @@ public class MinimailController {
                 Messenger messenger = new Messenger(playerDetails);
 
                 for (String data : recipients) {
-                    if (!StringUtils.isNumeric(data)) {
+                    if (!StringUtil.isNumeric(data)) {
                         continue;
                     }
 

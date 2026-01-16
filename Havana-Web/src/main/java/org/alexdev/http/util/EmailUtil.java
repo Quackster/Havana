@@ -6,7 +6,7 @@ import org.alexdev.havana.util.config.GameConfiguration;
 import org.alexdev.http.HavanaWeb;
 import org.alexdev.http.dao.EmailDao;
 import org.alexdev.http.template.TwigTemplate;
-import org.apache.commons.validator.routines.EmailValidator;
+import org.alexdev.havana.util.ValidationUtil;
 
 import javax.mail.*;
 import javax.mail.internet.*;
@@ -21,7 +21,7 @@ public class EmailUtil {
             return true;
         }
 
-        if (!EmailValidator.getInstance().isValid(targetEmail)) {
+        if (!ValidationUtil.isValidEmail(targetEmail)) {
             return false;
         }
 

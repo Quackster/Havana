@@ -9,8 +9,6 @@ import org.alexdev.havana.game.player.PlayerManager;
 import org.alexdev.havana.game.player.PlayerRank;
 import org.alexdev.havana.messages.outgoing.rooms.user.CHAT_MESSAGE;
 import org.alexdev.havana.messages.outgoing.rooms.user.CHAT_MESSAGE.ChatMessageType;
-import org.alexdev.havana.messages.outgoing.user.currencies.CREDIT_BALANCE;
-import org.apache.commons.lang3.StringUtils;
 
 public class CheckCreditsCommand extends Command {
     @Override

@@ -16,9 +16,9 @@ limitations under the License.
 package org.alexdev.http.util;
 
 import org.alexdev.duckhttpd.server.connection.WebConnection;
-import org.apache.commons.codec.binary.Hex;
 
 import javax.imageio.ImageIO;
+import java.util.HexFormat;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.ByteArrayOutputStream;
@@ -60,7 +60,7 @@ public class Captcha {
         messageDigest.reset();
         messageDigest.update(str.getBytes(StandardCharsets.UTF_8));
         final byte[] resultByte = messageDigest.digest();
-        final String result = new String(Hex.encodeHex(resultByte));
+        final String result = HexFormat.of().formatHex(resultByte);
         return result;
     }
 

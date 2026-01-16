@@ -26,7 +26,6 @@ import org.alexdev.http.game.stickers.StickerProduct;
 import org.alexdev.http.game.stickers.StickerType;
 import org.alexdev.http.util.BBCode;
 import org.alexdev.http.util.HtmlUtil;
-import org.apache.commons.lang3.StringUtils;
 
 import java.util.ArrayList;
 import java.util.Comparator;
@@ -290,7 +289,7 @@ public class Widget {
     public boolean hasSong() {
         Song song = null;
 
-        if (StringUtils.isNumeric(this.extraData)) {
+        if (StringUtil.isNumeric(this.extraData)) {
             int songId = Integer.parseInt(this.extraData);
             song = SongMachineDao.getSong(songId);
         }
@@ -302,7 +301,7 @@ public class Widget {
     public Song getSong() {
         Song song = null;
 
-        if (StringUtils.isNumeric(this.extraData)) {
+        if (StringUtil.isNumeric(this.extraData)) {
             int songId = Integer.parseInt(this.extraData);
             song = SongMachineDao.getSong(songId);
         }

@@ -3,7 +3,7 @@ package org.alexdev.havana.dao.mysql;
 import org.alexdev.havana.dao.Storage;
 import org.alexdev.havana.game.ban.Ban;
 import org.alexdev.havana.game.ban.BanType;
-import org.apache.commons.lang3.tuple.Pair;
+import org.alexdev.havana.util.Pair;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

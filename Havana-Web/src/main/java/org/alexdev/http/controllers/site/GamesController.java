@@ -5,7 +5,7 @@ import org.alexdev.duckhttpd.template.Template;
 import org.alexdev.havana.dao.mysql.HighscoreDao;
 import org.alexdev.havana.game.games.enums.GameType;
 import org.alexdev.http.util.XSSUtil;
-import org.apache.commons.lang3.StringUtils;
+import org.alexdev.havana.util.StringUtil;
 
 public class GamesController {
     private static final int HIGHSCORES_LIMIT = 10;
@@ -92,7 +92,7 @@ public class GamesController {
 
         int pageNumber = 1;
 
-        if (webConnection.post().contains("pageNumber") && StringUtils.isNumeric(webConnection.post().getString("pageNumber"))) {
+        if (webConnection.post().contains("pageNumber") && StringUtil.isNumeric(webConnection.post().getString("pageNumber"))) {
             pageNumber =  webConnection.post().getInt("pageNumber");
 
             if (pageNumber < 1) {
@@ -103,7 +103,7 @@ public class GamesController {
         int gameId = 1;
         GameType gameType = GameType.BATTLEBALL;
 
-        if (webConnection.post().contains("gameId") && StringUtils.isNumeric(webConnection.post().getString("gameId"))) {
+        if (webConnection.post().contains("gameId") && StringUtil.isNumeric(webConnection.post().getString("gameId"))) {
             gameId =  webConnection.post().getInt("gameId");
 
             if (gameId == 1) {
