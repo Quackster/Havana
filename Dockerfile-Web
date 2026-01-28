@@ -18,6 +18,10 @@ COPY --from=builder /sources/Havana-Web/build/libs/Havana-Web-unspecified.jar /h
 # Copy figuredata.xml
 COPY ./tools/figuredata.xml /havana-web/
 
+# Copy web templates and static assets
+COPY ./tools/www-tpl /havana-web/tools/www-tpl
+COPY ./tools/www /havana-web/tools/www
+
 # Copy entrypoint script
 COPY ./tools/docker/web-entrypoint.sh /havana-web/run.sh
 RUN chmod +x /havana-web/run.sh
