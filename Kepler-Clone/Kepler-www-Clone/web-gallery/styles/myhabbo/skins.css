@@ -1,0 +1,953 @@
+/* content sizes */
+.GuestbookWidget .widget-content, .MemberWidget .widget-content, .FriendsWidget .widget-content, .HighscoreListWidget .widget-content {
+	width: 290px;
+}
+.RatingWidget .widget-content {
+	width: 160px;
+}
+.GroupInfoWidget .widget-content, .ProfileWidget .widget-content, .RoomsWidget .widget-content, .GroupsWidget .widget-content, .HighScoresWidget .widget-content, .UserExpsWidget .widget-content, .stickie-content, .HabboMoviesWidget .widget-content, .TraxPlayerWidget .widget-content, .BadgesWidget .widget-content {
+	width: 218px;
+}
+
+/* golden skin */
+.GuestbookWidget .w_skin_goldenskin, .MemberWidget .w_skin_goldenskin, .FriendsWidget .w_skin_goldenskin, .HighscoreListWidget .w_skin_goldenskin {
+	width: 359px;
+}
+.RatingWidget .w_skin_goldenskin {
+	width: 229px;
+}
+.GroupInfoWidget .w_skin_goldenskin, .ProfileWidget .w_skin_goldenskin, .RoomsWidget .w_skin_goldenskin, .GroupsWidget .w_skin_goldenskin, .HighScoresWidget .w_skin_goldenskin, .UserExpsWidget .w_skin_goldenskin, .HabboMoviesWidget .w_skin_goldenskin, .TraxPlayerWidget .w_skin_goldenskin, .BadgesWidget .w_skin_goldenskin {
+	width: 287px;
+}
+
+/* default skin */
+.GuestbookWidget .w_skin_defaultskin, .MemberWidget .w_skin_defaultskin, .FriendsWidget .w_skin_defaultskin, .HighscoreListWidget .w_skin_defaultskin {
+	width: 324px;
+}
+.RatingWidget .w_skin_defaultskin {
+	width: 194px;
+}
+.GroupInfoWidget .w_skin_defaultskin, .ProfileWidget .w_skin_defaultskin, .RoomsWidget .w_skin_defaultskin, .GroupsWidget .w_skin_defaultskin, .HighScoresWidget .w_skin_defaultskin, .UserExpsWidget .w_skin_defaultskin, .HabboMoviesWidget .w_skin_defaultskin, .TraxPlayerWidget .w_skin_defaultskin, .BadgesWidget .w_skin_defaultskin {
+	width: 252px;
+}
+
+/* HC pillow skin */
+.GuestbookWidget .w_skin_hc_pillowskin, .MemberWidget .w_skin_hc_pillowskin, .FriendsWidget .w_skin_hc_pillowskin, .HighscoreListWidget .w_skin_hc_pillowskin {
+	width: 374px;
+}
+.RatingWidget .w_skin_hc_pillowskin {
+	width: 244px;
+}
+.GroupInfoWidget .w_skin_hc_pillowskin, .ProfileWidget .w_skin_hc_pillowskin, .RoomsWidget .w_skin_hc_pillowskin, .GroupsWidget .w_skin_hc_pillowskin, .HighScoresWidget .w_skin_hc_pillowskin, .UserExpsWidget .w_skin_hc_pillowskin, .HabboMoviesWidget .w_skin_hc_pillowskin, .TraxPlayerWidget .w_skin_hc_pillowskin, .BadgesWidget .w_skin_hc_pillowskin {
+	width: 302px;
+}
+
+/* HC scifi skin */
+.GuestbookWidget .w_skin_hc_machineskin, .MemberWidget .w_skin_hc_machineskin, .FriendsWidget .w_skin_hc_machineskin, .HighscoreListWidget .w_skin_hc_machineskin {
+	width: 385px;
+}
+.RatingWidget .w_skin_hc_machineskin {
+	width: 255px;
+}
+.GroupInfoWidget .w_skin_hc_machineskin, .ProfileWidget .w_skin_hc_machineskin, .RoomsWidget .w_skin_hc_machineskin, .GroupsWidget .w_skin_hc_machineskin, .HighScoresWidget .w_skin_hc_machineskin, .UserExpsWidget .w_skin_hc_machineskin, .HabboMoviesWidget .w_skin_hc_machineskin, .TraxPlayerWidget .w_skin_hc_machineskin, .BadgesWidget .w_skin_hc_machineskin {
+	width: 313px;
+}
+
+/* metal skin */
+.GuestbookWidget .w_skin_metalskin, .MemberWidget .w_skin_metalskin, .FriendsWidget .w_skin_metalskin, .HighscoreListWidget .w_skin_metalskin {
+	width: 345px;
+}
+.RatingWidget .w_skin_metalskin {
+	width: 215px;
+}
+.GroupInfoWidget .w_skin_metalskin, .ProfileWidget .w_skin_metalskin, .RoomsWidget .w_skin_metalskin, .GroupsWidget .w_skin_metalskin, .HighScoresWidget .w_skin_metalskin, .UserExpsWidget .w_skin_metalskin, .HabboMoviesWidget .w_skin_metalskin, .TraxPlayerWidget .w_skin_metalskin, .BadgesWidget .w_skin_metalskin {
+	width: 273px;
+}
+
+/* notepad skin */
+.GuestbookWidget .w_skin_notepadskin, .MemberWidget .w_skin_notepadskin, .FriendsWidget .w_skin_notepadskin, .HighscoreListWidget .w_skin_notepadskin {
+	width: 326px;
+}
+.RatingWidget .w_skin_notepadskin {
+	width: 196px;
+}
+.GroupInfoWidget .w_skin_notepadskin, .ProfileWidget .w_skin_notepadskin, .RoomsWidget .w_skin_notepadskin, .GroupsWidget .w_skin_notepadskin, .HighScoresWidget .w_skin_notepadskin, .UserExpsWidget .w_skin_notepadskin, .HabboMoviesWidget .w_skin_notepadskin, .TraxPlayerWidget .w_skin_notepadskin, .BadgesWidget .w_skin_notepadskin {
+	width: 254px;
+}
+
+/* speechbubble skin */
+.GuestbookWidget .w_skin_speechbubbleskin, .MemberWidget .w_skin_speechbubbleskin, .FriendsWidget .w_skin_speechbubbleskin, .HighscoreListWidget .w_skin_speechbubbleskin {
+	width: 310px;
+}
+.RatingWidget .w_skin_speechbubbleskin {
+	width: 180px;
+}
+.GroupInfoWidget .w_skin_speechbubbleskin, .ProfileWidget .w_skin_speechbubbleskin, .RoomsWidget .w_skin_speechbubbleskin, .GroupsWidget .w_skin_speechbubbleskin, .HighScoresWidget .w_skin_speechbubbleskin, .UserExpsWidget .w_skin_speechbubbleskin, .HabboMoviesWidget .w_skin_speechbubbleskin, .TraxPlayerWidget .w_skin_speechbubbleskin, .BadgesWidget .w_skin_speechbubbleskin {
+	width: 238px;
+}
+
+/* stickienote skin */
+.GuestbookWidget .w_skin_noteitskin, .MemberWidget .w_skin_noteitskin, .FriendsWidget .w_skin_noteitskin, .HighscoreListWidget .w_skin_noteitskin {
+	width: 309px;
+}
+.RatingWidget .w_skin_noteitskin {
+	width: 179px;
+}
+.GroupInfoWidget .w_skin_noteitskin, .ProfileWidget .w_skin_noteitskin, .RoomsWidget .w_skin_noteitskin, .GroupsWidget .w_skin_noteitskin, .HighScoresWidget .w_skin_noteitskin, .UserExpsWidget .w_skin_noteitskin, .HabboMoviesWidget .w_skin_noteitskin, .TraxPlayerWidget .w_skin_noteitskin, .BadgesWidget .w_skin_noteitskin {
+	width: 237px;
+}
+
+.stickie .edit-button, .stickie .report-button {
+	position: absolute;
+	right: 0;
+	top: 5px;
+}
+
+
+/*Widths for bestexps and halloffame widget. Once the design has been done, unused configuration can be removed*/
+.HallOfFameWidget .widget-content, BestExpsWidget .widget-content {
+	width: 457px;
+}
+.HallOfFameWidget .w_skin_goldenskin, .BestExpsWidget .w_skin_goldenskin {
+	width: 526px;
+}
+.HallOfFameWidget .w_skin_metalskin, .BestExpsWidget .w_skin_metalskin {
+	width: 512px;
+}
+.HallOfFameWidget .w_skin_defaultskin, .BestExpsWidget .w_skin_defaultskin {
+	width: 491px;
+}
+.HallOfFameWidget .w_skin_notepadskin, .BestExpsWidget .w_skin_notepadskin {
+	width: 493px;
+}
+.HallOfFameWidget .w_skin_noteitskin, .BestExpsWidget .w_skin_noteitskin {
+	width: 476px;
+}
+.HallOfFameWidget .w_skin_speechbubbleskin, .BestExpsWidget .w_skin_speechbubbleskin {
+	width: 477px;
+}
+.HallOfFameWidget .w_skin_hc_machineskin, .BestExpsWidget .w_skin_hc_machineskin {
+	width: 552px;
+}
+.HallOfFameWidget .w_skin_hc_pillowskin, .BestExpsWidget .w_skin_hc_pillowskin {
+	width: 543px;
+}
+
+
+/** common widget stuff */
+.widget div.widget-headline h3 {
+	margin-top: 0;
+}
+
+#editmode div.widget-headline {
+	cursor: move;
+}
+
+.widget .edit-button {
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+.widget.ProfileWidget .report-button {
+	float: none;
+	position: absolute;
+	padding-left: 5px;
+}
+
+.widget.RoomsWidget .report-button {
+	float: right;
+	padding-left: 2px;
+	padding-right: 2px;
+	margin-left: 0px;
+	position: static;
+}
+
+
+
+/*** GOLDENSKIN ***/
+.w_skin_goldenskin .edit-button {
+	right: -10px;
+}
+
+.w_skin_goldenskin a {
+	color: #391c00;
+}
+
+.w_skin_goldenskin div.widget-content {
+	background: url(../../images/skins/Skin_Goldenframe_btmlR.png) no-repeat bottom right;
+	padding: 4px 35px 35px 4px;
+	color: #000;
+}
+
+.w_skin_goldenskin div.widget-body {
+	background: url(../../images/skins/Skin_Goldenframe_btmlL.png) no-repeat bottom left;
+	padding-left: 30px;
+}
+
+.w_skin_goldenskin div.widget-headline {
+	background: url(../../images/skins/Skin_Goldenframe_topR.png) no-repeat top right;
+	height: 31px;
+}
+
+.w_skin_goldenskin div.widget-corner {
+	background: url(../../images/skins/Skin_Goldenframe_topL.png) no-repeat top left;
+	padding-left: 31px;
+	height: 31px;
+}
+
+.w_skin_goldenskin div.widget-headline h3 {
+	text-align: center;
+	font-size: x-small;
+	height: 21px;
+	top: 7px;
+	text-align: center;
+	color: #733A00;
+	padding-top: 2px;
+	margin: 2px 20px 0 0;
+	position: relative;
+}
+
+.w_skin_goldenskin div.widget-headline .header-middle {
+	text-align: center;
+	background: url(../../images/skins/Skin_Goldenframe_Header_M.png);
+	height: 21px;
+	margin: 0px;
+	padding: 3px 5px 3px 5px;
+}
+
+.w_skin_goldenskin div.widget-headline .header-left {
+	background: url(../../images/skins/Skin_Goldenframe_Header_L.png) no-repeat;
+	height: 21px;
+	padding: 3px 0px 3px 8px;
+}
+
+.w_skin_goldenskin div.widget-headline .header-right {
+	background: url(../../images/skins/Skin_Goldenframe_Header_R.png) no-repeat;
+	height: 21px;
+	padding: 3px 18px 3px 0;
+}
+
+/*** metalskin ***/
+.w_skin_metalskin .edit-button {
+	right: -18px;
+	top: -1px;
+}
+
+.w_skin_metalskin a {
+	color: #41404a;
+}
+
+.w_skin_metalskin .metadata {
+	color: #484848;
+}
+
+.w_skin_metalskin div.widget-content {
+	background: url(../../images/skins/Skin_Metal_btmR.png) no-repeat bottom right;
+	padding: 1px 26px 23px 7px;
+	color: #000;
+}
+
+.w_skin_metalskin div.widget-body {
+	background: url(../../images/skins/Skin_Metal_btmL.png) no-repeat bottom left;
+	padding-left: 22px;
+}
+
+.w_skin_metalskin div.widget-headline {
+	background: url(../../images/skins/Skin_Metal_topRh.png) no-repeat top right;
+	height: 33px;
+}
+
+.w_skin_metalskin div.widget-corner {
+	background: url(../../images/skins/Skin_Metal_topLh.png) no-repeat top left;
+	padding-left: 35px;
+	height: 33px;
+}
+
+.w_skin_metalskin div.widget-headline h3 {
+	text-align: center;
+	font-size: x-small;
+	position: relative;
+	top: 3px;
+	height : 33px;
+	text-align: center;
+	color: #41404a;
+	padding-top: 2px;
+	margin: 2px 40px 0 0;
+	position: relative;
+}
+
+* html .w_skin_metalskin div.widget-headline h3 {
+	margin: 0px 40px -5px 0px;
+}
+
+/*** HCmacnihe ***/
+.w_skin_hc_machineskin .edit-button {
+	right: -47 px;
+	top: 17 px;
+}
+
+.w_skin_hc_machineskin a {
+	color: #163004;
+}
+
+.w_skin_hc_machineskin .metadata {
+	color: #5fe800;
+}
+
+.w_skin_hc_machineskin div.widget-content {
+	background: url(../../images/skins/Skin_HCmachine_btmR.png) no-repeat bottom right;
+	padding: 0 46px 31px 0;
+	color: #fff;
+}
+
+.w_skin_hc_machineskin div.widget-body {
+	background: url(../../images/skins/Skin_HCmachine_btmL.png) no-repeat bottom left;
+	padding-left: 49px;
+}
+
+.w_skin_hc_machineskin div.widget-headline {
+	background: url(../../images/skins/Skin_HCmachine_topRh.png) no-repeat top right;
+	height: 42px;
+}
+
+.w_skin_hc_machineskin div.widget-corner {
+	background: url(../../images/skins/Skin_HCmachine_topLh.png) no-repeat top left;
+	padding-left: 61px;
+	height: 42px;
+}
+
+.w_skin_hc_machineskin div.widget-headline h3 {
+	text-align: center;
+	font-size: x-small;
+	position: relative;
+	top: 3px;
+	text-align: center;
+	color: #fff;
+	padding-top: 2px;
+	margin: 2px 61px 0 0;
+	position: relative;
+}
+
+* html .w_skin_hc_machineskin div.widget-headline h3 {
+	margin: 0px 40px -5px 0px;
+}
+
+/*** golden pipes and marmor ***/
+.w_skin_defaultskin .edit-button {
+	right: -18px;
+	top: 8px;
+}
+
+.w_skin_defaultskin a {
+	color: #222;
+}
+
+.w_skin_defaultskin div.widget-content {
+	background: url(../../images/skins/Skin_HabboHomes_btmR.png) no-repeat bottom right;
+	padding: 4px 16px 19px 4px;
+	color: #000;
+}
+
+.w_skin_defaultskin div.widget-body {
+	background: url(../../images/skins/Skin_HabboHomes_btmL.png) no-repeat bottom left;
+	padding-left: 14px;
+}
+
+.w_skin_defaultskin div.widget-headline {
+	background: url(../../images/skins/Skin_HabboHomes_topRh.png) no-repeat top right;
+	height: 41px;
+}
+
+.w_skin_defaultskin div.widget-corner {
+	background: url(../../images/skins/Skin_HabboHomes_topLh.png) no-repeat top left;
+	padding-left: 41px;
+	height: 41px;
+}
+
+.w_skin_defaultskin div.widget-headline h3 {
+	text-align: left;
+	font-size: x-small;
+	font-weight: normal;
+	color: white;
+	vertical-align: bottom;
+	position: relative;
+	padding-top: 10px;
+	left: -33px;
+}
+
+* html .w_skin_defaultskin div.widget-headline h3 {
+	margin: 0px 0px -3px 0px;
+}
+
+/*** Notepadskin ***/
+.w_skin_notepadskin .edit-button {
+	right: 2px;
+	top: 5px;
+}
+
+.w_skin_notepadskin a {
+	color: #2c303a;
+}
+
+.w_skin_notepadskin div.widget-content {
+	background: url(../../images/skins/Skin_Notepad_btmR.png) no-repeat bottom right;
+	padding: 2px 7px 18px 2px;
+	color: #000;
+}
+
+.w_skin_notepadskin div.widget-body {
+	background: url(../../images/skins/Skin_Notepad_btmL.png) no-repeat bottom left;
+	padding-left: 27px;
+}
+
+.w_skin_notepadskin div.widget-headline {
+	background: url(../../images/skins/Skin_Notepad_topRh.png) no-repeat top right;
+	height: 29px;
+	width: 100%;
+}
+
+.w_skin_notepadskin div.widget-corner {
+	background: url(../../images/skins/Skin_Notepad_topLh.png) no-repeat top left;
+	padding-left: 27px;
+	height: 29px;
+}
+
+.w_skin_notepadskin div.widget-headline h3 {
+	text-align: left;
+	font-size: small;
+	vertical-align: bottom;
+	position: relative;
+	padding-top: 10px;
+	left: -4px;
+	color: #4c3a41;
+}
+
+* html .w_skin_notepadskin div.widget-headline h3 {
+	margin: 0px 0px -3px 0px;
+}
+
+/*** noteit ***/
+.w_skin_noteitskin .edit-button {
+	right: 4px;
+	top: 6px;
+}
+
+.w_skin_noteitskin a {
+	color: #000;
+}
+
+.w_skin_noteitskin .metadata {
+	color: #475665;
+}
+
+.w_skin_noteitskin div.widget-content {
+	background: url(../../images/skins/Skin_Stickienote_btmR.png) no-repeat bottom right;
+	padding: 7px 9px 30px 9px;
+	color: #000;
+}
+
+.w_skin_noteitskin div.widget-body {
+	background: url(../../images/skins/Skin_Stickienote_btmL.png) no-repeat bottom left;
+	padding-left: 1px;
+}
+
+.w_skin_noteitskin div.widget-headline {
+	background: url(../../images/skins/Skin_Stickienote_topR.png) no-repeat top right;
+	height: 30px;
+	width: 100%;
+}
+
+.w_skin_noteitskin div.widget-corner {
+	background: url(../../images/skins/Skin_Stickienote_topL.png) no-repeat top left;
+	padding-left: 5px;
+	height: 30px;
+}
+
+.w_skin_noteitskin div.widget-headline h3 {
+	text-align: left;
+	font-size: 11px;
+	vertical-align: bottom;
+	position: relative;
+	padding-top: 10px;
+	left: -4px;
+	color: #202933;
+}
+
+* html .w_skin_noteitskin div.widget-headline h3 {
+	margin: 0px 0px -3px 0px;
+}
+
+/*** speechbubbleskin ***/
+.w_skin_speechbubbleskin .edit-button {
+	right: 4px;
+	top: 5px;
+}
+
+.w_skin_speechbubbleskin a {
+	color: #2D2D2D;
+}
+
+.w_skin_speechbubbleskin div.widget-content {
+	background: url(../../images/skins/Skin_Speechbubble_btmR.png) no-repeat bottom right;
+	padding: 17px 10px 22px 0;
+	color: #000;
+}
+
+.w_skin_speechbubbleskin div.widget-body {
+	background: url(../../images/skins/Skin_Speechbubble_btmL.png) no-repeat bottom left;
+	padding-left: 10px;
+}
+
+.w_skin_speechbubbleskin div.widget-headline {
+	background: url(../../images/skins/Skin_Speechbubble_topR.png) no-repeat top right;
+	height: 10px;
+}
+
+.w_skin_speechbubbleskin div.widget-corner {
+	background: url(../../images/skins/Skin_Speechbubble_topL.png) no-repeat top left;
+	padding-left: 10px;
+	height: 10px;
+}
+
+.w_skin_speechbubbleskin div.widget-headline h3 {
+	text-align: left;
+	font-size: small;
+	vertical-align: bottom;
+	position: relative;
+	padding-top: 4px;
+	left: -4px;
+	color: #666;
+}
+
+* html .w_skin_speechbubbleskin div.widget-headline h3 {
+	margin: 0px 0px -10px 0px;
+}
+
+/*** STICKIES ***/
+
+div.stickie {
+	width: 250px;
+}
+
+#stickie-preview-window div.stickie  {
+	width: auto;
+}
+
+/*** GOLDSKIN ***/
+.n_skin_goldenskin .stickie-header {
+	background: url(../../images/skins/Skin_Goldenframe_topL.png) no-repeat top left;
+	padding-left: 31px;
+	height: 31px;
+	font-size: 1%;
+}
+
+* html .n_skin_goldenskin .stickie-header {
+	margin: 0 0 -7px 0;
+}
+
+.n_skin_goldenskin .stickie-header h3 {
+	background: url(../../images/skins/Skin_Goldenframe_topR.png) no-repeat top right;
+	height: 31px;
+	font-size: 1%;
+}
+
+.n_skin_goldenskin .stickie-body {
+	background: url(../../images/skins/Skin_Goldenframe_btmlL.png) no-repeat bottom left;
+	padding-left: 31px;
+}
+
+.n_skin_goldenskin .stickie-content {
+	background: url(../../images/skins/Skin_Goldenframe_btmlR.png) no-repeat bottom right;
+	padding:3px 30px 5px 2px;
+}
+
+.n_skin_goldenskin .stickie-content .stickie-markup {
+	vertical-align: top;
+	margin: 0px 0px 5px 2px;
+	padding: 0 0 19px 0;
+	color: #000;
+}
+
+.stickie .n_skin_goldenskin, #stickie-preview-window .n_skin_goldenskin {
+	width: 281px;
+}
+
+/*** BLUESKIN ***/
+.stickie .n_skin_defaultskin, #stickie-preview-window .n_skin_defaultskin {
+	width: 250px;
+}
+
+.n_skin_defaultskin .stickie-header {
+	background: url(../../images/skins/Skin_HabboHomes_topL.png) no-repeat;
+	padding-left: 14px;
+	height: 14px;
+	margin: 0;
+	font-size: 1%;
+}
+
+* html .n_skin_defaultskin .stickie-header {
+	margin: 0 0 -3px 0;
+}
+
+.n_skin_defaultskin .stickie-header h3 {
+	background: url(../../images/skins/Skin_HabboHomes_topR.png) no-repeat top right;
+	height: 14px;
+	margin: 0;
+	font-size: 1%;
+}
+
+.n_skin_defaultskin .stickie-body {
+	background: url(../../images/skins/Skin_HabboHomes_btmL.png) no-repeat bottom left;
+	padding-left: 14px;
+}
+
+.n_skin_defaultskin div.stickie-content {
+	background: url(../../images/skins/Skin_HabboHomes_btmR.png) no-repeat bottom right;
+	padding: 1px 15px 4px 3px;
+}
+
+.n_skin_defaultskin .stickie-content .stickie-markup {
+	vertical-align: top;
+	margin: 0;
+	padding-bottom: 7px;
+	color: #000;
+}
+
+/*** metalskin ***/
+.stickie .n_skin_metalskin, #stickie-preview-window .n_skin_metalskin {
+	width: 259px;
+}
+
+.n_skin_metalskin .stickie-header {
+	background: url(../../images/skins/Skin_Metal_topL.png) no-repeat;
+	padding-left: 24px;
+	height: 24px;
+	padding-bottom: 0;
+	margin: 0;
+	font-size: 1%;
+}
+
+* html .n_skin_metalskin .stickie-header {
+	margin: 0 0 -3px 0;
+}
+
+.n_skin_metalskin .stickie-header h3 {
+	background: url(../../images/skins/Skin_Metal_topR.png) no-repeat top right;
+	height: 24px;
+	margin: 0;
+	padding-bottom: 0;
+	font-size: 1%;
+}
+
+.n_skin_metalskin .stickie-body {
+	background: url(../../images/skins/Skin_Metal_btmL.png) no-repeat bottom left;
+	padding-left: 21px;
+}
+
+.n_skin_metalskin .stickie-content {
+	background: url(../../images/skins/Skin_Metal_btmR.png) no-repeat bottom right;
+	padding: 1px 20px 1px 0;
+}
+
+.n_skin_metalskin .stickie-content .stickie-markup {
+	vertical-align: top;
+	margin: 0 0 13px 0;
+	color: #000;
+}
+
+/*** hc_machineskin ***/
+
+.stickie .n_skin_hc_machineskin, #stickie-preview-window .n_skin_hc_machineskin {
+	width: 293px;
+}
+
+.n_skin_hc_machineskin .stickie-header {
+	background: url(../../images/skins/Skin_HCmachine_topL.png) no-repeat;
+	padding-left: 49px;
+	height: 42px;
+	padding-bottom: 0;
+	margin: 0;
+	font-size: 1%;
+}
+
+* html .n_skin_hc_machineskin .stickie-header {
+	margin: 0 0 -3px 0;
+}
+
+.n_skin_hc_machineskin .stickie-header h3 {
+	background: url(../../images/skins/Skin_HCmachine_topR.png) no-repeat top right;
+	height: 42px;
+	margin: 0;
+	padding-bottom: 0;
+	font-size: 1%;
+}
+
+.n_skin_hc_machineskin .stickie-body {
+	background: url(../../images/skins/Skin_HCmachine_btmL.png) no-repeat bottom left;
+	padding-left: 49px;
+}
+
+.n_skin_hc_machineskin .stickie-content {
+	background: url(../../images/skins/Skin_HCmachine_btmR.png) no-repeat bottom right;
+	padding:3px 28px 4px 0;
+}
+
+.n_skin_hc_machineskin .stickie-content .stickie-markup {
+	vertical-align: top;
+	margin: 2px 15px 29px 4px;
+	color: #fff;
+}
+
+/*** notepadskin***/
+.stickie .n_skin_notepadskin, #stickie-preview-window .n_skin_notepadskin {
+	width: 253px;
+}
+
+.n_skin_notepadskin .stickie-header {
+	background: url(../../images/skins/Skin_Notepad_topL.png) no-repeat;
+	padding-left: 20px;
+	height: 12px;
+	padding-bottom: 0;
+	margin: 0;
+	font-size: 1%;
+}
+
+* html .n_skin_notepadskin .stickie-header {
+	margin: 0 0 -3px 0;
+}
+
+.n_skin_notepadskin .stickie-header h3 {
+	background: url(../../images/skins/Skin_Notepad_topR.png) no-repeat top right;
+	height: 12px;
+	margin: 0;
+	padding-bottom: 0;
+	font-size: 1%;
+}
+
+.n_skin_notepadskin .stickie-body {
+	background: url(../../images/skins/Skin_Notepad_btmL.png) no-repeat bottom left;
+	padding-left: 27px;
+}
+
+.n_skin_notepadskin .stickie-content {
+	background: url(../../images/skins/Skin_Notepad_btmR.png) no-repeat bottom right;
+	padding:3px 5px 4px 3px;
+}
+
+.n_skin_notepadskin .stickie-content .stickie-markup {
+	vertical-align: top;
+	margin: 2px 0 0 0;
+	color: #000;
+}
+
+/*** noteitskin***/
+.stickie .n_skin_noteitskin, #stickie-preview-window .n_skin_noteitskin {
+	width: 254px;
+}
+
+.n_skin_noteitskin .stickie-header {
+	background: url(../../images/skins/Skin_Stickienote_topL.png) no-repeat;
+	padding-left: 5px;
+	height: 30px;
+	padding-bottom: 0;
+	margin: 0;
+	font-size: 1%;
+}
+
+* html .n_skin_noteitskin .stickie-header {
+	margin: 0 0 -3px 0;
+}
+
+.n_skin_noteitskin .stickie-header h3 {
+	background: url(../../images/skins/Skin_Stickienote_topR.png) no-repeat top right;
+	height: 30px;
+	margin: 0;
+	padding-bottom: 0;
+	font-size: 1%;
+}
+
+.n_skin_noteitskin .stickie-body {
+	background: url(../../images/skins/Skin_Stickienote_btmL.png) no-repeat bottom left;
+	padding-left: 5px;
+}
+
+.n_skin_noteitskin .stickie-content {
+	background: url(../../images/skins/Skin_Stickienote_btmR.png) no-repeat bottom right;
+	padding:1px 28px 23px 3px;
+}
+
+.n_skin_noteitskin .stickie-content .stickie-markup {
+	vertical-align: top;
+	margin-top: 2px;
+	margin-bottom: 0;
+	color: #000;
+}
+
+/*** speechbubleskin***/
+.stickie .n_skin_speechbubbleskin, #stickie-preview-window .n_skin_speechbubbleskin {
+	width: 236px;
+}
+.n_skin_speechbubbleskin .stickie-header {
+	background: url(../../images/skins/Skin_Speechbubble_topL.png) no-repeat;
+	padding-left: 10px;
+	height: 8px;
+	padding-bottom: 0;
+	margin: 0;
+	font-size: 1%;
+}
+
+* html .n_skin_speechbubbleskin .stickie-header {
+	margin: 0 0 -3px 0;
+}
+
+.n_skin_speechbubbleskin .stickie-header h3 {
+	background: url(../../images/skins/Skin_Speechbubble_topR.png) no-repeat top right;
+	height: 8px;
+	margin: 0;
+	padding-bottom: 0;
+	font-size: 1%;
+}
+
+.n_skin_speechbubbleskin .stickie-body {
+	background: url(../../images/skins/Skin_Speechbubble_btmL.png) no-repeat bottom left;
+	padding-left: 10px;
+}
+
+.n_skin_speechbubbleskin .stickie-content {
+	background: url(../../images/skins/Skin_Speechbubble_btmR.png) no-repeat bottom right;
+	padding:1px 5px 6px 3px;
+}
+
+.n_skin_speechbubbleskin .stickie-content .stickie-markup {
+	vertical-align: top;
+	margin-top: 2px;
+	margin-bottom: 10px;
+}
+
+/*** hc_pillow skin ***/
+.w_skin_hc_pillowskin .edit-button {
+	right: 10px;
+	top: 20px;
+}
+
+.w_skin_hc_pillowskin a {
+	color: #7c0065;
+}
+
+.w_skin_hc_pillowskin .metadata {
+	color: #b53f6e;
+}
+
+.w_skin_hc_pillowskin div.widget-content {
+	background: url(../../images/skins/girl/Skin_HCpillow_btmR.png) no-repeat bottom right;
+	padding: 0 41px 38px 0;
+	color: #000;
+	font-weight: normal;
+	margin-bottom: 1px;
+	margin-left: 44px;
+}
+
+.w_skin_hc_pillowskin div.widget-body {
+	background: url(../../images/skins/girl/Skin_HCpillow_btmL.png) no-repeat bottom left;
+	margin-left: 0px;
+
+}
+
+.w_skin_hc_pillowskin div.widget-headline {
+	background: url(../../images/skins/girl/Skin_HCpillow_topRh.png) no-repeat top right;
+	height: 49px;
+	padding-left: 0px;
+	margin-left:13px
+}
+
+.w_skin_hc_pillowskin div.widget-corner {
+	background: url(../../images/skins/girl/Skin_HCpillow_topLh.png) no-repeat top left;
+	background-position: 0px 0px;
+	padding-left: 41px;
+	height: 49px;
+}
+
+.w_skin_hc_pillowskin div.widget-headline h3 {
+	text-align: left;
+	padding-left:15px;
+	font-size: small;
+	font-weight: bold;
+	color: #733A00;
+	vertical-align: bottom;
+	position: relative;
+	padding-top: 10px;
+	color:#510042;
+}
+
+
+.w_skin_hc_pillowskin div.widget-headline .header-right {
+	padding: 1px 18px 3px 0;
+}
+
+
+* html .w_skin_hc_pillowskin div.widget-headline h3 {
+
+	margin: 0px 0px -3px 0px;
+}
+
+/***  Stickie note ***/
+
+.stickie .n_skin_hc_pillowskin, #stickie-preview-window .n_skin_hc_pillowskin {
+	width: 300px;
+}
+
+.n_skin_hc_pillowskin .stickie-header {
+	background: url(../../images/skins/girl/Skin_HCpillow_topL.png) no-repeat;
+	padding-left: 40px;
+	height: 49px;
+	padding-bottom: 0;
+	margin: 0;
+	font-size: 1%;
+}
+
+* html .n_skin_hc_pillowskin .stickie-header {
+	margin: 0 0 -3px 0;
+}
+
+.n_skin_hc_pillowskin .stickie-header h3 {
+	background: url(../../images/skins/girl/Skin_HCpillow_topR.png) no-repeat top right;
+	height: 49px;
+	margin: 0;
+	padding-bottom: 0;
+	font-size: 1%;
+}
+
+.n_skin_hc_pillowskin .stickie-body {
+	background: url(../../images/skins/girl/Skin_HCpillow_btmL.png) no-repeat bottom left;
+	padding-left: 41px;
+}
+
+.n_skin_hc_pillowskin .stickie-content {
+	background: url(../../images/skins/girl/Skin_HCpillow_btmR.png) no-repeat bottom right;
+	padding: 0 35px 36px 3px;
+	margin-left: 4px;
+}
+
+.n_skin_hc_pillowskin .stickie-content .stickie-markup {
+	vertical-align: top;
+	margin-top: 0;
+	padding-left: 0;
+	color: #000;
+}
+
+div.stickie.n_skin_nakedskin-c, .n_skin_nakedskin div.stickie-content {
+	width: auto;
+}
+
+.n_skin_nakedskin div.stickie-header h3 {
+	height: auto;
+}
+
+.n_skin_nakedskin div.stickie-header .clear {
+	display: none;
+}
+
+.n_skin_nakedskin div.stickie-header h3, .n_skin_nakedskin div.stickie-body, .n_skin_nakedskin div.stickie-content, .n_skin_nakedskin div.stickie-footer {
+	padding: 0;
+}

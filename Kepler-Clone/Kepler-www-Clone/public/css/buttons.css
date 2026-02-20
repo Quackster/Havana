@@ -1,0 +1,126 @@
+input.login-border {
+	border-style: solid;
+    border-color: #004080;
+	border-radius: 2px;
+	background-color: #e6e6e6;
+	width: 210px;
+	height: 20px;
+	padding: 5px 5px;
+	font-size: 16px;
+	font-family: "Ubuntu Condensed";
+}
+
+.register-border {
+	border-style: solid;
+    border-color: #004080;
+	border-radius: 2px;
+	background-color: #e6e6e6;
+	width: 300px;
+	height: 20px;
+	padding: 5px 5px;
+	font-size: 16px;
+	font-family: "Ubuntu Condensed";
+}
+
+.register-button {
+	border-style: solid;
+    border-color: #009900;
+	border-radius: 4px;
+	padding: 10px;
+	background-color: #006600;
+	width: 40%;
+	height: 55%;
+	padding: 5px 5px;
+	font-size: 24px;
+	color: white;
+	font-family: "Ubuntu Condensed";
+}
+
+.register-button-form {
+	border-style: solid;
+    border-color: #009900;
+	border-radius: 4px;
+	padding: 10px;
+	background-color: #006600;
+	width: 300px;
+	height: 55%;
+	padding: 5px 5px;
+	font-size: 24px;
+	color: white;
+	font-family: "Ubuntu Condensed";
+}
+
+.register-button:hover {
+	background-color: #009900;
+	
+}
+
+.register-button:focus {
+	background-color: #003300;
+	
+}
+
+.register-button:active {
+	background-color: #006600;
+	
+}
+
+.login-button {
+    border-color: #4da6ff;
+	border-style: solid;
+	border-radius: 4px;
+	padding: 10px;
+	background-color: #0059b3;
+	height: 50px;
+	width: 60%;
+	padding: 5px 5px;
+	font-size: 24px;
+	color: white;
+	font-family: "Ubuntu Condensed";
+}
+
+.login-button:hover {
+	background-color: #4da6ff;
+	
+}
+
+.login-button:focus {
+	background-color: #00264d;
+}
+
+.login-button:active {
+	background-color: #0059b3;
+}
+
+/*
+	Button override
+
+*/
+
+.enter-hotel {
+    border-color: #4da6ff;
+	border-style: solid;
+	border-radius: 4px;
+	padding: 10px;
+	background-color: #0059b3;
+	height: 50px;
+	width: 140px;
+	padding: 5px 5px;
+	font-size: 24px;
+	color: white;
+	font-family: "Ubuntu Condensed";
+}
+
+.enter-hotel:hover {
+	background-color: #4da6ff;
+	
+}
+
+.enter-hotel:focus {
+	background-color: #00264d;
+}
+
+.enter-hotel:active {
+	background-color: #0059b3;
+}
+

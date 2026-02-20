@@ -1,0 +1,12 @@
+#register-main {
+	background-image: url('../../public/images/registration_background_step2.png');
+	background-repeat: no-repeat;
+	background-position: 501px -150px;
+}
+
+#register-text {
+	text-align: center;
+	width: 55%;
+	margin-left: 100px;
+}
+

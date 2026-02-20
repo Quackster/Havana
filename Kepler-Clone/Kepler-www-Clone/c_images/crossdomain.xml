@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE cross-domain-policy SYSTEM "http://www.macromedia.com/xml/dtds/cross-domain-policy.dtd">
+<cross-domain-policy>
+
+<allow-access-from domain="images.habbohotel.nl" />
+<allow-access-from domain="*.habbomobile.fr" />
+<allow-access-from domain="amp.music.euro.real.com" />
+<allow-access-from domain="*.habbo.nl" />
+<allow-access-from domain="*.habbo.be" />
+
+
+<allow-access-from domain="*.habbohotel.fr"/>
+<allow-access-from domain="ads.habbohotel.ca"/>
+<allow-access-from domain="classichabbo.com"/>
+<allow-access-from domain="images.habbohotel.nl"/>
+<allow-access-from domain="*classichabbo.com." />
+
+<allow-access-from domain="*"/>
+
+<allow-access-from domain="*.habbo.fr" />
+<allow-access-from domain="*.habbo.be" />
+<allow-access-from domain="images.habbohotel.fr" />
+<allow-access-from domain="ads.habbohotel.fr"/>
+<allow-access-from domain="192.168.1.2"/>
+<allow-access-from domain="192.168.1.6"/>
+
+<allow-access-from domain="ads.habbohotel.co.uk"/>
+<allow-access-from domain="ads.habbohotel.com"/>
+<allow-access-from domain="127.0.0.1"/>
+<allow-access-from domain="23.95.84.219"/>
+<allow-access-from domain="images.habbohotel.co.uk" />
+<allow-access-from domain="images.habbohotel.com" />
+
+<allow-access-from domain="*.habbo.co.uk"/>
+<allow-access-from domain="*habbo.co.uk."/>
+<allow-access-from domain="*habbo.com."/>
+<allow-access-from domain="*habbo.com"/>
+</cross-domain-policy>

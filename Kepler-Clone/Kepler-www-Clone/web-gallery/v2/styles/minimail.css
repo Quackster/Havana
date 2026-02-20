@@ -1,0 +1,82 @@
+.minimail { position: relative }
+.minimail .blue h2.title { background-color: #559edc }
+#minimail { padding: 10px 0 0 0; position: relative }
+#minimail .message-item { margin-bottom: 3px }
+#minimail .unread-selector { float: right; margin-right: 5px }
+#minimail .unread-selector input { margin: 0; vertical-align: top }
+#minimail ul.box-tabs li { float: left }
+#minimail .message-preview { height: 30px;line-height: 30px; overflow: hidden; padding-right: 10px; cursor: pointer }
+#minimail .message-item.unread .message-preview { background: #C2DAEA url(../images/minimail/messages_bg_white.png) no-repeat 0px 0px }
+#minimail .message-item.read .message-preview { background: #DCDCDC url(../images/minimail/messages_bg_white.png) no-repeat 0px -58px }
+#minimail .message-item.opened .message-preview { background-position: 0px -114px }
+#minimail .message-preview img { vertical-align: bottom; margin: 0 10px 0 3px; float: left }
+#minimail .message-sender { padding: 0 5px; float: left; max-width: 177px; white-space: nowrap }
+#minimail .message-sender-multiple { margin-right: 5px; float: left; white-space: nowrap }
+#minimail .message-subject { color: #2B7191 }
+#minimail .message-sender, #minimail .message-subject { overflow: hidden; text-overflow: ellipsis }
+#minimail .message-item.read .message-subject { color: #6E6E6E }
+#minimail .unread { font-weight: bold }
+#minimail .message-preview a { color: #000 }
+#minimail .message-tstamp { color: #888; font-weight: normal; font-size: 9px; float: right; font-family:Lucida Grande,Lucida Sans Unicode,sans-serif; }
+#minimail .message-body { padding: 0; font-weight: normal; background-color: #fff }
+#minimail .message-body .contents { padding: 5px 5px 0 5px}
+#minimail .message-body .contents a.new-button { margin-bottom: 0 }
+#minimail .message-body-bottom { background: #DCDCDC url(../images/minimail/messages_bg_white.png) no-repeat -35px -23px; height: 7px}
+#minimail .unread .message-body-bottom { background-color: #C2DAEA }
+#minimail .message-body .body-text { padding: 5px; background-color: #fff; border: 1px solid #ccc; overflow: auto; }
+#minimail .replying .body-text { background-color: transparent; border: 1px solid transparent }
+#minimail .reply-controls { margin-top: 8px }
+#minimail .reply-controls .related-messages { float: left; height: 14px; width: 20px; background: transparent url(../images/minimail/conversation_icon.png) no-repeat 0 0; margin: 5px 0 0 5px; }
+#minimail .label-conversation .related-messages { display: none }
+#minimail .message-item.read .message-body { margin-left: 35px; background-color: #DCDCDC; margin-right: 4px }
+#minimail .message-item.unread .message-body { margin-left: 35px; background-color: #C2DAEA; margin-right: 4px }
+#minimail #message-compose { padding: 10px; }
+#minimail .message-body textarea { width: 385px; margin-bottom: 10px}
+#minimail .compose { font-size: 10px; position: absolute; right: 5px; top: 5px }
+#minimail .navigation { padding: 5px; position: relative; height: 12px; margin: 3px 0; font-size: 10px }
+#minimail .navigation a { text-decoration: none; background-color: #e3e3e3; padding: 2px }
+#minimail .navigation p { margin: 0; padding: 0; color: #2B7191; height: 12px }
+#minimail .progress { position: absolute; }
+#minimail .progress img { margin-left: 250px; }
+#minimail input.error, #minimail textarea.error, ul.tbl-holder.error { border: 2px solid #f00 }
+#minimail .no-messages { margin: 5px 0 15px 0; padding: 0; text-align: center }
+#minimail .nested { padding-top: 1em; margin-top: 1em; border-top: 1px solid #ccc }
+#minimail .trash-controls { margin: 10px 0; }
+#minimail .message-text { border: 1px solid #999; padding: 6px 5px; width: 414px; }
+#minimail .message-headers { font-size: 10px; background-color: #e3e3e3; padding: 5px }
+#minimail .message-headers b { float: left; width: 100px }
+#minimail .notification { position: absolute; border: 2px solid #390; background-color: #E4FF7A; width: 270px; left: 80px; top: 87px; padding: 6px; text-align: center; }
+#minimail .notification.error { border-color: #C00; background-color: #FFC7C7 }
+#minimail.second-level-auth .new-button, #minimail.second-level-auth .trash-controls { display: none }
+#minimail.second-level-auth .inbox-refresh .new-button { display: block }
+#minimail .report { float: right; height: 17px; width: 15px; background: url(../images/minimail/flag.png) no-repeat 0 0; margin-right: 5px; -moz-opacity: .6; opacity: .60; filter: alpha(opacity=60); -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)"; }
+#minimail .report:hover { -moz-opacity: 1; opacity: 1; filter: alpha(opacity=100); -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)"; }
+#minimail .preview-area-container { margin-top: 7px }
+#minimail .preview-area { color: #333; background-color: #e3e3e3; overflow: auto }
+#minimail .notice { border: 1px solid #ccc; margin: 10px; padding: 10px; background-color: #DCEAFA; color: #6a6a6a }
+#minimail .inbox-refresh { margin:10px 7px 0px 7px }
+#minimail .message-headers li { width: 370px; }
+#minimail .message-headers li.header-report { width: 15px; float: right; }
+
+
+/* TextboxList */
+ul.tbl-holder { margin: 0; border: 1px solid #999; overflow: hidden; height: auto !important; height: 1%; padding: 4px 5px 0; width: 414px;}
+*:first-child+html ul.tbl-holder { padding-bottom: 2px; } * html ul.tbl-holder { padding-bottom: 2px; } /* ie7 and below */
+ul.tbl-holder li { float: left; list-style-type: none; margin: 0 5px 4px 0; }
+ul.tbl-holder li.bit-box, ul.tbl-holder li.bit-input input { border: 1px solid #fff; }
+ul.tbl-holder li.bit-box { -moz-border-radius: 6px; -webkit-border-radius: 6px; border-radius: 6px; border: 1px solid #CAD8F3; background: #DEE7F8 no-repeat 0 50%; padding: 1px 5px 2px 8px; }
+ul.tbl-holder li.bit-box-focus { border-color: #598BEC; background-color: #598BEC; color: #fff; }
+ul.tbl-holder li.bit-input input { width: 150px; margin: 0; border: none; outline: 0; padding: 3px 0 2px; } /* no left/right padding here please */
+ul.tbl-holder li.bit-input input.smallinput { width: 20px; }
+ul.tbl-holder li.bit-hover { background-color: #BBCEF1; border: 1px solid #6D95E0; }
+ul.tbl-holder li.bit-box-focus { border-color: #598BEC; background-color: #598BEC; color: #fff; }
+ul.tbl-holder li.bit-box a.closebutton { position: absolute; right: 4px; top: 5px; display: block; width: 7px; height: 7px; font-size: 1px; background: url('close.gif'); }
+ul.tbl-holder li.bit-box a.closebutton:hover { background-position: 7px; }
+ul.tbl-holder li.bit-box-focus a.closebutton, ul.tbl-holder li.bit-box-focus a.closebutton:hover { background-position: bottom; }
+#message-recipients-auto { position: absolute; width: 426px; background: #eee; z-index: 1000; }
+#message-recipients-auto .default { padding: 5px 7px; border: 1px solid #999; border-width: 0 1px 1px; }
+#message-recipients-auto ul { margin: 0; padding: 0; }
+#message-recipients-auto ul li { padding: 5px 12px 5px 8px; z-index: 1000; cursor: pointer; margin: 0; list-style-type: none; border: 1px solid #999; border-width: 0 1px 1px; background: #eee no-repeat 0 50%; }
+#message-recipients-auto ul li em { font-weight: bold; font-style: normal; }
+#message-recipients-auto ul li.auto-focus { background-color: #DEE7F8; }
+#message-recipients-auto ul li.auto-focus em { }

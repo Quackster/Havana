@@ -1,0 +1,51 @@
+
+#info-name {
+	
+}
+
+#habbo-plate {
+	background-image: url('../../public/images/me/info_habbo_plate.png');
+	background-repeat: no-repeat;
+	background-position:18px -123px;
+}
+
+#habbo-figure {
+	position:absolute;
+	background-position: 20px 80px;
+	background-repeat: no-repeat;
+}
+
+div.main {
+	
+}
+
+
+
+/*
+	My info
+*/
+
+.player-info {
+	display:inline-block;
+	vertical-align:top;
+	width: 190;
+	padding-left:10px;
+	padding-top:20px;
+}
+
+.player-appearance {
+	display:inline-block;
+	margin-left: 20px;
+	width: 90px;
+	height: 170px;
+}
+
+/*
+	Hotel status
+*/
+#hotel-status-online {
+	background-image: url('../../public/images/hotel_status/hotel-button-hotelopen.gif');
+	background-repeat: no-repeat;
+	width: 90px;
+	height: 70px;
+}

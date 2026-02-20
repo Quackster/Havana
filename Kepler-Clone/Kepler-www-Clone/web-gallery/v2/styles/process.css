@@ -1,0 +1,288 @@
+body.process-template {
+	background-color: #bce0ee;
+	background-image: none;
+	padding: 0 10px;
+}
+
+body.process-template #container {
+	width: 766px;
+	margin-top: 12px;
+	position:relative;
+}
+
+body#popup.process-template #container {
+	width: 720px;	
+}
+
+body.process-template #header {
+	width: auto;
+	padding: 0;
+	position: relative;
+}
+
+body.process-template #header h1 a {
+	height: 54px;
+}
+
+body.secure-page #header h1 a {
+    height: 42px;
+}
+
+body.process-template #process-content {
+	clear: left;
+	margin-top: 18px;
+}
+
+body.process-template #footer {
+	padding-right: 0;
+	padding-top: 16px;
+}
+
+body.process-template #column1 {
+	float: none;
+	width: auto;
+}
+
+body#landing.process-template #column1, 
+body#reauthenticate.process-template #column1 {
+	float: left;
+	width: 404px;
+	clear: left;
+}
+
+body#landing.process-template #column2, 
+body#reauthenticate.process-template #column2 {
+	float: left;
+	width: 310px;
+}
+
+body#landing.process-template #column1 .cb, 
+body#reauthenticate.process-template #column1 .cb, 
+body#popup.process-template #column1 .cb {
+	margin: 0 8px 8px 0;
+}
+
+body#landing.process-template #column2 .cb, 
+body#reauthenticate.process-template #column2 .cb, 
+body#popup.process-template #column2 .cb {
+	margin-right: 0;
+}
+
+body#popup.process-template #column1 {
+	width: 354px;
+	float: left;	
+}
+
+body#popup.process-template #column2 {
+	width: 314px;
+	float: left;	
+}
+
+body.process-template #content.wide {
+	padding: 0 8px;
+}
+
+body.process-template #content {
+	padding: 0 21px;
+}
+
+body.plain-template #content {
+	padding-bottom: 21px;
+}
+
+
+/* stats */
+
+ul.stats {
+	list-style: none;
+	margin: 0;
+	position: absolute;
+	left: 0;
+	top: 56px;
+	z-index: 1;
+}
+
+ul.stats li {
+	margin: 0;
+	float: left;
+	color: #fc6204;
+	text-align: right;
+}
+
+ul.stats li.stats-online { width: 395px; }
+ul.stats li.stats-visited { width: 310px; }
+
+#register ul.stats li.stats-online { width: 435px; }
+#register ul.stats li.stats-visited { width: 269px; }
+
+#logout ul.stats li.stats-online, #popup ul.stats li.stats-online { width: 346px; }
+#logout ul.stats li.stats-visited, #popup ul.stats li.stats-visited { width: 313px; }
+
+ul.stats span.stats-fig {
+	color: #000;
+	font-weight: bold;
+}
+
+
+/* rounded template */
+
+.process-template-box .bt, .process-template-box .bt div, 
+.process-template-box .bb, .process-template-box .bb div {
+	background-image: url(../images/box_process.png);
+}
+body.process-template #column1 .cb { margin: 0; }
+body.process-template #column2 .cbb { margin-right: 0; }
+
+
+/* yellow boxes */
+
+#content .cbb.process_yellow { background: #ffcd0a; }
+#content .cb.process_yellow { background: transparent; }
+#content .process_yellow .bt, #content .process_yellow .bt div { background-image: url(../images/box_yellow.png); }
+#content .process_yellow .bb { background-image: url(../images/box_yellow.png); }
+#content .process_yellow .bb div { background-image: url(../images/box_yellow.png); }
+#content .process_yellow .i1, #content .process_yellow .i2, #content .process_yellow .i3 { background: #ffcd0a; }
+#content .process_yellow h2 { background: #f29400; }
+
+
+/* landing page */
+
+#create-habbo-nonflash {
+	padding: 0;
+	height: 389px;
+	position: relative;
+	background: url(../images/landing/test1.gif) no-repeat 0 0;
+	font-size: 16px;
+}
+
+#create-habbo-nonflash #landing-register-text {
+	position: absolute;
+	top: 290px;
+	width: 100%;
+	text-align: center;
+	margin-top: -20px;
+}
+
+#create-habbo-nonflash #landing-register-text a {
+	display: block;
+	background: url(../images/landing/createbutton_arrow.png) no-repeat 100% 0;
+	height: 40px;
+	width: 290px;
+	margin: 0 auto;
+	color: #fff;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.layout-real_world #create-habbo-nonflash .landing-text-1 { 
+    width: 306px; 
+    height: 48px; 
+    background: transparent url(../images/landing/speechbubble_big.gif) no-repeat 50% top; 
+    line-height: 38px; 
+    color: #000;
+    font-weight: bold; 
+    text-align: center;
+    position: absolute;
+    top: 10px;
+    left: 68px; 
+}
+
+.layout-real_world #create-habbo-nonflash .landing-text-2 { 
+    width: 172px; 
+    height: 24px; 
+    background: transparent url(../images/landing/speechbubble_small.gif) no-repeat 50% top; 
+    color: #000;
+    font-size: 9px;
+    line-height: 18px;
+    text-align: center;
+    position: absolute;
+    top: 123px;
+    right: 24px; 
+}
+
+.layout-static #create-habbo-nonflash .landing-text-1 { 
+    color: #fff;
+    font-weight: bold;
+    font-size: 28px; 
+    text-align: center;
+    padding: 15px 60px;
+}
+
+.layout-static #create-habbo-nonflash .landing-text-2, .layout-static #create-habbo-nonflash .landing-text-3 { 
+    width: 172px; 
+    height: 24px; 
+    background: transparent url(../images/landing/speechbubble_small.gif) no-repeat 50% top; 
+    color: #000;
+    font-size: 9px;
+    line-height: 18px;
+    text-align: center;
+    position: absolute;
+    top: 97px;
+    right: 130px; 	
+}
+
+.layout-static #create-habbo-nonflash .landing-text-3 {
+    top: 123px;
+    right: 24px; 
+}
+
+#create-habbo-nonflash .frame { width: 100%; height: 100%; background: transparent url(../images/landing/tranparent_hand.gif) no-repeat 0 0; }
+
+#create-habbo-nonflash #landing-promotional-text {
+    position: absolute;
+    bottom: 28px;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+}
+
+#create-habbo-nonflash #landing-promotional-text span {
+    display: block;
+    margin: 0 auto;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 0 37px 0 27px;
+}
+
+#create-habbo-nonflash div a:hover {
+	text-decoration: underline;
+}
+
+#create-habbo-nonflash div a span {
+	display: block;
+	height: inherit;
+	margin-right: 17px;
+	padding: 7px 0 14px 0;
+	background: url(../images/landing/createbutton_bg.png) no-repeat 0 0;
+}
+
+#create-habbo h2 {
+	font-weight: bold;
+}
+
+#habbo-intro-nonflash ul li {
+	list-style-type: disc;
+	margin-left: 1em;
+	padding-left: .3em;
+}
+
+
+/* Make room for the logout page ad */
+
+body#logout.process-template #content {
+    padding:0pt 0px;
+}
+
+body#logout.process-template #header, body#logout.process-template .flash-message
+{
+      padding:0pt 22px;
+}
+
+body#logout.process-template .ad-container {
+    margin-left: 8px;
+}
+
+#header { 
+    background: none;
+}

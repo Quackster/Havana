@@ -1,0 +1,275 @@
+body#register #column1 {
+	width: auto;
+	position: static;
+
+}
+body#register #column1 .cb {
+	margin-right: 0;
+}
+
+body#register #column1 .box-content {
+	padding: 7px 7px 3px 0;
+}
+
+#registerform fieldset {
+	padding: 0 7px;
+	margin-top: 8px;
+}
+
+#registerform fieldset#register-fieldset-captcha {
+    padding: 0;
+}
+
+#registerform fieldset#register-fieldset-name {
+	margin-top: 0;
+}
+
+#registerform #register-fieldset-captcha label, #registerform #register-terms-content label {
+	color: #fff;
+}
+
+#register-avatar-editor-title {
+	color: #fff;
+	background-color: #663300;
+}
+
+h2.heading {
+	margin: 0;
+	padding: 0 5px;
+	font-size: 18px;
+    text-align: center;
+}
+
+#register-column-left div.rounded-container {
+	margin: 0;
+}
+
+#registerform h3 {
+	clear: both;
+	font-weight: normal;
+	font-size: 11px;
+	margin: 0;
+}
+
+#register-fieldset-name ul {
+	text-align: left;
+}
+
+#registerform label {
+	color: #000;
+}
+
+#registerform input.error {
+	/*background: white url(../images/registration/error_icon.gif) no-repeat 99% 50%;*/
+	background-color: #f18f9b;
+}
+
+#registerform input.register-ok {
+	background: white url(../images/registration/ok_icon.gif) no-repeat 99% 50%;
+}
+
+div.register-label {
+	padding-bottom: 4px;
+    text-align: center;
+    font-weight: bold;
+}
+
+div.register-error {
+	padding-top: 7px;
+	clear: both;
+}
+
+div.register-error div.rounded-red {
+	padding: 0 16px;
+}
+
+#register-button-continue {
+	float: right;
+}
+
+#register-name {
+	font-weight: bold;
+    float: left;
+    width: 180px;
+}
+
+#register-name.wide {
+    width: 210px;
+}
+
+#register-name-check-container {
+	text-align: right;
+}
+
+#register-name-check {
+	margin: 0;
+}
+
+#register-namelist-rounded-element #register-name-check-container {
+	text-align: left;
+	padding-left: 25px;
+	padding-top: 3px;
+}
+
+input.register-text {
+	border: 1px solid white;
+	padding: 3px;
+}
+
+input.register-text-black {
+    border: 1px solid black;
+}
+
+input.register-text, #recaptcha_response_field {
+    width: 230px;
+}
+
+input.register-text.wide, #register-parentEmail-bubble, #register-captcha-bubble, #recaptcha_response_field.wide {
+	width: 265px;
+}
+
+#register-parentEmail {
+	width: 215px;
+}
+
+#register-namelist-rounded-element #register-name {
+	width: 165px;
+}
+
+#register-avatar-editor {
+	text-align: center;
+	padding-top: 7px;
+}
+
+#register-column-right {
+	float: right;
+	width: 269px;
+}
+
+#register-column-left {
+	float: left;
+    width: 428px;
+}
+
+#register-column-left.wide {
+    width: 305px;
+}
+
+#register-parent-email, #register-ageLimit {
+	position: absolute;
+	top: 0;
+	left: -1500px;
+	width: 308px;
+}
+
+#register-buttons {
+    position: relative;
+    width: 100%;
+    clear: both;
+	text-align: left;
+	padding-top: 10px;
+}
+
+div.register-avatars {
+	clear: both;
+	padding-left: 80px;
+	margin-bottom: 11px;
+}
+
+div.register-avatar {
+	float: left;
+	width: 90px;
+	background-repeat: no-repeat;
+	background-position: 50% 0;
+}
+
+div.register-avatar input {
+	margin-top: 120px;
+}
+
+#register-terms {
+	padding: 0 16px;
+}
+
+#register-terms-content.error p.last, #register-birthday.error select {
+	border: 2px solid #f18f9b;
+}
+
+#register-terms-link {
+	background: url(../images/registration/terms_icon.gif) no-repeat;
+	padding-left: 20px;
+	color: white;
+}
+
+#suggestion-list {
+    margin-left: 60px;
+}
+
+#suggestion-list ul.habblet-list li {
+    padding: 0;
+    margin: 0;
+}
+
+input.register-loading {
+	background: #fff url(/images/progress_bubbles.gif) no-repeat 99%;
+	padding-right: 8px;
+}
+
+#register-section-3 {
+    position: relative;
+    margin-top: 4px;
+}
+
+#registration-overlay {
+    display: none;
+    position: absolute;
+    padding: 0;
+    top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 9000;
+	background-color: #b0b0a5;
+	-moz-opacity: .5;
+	opacity: .50;
+	filter: alpha(opacity=50);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+}
+
+span.numbering {
+    float: left;
+}
+
+#register-birthday {
+    text-align: center;
+}
+
+div.register-input {
+    font-weight: bold;
+    font-size: 16px;
+    text-align: center;
+}
+
+#inviter-info img {
+    position: absolute;
+    left:397px; 
+    top:0px;
+}
+
+#inviter-info p {
+    position: absolute;
+    left:168px;
+    top:14px;
+    width: 209px;
+    height: 36px;
+    padding: 8px 15px 8px 8px;
+    background: #fff url(../images/tooltips/bubble-full-right.png) no-repeat 0 0;
+}
+
+#register-marketing-box, #captcha_response {
+    padding-left: 8px;
+}
+
+#error-bubble-content.content {
+    padding: 0 5px 20px;
+}

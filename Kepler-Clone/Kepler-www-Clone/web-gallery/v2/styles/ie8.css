@@ -1,0 +1,22 @@
+/* new front page login box margin tweaks */
+#fp-container #login-username {
+    margin-bottom: 3px;
+}
+#fp-container #login-password {
+    margin-bottom: 5px;
+}
+#fp-container #remember-me {
+    margin-bottom: 5px;
+}
+#fp-container #remember-me input {
+    margin-left: -3px;
+}
+
+
+ul.bbcode_toolbar li {
+    float: left;
+}
+div#linktool-inline input#linktool-find {
+    height: 23px;
+    padding-right: 28px;
+}

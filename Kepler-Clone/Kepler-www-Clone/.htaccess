@@ -1,0 +1,8 @@
+Header set Access-Control-Allow-Origin "*"
+
+Options -Indexes
+
+RewriteEngine On
+RewriteRule ^habbo-imaging/badge/(.*).gif$ ./habbo-imaging/badge.php?badge=$1
+RewriteRule ^habbo-imaging/furni$ ./habbo-imaging/furni.php
+RewriteRule ^habbo-imaging/avatarimage$ ./habbo-imaging/avatarimage.php

@@ -1,0 +1,29 @@
+div.portlet-scale, div.portlet-scale-content, div.content-white, 
+div.content-red, div.purse-content, div.content-blue, div.content-beige, 
+div.content-dblue, div.processbox-inner, div.headline-wrapper, div.headline-inner, 
+div.body, #tabmenu-content, div.bubble, .processbox .content, div.dialog-grey-body, 
+div.stickie-content, div.stickie-body, div.menu-content, div.widget-inventory-item, 
+div.blackbubble-body {
+	height: 1%;
+}
+
+#mycredits-content h3, #habboclub-content h3, #tabmenu a.arrow span {
+	position: relative;
+}
+
+#mypage-ad {
+	right: 7px;	
+}
+
+#tabmenu-myhabbo-register {
+	margin: 0;
+}
+
+#room_wrapper {
+	/*word-wrap: break-word;*/
+	width: 210px;
+}
+
+* html #guestbook-entry-container {
+	height: expression(this.scrollHeight > 250 ? "250px" : "auto"); /* IE 6 max-height hack*/	
+}

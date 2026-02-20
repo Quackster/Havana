@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+	<link rel="stylesheet" type="text/css" href="http://www.habborator.org/common/css/404.css" />
+	<link rel="copyright" title="Copyright" href="about/index.html" />
+
+	<script type="text/javascript" src="http://www.habborator.org/common/scripts/prototype.js"></script>
+	<script type="text/javascript" src="http://www.habborator.org/common/scripts/window.js"></script>
+	<script type="text/javascript" src="http://www.habborator.org/common/scripts/window_ext.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="http://www.habborator.org/common/map/themes/default.css" />
+	<link rel="stylesheet" type="text/css" href="http://www.habborator.org/common/map/themes/console.css" />
+	<link rel="stylesheet" type="text/css" href="http://www.habborator.org/common/map/themes/login_win.css" />
+
+	<title>Habborator :: 404</title>
+
+</head>
+
+<body>
+
+<div id="container">
+	
+	<h1>404</h1>
+
+	<p>
+		Dead end. You&#8217;re lost in (Habborator) space. Either you mistyped something, you were fed a wrong link, or maybe, just maybe, we messed up. Anything is possible, but one thing&#8217;s for sure, it didn&#8217;t work. We&#8217;re sorry.
+	</p>
+
+	<p>
+		Now what ?! Well, try our <a href="http://www.habborator.org/">frontpage</a>. It&#8217;s basically nothing more than a sitemap. Speaking about such a thing, if that frontpage confuzzles you, we have a normal <a id="map" href="javascript:win1.show();" accesskey="1">sitemap</a> too (like, a simple list). There&#8217;s no end to our efforts to please you.
+	</p>
+
+</div>
+
+<div id="sticker"></div>
+
+<script type="text/javascript">
+	win1 = new Window('Uno', {className:"dialog", title:"Sitemap", width:210, height:300, top:50, left:50, url:"http://www.habborator.org/common/map/map.html"});
+	win2 = new Window('Two', {className:"console", title:"Updates", width:350, height:100, top:10, right:50, url:"http://www.habborator.org/common/map/changes.html"});
+	win3 = new Window('Drei', {className:"login_win", title:"", width:195, height:195, resizable:false, minimizable:false, maximizable:false, top:200, left:250, url:"http://www.habborator.org/common/map/login.html"});
+	WindowStore.init();
+	WindowCloseKey.init();
+</script>
+
+</body>
+</html>

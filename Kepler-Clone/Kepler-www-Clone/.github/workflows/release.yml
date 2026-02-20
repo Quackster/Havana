@@ -1,0 +1,41 @@
+name: Compress and Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  compress-and-release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Zip the repository (safe method)
+        run: |
+          ZIP_NAME=${{ github.event.repository.name }}-${{ github.ref_name }}.zip
+          echo "ZIP_NAME=$ZIP_NAME" >> $GITHUB_ENV
+
+          mkdir staging
+          rsync -a \
+            --exclude='.git' \
+            --exclude='staging' \
+            --exclude='*.htm' \
+            --exclude='*.html' \
+            ./ staging/
+
+          cd staging
+          zip -r "../$ZIP_NAME" .
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ github.ref_name }}
+          name: Release ${{ github.ref_name }}
+          files: ${{ env.ZIP_NAME }}
+          draft: false
+          make_latest: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -1,0 +1,25 @@
+#background-register {
+	background-image: url('../../public/images/registration_background_step3_boy.png');
+	background-repeat: no-repeat;
+	background-position: 100% 60px
+}
+
+#register-div {
+	background: none;
+	// background-color: #004d80;
+	background-repeat: no-repeat;
+	background-position: 501px -150px;
+}
+
+p.register-text {
+	color: #99ccff;
+	font-size: 18px;
+}
+
+.password-confirm {
+	
+	border: 1px solid transparent;
+	padding: 10px;
+	background-color: #336699;
+	border-radius: 6px;
+}

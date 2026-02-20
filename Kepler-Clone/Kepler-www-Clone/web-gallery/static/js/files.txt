@@ -1,0 +1,18 @@
+Replace all habboReqPath+"/ with habboReqPath+"|
+Replace all "/ with habboReqPath+"/ (IGNORE visual.js)
+Replace all habboStaticFilePath+habboReqPath+ with habboReqPath+
+Replace all habboReqPath+"| with habboReqPath+"/
+Repalce Discussions.redirectLocation=habboReqPath+"/groups/"+Discussions.groupUrl+habboReqPath+"/discussions" with Discussions.redirectLocation=habboReqPath+"/groups/"+Discussions.groupUrl+"/discussions"
+Replace all habboReqPath+ with "" in landing.js
+Replace function(){new Ajax.Request("/captcha/generate",{method:"post"})} with function(){new Ajax.Request(habboReqPath+"/captcha/generate",{method:"post"})} in landing.js
+Replace all habboReqPath + habboReqPath+ with habboReqPath + in ./js/myhabbo-store.js
+Replace "D=A.path||habboStaticFilePath+"/js";B.src=D+habboReqPath+"/"+E+".js";if(A.callback)" with "D=A.path||habboStaticFilePath+"/js";B.src=D+"/"+E+".js";if(A.callback)" in common.js
+//Replace "D.style.zIndex+habboReqPath+"/";" with "D.style.zIndex+"/";" in homeedit.js
+Instead, Replace all habboReqPath+"/" with "/"
+Replace all (regex) "openGroupActionDialog(habboReqPath+(.*),habboReqPath+(.*),null,D,null)" with "openGroupActionDialog(\1,\2,null,D,null)"
+Replace "searchUrl:habboReqPath+"/myhabbo/avatarlist/friendsearchpaging"" with "searchUrl:"/myhabbo/avatarlist/friendsearchpaging"" in homeview.js
+Replace "searchUrl:habboReqPath+"/myhabbo/avatarlist/membersearchpaging"" with "searchUrl:"/myhabbo/avatarlist/membersearchpaging"" in homeview.js
+Replace "A=habboReqPath+" with "A=" in homeedit.js
+Replace "A="/myhabbo/widget/edit"" with "A=habboReqPath+"/myhabbo/widget/edit"" in homeedit.js
+Replace "A="/myhabbo/stickie/edit"" with "A=habboReqPath+"/myhabbo/stickie/edit"" in homeedit.js
+Replace "habboReqPath+"/myhabbo/rating/" with ""/myhabbo/rating/" in homeview.js

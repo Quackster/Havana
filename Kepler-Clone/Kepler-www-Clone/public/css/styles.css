@@ -1,0 +1,409 @@
+/* -----------------------
+Base styles
+------------------------*/
+
+body
+{
+	margin: 0;
+	padding: 0;
+	background: #00334D;
+	background-color: #eee;
+	font-family: "Ubuntu Condensed";
+	color: white;
+}
+
+h1,h2,h3,h4,h5,h6
+{
+	margin: 0 0 .5em;
+	font-weight: 500;
+	line-height: 1.1;
+}
+
+h1 { font-size: 2.25em; } /* 36px */
+h2 { font-size: 1.75em; } /* 28px */
+h3 { font-size: 1.375em; } /* 22px */
+h4 { font-size: 1.125em; } /* 18px */
+h5 { font-size: 1em; } /* 16px */
+h6 { font-size: .875em; } /* 14px */
+
+p
+{
+	margin: 0 0 1.5em;
+	line-height: 1.5;
+}
+
+p.login
+{
+	margin: 0 0 1.0em;
+	line-height: 1;
+}
+
+
+
+blockquote
+{
+	padding: 1em 2em;
+	margin: 0 0 2em;
+	border-left: 5px solid #eee;
+}
+
+hr
+{
+	height: 0;
+	margin-top: 1em;
+	margin-bottom: 2em;
+	border: 0;
+	border-top: 1px solid #ddd;
+}
+
+table
+{
+	background-color: transparent;
+	border-spacing: 0;
+	border-collapse: collapse;
+	border-top: 0;/*1px solid #ddd;*/
+}
+
+th, td
+{
+	padding: .5em 1em;
+	vertical-align: top;
+	text-align: left;
+	border-bottom: 0px;/*1px solid #ddd;*/
+}
+
+/* -----------------------
+Layout styles
+------------------------*/
+
+.container {
+	max-width: 70em;
+	margin: 0 auto;
+}
+
+.header
+{
+	color: #fff;
+	background: #006699;
+	padding: 1em 1.25em;
+}
+
+.header-content {
+	background-image: url('../../public/images/hotel.png');
+	background-repeat: no-repeat;
+	height: 200px;
+	background-position: -50px;
+	margin-bottom: -24px;
+	margin-top: -24px;
+}
+
+.header-logo {
+	/*
+		Use this for generating logos, it has the huge text like Habbo if you scroll down
+		https://hsource.fr/genfont
+	*/
+	background-image: url('../../public/images/logo.png');
+	background-repeat: no-repeat;
+	background-position: 20px 125px;
+	width: 100%;
+	height: 100%;
+}
+
+
+.header-heading { margin: 0; }
+
+.nav-bar
+{
+	background: #E6F0F5;
+	padding: 0;
+}
+
+.content
+{
+	overflow: hidden;
+	padding: 1em 1.25em;
+	background-color: #004d80;
+}
+
+.main, .aside
+{
+	margin-bottom: 1em;
+	border-radius: 4px;
+	background: #006699;
+	padding: 10px;
+}
+
+.footer
+{
+	color: #fff;
+	background: #00334D;
+	padding: 1em 1.25em;
+	box-shadow: 0px 500px 0px 500px #00334D;
+}
+
+/*-----------------------
+|	Custom bullshit
+|----------------------*/
+
+#text-main {
+	text-shadow: 1px 1px #000000;
+}
+
+
+#div-header-top {
+	background: #00334D;
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+	margin-top: -10px;
+	margin-left: -10px;
+	width: calc(100% + 10px);
+	height: 30px;
+	padding: 5px;
+	font-size: 20px;
+}
+
+#div-header-middle {
+	background: #00334D;
+	margin-top: -10px;
+	margin-left: -10px;
+	width: calc(100% + 10px);
+	height: 30px;
+	padding: 5px;
+	font-size: 20px;
+}
+
+
+/* -----------------------
+Nav
+------------------------*/
+
+.nav
+{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	font-size: 20px;
+}
+
+.nav li
+{
+	display: inline;
+	margin: 0;
+}
+
+.nav a
+{
+	display: block;
+	padding: .7em 1.25em;
+	color: #000000;
+	text-decoration: none;
+	border-bottom: 1px solid gray;
+}
+
+.nav a:link { color: #004d80; }
+.nav a:visited { color: #004d80; }
+
+
+/* -----------------------
+Single styles
+------------------------*/
+
+.img-responsive { max-width: 100%; }
+
+.btn
+{
+	color: #fff !important;
+	background-color: royalblue;
+	border-color: #222;
+	display: inline-block;
+	padding: .5em 1em;
+	margin-bottom: 0;
+	font-weight: 400;
+	line-height: 1.2;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: middle;
+	cursor: pointer;
+	border: 1px solid transparent;
+	border-radius: .2em;
+	text-decoration: none;
+}
+
+.btn:hover
+{
+	color: #fff !important;
+	background-color: green;
+}
+
+.btn:focus
+{
+	color: #fff !important;
+	background-color: black;
+}
+
+.btn:active
+{
+	color: #fff !important;
+	background-color: red;
+}
+
+.table
+{
+	width: 100%;
+	max-width: 100%;
+	margin-bottom: 20px;
+}
+
+.list-unstyled
+{
+	padding-left: 0;
+	list-style: none;
+}
+
+.list-inline
+{
+	padding-left: 0;
+	margin-left: -5px;
+	list-style: none;
+}
+
+.list-inline > li
+{
+	display: inline-block;
+	padding-right: 5px;
+	padding-left: 5px;
+}
+
+/* -----------------------
+Wide styles
+------------------------*/
+
+@media (min-width: 55em)
+{
+	.header { padding: 1.5em 3em; }
+	.nav-bar { padding: 1em 3em; }
+	.content { padding: 1.2em 3em; }
+
+	.main
+	{
+		float: left;
+		width: 65%;
+		margin-right: 1%; /*5%*/
+		margin-bottom: 1em;
+	}
+
+	.aside
+	{
+		float: left;
+		width: 20%;
+		margin-bottom: 1em;
+	}
+
+	.footer { padding: 2em 3em; }
+	
+	.nav li
+	{
+		display: inline;
+		margin: 0 1em 0 0;
+	}
+	
+	.nav a
+	{
+		display: inline;
+		padding: 0;
+		border-bottom: 0;
+	}
+}
+
+/*
+	News
+*/
+
+i.date {
+	color: gray;
+}
+
+
+.news-item {
+	display:inline-block;
+	vertical-align:top;
+	width: 199px;
+	padding: 10px;
+	margin-left:10px;
+}
+
+.news-img {
+	margin-left:10px;
+	display:inline-block;
+	padding: 10px;
+	height: 100px;
+	width: 100px;
+	background-repeat: no-repeat;
+	background-position: bottom 0px right 0px;
+	box-shadow: 3px 3px 0px #004466;
+}
+
+.news-text {
+	padding:20px;
+	white-space: nowrap;
+}
+
+.news-shortstory {
+	margin-top: 10px;
+}
+
+/*
+	alerts
+*/
+
+/* The alert message box */
+.error {
+    padding: 20px;
+    background-color: #f44336; /* Red */
+    color: white;
+    margin-bottom: 15px;
+	width: 965px;
+	border-radius: 3px;
+}
+
+/* The warning message box */
+.warning {
+    padding: 20px;
+    background-color: #ffc266; /* Yellow */
+    color: white;
+    margin-bottom: 15px;
+	width: 965px;
+	border-radius: 3px;
+}
+
+/* The warning message box */
+.success {
+    padding: 20px;
+    background-color: #339933; /* Yellow */
+    color: white;
+    margin-bottom: 15px;
+	width: 965px;
+	border-radius: 3px;
+}
+
+/* The close button */
+.closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* When moving the mouse over the close button */
+.closebtn:hover {
+    color: black;
+}
+
+a {
+  color: inherit; /* blue colors for links too */
+  text-decoration: inherit; /* no underline */
+}

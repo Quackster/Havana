@@ -1,0 +1,27 @@
+#topbar-menu ul li div { float: left; padding-top: 10px; }
+#topbar-menu ul li a { display: inline; }
+#topbar-menu ul li a span { display: inline; }
+
+#tabmenu-bottom { filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='menu_bg_bottom.png', sizingMethod='crop'); }
+#tabmenu-content { filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='menu_bg.png', sizingMethod='scale'); }
+
+#topdim { filter: alpha(opacity=30); }
+
+#room_wrapper {
+	height:expression(this.scrollHeight > 200? "200px": "auto" );
+}
+
+div.bubble-body {
+	height: 1%;
+}
+
+div.widget, div.sticker, div.stickie { margin-left: -3px; }
+
+/* Hides from IE-mac \*/
+* html .clearfix {height: 1%;}
+.clearfix {display: block;}
+/* End hide from IE-mac */
+
+div.portlet-scale-content{
+    zoom:1;
+}

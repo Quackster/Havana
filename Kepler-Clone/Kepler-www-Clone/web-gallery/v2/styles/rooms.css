@@ -1,0 +1,120 @@
+.recommendedrooms-lite-habblet-list-container ul.habblet-list li {
+    padding: 5px 15px;
+    min-height: 1%;
+}
+
+.recommendedrooms-lite-habblet-list-container .enter-room-link:hover {
+	text-decoration: none;
+}
+
+.recommendedrooms-lite-habblet-list-container .enter-room-link:hover .room-enter, .recommendedrooms-lite-habblet-list-container .enter-room-link:hover .room-name {
+	text-decoration: underline;	
+}
+
+.enter-room-link {
+	display: block;
+	background: transparent url(../images/rooms/room_icon_1.gif) no-repeat 0 1px;
+	padding: 5px 0 5px 42px;
+	cursor: pointer;
+}
+
+.room-occupancy-1 { background-image: url(../images/rooms/room_icon_1.gif);	}
+.room-occupancy-2 { background-image: url(../images/rooms/room_icon_2.gif);	}
+.room-occupancy-3 { background-image: url(../images/rooms/room_icon_3.gif);	}
+.room-occupancy-4 { background-image: url(../images/rooms/room_icon_4.gif);	}
+.room-occupancy-5 { background-image: url(../images/rooms/room_icon_5.gif);	}
+
+.recommendedrooms-lite-habblet-list-container .enter-room-link .room-enter {
+	float: right;
+	padding-right: 26px;
+	margin: 10px 0 10px 10px;
+	color: #4AB501;
+	background: transparent url(../images/info_icons.png) no-repeat 100% -800px;
+	line-height: 16px;
+	cursor: pointer;
+}
+
+.recommendedrooms-lite-habblet-list-container .enter-room-link .room-description, .recommendedrooms-lite-habblet-list-container .room-owner {
+	display: block;
+	font-size: 11px;
+}
+
+#column2 .room-owner { display: none; }
+#column2 .room-description { height: 1.2em; overflow: hidden; }
+#column2 .recommendedrooms-lite-habblet-list-container ul.habblet-list li {
+    padding: 2px 15px;
+}
+
+.recommendedrooms-lite-habblet-list-container .enter-room-link .room-name, .room-summaryinfo .room-toggle-fullinfo {
+	color: #000;	
+}
+.recommendedrooms-lite-habblet-list-container .enter-room-link .room-name {
+	font-size: 12px;	
+}
+
+.recommendedrooms-lite-habblet-list-container .enter-hotel-link {
+    float: none;
+    display: block;
+    height: 16px;
+    padding: 0;
+    margin: 4px 0 3px 0;
+    width: 16px;
+}
+
+ul.room-more-data {
+    margin-top: 0pt;
+}
+
+.recommendedrooms-habblet-list-container ul.habblet-list li {
+    padding-left: 10px;
+}
+
+a.room-toggle-more-data {
+	background: transparent url(../images/more_arrows.png) no-repeat 100% -189px;
+    float: left;
+    margin-top: 7px;
+    padding-right: 14px;
+    margin: 10px 0 11px 10px;
+}
+
+a.room-toggle-more-data.less {
+	background: transparent url(../images/more_arrows.png) no-repeat 100% -237px;
+}
+
+.room-description, .room-owner {
+    color: #666666;
+}
+
+div.room-description {
+    word-break: break-all;
+}
+
+div.room-icon {
+    background-image: url(../images/info_icons.png);
+    margin: -31px 0pt 0pt 85px;
+    width: 16px;
+    height: 16px;
+}
+
+/* Room link habblet */
+div.room-password-protected {
+    background-position: 0 -624px;
+}
+
+div.room-locked {
+    background-position: 0 -576px;
+}
+
+#roomlink-habblet-container {
+    background-color: #e1d5b7;
+    height: 1%;
+}
+
+#roomlink-habblet-container div.roominfo,  #roomlink-habblet-container div.room-description {
+    padding: 0;
+    width: 125px;
+}
+
+#roomlink-habblet-container div.room-name-label {
+    font-weight: bold;
+}

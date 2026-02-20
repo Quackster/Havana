@@ -1,0 +1,85 @@
+#collectible-current {
+	color: white;
+}
+
+#collectible-current h2.title {
+	background-color: #595959;
+}
+
+#collectible-current-content {
+	background: url(../images/collectibles/bg_around.png) no-repeat;
+	padding: 0 12px 7px 12px;
+}
+
+#collectibles-current-img {
+	float: right;
+	width: 205px;
+	height: 170px;
+	background-repeat: no-repeat;
+	background-position: 50% 100%;
+}
+
+#collectible-current h4 {
+	clear: both;
+	font-size: 20px;
+	margin: 0;
+	padding-top: 5px;
+	background-repeat: no-repeat;
+	background-position: 95% 60%;
+}
+
+a.collectibles-purchase-current {
+	margin: 5px 0 0 0;
+	float: right;
+}
+
+span.collectibles-timeleft {
+	padding: 9px 7px 0 0;
+	float: right;
+}
+
+#collectibles-list {
+	margin: 5px 0 0 0;
+}
+
+#collectibles-list li {
+	padding: 8px 15px;
+}
+
+#collectibles-list li h4 {
+	margin: 0;
+	font-size: 11px;
+	font-weight: normal;
+}
+
+#collectibles-list li p {
+	color: #736673;
+}
+
+#collectibles-list li div.collectibles-prodimg {
+	float: left;
+	width: 75px;
+	height: 40px;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+}
+
+#collectibles-instructions {
+	background: url(../images/collectibles/instructions.png) no-repeat 200px 8px;
+	padding-right: 111px;
+	min-height: 80px;
+}
+
+p.collectibles-value-intro, p.collectibles-value-product { clear: both; }
+
+p.collectibles-value-intro img {
+	float: right;
+	margin-left: 10px;
+	margin-bottom: 5px;
+}
+
+p.collectibles-value-product img {
+	float: left;
+	margin-right: 10px;
+	margin-bottom: 5px;
+}

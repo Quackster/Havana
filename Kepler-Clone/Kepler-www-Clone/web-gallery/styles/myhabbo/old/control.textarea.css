@@ -1,0 +1,104 @@
+ul.bbcode_toolbar {
+    list-style:none;
+    margin:0;
+    padding:0;
+    margin-bottom:2px;
+    text-align: left;    
+}
+
+ul.bbcode_toolbar li.control-button {
+    float:left;
+    list-style:none;
+    margin:0;
+    padding:0;
+}
+
+ul.bbcode_toolbar li.control-button a {
+    width:19px;
+    height:18px;
+    float:left;
+    display:block;
+    background-image:url("../../images/myhabbo/buttons/bbcode.png");
+    margin:1px !important;
+    margin: 0 1px 0 0;
+}
+
+ul.bbcode_toolbar li.control-button span {
+    display:none;
+}
+
+#bbcode_bold_button { background-position: 0 0; }
+#bbcode_italics_button { background-position: 0 -53px; }
+#bbcode_underline_button { background-position: 0 -105px; }
+#bbcode_quote_button { background-position: 0 -158px; }
+#bbcode_smallsize_button { background-position: 0 -263px; }
+#bbcode_largesize_button { background-position: 0 -210px; }
+#bbcode_code_button { background-position: 0 -315px; }
+#bbcode_link_button { background-position: 0 -368px; }
+
+ul.bbcode_toolbar select {
+    margin-left:3px;
+}
+
+.bbcode-quote {
+    background-color: #ceceba;
+    border: 1px solid #000000;
+    margin: 3px 3px 10px;
+    padding: 5px;
+}
+
+.bbcode-enabled {
+	clear: both;
+}
+
+.w_skin_defaultskin .bbcode-quote {
+    background-color: #ceceba;
+}
+
+.w_skin_goldenskin .bbcode-quote {
+    background-color: #c9cab1;
+}
+
+.w_skin_hc_pillowskin .bbcode-quote {
+    background-color: #e274ba;
+}
+
+.w_skin_hc_machineskin .bbcode-quote {
+    background-color: #1f5f16;
+}
+
+.w_skin_metalskin .bbcode-quote {
+    background-color: #9999a3;
+}
+
+.w_skin_notepadskin .bbcode-quote {
+    background-color: #d6dbef;
+}
+
+.w_skin_speechbubbleskin .bbcode-quote {
+    background-color: #e2e2e2;
+}
+
+.w_skin_noteitskin .bbcode-quote {
+    background-color: #7ea7d0;
+}
+
+ul.bbcode_toolbar li.linktools {
+	clear: both;
+}
+
+ul.bbcode_toolbar li.linktools div, ul.bbcode_toolbar li.linktools a.new-button {
+	float: left;
+}
+
+ul.bbcode_toolbar .linktool-results {
+	clear: both;
+	width: 100%;
+}
+
+ul.bbcode_toolbar .linktool-results li, ul.bbcode_toolbar .linktool-results li a {
+	float: none;
+	background: none;
+	width: auto;
+	height: auto;
+}

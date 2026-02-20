@@ -1,0 +1,2154 @@
+<figuredata>
+-
+<colors>
+-
+<palette id="1">
+<color id="1" index="0" club="0" selectable="1">FFCB98</color>
+<color id="2" index="1" club="0" selectable="1">E3AE7D</color>
+<color id="3" index="2" club="0" selectable="1">C99263</color>
+<color id="4" index="3" club="0" selectable="1">AE7748</color>
+<color id="5" index="4" club="0" selectable="1">945C2F</color>
+<color id="6" index="5" club="0" selectable="1">6E482C</color>
+<color id="7" index="6" club="0" selectable="1">FFC680</color>
+<color id="8" index="7" club="0" selectable="1">F4AC54</color>
+<color id="9" index="8" club="0" selectable="1">DC9B4C</color>
+<color id="10" index="9" club="0" selectable="1">FFDBC1</color>
+<color id="11" index="10" club="0" selectable="1">FFB696</color>
+<color id="12" index="11" club="0" selectable="1">FF987F</color>
+<color id="13" index="12" club="0" selectable="1">F0DCA3</color>
+<color id="14" index="13" club="0" selectable="1">F5DA88</color>
+<color id="15" index="14" club="0" selectable="1">DFC375</color>
+<color id="16" index="15" club="0" selectable="1">EFD17D</color>
+<color id="17" index="16" club="0" selectable="1">C89F56</color>
+<color id="18" index="17" club="0" selectable="1">A89473</color>
+<color id="19" index="18" club="0" selectable="1">B87560</color>
+<color id="20" index="19" club="0" selectable="1">9C543F</color>
+<color id="21" index="20" club="0" selectable="1">6E392C</color>
+<color id="22" index="21" club="0" selectable="1">EAEFD0</color>
+<color id="23" index="22" club="0" selectable="1">E2E4B0</color>
+<color id="24" index="23" club="0" selectable="1">D5D08C</color>
+<color id="25" index="24" club="0" selectable="1">C4A7B3</color>
+<color id="26" index="25" club="0" selectable="1">C2C4A7</color>
+<color id="27" index="26" club="0" selectable="1">C5C0C2</color>
+<color id="28" index="27" club="0" selectable="1">F1E5DA</color>
+<color id="29" index="28" club="0" selectable="1">B3BDC3</color>
+<color id="30" index="29" club="0" selectable="1">4C311E</color>
+<color id="1001" index="30" club="0" selectable="0">644628</color>
+<color id="1002" index="31" club="0" selectable="0">926338</color>
+<color id="1003" index="32" club="0" selectable="0">A97C44</color>
+<color id="1004" index="33" club="0" selectable="0">B3957F</color>
+<color id="1005" index="34" club="0" selectable="0">BD9562</color>
+<color id="1006" index="35" club="0" selectable="0">C2A896</color>
+<color id="1007" index="36" club="0" selectable="0">CA9072</color>
+<color id="1008" index="37" club="0" selectable="0">CBBC90</color>
+<color id="1009" index="38" club="0" selectable="0">D1A78C</color>
+<color id="1010" index="39" club="0" selectable="0">D1BCAD</color>
+<color id="1011" index="40" club="0" selectable="0">D7BCA9</color>
+<color id="1012" index="41" club="0" selectable="0">D7CBA3</color>
+<color id="1013" index="42" club="0" selectable="0">D8A595</color>
+<color id="1014" index="43" club="0" selectable="0">D8B07E</color>
+<color id="1015" index="44" club="0" selectable="0">E0BD91</color>
+<color id="1016" index="45" club="0" selectable="0">E0D0C5</color>
+<color id="1017" index="46" club="0" selectable="0">E2DBB9</color>
+<color id="1018" index="47" club="0" selectable="0">E3D38D</color>
+<color id="1019" index="48" club="0" selectable="0">E7C9A3</color>
+<color id="1020" index="49" club="0" selectable="0">EDD7BB</color>
+<color id="1021" index="50" club="0" selectable="0">EEE7E0</color>
+<color id="1022" index="51" club="0" selectable="0">EFC3B6</color>
+<color id="1023" index="52" club="0" selectable="0">F1D6B4</color>
+<color id="1024" index="53" club="0" selectable="0">F8E5DA</color>
+<color id="1025" index="54" club="0" selectable="0">FDDACF</color>
+<color id="1026" index="55" club="0" selectable="0">FFCC99</color>
+</palette>
+-
+<palette id="2">
+<color id="31" index="0" club="0" selectable="1">FFD6A9</color>
+<color id="32" index="1" club="0" selectable="1">DFA66F</color>
+<color id="33" index="2" club="0" selectable="1">D1803A</color>
+<color id="34" index="3" club="0" selectable="1">FFEEB9</color>
+<color id="35" index="4" club="0" selectable="1">F6D059</color>
+<color id="36" index="5" club="0" selectable="1">F2B11D</color>
+<color id="37" index="6" club="0" selectable="1">9A5D2E</color>
+<color id="38" index="7" club="0" selectable="1">AC5300</color>
+<color id="39" index="8" club="0" selectable="1">783400</color>
+<color id="40" index="9" club="0" selectable="1">D8D3D9</color>
+<color id="41" index="10" club="0" selectable="1">918D98</color>
+<color id="42" index="11" club="0" selectable="1">4A4656</color>
+<color id="43" index="12" club="0" selectable="1">F29159</color>
+<color id="44" index="13" club="0" selectable="1">9E3D3B</color>
+<color id="45" index="14" club="0" selectable="1">5C4332</color>
+<color id="46" index="15" club="0" selectable="1">FF8746</color>
+<color id="47" index="16" club="0" selectable="1">FC610C</color>
+<color id="48" index="17" club="0" selectable="1">DE3900</color>
+<color id="1316" index="18" club="0" selectable="1">D2FF00</color>
+<color id="49" index="19" club="1" selectable="1">FFFFFF</color>
+<color id="50" index="20" club="1" selectable="1">E5FF09</color>
+<color id="51" index="21" club="1" selectable="1">A3FF8F</color>
+<color id="52" index="22" club="1" selectable="1">339966</color>
+<color id="53" index="23" club="1" selectable="1">3A7B93</color>
+<color id="54" index="24" club="1" selectable="1">FFBDBC</color>
+<color id="55" index="25" club="1" selectable="1">DE34A4</color>
+<color id="56" index="26" club="1" selectable="1">9F5699</color>
+<color id="57" index="27" club="1" selectable="1">D5F9FB</color>
+<color id="58" index="28" club="1" selectable="1">6699CC</color>
+<color id="59" index="29" club="1" selectable="1">E71B0A</color>
+<color id="60" index="30" club="1" selectable="1">95FFFA</color>
+<color id="61" index="31" club="1" selectable="1">2D2D2D</color>
+<color id="1027" index="32" club="0" selectable="0">00FA00</color>
+<color id="1028" index="33" club="0" selectable="0">0A0A0A</color>
+<color id="1029" index="34" club="0" selectable="0">105262</color>
+<color id="1030" index="35" club="0" selectable="0">106262</color>
+<color id="1031" index="36" club="0" selectable="0">1E3214</color>
+<color id="1032" index="37" club="0" selectable="0">20B4A4</color>
+<color id="1033" index="38" club="0" selectable="0">234CAF</color>
+<color id="1034" index="39" club="0" selectable="0">248954</color>
+<color id="1035" index="40" club="0" selectable="0">282828</color>
+<color id="1036" index="41" club="0" selectable="0">292929</color>
+<color id="1037" index="42" club="0" selectable="0">298BB4</color>
+<color id="1038" index="43" club="0" selectable="0">2DA5E9</color>
+<color id="1039" index="44" club="0" selectable="0">319CF6</color>
+<color id="1040" index="45" club="0" selectable="0">31F6DE</color>
+<color id="1041" index="46" club="0" selectable="0">322F3E</color>
+<color id="1042" index="47" club="0" selectable="0">323235</color>
+<color id="1043" index="48" club="0" selectable="0">325B6A</color>
+<color id="1044" index="49" club="0" selectable="0">3296FA</color>
+<color id="1045" index="50" club="0" selectable="0">333333</color>
+<color id="1046" index="51" club="0" selectable="0">394194</color>
+<color id="1047" index="52" club="0" selectable="0">463C14</color>
+<color id="1048" index="53" club="0" selectable="0">4A6A18</color>
+<color id="1049" index="54" club="0" selectable="0">4B5A5A</color>
+<color id="1050" index="55" club="0" selectable="0">4D3223</color>
+<color id="1051" index="56" club="0" selectable="0">4F87C0</color>
+<color id="1052" index="57" club="0" selectable="0">579E1F</color>
+<color id="1053" index="58" club="0" selectable="0">5A480A</color>
+<color id="1054" index="59" club="0" selectable="0">5A837B</color>
+<color id="1055" index="60" club="0" selectable="0">624A41</color>
+<color id="1056" index="61" club="0" selectable="0">625A20</color>
+<color id="1057" index="62" club="0" selectable="0">626262</color>
+<color id="1058" index="63" club="0" selectable="0">646D6C</color>
+<color id="1059" index="64" club="0" selectable="0">662608</color>
+<color id="1060" index="65" club="0" selectable="0">666666</color>
+<color id="1061" index="66" club="0" selectable="0">674E3B</color>
+<color id="1062" index="67" club="0" selectable="0">6A3910</color>
+<color id="1063" index="68" club="0" selectable="0">736346</color>
+<color id="1064" index="69" club="0" selectable="0">781414</color>
+<color id="1065" index="70" club="0" selectable="0">784215</color>
+<color id="1066" index="71" club="0" selectable="0">786D5A</color>
+<color id="1067" index="72" club="0" selectable="0">7B1894</color>
+<color id="1068" index="73" club="0" selectable="0">7D5B17</color>
+<color id="1069" index="74" club="0" selectable="0">80557C</color>
+<color id="1070" index="75" club="0" selectable="0">833141</color>
+<color id="1071" index="76" club="0" selectable="0">8A4924</color>
+<color id="1072" index="77" club="0" selectable="0">8B1820</color>
+<color id="1073" index="78" club="0" selectable="0">8C694B</color>
+<color id="1074" index="79" club="0" selectable="0">8C967E</color>
+<color id="1075" index="80" club="0" selectable="0">904839</color>
+<color id="1076" index="81" club="0" selectable="0">926338</color>
+<color id="1077" index="82" club="0" selectable="0">946220</color>
+<color id="1078" index="83" club="0" selectable="0">947BAC</color>
+<color id="1079" index="84" club="0" selectable="0">948B6A</color>
+<color id="1080" index="85" club="0" selectable="0">94BD29</color>
+<color id="1081" index="86" club="0" selectable="0">94DFFF</color>
+<color id="1082" index="87" club="0" selectable="0">94FFD5</color>
+<color id="1083" index="88" club="0" selectable="0">976D3E</color>
+<color id="1084" index="89" club="0" selectable="0">9CF068</color>
+<color id="1085" index="90" club="0" selectable="0">9E3F0B</color>
+<color id="1086" index="91" club="0" selectable="0">A08C64</color>
+<color id="1087" index="92" club="0" selectable="0">A4A4A4</color>
+<color id="1088" index="93" club="0" selectable="0">A4DEFF</color>
+<color id="1089" index="94" club="0" selectable="0">A55A18</color>
+<color id="1090" index="95" club="0" selectable="0">A7272C</color>
+<color id="1091" index="96" club="0" selectable="0">A97C44</color>
+<color id="1092" index="97" club="0" selectable="0">B29B86</color>
+<color id="1093" index="98" club="0" selectable="0">B2A590</color>
+<color id="1094" index="99" club="0" selectable="0">B3957F</color>
+<color id="1095" index="100" club="0" selectable="0">B429CD</color>
+<color id="1096" index="101" club="0" selectable="0">B4EE29</color>
+<color id="1097" index="102" club="0" selectable="0">B58B5C</color>
+<color id="1098" index="103" club="0" selectable="0">B9A16E</color>
+<color id="1099" index="104" club="0" selectable="0">BD9562</color>
+<color id="1100" index="105" club="0" selectable="0">BD9CFF</color>
+<color id="1101" index="106" club="0" selectable="0">BDBD9D</color>
+<color id="1102" index="107" club="0" selectable="0">C21A86</color>
+<color id="1103" index="108" club="0" selectable="0">C29C57</color>
+<color id="1104" index="109" club="0" selectable="0">C2A896</color>
+<color id="1105" index="110" club="0" selectable="0">C2E3E8</color>
+<color id="1106" index="111" club="0" selectable="0">C376C4</color>
+<color id="1107" index="112" club="0" selectable="0">C4FFFF</color>
+<color id="1108" index="113" club="0" selectable="0">C54A29</color>
+<color id="1109" index="114" club="0" selectable="0">C59462</color>
+<color id="1110" index="115" club="0" selectable="0">C8D2E6</color>
+<color id="1111" index="116" club="0" selectable="0">C96B2F</color>
+<color id="1112" index="117" club="0" selectable="0">CA5A1E</color>
+<color id="1113" index="118" club="0" selectable="0">CA5A33</color>
+<color id="1114" index="119" club="0" selectable="0">CA9072</color>
+<color id="1115" index="120" club="0" selectable="0">CBBC90</color>
+<color id="1116" index="121" club="0" selectable="0">CD99C7</color>
+<color id="1117" index="122" club="0" selectable="0">CF6254</color>
+<color id="1118" index="123" club="0" selectable="0">D1A78C</color>
+<color id="1119" index="124" club="0" selectable="0">D1BCAD</color>
+<color id="1120" index="125" club="0" selectable="0">D2C8CC</color>
+<color id="1121" index="126" club="0" selectable="0">D45B0A</color>
+<color id="1122" index="127" club="0" selectable="0">D4FE80</color>
+<color id="1123" index="128" club="0" selectable="0">D54173</color>
+<color id="1124" index="129" club="0" selectable="0">D5FF9C</color>
+<color id="1125" index="130" club="0" selectable="0">D7BCA9</color>
+<color id="1126" index="131" club="0" selectable="0">D7CBA3</color>
+<color id="1127" index="132" club="0" selectable="0">D8A595</color>
+<color id="1128" index="133" club="0" selectable="0">D8B07E</color>
+<color id="1129" index="134" club="0" selectable="0">DA945E</color>
+<color id="1130" index="135" club="0" selectable="0">DB7C62</color>
+<color id="1131" index="136" club="0" selectable="0">DCDCC8</color>
+<color id="1132" index="137" club="0" selectable="0">DDA934</color>
+<color id="1133" index="138" club="0" selectable="0">DE73DE</color>
+<color id="1134" index="139" club="0" selectable="0">DEDEDE</color>
+<color id="1135" index="140" club="0" selectable="0">DFDAB4</color>
+<color id="1136" index="141" club="0" selectable="0">DFDABE</color>
+<color id="1137" index="142" club="0" selectable="0">E0BA78</color>
+<color id="1138" index="143" club="0" selectable="0">E0BD91</color>
+<color id="1139" index="144" club="0" selectable="0">E0D0C5</color>
+<color id="1140" index="145" club="0" selectable="0">E1CC78</color>
+<color id="1141" index="146" club="0" selectable="0">E2DBB9</color>
+<color id="1142" index="147" club="0" selectable="0">E63139</color>
+<color id="1143" index="148" club="0" selectable="0">E6A4F6</color>
+<color id="1144" index="149" club="0" selectable="0">E7C9A3</color>
+<color id="1145" index="150" club="0" selectable="0">E7E92D</color>
+<color id="1146" index="151" club="0" selectable="0">EA5959</color>
+<color id="1147" index="152" club="0" selectable="0">ECFFED</color>
+<color id="1148" index="153" club="0" selectable="0">EDD7BB</color>
+<color id="1149" index="154" club="0" selectable="0">EEE7E0</color>
+<color id="1150" index="155" club="0" selectable="0">EEEEEE</color>
+<color id="1151" index="156" club="0" selectable="0">EFC3B6</color>
+<color id="1152" index="157" club="0" selectable="0">F1D6B4</color>
+<color id="1153" index="158" club="0" selectable="0">F6AC31</color>
+<color id="1154" index="159" club="0" selectable="0">F73B32</color>
+<color id="1155" index="160" club="0" selectable="0">F8E5DA</color>
+<color id="1156" index="161" club="0" selectable="0">FDA61E</color>
+<color id="1157" index="162" club="0" selectable="0">FDDACF</color>
+<color id="1158" index="163" club="0" selectable="0">FE6D6D</color>
+<color id="1159" index="164" club="0" selectable="0">FE834D</color>
+<color id="1160" index="165" club="0" selectable="0">FF0000</color>
+<color id="1161" index="166" club="0" selectable="0">FF006A</color>
+<color id="1162" index="167" club="0" selectable="0">FF4814</color>
+<color id="1163" index="168" club="0" selectable="0">FF4C2F</color>
+<color id="1164" index="169" club="0" selectable="0">FF5F9B</color>
+<color id="1165" index="170" club="0" selectable="0">FF7329</color>
+<color id="1166" index="171" club="0" selectable="0">FF7383</color>
+<color id="1167" index="172" club="0" selectable="0">FF7BDE</color>
+<color id="1168" index="173" club="0" selectable="0">FF9C62</color>
+<color id="1169" index="174" club="0" selectable="0">FFA772</color>
+<color id="1170" index="175" club="0" selectable="0">FFADAE</color>
+<color id="1171" index="176" club="0" selectable="0">FFBC42</color>
+<color id="1172" index="177" club="0" selectable="0">FFBDBD</color>
+<color id="1173" index="178" club="0" selectable="0">FFBE73</color>
+<color id="1174" index="179" club="0" selectable="0">FFC53A</color>
+<color id="1175" index="180" club="0" selectable="0">FFCD94</color>
+<color id="1176" index="181" club="0" selectable="0">FFCD9B</color>
+<color id="1177" index="182" club="0" selectable="0">FFDC7A</color>
+<color id="1178" index="183" club="0" selectable="0">FFE639</color>
+<color id="1179" index="184" club="0" selectable="0">FFE673</color>
+<color id="1180" index="185" club="0" selectable="0">FFEAAC</color>
+<color id="1181" index="186" club="0" selectable="0">FFEAAD</color>
+<color id="1182" index="187" club="0" selectable="0">FFEEC5</color>
+<color id="1183" index="188" club="0" selectable="0">FFFFFF</color>
+</palette>
+-
+<palette id="3">
+<color id="62" index="0" club="0" selectable="1">EEEEEE</color>
+<color id="63" index="1" club="0" selectable="1">A4A4A4</color>
+<color id="64" index="2" club="0" selectable="1">595959</color>
+<color id="65" index="3" club="0" selectable="1">F6E179</color>
+<color id="66" index="4" club="0" selectable="1">E7B027</color>
+<color id="67" index="5" club="0" selectable="1">A86B19</color>
+<color id="68" index="6" club="0" selectable="1">F8C790</color>
+<color id="69" index="7" club="0" selectable="1">EB7E43</color>
+<color id="70" index="8" club="0" selectable="1">C74400</color>
+<color id="71" index="9" club="0" selectable="1">FFBFC2</color>
+<color id="72" index="10" club="0" selectable="1">ED5C50</color>
+<color id="73" index="11" club="0" selectable="1">9F2B31</color>
+<color id="74" index="12" club="0" selectable="1">E7D1EE</color>
+<color id="75" index="13" club="0" selectable="1">AC94B3</color>
+<color id="76" index="14" club="0" selectable="1">7E5B90</color>
+<color id="77" index="15" club="0" selectable="1">ACC9E6</color>
+<color id="78" index="16" club="0" selectable="1">6D80BB</color>
+<color id="79" index="17" club="0" selectable="1">544A81</color>
+<color id="80" index="18" club="0" selectable="1">C5EDE6</color>
+<color id="81" index="19" club="0" selectable="1">75B7C7</color>
+<color id="82" index="20" club="0" selectable="1">4F7AA2</color>
+<color id="83" index="21" club="0" selectable="1">BBF3BD</color>
+<color id="84" index="22" club="0" selectable="1">6BAE61</color>
+<color id="85" index="23" club="0" selectable="1">456F40</color>
+<color id="1315" index="24" club="0" selectable="1">D2FF00</color>
+<color id="86" index="25" club="0" selectable="1">EDFF9A</color>
+<color id="87" index="26" club="0" selectable="1">BABB3D</color>
+<color id="88" index="27" club="0" selectable="1">7A7D22</color>
+<color id="89" index="28" club="0" selectable="1">F3E1AF</color>
+<color id="90" index="29" club="0" selectable="1">96743D</color>
+<color id="91" index="30" club="0" selectable="1">6B573B</color>
+<color id="92" index="31" club="1" selectable="1">FFFFFF</color>
+<color id="93" index="32" club="1" selectable="1">FFF41D</color>
+<color id="94" index="33" club="1" selectable="1">FF9211</color>
+<color id="95" index="34" club="1" selectable="1">FF27A6</color>
+<color id="96" index="35" club="1" selectable="1">FF1300</color>
+<color id="97" index="36" club="1" selectable="1">FF6D8F</color>
+<color id="98" index="37" club="1" selectable="1">E993FF</color>
+<color id="99" index="38" club="1" selectable="1">C600AD</color>
+<color id="100" index="39" club="1" selectable="1">9B001D</color>
+<color id="101" index="40" club="1" selectable="1">76FF2D</color>
+<color id="102" index="41" club="1" selectable="1">1CDC00</color>
+<color id="103" index="42" club="1" selectable="1">AFF203</color>
+<color id="104" index="43" club="1" selectable="1">00B9A8</color>
+<color id="105" index="44" club="1" selectable="1">94FFEC</color>
+<color id="106" index="45" club="1" selectable="1">1BD2FF</color>
+<color id="107" index="46" club="1" selectable="1">1F55FF</color>
+<color id="108" index="47" club="1" selectable="1">0219A5</color>
+<color id="109" index="48" club="1" selectable="1">3A5341</color>
+<color id="110" index="49" club="1" selectable="1">1E1E1E</color>
+<color id="1184" index="50" club="0" selectable="0">003F1D</color>
+<color id="1185" index="51" club="0" selectable="0">096E16</color>
+<color id="1186" index="52" club="0" selectable="0">105262</color>
+<color id="1187" index="53" club="0" selectable="0">106262</color>
+<color id="1188" index="54" club="0" selectable="0">121D6D</color>
+<color id="1189" index="55" club="0" selectable="0">1F1F1F</color>
+<color id="1190" index="56" club="0" selectable="0">20B4A4</color>
+<color id="1191" index="57" club="0" selectable="0">20B913</color>
+<color id="1192" index="58" club="0" selectable="0">2828C8</color>
+<color id="1193" index="59" club="0" selectable="0">292929</color>
+<color id="1194" index="60" club="0" selectable="0">298BB4</color>
+<color id="1195" index="61" club="0" selectable="0">2F2D26</color>
+<color id="1196" index="62" club="0" selectable="0">319CF6</color>
+<color id="1197" index="63" club="0" selectable="0">31F6DE</color>
+<color id="1198" index="64" club="0" selectable="0">333333</color>
+<color id="1199" index="65" club="0" selectable="0">336633</color>
+<color id="1200" index="66" club="0" selectable="0">365E8A</color>
+<color id="1201" index="67" club="0" selectable="0">378BE8</color>
+<color id="1202" index="68" club="0" selectable="0">37E8C5</color>
+<color id="1203" index="69" club="0" selectable="0">394194</color>
+<color id="1204" index="70" club="0" selectable="0">3B7AC0</color>
+<color id="1205" index="71" club="0" selectable="0">3D3D3D</color>
+<color id="1206" index="72" club="0" selectable="0">406A65</color>
+<color id="1207" index="73" club="0" selectable="0">43001A</color>
+<color id="1208" index="74" club="0" selectable="0">456283</color>
+<color id="1209" index="75" club="0" selectable="0">4A6A18</color>
+<color id="1210" index="76" club="0" selectable="0">4C882B</color>
+<color id="1211" index="77" club="0" selectable="0">5A837B</color>
+<color id="1212" index="78" club="0" selectable="0">5CC445</color>
+<color id="1213" index="79" club="0" selectable="0">5F5F5F</color>
+<color id="1214" index="80" club="0" selectable="0">624A41</color>
+<color id="1215" index="81" club="0" selectable="0">625A20</color>
+<color id="1216" index="82" club="0" selectable="0">626262</color>
+<color id="1217" index="83" club="0" selectable="0">656A40</color>
+<color id="1218" index="84" club="0" selectable="0">666666</color>
+<color id="1219" index="85" club="0" selectable="0">687450</color>
+<color id="1220" index="86" club="0" selectable="0">6A3910</color>
+<color id="1221" index="87" club="0" selectable="0">6A405C</color>
+<color id="1222" index="88" club="0" selectable="0">6A4A40</color>
+<color id="1223" index="89" club="0" selectable="0">779FBB</color>
+<color id="1224" index="90" club="0" selectable="0">795E53</color>
+<color id="1225" index="91" club="0" selectable="0">7B1894</color>
+<color id="1226" index="92" club="0" selectable="0">7B5818</color>
+<color id="1227" index="93" club="0" selectable="0">7C8F7D</color>
+<color id="1228" index="94" club="0" selectable="0">7D0004</color>
+<color id="1229" index="95" club="0" selectable="0">7D0034</color>
+<color id="1230" index="96" club="0" selectable="0">833141</color>
+<color id="1231" index="97" club="0" selectable="0">87D7CD</color>
+<color id="1232" index="98" club="0" selectable="0">88E0DE</color>
+<color id="1233" index="99" club="0" selectable="0">8B1820</color>
+<color id="1234" index="100" club="0" selectable="0">946220</color>
+<color id="1235" index="101" club="0" selectable="0">947BAC</color>
+<color id="1236" index="102" club="0" selectable="0">948B6A</color>
+<color id="1237" index="103" club="0" selectable="0">94BD29</color>
+<color id="1238" index="104" club="0" selectable="0">94FFD5</color>
+<color id="1239" index="105" club="0" selectable="0">95784E</color>
+<color id="1240" index="106" club="0" selectable="0">983E4F</color>
+<color id="1241" index="107" club="0" selectable="0">98863E</color>
+<color id="1242" index="108" club="0" selectable="0">9FD787</color>
+<color id="1243" index="109" club="0" selectable="0">A4A4A4</color>
+<color id="1244" index="110" club="0" selectable="0">A4DEFF</color>
+<color id="1245" index="111" club="0" selectable="0">A88139</color>
+<color id="1246" index="112" club="0" selectable="0">ADD0FF</color>
+<color id="1247" index="113" club="0" selectable="0">AFDCDF</color>
+<color id="1248" index="114" club="0" selectable="0">B3FCFF</color>
+<color id="1249" index="115" club="0" selectable="0">B429CD</color>
+<color id="1250" index="116" club="0" selectable="0">B4EE29</color>
+<color id="1251" index="117" club="0" selectable="0">B6396D</color>
+<color id="1252" index="118" club="0" selectable="0">B79BFF</color>
+<color id="1253" index="119" club="0" selectable="0">B8E737</color>
+<color id="1254" index="120" club="0" selectable="0">BA9D73</color>
+<color id="1255" index="121" club="0" selectable="0">BAAD68</color>
+<color id="1256" index="122" club="0" selectable="0">BAC7FF</color>
+<color id="1257" index="123" club="0" selectable="0">BB2430</color>
+<color id="1258" index="124" club="0" selectable="0">BD9CFF</color>
+<color id="1259" index="125" club="0" selectable="0">BDFFC8</color>
+<color id="1260" index="126" club="0" selectable="0">C0B4C7</color>
+<color id="1261" index="127" club="0" selectable="0">C1C1C1</color>
+<color id="1262" index="128" club="0" selectable="0">C1D2DB</color>
+<color id="1263" index="129" club="0" selectable="0">C54A29</color>
+<color id="1264" index="130" club="0" selectable="0">C59462</color>
+<color id="1265" index="131" club="0" selectable="0">C6B3D6</color>
+<color id="1266" index="132" club="0" selectable="0">C745D9</color>
+<color id="1267" index="133" club="0" selectable="0">CA2221</color>
+<color id="1268" index="134" club="0" selectable="0">CDCDFF</color>
+<color id="1269" index="135" club="0" selectable="0">CDFFB3</color>
+<color id="1270" index="136" club="0" selectable="0">D1DFAF</color>
+<color id="1271" index="137" club="0" selectable="0">D1FFD4</color>
+<color id="1272" index="138" club="0" selectable="0">D54173</color>
+<color id="1273" index="139" club="0" selectable="0">D5FF9C</color>
+<color id="1274" index="140" club="0" selectable="0">D68C8C</color>
+<color id="1275" index="141" club="0" selectable="0">D7C187</color>
+<color id="1276" index="142" club="0" selectable="0">D9457E</color>
+<color id="1277" index="143" club="0" selectable="0">D97145</color>
+<color id="1278" index="144" club="0" selectable="0">DE73DE</color>
+<color id="1279" index="145" club="0" selectable="0">DEDEDE</color>
+<color id="1280" index="146" club="0" selectable="0">DFAFD1</color>
+<color id="1281" index="147" club="0" selectable="0">DFCBAF</color>
+<color id="1282" index="148" club="0" selectable="0">E63139</color>
+<color id="1283" index="149" club="0" selectable="0">E6A4F6</color>
+<color id="1284" index="150" club="0" selectable="0">E8B137</color>
+<color id="1285" index="151" club="0" selectable="0">E8FFFF</color>
+<color id="1286" index="152" club="0" selectable="0">EEEEEE</color>
+<color id="1287" index="153" club="0" selectable="0">F64C3E</color>
+<color id="1288" index="154" club="0" selectable="0">F6AC31</color>
+<color id="1289" index="155" club="0" selectable="0">F9A0A0</color>
+<color id="1290" index="156" club="0" selectable="0">FF006A</color>
+<color id="1291" index="157" club="0" selectable="0">FF1092</color>
+<color id="1292" index="158" club="0" selectable="0">FF45D6</color>
+<color id="1293" index="159" club="0" selectable="0">FF7329</color>
+<color id="1294" index="160" club="0" selectable="0">FF7383</color>
+<color id="1295" index="161" club="0" selectable="0">FF7BDE</color>
+<color id="1296" index="162" club="0" selectable="0">FF8516</color>
+<color id="1297" index="163" club="0" selectable="0">FF9C62</color>
+<color id="1298" index="164" club="0" selectable="0">FFB3D7</color>
+<color id="1299" index="165" club="0" selectable="0">FFB6DE</color>
+<color id="1300" index="166" club="0" selectable="0">FFBDBD</color>
+<color id="1301" index="167" club="0" selectable="0">FFC800</color>
+<color id="1302" index="168" club="0" selectable="0">FFC92B</color>
+<color id="1303" index="169" club="0" selectable="0">FFCD94</color>
+<color id="1304" index="170" club="0" selectable="0">FFCE64</color>
+<color id="1305" index="171" club="0" selectable="0">FFD2B3</color>
+<color id="1306" index="172" club="0" selectable="0">FFE639</color>
+<color id="1307" index="173" club="0" selectable="0">FFE673</color>
+<color id="1308" index="174" club="0" selectable="0">FFEDB3</color>
+<color id="1309" index="175" club="0" selectable="0">FFEE6D</color>
+<color id="1310" index="176" club="0" selectable="0">FFEEC5</color>
+<color id="1311" index="177" club="0" selectable="0">FFFF00</color>
+<color id="1312" index="178" club="0" selectable="0">FFFF66</color>
+<color id="1313" index="179" club="0" selectable="0">FFFFFA</color>
+<color id="1314" index="180" club="0" selectable="0">FFFFFF</color>
+</palette>
+</colors>
+-
+<sets>
+-
+<settype type="hr" paletteid="2" mandatory="0">
+-
+<set id="175" gender="M" club="0" colorable="0" selectable="0">
+<part id="996" type="hr" colorable="0" index="0"/>
+</set>
+-
+<set id="177" gender="M" club="0" colorable="0" selectable="0">
+<part id="458" type="hr" colorable="0" index="0"/>
+</set>
+-
+<set id="145" gender="M" club="0" colorable="1" selectable="1">
+<part id="16" type="hr" colorable="1" index="0"/>
+<part id="16" type="hrb" colorable="1" index="0"/>
+</set>
+-
+<set id="580" gender="F" club="0" colorable="0" selectable="0">
+<part id="457" type="hr" colorable="0" index="0"/>
+</set>
+-
+<set id="525" gender="F" club="0" colorable="1" selectable="0">
+<part id="14" type="hr" colorable="1" index="0"/>
+</set>
+-
+<set id="550" gender="F" club="0" colorable="1" selectable="1">
+<part id="18" type="hr" colorable="1" index="0"/>
+<part id="18" type="hrb" colorable="1" index="0"/>
+</set>
+-
+<set id="595" gender="F" club="0" colorable="0" selectable="0">
+<part id="25" type="hr" colorable="0" index="0"/>
+</set>
+-
+<set id="125" gender="M" club="0" colorable="1" selectable="1">
+<part id="8" type="hr" colorable="1" index="0"/>
+<part id="8" type="hrb" colorable="1" index="0"/>
+</set>
+-
+<set id="140" gender="M" club="0" colorable="1" selectable="0">
+<part id="14" type="hr" colorable="1" index="0"/>
+</set>
+-
+<set id="176" gender="M" club="0" colorable="0" selectable="0">
+<part id="457" type="hr" colorable="0" index="0"/>
+</set>
+-
+<set id="165" gender="M" club="0" colorable="1" selectable="1">
+<part id="24" type="hr" colorable="1" index="0"/>
+<part id="24" type="hrb" colorable="1" index="0"/>
+</set>
+-
+<set id="676" gender="U" club="0" colorable="1" selectable="1">
+<part id="31" type="hr" colorable="1" index="0"/>
+<part id="31" type="hrb" colorable="1" index="0"/>
+</set>
+-
+<set id="105" gender="M" club="0" colorable="1" selectable="1">
+<part id="2" type="hr" colorable="1" index="0"/>
+<part id="2" type="hrb" colorable="1" index="0"/>
+</set>
+-
+<set id="596" gender="F" club="0" colorable="0" selectable="1">
+<part id="26" type="hr" colorable="0" index="0"/>
+<part id="26" type="hrb" colorable="0" index="0"/>
+</set>
+-
+<set id="130" gender="M" club="0" colorable="1" selectable="0">
+<part id="13" type="hr" colorable="1" index="0"/>
+</set>
+-
+<set id="155" gender="M" club="0" colorable="1" selectable="1">
+<part id="10" type="hr" colorable="1" index="0"/>
+<part id="10" type="hrb" colorable="1" index="0"/>
+</set>
+-
+<set id="150" gender="M" club="0" colorable="1" selectable="0">
+<part id="15" type="hr" colorable="1" index="0"/>
+</set>
+-
+<set id="500" gender="F" club="0" colorable="1" selectable="1">
+<part id="3" type="hr" colorable="1" index="0"/>
+<part id="3" type="hrb" colorable="1" index="0"/>
+</set>
+-
+<set id="555" gender="F" club="0" colorable="1" selectable="1">
+<part id="19" type="hr" colorable="1" index="0"/>
+<part id="19" type="hrb" colorable="1" index="0"/>
+</set>
+-
+<set id="681" gender="U" club="0" colorable="1" selectable="1">
+<part id="29" type="hr" colorable="1" index="0"/>
+<part id="29" type="hrb" colorable="1" index="0"/>
+</set>
+-
+<set id="510" gender="F" club="0" colorable="1" selectable="1">
+<part id="5" type="hr" colorable="1" index="0"/>
+<part id="5" type="hrb" colorable="1" index="0"/>
+</set>
+-
+<set id="565" gender="F" club="0" colorable="1" selectable="0">
+<part id="21" type="hr" colorable="1" index="0"/>
+</set>
+-
+<set id="115" gender="M" club="0" colorable="1" selectable="1">
+<part id="5" type="hr" colorable="1" index="0"/>
+<part id="5" type="hrb" colorable="1" index="0"/>
+</set>
+-
+<set id="170" gender="M" club="0" colorable="1" selectable="1">
+<part id="23" type="hr" colorable="1" index="0"/>
+<part id="23" type="hrb" colorable="1" index="0"/>
+</set>
+-
+<set id="505" gender="F" club="0" colorable="1" selectable="1">
+<part id="4" type="hr" colorable="1" index="0"/>
+<part id="4" type="hrb" colorable="1" index="0"/>
+</set>
+-
+<set id="540" gender="F" club="0" colorable="1" selectable="1">
+<part id="11" type="hr" colorable="1" index="0"/>
+<part id="11" type="hrb" colorable="1" index="0"/>
+</set>
+-
+<set id="530" gender="F" club="0" colorable="1" selectable="1">
+<part id="16" type="hr" colorable="1" index="0"/>
+<part id="16" type="hrb" colorable="1" index="0"/>
+</set>
+-
+<set id="515" gender="F" club="0" colorable="1" selectable="1">
+<part id="6" type="hr" colorable="1" index="0"/>
+<part id="6" type="hrb" colorable="1" index="0"/>
+</set>
+-
+<set id="590" gender="F" club="0" colorable="0" selectable="0">
+<part id="458" type="hr" colorable="0" index="0"/>
+</set>
+-
+<set id="100" gender="M" club="0" colorable="0" selectable="1">
+<part id="1" type="hr" colorable="0" index="0"/>
+<part id="1" type="hrb" colorable="0" index="0"/>
+</set>
+-
+<set id="679" gender="U" club="0" colorable="1" selectable="1">
+<part id="27" type="hr" colorable="1" index="0"/>
+<part id="27" type="hrb" colorable="1" index="0"/>
+</set>
+-
+<set id="570" gender="F" club="0" colorable="1" selectable="0">
+<part id="22" type="hr" colorable="1" index="0"/>
+</set>
+-
+<set id="585" gender="F" club="0" colorable="0" selectable="0">
+<part id="996" type="hr" colorable="0" index="0"/>
+</set>
+-
+<set id="135" gender="M" club="0" colorable="1" selectable="1">
+<part id="9" type="hr" colorable="1" index="0"/>
+<part id="9" type="hrb" colorable="1" index="0"/>
+</set>
+-
+<set id="178" gender="M" club="0" colorable="0" selectable="0">
+<part id="25" type="hr" colorable="0" index="0"/>
+</set>
+-
+<set id="575" gender="F" club="0" colorable="1" selectable="1">
+<part id="23" type="hr" colorable="1" index="0"/>
+<part id="23" type="hrb" colorable="1" index="0"/>
+</set>
+-
+<set id="535" gender="F" club="0" colorable="1" selectable="0">
+<part id="15" type="hr" colorable="1" index="0"/>
+</set>
+-
+<set id="110" gender="M" club="0" colorable="1" selectable="1">
+<part id="4" type="hr" colorable="1" index="0"/>
+<part id="4" type="hrb" colorable="1" index="0"/>
+</set>
+-
+<set id="520" gender="F" club="0" colorable="1" selectable="1">
+<part id="9" type="hr" colorable="1" index="0"/>
+<part id="9" type="hrb" colorable="1" index="0"/>
+</set>
+-
+<set id="120" gender="M" club="0" colorable="0" selectable="0">
+<part id="7" type="hr" colorable="0" index="0"/>
+</set>
+-
+<set id="545" gender="F" club="0" colorable="1" selectable="1">
+<part id="17" type="hr" colorable="1" index="0"/>
+<part id="17" type="hrb" colorable="1" index="0"/>
+</set>
+-
+<set id="160" gender="M" club="0" colorable="1" selectable="0">
+<part id="21" type="hr" colorable="1" index="0"/>
+</set>
+-
+<set id="889" gender="M" club="0" colorable="1" selectable="1">
+<part id="32" type="hr" colorable="1" index="0"/>
+<part id="32" type="hrb" colorable="1" index="0"/>
+</set>
+-
+<set id="890" gender="F" club="0" colorable="1" selectable="1">
+<part id="34" type="hr" colorable="1" index="0"/>
+<part id="34" type="hrb" colorable="1" index="0"/>
+</set>
+-
+<set id="891" gender="U" club="0" colorable="1" selectable="1">
+<part id="33" type="hr" colorable="1" index="0"/>
+<part id="33" type="hrb" colorable="1" index="0"/>
+</set>
+-
+<set id="892" gender="U" club="0" colorable="1" selectable="1">
+<part id="35" type="hr" colorable="1" index="0"/>
+<part id="35" type="hrb" colorable="1" index="0"/>
+</set>
+-
+<set id="893" gender="U" club="0" colorable="1" selectable="1">
+<part id="36" type="hr" colorable="1" index="0"/>
+<part id="36" type="hrb" colorable="1" index="0"/>
+</set>
+-
+<set id="802" gender="M" club="1" colorable="1" selectable="1">
+<part id="509" type="hr" colorable="1" index="0"/>
+<part id="509" type="hrb" colorable="1" index="0"/>
+</set>
+-
+<set id="869" gender="F" club="1" colorable="1" selectable="0">
+<part id="19" type="hr" colorable="1" index="0"/>
+<part id="19" type="hrb" colorable="1" index="0"/>
+</set>
+-
+<set id="842" gender="M" club="1" colorable="1" selectable="0">
+<part id="504" type="hr" colorable="1" index="0"/>
+<part id="504" type="hrb" colorable="1" index="0"/>
+</set>
+-
+<set id="840" gender="F" club="1" colorable="1" selectable="1">
+<part id="20" type="hr" colorable="1" index="0"/>
+<part id="20" type="hrb" colorable="1" index="0"/>
+</set>
+-
+<set id="828" gender="M" club="1" colorable="1" selectable="1">
+<part id="501" type="hr" colorable="1" index="0"/>
+<part id="501" type="hrb" colorable="1" index="0"/>
+</set>
+-
+<set id="871" gender="F" club="1" colorable="1" selectable="0">
+<part id="18" type="hr" colorable="1" index="0"/>
+<part id="18" type="hrb" colorable="1" index="0"/>
+</set>
+-
+<set id="874" gender="F" club="1" colorable="1" selectable="0">
+<part id="26" type="hr" colorable="1" index="0"/>
+<part id="26" type="hrb" colorable="1" index="0"/>
+</set>
+-
+<set id="859" gender="F" club="1" colorable="1" selectable="0">
+<part id="200" type="hr" colorable="1" index="0"/>
+<part id="200" type="hrb" colorable="1" index="0"/>
+</set>
+-
+<set id="837" gender="F" club="1" colorable="1" selectable="1">
+<part id="200" type="hr" colorable="1" index="0"/>
+<part id="200" type="hrb" colorable="1" index="0"/>
+</set>
+-
+<set id="846" gender="M" club="1" colorable="1" selectable="0">
+<part id="5" type="hr" colorable="1" index="0"/>
+<part id="5" type="hrb" colorable="1" index="0"/>
+</set>
+-
+<set id="800" gender="M" club="1" colorable="1" selectable="0">
+<part id="502" type="hr" colorable="1" index="0"/>
+</set>
+-
+<set id="868" gender="F" club="1" colorable="1" selectable="0">
+<part id="11" type="hr" colorable="1" index="0"/>
+<part id="11" type="hrb" colorable="1" index="0"/>
+</set>
+-
+<set id="834" gender="F" club="1" colorable="1" selectable="1">
+<part id="506" type="hr" colorable="1" index="0"/>
+<part id="506" type="hrb" colorable="1" index="0"/>
+</set>
+-
+<set id="866" gender="F" club="1" colorable="1" selectable="0">
+<part id="9" type="hr" colorable="1" index="0"/>
+<part id="9" type="hrb" colorable="1" index="0"/>
+</set>
+-
+<set id="556" gender="F" club="1" colorable="0" selectable="0">
+<part id="19" type="hr" colorable="0" index="0"/>
+<part id="19" type="hrb" colorable="0" index="0"/>
+</set>
+-
+<set id="852" gender="M" club="1" colorable="1" selectable="0">
+<part id="23" type="hr" colorable="1" index="0"/>
+<part id="23" type="hrb" colorable="1" index="0"/>
+</set>
+-
+<set id="830" gender="M" club="1" colorable="1" selectable="1">
+<part id="201" type="hr" colorable="1" index="0"/>
+<part id="201" type="hrb" colorable="1" index="0"/>
+</set>
+-
+<set id="872" gender="F" club="1" colorable="1" selectable="0">
+<part id="17" type="hr" colorable="1" index="0"/>
+<part id="17" type="hrb" colorable="1" index="0"/>
+</set>
+-
+<set id="873" gender="F" club="1" colorable="1" selectable="0">
+<part id="23" type="hr" colorable="1" index="0"/>
+<part id="23" type="hrb" colorable="1" index="0"/>
+</set>
+-
+<set id="831" gender="M" club="1" colorable="1" selectable="1">
+<part id="203" type="hr" colorable="1" index="0"/>
+<part id="203" type="hrb" colorable="1" index="0"/>
+</set>
+-
+<set id="856" gender="F" club="1" colorable="1" selectable="0">
+<part id="506" type="hr" colorable="1" index="0"/>
+<part id="506" type="hrb" colorable="1" index="0"/>
+</set>
+-
+<set id="801" gender="M" club="1" colorable="1" selectable="0">
+<part id="505" type="hr" colorable="1" index="0"/>
+</set>
+-
+<set id="836" gender="F" club="1" colorable="1" selectable="1">
+<part id="508" type="hr" colorable="1" index="0"/>
+<part id="508" type="hrb" colorable="1" index="0"/>
+</set>
+-
+<set id="855" gender="F" club="1" colorable="1" selectable="0">
+<part id="503" type="hr" colorable="1" index="0"/>
+<part id="503" type="hrb" colorable="1" index="0"/>
+</set>
+-
+<set id="865" gender="F" club="1" colorable="1" selectable="0">
+<part id="6" type="hr" colorable="1" index="0"/>
+<part id="6" type="hrb" colorable="1" index="0"/>
+</set>
+-
+<set id="810" gender="F" club="1" colorable="1" selectable="0">
+<part id="502" type="hr" colorable="1" index="0"/>
+</set>
+-
+<set id="811" gender="F" club="1" colorable="1" selectable="1">
+<part id="509" type="hr" colorable="1" index="0"/>
+<part id="509" type="hrb" colorable="1" index="0"/>
+</set>
+-
+<set id="854" gender="F" club="1" colorable="1" selectable="0">
+<part id="501" type="hr" colorable="1" index="0"/>
+<part id="501" type="hrb" colorable="1" index="0"/>
+</set>
+-
+<set id="833" gender="F" club="1" colorable="1" selectable="1">
+<part id="503" type="hr" colorable="1" index="0"/>
+<part id="503" type="hrb" colorable="1" index="0"/>
+</set>
+-
+<set id="838" gender="F" club="1" colorable="1" selectable="1">
+<part id="202" type="hr" colorable="1" index="0"/>
+<part id="202" type="hrb" colorable="1" index="0"/>
+</set>
+-
+<set id="844" gender="M" club="1" colorable="1" selectable="0">
+<part id="203" type="hr" colorable="1" index="0"/>
+<part id="203" type="hrb" colorable="1" index="0"/>
+</set>
+-
+<set id="835" gender="F" club="1" colorable="1" selectable="1">
+<part id="507" type="hr" colorable="1" index="0"/>
+<part id="507" type="hrb" colorable="1" index="0"/>
+</set>
+-
+<set id="860" gender="F" club="1" colorable="1" selectable="0">
+<part id="202" type="hr" colorable="1" index="0"/>
+<part id="202" type="hrb" colorable="1" index="0"/>
+</set>
+-
+<set id="862" gender="F" club="1" colorable="1" selectable="0">
+<part id="3" type="hr" colorable="1" index="0"/>
+<part id="3" type="hrb" colorable="1" index="0"/>
+</set>
+-
+<set id="858" gender="F" club="1" colorable="1" selectable="0">
+<part id="508" type="hr" colorable="1" index="0"/>
+<part id="508" type="hrb" colorable="1" index="0"/>
+</set>
+-
+<set id="829" gender="M" club="1" colorable="1" selectable="1">
+<part id="504" type="hr" colorable="1" index="0"/>
+<part id="504" type="hrb" colorable="1" index="0"/>
+</set>
+-
+<set id="864" gender="F" club="1" colorable="1" selectable="0">
+<part id="5" type="hr" colorable="1" index="0"/>
+<part id="5" type="hrb" colorable="1" index="0"/>
+</set>
+-
+<set id="849" gender="M" club="1" colorable="1" selectable="0">
+<part id="2" type="hr" colorable="1" index="0"/>
+<part id="2" type="hrb" colorable="1" index="0"/>
+</set>
+-
+<set id="841" gender="M" club="1" colorable="1" selectable="0">
+<part id="501" type="hr" colorable="1" index="0"/>
+<part id="501" type="hrb" colorable="1" index="0"/>
+</set>
+-
+<set id="867" gender="F" club="1" colorable="1" selectable="0">
+<part id="16" type="hr" colorable="1" index="0"/>
+<part id="16" type="hrb" colorable="1" index="0"/>
+</set>
+-
+<set id="870" gender="F" club="1" colorable="1" selectable="0">
+<part id="20" type="hr" colorable="1" index="0"/>
+<part id="20" type="hrb" colorable="1" index="0"/>
+</set>
+-
+<set id="678" gender="U" club="1" colorable="1" selectable="1">
+<part id="28" type="hr" colorable="1" index="0"/>
+<part id="28" type="hrb" colorable="1" index="0"/>
+</set>
+-
+<set id="832" gender="F" club="1" colorable="1" selectable="1">
+<part id="501" type="hr" colorable="1" index="0"/>
+<part id="501" type="hrb" colorable="1" index="0"/>
+</set>
+-
+<set id="847" gender="M" club="1" colorable="1" selectable="0">
+<part id="8" type="hr" colorable="1" index="0"/>
+<part id="8" type="hrb" colorable="1" index="0"/>
+</set>
+-
+<set id="861" gender="F" club="1" colorable="1" selectable="0">
+<part id="203" type="hr" colorable="1" index="0"/>
+<part id="203" type="hrb" colorable="1" index="0"/>
+</set>
+-
+<set id="839" gender="F" club="1" colorable="1" selectable="1">
+<part id="203" type="hr" colorable="1" index="0"/>
+<part id="203" type="hrb" colorable="1" index="0"/>
+</set>
+-
+<set id="845" gender="M" club="1" colorable="1" selectable="0">
+<part id="4" type="hr" colorable="1" index="0"/>
+<part id="4" type="hrb" colorable="1" index="0"/>
+</set>
+-
+<set id="853" gender="M" club="1" colorable="1" selectable="0">
+<part id="24" type="hr" colorable="1" index="0"/>
+<part id="24" type="hrb" colorable="1" index="0"/>
+</set>
+-
+<set id="848" gender="M" club="1" colorable="1" selectable="0">
+<part id="9" type="hr" colorable="1" index="0"/>
+<part id="9" type="hrb" colorable="1" index="0"/>
+</set>
+-
+<set id="857" gender="F" club="1" colorable="1" selectable="0">
+<part id="507" type="hr" colorable="1" index="0"/>
+<part id="507" type="hrb" colorable="1" index="0"/>
+</set>
+-
+<set id="843" gender="M" club="1" colorable="1" selectable="0">
+<part id="201" type="hr" colorable="1" index="0"/>
+<part id="201" type="hrb" colorable="1" index="0"/>
+</set>
+-
+<set id="850" gender="M" club="1" colorable="1" selectable="0">
+<part id="16" type="hr" colorable="1" index="0"/>
+<part id="16" type="hrb" colorable="1" index="0"/>
+</set>
+-
+<set id="863" gender="F" club="1" colorable="1" selectable="0">
+<part id="4" type="hr" colorable="1" index="0"/>
+<part id="4" type="hrb" colorable="1" index="0"/>
+</set>
+-
+<set id="851" gender="M" club="1" colorable="1" selectable="0">
+<part id="10" type="hr" colorable="1" index="0"/>
+<part id="10" type="hrb" colorable="1" index="0"/>
+</set>
+-
+<set id="677" gender="U" club="1" colorable="1" selectable="1">
+<part id="30" type="hr" colorable="1" index="0"/>
+<part id="30" type="hrb" colorable="1" index="0"/>
+</set>
+</settype>
+-
+<settype type="hd" paletteid="1" mandatory="1">
+-
+<set id="620" gender="F" club="0" colorable="1" selectable="1">
+<part id="1" type="bd" colorable="1" index="0"/>
+<part id="5" type="ey" colorable="1" index="0"/>
+<part id="1" type="fc" colorable="1" index="0"/>
+<part id="1" type="hd" colorable="1" index="0"/>
+<part id="1" type="lh" colorable="1" index="0"/>
+<part id="1" type="rh" colorable="1" index="0"/>
+</set>
+-
+<set id="626" gender="F" club="0" colorable="1" selectable="1">
+<part id="1" type="bd" colorable="1" index="0"/>
+<part id="7" type="ey" colorable="1" index="0"/>
+<part id="1" type="fc" colorable="1" index="0"/>
+<part id="1" type="hd" colorable="1" index="0"/>
+<part id="1" type="lh" colorable="1" index="0"/>
+<part id="1" type="rh" colorable="1" index="0"/>
+</set>
+-
+<set id="180" gender="M" club="0" colorable="1" selectable="1">
+<part id="1" type="bd" colorable="1" index="0"/>
+<part id="1" type="ey" colorable="1" index="0"/>
+<part id="1" type="fc" colorable="1" index="0"/>
+<part id="2" type="hd" colorable="1" index="0"/>
+<part id="1" type="lh" colorable="1" index="0"/>
+<part id="1" type="rh" colorable="1" index="0"/>
+</set>
+-
+<set id="207" gender="M" club="0" colorable="1" selectable="1">
+<part id="1" type="bd" colorable="1" index="0"/>
+<part id="6" type="ey" colorable="1" index="0"/>
+<part id="1" type="fc" colorable="1" index="0"/>
+<part id="2" type="hd" colorable="1" index="0"/>
+<part id="1" type="lh" colorable="1" index="0"/>
+<part id="1" type="rh" colorable="1" index="0"/>
+</set>
+-
+<set id="205" gender="M" club="0" colorable="1" selectable="1">
+<part id="1" type="bd" colorable="1" index="0"/>
+<part id="4" type="ey" colorable="1" index="0"/>
+<part id="1" type="fc" colorable="1" index="0"/>
+<part id="2" type="hd" colorable="1" index="0"/>
+<part id="1" type="lh" colorable="1" index="0"/>
+<part id="1" type="rh" colorable="1" index="0"/>
+</set>
+-
+<set id="190" gender="M" club="0" colorable="1" selectable="1">
+<part id="1" type="bd" colorable="1" index="0"/>
+<part id="3" type="ey" colorable="1" index="0"/>
+<part id="1" type="fc" colorable="1" index="0"/>
+<part id="2" type="hd" colorable="1" index="0"/>
+<part id="1" type="lh" colorable="1" index="0"/>
+<part id="1" type="rh" colorable="1" index="0"/>
+</set>
+-
+<set id="625" gender="F" club="0" colorable="1" selectable="1">
+<part id="1" type="bd" colorable="1" index="0"/>
+<part id="5" type="ey" colorable="1" index="0"/>
+<part id="1" type="fc" colorable="1" index="0"/>
+<part id="2" type="hd" colorable="1" index="0"/>
+<part id="1" type="lh" colorable="1" index="0"/>
+<part id="1" type="rh" colorable="1" index="0"/>
+</set>
+-
+<set id="185" gender="M" club="0" colorable="1" selectable="1">
+<part id="1" type="bd" colorable="1" index="0"/>
+<part id="1" type="ey" colorable="1" index="0"/>
+<part id="1" type="fc" colorable="1" index="0"/>
+<part id="1" type="hd" colorable="1" index="0"/>
+<part id="1" type="lh" colorable="1" index="0"/>
+<part id="1" type="rh" colorable="1" index="0"/>
+</set>
+-
+<set id="195" gender="M" club="0" colorable="1" selectable="1">
+<part id="1" type="bd" colorable="1" index="0"/>
+<part id="3" type="ey" colorable="1" index="0"/>
+<part id="1" type="fc" colorable="1" index="0"/>
+<part id="1" type="hd" colorable="1" index="0"/>
+<part id="1" type="lh" colorable="1" index="0"/>
+<part id="1" type="rh" colorable="1" index="0"/>
+</set>
+-
+<set id="610" gender="F" club="0" colorable="1" selectable="1">
+<part id="1" type="bd" colorable="1" index="0"/>
+<part id="4" type="ey" colorable="1" index="0"/>
+<part id="1" type="fc" colorable="1" index="0"/>
+<part id="1" type="hd" colorable="1" index="0"/>
+<part id="1" type="lh" colorable="1" index="0"/>
+<part id="1" type="rh" colorable="1" index="0"/>
+</set>
+-
+<set id="200" gender="M" club="0" colorable="1" selectable="1">
+<part id="1" type="bd" colorable="1" index="0"/>
+<part id="4" type="ey" colorable="1" index="0"/>
+<part id="1" type="fc" colorable="1" index="0"/>
+<part id="1" type="hd" colorable="1" index="0"/>
+<part id="1" type="lh" colorable="1" index="0"/>
+<part id="1" type="rh" colorable="1" index="0"/>
+</set>
+-
+<set id="600" gender="F" club="0" colorable="1" selectable="1">
+<part id="1" type="bd" colorable="1" index="0"/>
+<part id="2" type="ey" colorable="1" index="0"/>
+<part id="1" type="fc" colorable="1" index="0"/>
+<part id="2" type="hd" colorable="1" index="0"/>
+<part id="1" type="lh" colorable="1" index="0"/>
+<part id="1" type="rh" colorable="1" index="0"/>
+</set>
+-
+<set id="615" gender="F" club="0" colorable="1" selectable="1">
+<part id="1" type="bd" colorable="1" index="0"/>
+<part id="4" type="ey" colorable="1" index="0"/>
+<part id="1" type="fc" colorable="1" index="0"/>
+<part id="2" type="hd" colorable="1" index="0"/>
+<part id="1" type="lh" colorable="1" index="0"/>
+<part id="1" type="rh" colorable="1" index="0"/>
+</set>
+-
+<set id="206" gender="M" club="0" colorable="1" selectable="1">
+<part id="1" type="bd" colorable="1" index="0"/>
+<part id="6" type="ey" colorable="1" index="0"/>
+<part id="1" type="fc" colorable="1" index="0"/>
+<part id="1" type="hd" colorable="1" index="0"/>
+<part id="1" type="lh" colorable="1" index="0"/>
+<part id="1" type="rh" colorable="1" index="0"/>
+</set>
+-
+<set id="627" gender="F" club="0" colorable="1" selectable="1">
+<part id="1" type="bd" colorable="1" index="0"/>
+<part id="7" type="ey" colorable="1" index="0"/>
+<part id="1" type="fc" colorable="1" index="0"/>
+<part id="2" type="hd" colorable="1" index="0"/>
+<part id="1" type="lh" colorable="1" index="0"/>
+<part id="1" type="rh" colorable="1" index="0"/>
+</set>
+-
+<set id="605" gender="F" club="0" colorable="1" selectable="1">
+<part id="1" type="bd" colorable="1" index="0"/>
+<part id="2" type="ey" colorable="1" index="0"/>
+<part id="1" type="fc" colorable="1" index="0"/>
+<part id="1" type="hd" colorable="1" index="0"/>
+<part id="1" type="lh" colorable="1" index="0"/>
+<part id="1" type="rh" colorable="1" index="0"/>
+</set>
+-
+<set id="208" gender="M" club="0" colorable="1" selectable="1">
+<part id="1" type="bd" colorable="1" index="0"/>
+<part id="8" type="ey" colorable="1" index="0"/>
+<part id="1" type="fc" colorable="1" index="0"/>
+<part id="1" type="hd" colorable="1" index="0"/>
+<part id="1" type="lh" colorable="1" index="0"/>
+<part id="1" type="rh" colorable="1" index="0"/>
+</set>
+-
+<set id="209" gender="M" club="0" colorable="1" selectable="1">
+<part id="1" type="bd" colorable="1" index="0"/>
+<part id="8" type="ey" colorable="1" index="0"/>
+<part id="1" type="fc" colorable="1" index="0"/>
+<part id="2" type="hd" colorable="1" index="0"/>
+<part id="1" type="lh" colorable="1" index="0"/>
+<part id="1" type="rh" colorable="1" index="0"/>
+</set>
+-
+<set id="628" gender="F" club="0" colorable="1" selectable="1">
+<part id="1" type="bd" colorable="1" index="0"/>
+<part id="9" type="ey" colorable="1" index="0"/>
+<part id="1" type="fc" colorable="1" index="0"/>
+<part id="1" type="hd" colorable="1" index="0"/>
+<part id="1" type="lh" colorable="1" index="0"/>
+<part id="1" type="rh" colorable="1" index="0"/>
+</set>
+-
+<set id="629" gender="F" club="0" colorable="1" selectable="1">
+<part id="1" type="bd" colorable="1" index="0"/>
+<part id="9" type="ey" colorable="1" index="0"/>
+<part id="1" type="fc" colorable="1" index="0"/>
+<part id="2" type="hd" colorable="1" index="0"/>
+<part id="1" type="lh" colorable="1" index="0"/>
+<part id="1" type="rh" colorable="1" index="0"/>
+</set>
+</settype>
+-
+<settype type="ch" paletteid="3" mandatory="1">
+-
+<set id="680" gender="F" club="0" colorable="1" selectable="1">
+<part id="17" type="ch" colorable="1" index="0"/>
+<part id="17" type="ls" colorable="1" index="0"/>
+<part id="17" type="rs" colorable="1" index="0"/>
+</set>
+-
+<set id="876" gender="M" club="0" colorable="1" selectable="1">
+<part id="20" type="ch" colorable="1" index="0"/>
+<part id="2" type="ls" colorable="1" index="0"/>
+<part id="2" type="rs" colorable="1" index="0"/>
+<part id="1020" type="ch" colorable="0" index="1"/>
+</set>
+-
+<set id="675" gender="F" club="0" colorable="1" selectable="1">
+<part id="16" type="ch" colorable="1" index="0"/>
+<part id="2" type="ls" colorable="1" index="0"/>
+<part id="2" type="rs" colorable="1" index="0"/>
+</set>
+-
+<set id="690" gender="F" club="0" colorable="1" selectable="1">
+<part id="101" type="ch" colorable="1" index="0"/>
+<part id="2" type="ls" colorable="1" index="0"/>
+<part id="2" type="rs" colorable="1" index="0"/>
+<part id="1101" type="ch" colorable="0" index="1"/>
+</set>
+-
+<set id="879" gender="F" club="0" colorable="1" selectable="1">
+<part id="22" type="ch" colorable="1" index="0"/>
+<part id="1" type="ls" colorable="1" index="0"/>
+<part id="1" type="rs" colorable="1" index="0"/>
+</set>
+-
+<set id="210" gender="M" club="0" colorable="1" selectable="1">
+<part id="1" type="ch" colorable="1" index="0"/>
+<part id="1" type="ls" colorable="1" index="0"/>
+<part id="1" type="rs" colorable="1" index="0"/>
+</set>
+-
+<set id="665" gender="F" club="0" colorable="1" selectable="1">
+<part id="15" type="ch" colorable="1" index="0"/>
+<part id="3" type="ls" colorable="1" index="0"/>
+<part id="3" type="rs" colorable="1" index="0"/>
+</set>
+-
+<set id="685" gender="F" club="0" colorable="1" selectable="1">
+<part id="18" type="ch" colorable="1" index="0"/>
+<part id="3" type="ls" colorable="1" index="0"/>
+<part id="3" type="rs" colorable="1" index="0"/>
+</set>
+-
+<set id="267" gender="M" club="0" colorable="1" selectable="1">
+<part id="207" type="ch" colorable="1" index="0"/>
+<part id="3" type="ls" colorable="1" index="0"/>
+<part id="3" type="rs" colorable="1" index="0"/>
+<part id="1207" type="ch" colorable="0" index="1"/>
+</set>
+-
+<set id="245" gender="M" club="0" colorable="1" selectable="1">
+<part id="8" type="ch" colorable="1" index="0"/>
+<part id="2" type="ls" colorable="1" index="0"/>
+<part id="2" type="rs" colorable="1" index="0"/>
+</set>
+-
+<set id="878" gender="M" club="0" colorable="1" selectable="1">
+<part id="21" type="ch" colorable="1" index="0"/>
+<part id="2" type="ls" colorable="1" index="0"/>
+<part id="2" type="rs" colorable="1" index="0"/>
+<part id="1021" type="ch" colorable="0" index="1"/>
+</set>
+-
+<set id="670" gender="F" club="0" colorable="1" selectable="1">
+<part id="16" type="ch" colorable="1" index="0"/>
+<part id="1" type="ls" colorable="1" index="0"/>
+<part id="1" type="rs" colorable="1" index="0"/>
+</set>
+-
+<set id="645" gender="F" club="0" colorable="1" selectable="1">
+<part id="4" type="ch" colorable="1" index="0"/>
+<part id="1" type="ls" colorable="1" index="0"/>
+<part id="1" type="rs" colorable="1" index="0"/>
+</set>
+-
+<set id="640" gender="F" club="0" colorable="1" selectable="1">
+<part id="4" type="ch" colorable="1" index="0"/>
+<part id="2" type="ls" colorable="1" index="0"/>
+<part id="2" type="rs" colorable="1" index="0"/>
+</set>
+-
+<set id="220" gender="M" club="0" colorable="1" selectable="1">
+<part id="3" type="ch" colorable="1" index="0"/>
+<part id="1" type="ls" colorable="1" index="0"/>
+<part id="1" type="rs" colorable="1" index="0"/>
+</set>
+-
+<set id="655" gender="F" club="0" colorable="1" selectable="1">
+<part id="6" type="ch" colorable="1" index="0"/>
+<part id="1" type="ls" colorable="1" index="0"/>
+<part id="1" type="rs" colorable="1" index="0"/>
+</set>
+-
+<set id="882" gender="F" club="0" colorable="1" selectable="1">
+<part id="23" type="ch" colorable="1" index="0"/>
+<part id="2" type="ls" colorable="1" index="0"/>
+<part id="2" type="rs" colorable="1" index="0"/>
+<part id="1023" type="ch" colorable="0" index="1"/>
+</set>
+-
+<set id="260" gender="M" club="0" colorable="1" selectable="1">
+<part id="800" type="ch" colorable="0" index="0"/>
+<part id="800" type="ls" colorable="0" index="0"/>
+<part id="800" type="rs" colorable="0" index="0"/>
+<part id="1800" type="ch" colorable="1" index="1"/>
+<part id="1800" type="ls" colorable="1" index="1"/>
+<part id="1800" type="rs" colorable="1" index="1"/>
+</set>
+-
+<set id="881" gender="F" club="0" colorable="1" selectable="1">
+<part id="23" type="ch" colorable="1" index="0"/>
+<part id="1" type="ls" colorable="1" index="0"/>
+<part id="1" type="rs" colorable="1" index="0"/>
+<part id="1023" type="ch" colorable="0" index="1"/>
+</set>
+-
+<set id="255" gender="M" club="0" colorable="1" selectable="1">
+<part id="10" type="ch" colorable="1" index="0"/>
+<part id="1" type="ls" colorable="1" index="0"/>
+<part id="1" type="rs" colorable="1" index="0"/>
+</set>
+-
+<set id="880" gender="F" club="0" colorable="1" selectable="1">
+<part id="22" type="ch" colorable="1" index="0"/>
+<part id="2" type="ls" colorable="1" index="0"/>
+<part id="2" type="rs" colorable="1" index="0"/>
+</set>
+-
+<set id="875" gender="M" club="0" colorable="1" selectable="1">
+<part id="20" type="ch" colorable="1" index="0"/>
+<part id="1" type="ls" colorable="1" index="0"/>
+<part id="1" type="rs" colorable="1" index="0"/>
+<part id="1020" type="ch" colorable="0" index="1"/>
+</set>
+-
+<set id="262" gender="M" club="0" colorable="1" selectable="1">
+<part id="100" type="ch" colorable="1" index="0"/>
+<part id="1" type="ls" colorable="1" index="0"/>
+<part id="1" type="rs" colorable="1" index="0"/>
+<part id="1100" type="ch" colorable="0" index="1"/>
+</set>
+-
+<set id="669" gender="F" club="0" colorable="1" selectable="1">
+<part id="206" type="ch" colorable="1" index="0"/>
+<part id="3" type="ls" colorable="1" index="0"/>
+<part id="3" type="rs" colorable="1" index="0"/>
+<part id="1206" type="ch" colorable="0" index="1"/>
+</set>
+-
+<set id="691" gender="F" club="0" colorable="1" selectable="1">
+<part id="101" type="ch" colorable="1" index="0"/>
+<part id="1" type="ls" colorable="1" index="0"/>
+<part id="1" type="rs" colorable="1" index="0"/>
+<part id="1101" type="ch" colorable="0" index="1"/>
+</set>
+-
+<set id="660" gender="F" club="0" colorable="1" selectable="1">
+<part id="10" type="ch" colorable="1" index="0"/>
+<part id="1" type="ls" colorable="1" index="0"/>
+<part id="1" type="rs" colorable="1" index="0"/>
+</set>
+-
+<set id="240" gender="M" club="0" colorable="1" selectable="1">
+<part id="8" type="ch" colorable="1" index="0"/>
+<part id="1" type="ls" colorable="1" index="0"/>
+<part id="1" type="rs" colorable="1" index="0"/>
+</set>
+-
+<set id="250" gender="M" club="0" colorable="1" selectable="1">
+<part id="9" type="ch" colorable="1" index="0"/>
+<part id="2" type="ls" colorable="1" index="0"/>
+<part id="2" type="rs" colorable="1" index="0"/>
+</set>
+-
+<set id="877" gender="M" club="0" colorable="1" selectable="1">
+<part id="21" type="ch" colorable="1" index="0"/>
+<part id="1" type="ls" colorable="1" index="0"/>
+<part id="1" type="rs" colorable="1" index="0"/>
+<part id="1021" type="ch" colorable="0" index="1"/>
+</set>
+-
+<set id="650" gender="F" club="0" colorable="1" selectable="1">
+<part id="6" type="ch" colorable="1" index="0"/>
+<part id="2" type="ls" colorable="1" index="0"/>
+<part id="2" type="rs" colorable="1" index="0"/>
+</set>
+-
+<set id="215" gender="M" club="0" colorable="1" selectable="1">
+<part id="1" type="ch" colorable="1" index="0"/>
+<part id="2" type="ls" colorable="1" index="0"/>
+<part id="2" type="rs" colorable="1" index="0"/>
+</set>
+-
+<set id="230" gender="M" club="0" colorable="1" selectable="1">
+<part id="5" type="ch" colorable="1" index="0"/>
+<part id="1" type="ls" colorable="1" index="0"/>
+<part id="1" type="rs" colorable="1" index="0"/>
+</set>
+-
+<set id="266" gender="M" club="0" colorable="0" selectable="1">
+<part id="105" type="ch" colorable="0" index="0"/>
+<part id="2" type="ls" colorable="0" index="0"/>
+<part id="2" type="rs" colorable="0" index="0"/>
+</set>
+-
+<set id="235" gender="M" club="0" colorable="1" selectable="1">
+<part id="5" type="ch" colorable="1" index="0"/>
+<part id="2" type="ls" colorable="1" index="0"/>
+<part id="2" type="rs" colorable="1" index="0"/>
+</set>
+-
+<set id="635" gender="F" club="0" colorable="1" selectable="1">
+<part id="2" type="ch" colorable="1" index="0"/>
+<part id="2" type="ls" colorable="1" index="0"/>
+<part id="2" type="rs" colorable="1" index="0"/>
+</set>
+-
+<set id="265" gender="M" club="0" colorable="1" selectable="1">
+<part id="100" type="ch" colorable="1" index="0"/>
+<part id="2" type="ls" colorable="1" index="0"/>
+<part id="2" type="rs" colorable="1" index="0"/>
+<part id="1100" type="ch" colorable="0" index="1"/>
+</set>
+-
+<set id="667" gender="F" club="0" colorable="0" selectable="1">
+<part id="106" type="ch" colorable="0" index="0"/>
+<part id="2" type="ls" colorable="0" index="0"/>
+<part id="2" type="rs" colorable="0" index="0"/>
+</set>
+-
+<set id="630" gender="F" club="0" colorable="1" selectable="1">
+<part id="2" type="ch" colorable="1" index="0"/>
+<part id="1" type="ls" colorable="1" index="0"/>
+<part id="1" type="rs" colorable="1" index="0"/>
+</set>
+-
+<set id="225" gender="M" club="0" colorable="1" selectable="1">
+<part id="3" type="ch" colorable="1" index="0"/>
+<part id="2" type="ls" colorable="1" index="0"/>
+<part id="2" type="rs" colorable="1" index="0"/>
+</set>
+-
+<set id="807" gender="M" club="1" colorable="1" selectable="1">
+<part id="200" type="ch" colorable="1" index="0"/>
+<part id="1" type="ls" colorable="1" index="0"/>
+<part id="1" type="rs" colorable="1" index="0"/>
+<part id="1200" type="ch" colorable="0" index="1"/>
+</set>
+-
+<set id="816" gender="F" club="1" colorable="1" selectable="1">
+<part id="505" type="ch" colorable="1" index="0"/>
+<part id="2" type="ls" colorable="1" index="0"/>
+<part id="2" type="rs" colorable="1" index="0"/>
+</set>
+-
+<set id="813" gender="F" club="1" colorable="1" selectable="1">
+<part id="503" type="ch" colorable="1" index="0"/>
+<part id="1" type="ls" colorable="1" index="0"/>
+<part id="1" type="rs" colorable="1" index="0"/>
+</set>
+-
+<set id="812" gender="F" club="1" colorable="1" selectable="1">
+<part id="503" type="ch" colorable="1" index="0"/>
+<part id="2" type="ls" colorable="1" index="0"/>
+<part id="2" type="rs" colorable="1" index="0"/>
+</set>
+-
+<set id="815" gender="F" club="1" colorable="1" selectable="1">
+<part id="204" type="ch" colorable="1" index="0"/>
+<part id="1" type="ls" colorable="1" index="0"/>
+<part id="1" type="rs" colorable="1" index="0"/>
+<part id="1204" type="ch" colorable="0" index="1"/>
+</set>
+-
+<set id="823" gender="F" club="1" colorable="1" selectable="1">
+<part id="201" type="ch" colorable="1" index="0"/>
+<part id="1" type="ls" colorable="1" index="0"/>
+<part id="1" type="rs" colorable="1" index="0"/>
+</set>
+-
+<set id="804" gender="M" club="1" colorable="1" selectable="1">
+<part id="502" type="ch" colorable="1" index="0"/>
+<part id="2" type="ls" colorable="1" index="0"/>
+<part id="2" type="rs" colorable="1" index="0"/>
+</set>
+-
+<set id="818" gender="F" club="1" colorable="1" selectable="1">
+<part id="506" type="ch" colorable="1" index="0"/>
+<part id="2" type="ls" colorable="1" index="0"/>
+<part id="2" type="rs" colorable="1" index="0"/>
+</set>
+-
+<set id="803" gender="M" club="1" colorable="1" selectable="1">
+<part id="501" type="ch" colorable="1" index="0"/>
+<part id="3" type="ls" colorable="1" index="0"/>
+<part id="3" type="rs" colorable="1" index="0"/>
+</set>
+-
+<set id="814" gender="F" club="1" colorable="1" selectable="1">
+<part id="504" type="ch" colorable="1" index="0"/>
+<part id="2" type="ls" colorable="1" index="0"/>
+<part id="2" type="rs" colorable="1" index="0"/>
+</set>
+-
+<set id="809" gender="M" club="1" colorable="1" selectable="1">
+<part id="202" type="ch" colorable="1" index="0"/>
+<part id="1" type="ls" colorable="1" index="0"/>
+<part id="1" type="rs" colorable="1" index="0"/>
+<part id="1202" type="ch" colorable="0" index="1"/>
+</set>
+-
+<set id="819" gender="F" club="1" colorable="1" selectable="1">
+<part id="506" type="ch" colorable="1" index="0"/>
+<part id="1" type="ls" colorable="1" index="0"/>
+<part id="1" type="rs" colorable="1" index="0"/>
+</set>
+-
+<set id="824" gender="F" club="1" colorable="1" selectable="1">
+<part id="203" type="ch" colorable="1" index="0"/>
+<part id="3" type="ls" colorable="1" index="0"/>
+<part id="3" type="rs" colorable="1" index="0"/>
+</set>
+-
+<set id="808" gender="M" club="1" colorable="1" selectable="1">
+<part id="202" type="ch" colorable="1" index="0"/>
+<part id="2" type="ls" colorable="1" index="0"/>
+<part id="2" type="rs" colorable="1" index="0"/>
+<part id="1202" type="ch" colorable="0" index="1"/>
+</set>
+-
+<set id="825" gender="F" club="1" colorable="1" selectable="1">
+<part id="204" type="ch" colorable="1" index="0"/>
+<part id="2" type="ls" colorable="1" index="0"/>
+<part id="2" type="rs" colorable="1" index="0"/>
+<part id="1204" type="ch" colorable="0" index="1"/>
+</set>
+-
+<set id="822" gender="F" club="1" colorable="1" selectable="1">
+<part id="201" type="ch" colorable="1" index="0"/>
+<part id="2" type="ls" colorable="1" index="0"/>
+<part id="2" type="rs" colorable="1" index="0"/>
+</set>
+-
+<set id="805" gender="M" club="1" colorable="1" selectable="1">
+<part id="502" type="ch" colorable="1" index="0"/>
+<part id="1" type="ls" colorable="1" index="0"/>
+<part id="1" type="rs" colorable="1" index="0"/>
+</set>
+-
+<set id="806" gender="M" club="1" colorable="1" selectable="1">
+<part id="200" type="ch" colorable="1" index="0"/>
+<part id="2" type="ls" colorable="1" index="0"/>
+<part id="2" type="rs" colorable="1" index="0"/>
+<part id="1200" type="ch" colorable="0" index="1"/>
+</set>
+-
+<set id="821" gender="F" club="1" colorable="1" selectable="1">
+<part id="507" type="ch" colorable="1" index="0"/>
+<part id="1" type="ls" colorable="1" index="0"/>
+<part id="1" type="rs" colorable="1" index="0"/>
+<part id="1507" type="ch" colorable="0" index="1"/>
+</set>
+-
+<set id="826" gender="F" club="1" colorable="1" selectable="1">
+<part id="205" type="ch" colorable="1" index="0"/>
+<part id="3" type="ls" colorable="1" index="0"/>
+<part id="3" type="rs" colorable="1" index="0"/>
+<part id="1205" type="ch" colorable="0" index="1"/>
+</set>
+-
+<set id="820" gender="F" club="1" colorable="1" selectable="1">
+<part id="507" type="ch" colorable="1" index="0"/>
+<part id="2" type="ls" colorable="1" index="0"/>
+<part id="2" type="rs" colorable="1" index="0"/>
+<part id="1507" type="ch" colorable="0" index="1"/>
+</set>
+-
+<set id="817" gender="F" club="1" colorable="1" selectable="1">
+<part id="505" type="ch" colorable="1" index="0"/>
+<part id="1" type="ls" colorable="1" index="0"/>
+<part id="1" type="rs" colorable="1" index="0"/>
+</set>
+-
+<set id="883" gender="F" club="1" colorable="1" selectable="1">
+<part id="208" type="ch" colorable="1" index="0"/>
+<part id="3" type="ls" colorable="0" index="0"/>
+<part id="3" type="rs" colorable="0" index="0"/>
+<part id="1208" type="ch" colorable="0" index="1"/>
+</set>
+-
+<set id="884" gender="F" club="0" colorable="1" selectable="1">
+<part id="209" type="ch" colorable="1" index="0"/>
+<part id="3" type="ls" colorable="0" index="0"/>
+<part id="3" type="rs" colorable="0" index="0"/>
+</set>
+-
+<set id="888" gender="F" club="1" colorable="1" selectable="1">
+<part id="802" type="ch" colorable="0" index="0"/>
+<part id="802" type="ls" colorable="0" index="0"/>
+<part id="802" type="rs" colorable="0" index="0"/>
+<part id="1802" type="ch" colorable="1" index="1"/>
+<part id="1802" type="ls" colorable="1" index="1"/>
+<part id="1802" type="rs" colorable="1" index="1"/>
+</set>
+-
+<set id="886" gender="M" club="1" colorable="1" selectable="1">
+<part id="802" type="ch" colorable="0" index="0"/>
+<part id="802" type="ls" colorable="0" index="0"/>
+<part id="802" type="rs" colorable="0" index="0"/>
+<part id="803" type="ch" colorable="0" index="1"/>
+<part id="1802" type="ls" colorable="1" index="1"/>
+<part id="1802" type="rs" colorable="1" index="1"/>
+<part id="1802" type="ch" colorable="1" index="2"/>
+</set>
+-
+<set id="887" gender="U" club="1" colorable="1" selectable="1">
+<part id="801" type="ch" colorable="1" index="0"/>
+<part id="801" type="ls" colorable="1" index="0"/>
+<part id="801" type="rs" colorable="1" index="0"/>
+<part id="1801" type="ch" colorable="0" index="1"/>
+<part id="1801" type="ls" colorable="0" index="1"/>
+<part id="1801" type="rs" colorable="0" index="1"/>
+</set>
+-
+<set id="885" gender="F" club="1" colorable="1" selectable="1">
+<part id="210" type="ch" colorable="1" index="0"/>
+<part id="3" type="ls" colorable="0" index="0"/>
+<part id="3" type="rs" colorable="0" index="0"/>
+<part id="1210" type="ch" colorable="0" index="1"/>
+</set>
+</settype>
+-
+<settype type="lg" paletteid="3" mandatory="1">
+-
+<set id="715" gender="F" club="0" colorable="1" selectable="1">
+<part id="5" type="lg" colorable="1" index="0"/>
+</set>
+-
+<set id="696" gender="F" club="0" colorable="1" selectable="1">
+<part id="201" type="lg" colorable="1" index="0"/>
+</set>
+-
+<set id="280" gender="M" club="0" colorable="1" selectable="1">
+<part id="4" type="lg" colorable="1" index="0"/>
+</set>
+-
+<set id="285" gender="M" club="0" colorable="1" selectable="1">
+<part id="6" type="lg" colorable="1" index="0"/>
+</set>
+-
+<set id="710" gender="F" club="0" colorable="1" selectable="1">
+<part id="4" type="lg" colorable="1" index="0"/>
+</set>
+-
+<set id="720" gender="F" club="0" colorable="1" selectable="1">
+<part id="6" type="lg" colorable="1" index="0"/>
+</set>
+-
+<set id="270" gender="M" club="0" colorable="1" selectable="1">
+<part id="1" type="lg" colorable="1" index="0"/>
+</set>
+-
+<set id="281" gender="M" club="0" colorable="1" selectable="1">
+<part id="201" type="lg" colorable="1" index="0"/>
+</set>
+-
+<set id="275" gender="M" club="0" colorable="1" selectable="1">
+<part id="2" type="lg" colorable="1" index="0"/>
+</set>
+-
+<set id="700" gender="F" club="0" colorable="1" selectable="1">
+<part id="2" type="lg" colorable="1" index="0"/>
+</set>
+-
+<set id="705" gender="F" club="0" colorable="1" selectable="1">
+<part id="3" type="lg" colorable="1" index="0"/>
+</set>
+-
+<set id="695" gender="F" club="0" colorable="1" selectable="1">
+<part id="1" type="lg" colorable="1" index="0"/>
+</set>
+-
+<set id="827" gender="F" club="1" colorable="1" selectable="1">
+<part id="200" type="lg" colorable="1" index="0"/>
+</set>
+-
+<set id="716" gender="F" club="0" colorable="1" selectable="1">
+<part id="7" type="lg" colorable="1" index="0"/>
+<part id="1007" type="lg" colorable="0" index="1"/>
+</set>
+</settype>
+-
+<settype type="sh" paletteid="3" mandatory="1">
+-
+<set id="740" gender="F" club="0" colorable="1" selectable="1">
+<part id="4" type="sh" colorable="1" index="0"/>
+</set>
+-
+<set id="300" gender="M" club="0" colorable="1" selectable="1">
+<part id="3" type="sh" colorable="1" index="0"/>
+</set>
+-
+<set id="735" gender="F" club="0" colorable="1" selectable="1">
+<part id="3" type="sh" colorable="1" index="0"/>
+</set>
+-
+<set id="730" gender="F" club="0" colorable="1" selectable="1">
+<part id="2" type="sh" colorable="1" index="0"/>
+</set>
+-
+<set id="305" gender="M" club="0" colorable="1" selectable="1">
+<part id="4" type="sh" colorable="1" index="0"/>
+</set>
+-
+<set id="295" gender="M" club="0" colorable="1" selectable="1">
+<part id="2" type="sh" colorable="1" index="0"/>
+</set>
+-
+<set id="725" gender="F" club="0" colorable="1" selectable="1">
+<part id="1" type="sh" colorable="1" index="0"/>
+</set>
+-
+<set id="290" gender="M" club="0" colorable="1" selectable="1">
+<part id="1" type="sh" colorable="1" index="0"/>
+</set>
+-
+<set id="905" gender="U" club="0" colorable="1" selectable="1">
+<part id="5" type="sh" colorable="1" index="0"/>
+</set>
+-
+<set id="906" gender="U" club="0" colorable="1" selectable="1">
+<part id="6" type="sh" colorable="1" index="0"/>
+</set>
+-
+<set id="907" gender="F" club="0" colorable="1" selectable="1">
+<part id="7" type="sh" colorable="1" index="0"/>
+</set>
+-
+<set id="908" gender="M" club="0" colorable="1" selectable="1">
+<part id="8" type="sh" colorable="1" index="0"/>
+</set>
+</settype>
+-
+<settype type="ha" paletteid="3" mandatory="0">
+-
+<set id="1010" gender="U" club="0" colorable="1" selectable="1">
+<part id="10" type="ha" colorable="1" index="0"/>
+-
+<hiddenlayers>
+<layer parttype="hrb"/>
+</hiddenlayers>
+</set>
+-
+<set id="1003" gender="U" club="0" colorable="1" selectable="1">
+<part id="3" type="ha" colorable="1" index="0"/>
+-
+<hiddenlayers>
+<layer parttype="hrb"/>
+</hiddenlayers>
+</set>
+-
+<set id="1018" gender="U" club="0" colorable="0" selectable="1">
+<part id="18" type="ha" colorable="0" index="0"/>
+-
+<hiddenlayers>
+<layer parttype="hrb"/>
+</hiddenlayers>
+</set>
+-
+<set id="1020" gender="U" club="0" colorable="0" selectable="1">
+<part id="20" type="ha" colorable="0" index="0"/>
+-
+<hiddenlayers>
+<layer parttype="hrb"/>
+</hiddenlayers>
+</set>
+-
+<set id="1022" gender="U" club="0" colorable="1" selectable="1">
+<part id="22" type="ha" colorable="1" index="0"/>
+-
+<hiddenlayers>
+<layer parttype="hrb"/>
+<layer parttype="hr"/>
+</hiddenlayers>
+</set>
+-
+<set id="1006" gender="U" club="0" colorable="0" selectable="1">
+<part id="6" type="ha" colorable="0" index="0"/>
+-
+<hiddenlayers>
+<layer parttype="hrb"/>
+</hiddenlayers>
+</set>
+-
+<set id="1021" gender="U" club="0" colorable="1" selectable="1">
+<part id="21" type="ha" colorable="1" index="0"/>
+-
+<hiddenlayers>
+<layer parttype="fa"/>
+<layer parttype="hrb"/>
+<layer parttype="hr"/>
+</hiddenlayers>
+</set>
+-
+<set id="1023" gender="U" club="0" colorable="1" selectable="1">
+<part id="23" type="ha" colorable="1" index="0"/>
+-
+<hiddenlayers>
+<layer parttype="hrb"/>
+</hiddenlayers>
+</set>
+-
+<set id="1017" gender="U" club="0" colorable="0" selectable="1">
+<part id="17" type="ha" colorable="0" index="0"/>
+-
+<hiddenlayers>
+<layer parttype="hrb"/>
+<layer parttype="hr"/>
+</hiddenlayers>
+</set>
+-
+<set id="1002" gender="U" club="0" colorable="1" selectable="1">
+<part id="2" type="ha" colorable="1" index="0"/>
+-
+<hiddenlayers>
+<layer parttype="hrb"/>
+</hiddenlayers>
+</set>
+-
+<set id="1007" gender="U" club="0" colorable="0" selectable="1">
+<part id="7" type="ha" colorable="0" index="0"/>
+-
+<hiddenlayers>
+<layer parttype="hrb"/>
+<layer parttype="hr"/>
+</hiddenlayers>
+</set>
+-
+<set id="1014" gender="U" club="0" colorable="0" selectable="1">
+<part id="14" type="ha" colorable="0" index="0"/>
+-
+<hiddenlayers>
+<layer parttype="hrb"/>
+</hiddenlayers>
+</set>
+-
+<set id="1005" gender="U" club="0" colorable="1" selectable="1">
+<part id="5" type="ha" colorable="1" index="0"/>
+-
+<hiddenlayers>
+<layer parttype="hrb"/>
+</hiddenlayers>
+</set>
+-
+<set id="1001" gender="U" club="0" colorable="0" selectable="1">
+<part id="1" type="ha" colorable="0" index="0"/>
+-
+<hiddenlayers>
+<layer parttype="hrb"/>
+</hiddenlayers>
+</set>
+-
+<set id="1008" gender="U" club="0" colorable="0" selectable="1">
+<part id="8" type="ha" colorable="0" index="0"/>
+-
+<hiddenlayers>
+<layer parttype="hrb"/>
+<layer parttype="hr"/>
+</hiddenlayers>
+</set>
+-
+<set id="1015" gender="U" club="0" colorable="0" selectable="1">
+<part id="15" type="ha" colorable="0" index="0"/>
+-
+<hiddenlayers>
+<layer parttype="fa"/>
+<layer parttype="ea"/>
+<layer parttype="hrb"/>
+<layer parttype="hr"/>
+</hiddenlayers>
+</set>
+-
+<set id="1004" gender="U" club="0" colorable="1" selectable="1">
+<part id="4" type="ha" colorable="1" index="0"/>
+-
+<hiddenlayers>
+<layer parttype="hrb"/>
+</hiddenlayers>
+</set>
+-
+<set id="1009" gender="U" club="0" colorable="1" selectable="1">
+<part id="9" type="ha" colorable="1" index="0"/>
+-
+<hiddenlayers>
+<layer parttype="hrb"/>
+</hiddenlayers>
+</set>
+-
+<set id="1013" gender="U" club="1" colorable="1" selectable="1">
+<part id="13" type="ha" colorable="1" index="0"/>
+-
+<hiddenlayers>
+<layer parttype="hrb"/>
+</hiddenlayers>
+</set>
+-
+<set id="1019" gender="U" club="1" colorable="0" selectable="1">
+<part id="19" type="ha" colorable="0" index="0"/>
+-
+<hiddenlayers>
+<layer parttype="hrb"/>
+</hiddenlayers>
+</set>
+-
+<set id="1016" gender="U" club="1" colorable="0" selectable="1">
+<part id="16" type="ha" colorable="0" index="0"/>
+-
+<hiddenlayers>
+<layer parttype="hrb"/>
+</hiddenlayers>
+</set>
+-
+<set id="1024" gender="U" club="1" colorable="0" selectable="1">
+<part id="24" type="ha" colorable="0" index="0"/>
+-
+<hiddenlayers>
+<layer parttype="hrb"/>
+</hiddenlayers>
+</set>
+-
+<set id="1011" gender="U" club="1" colorable="1" selectable="1">
+<part id="11" type="ha" colorable="1" index="0"/>
+-
+<hiddenlayers>
+<layer parttype="hrb"/>
+</hiddenlayers>
+</set>
+-
+<set id="1012" gender="U" club="1" colorable="1" selectable="1">
+<part id="12" type="ha" colorable="1" index="0"/>
+-
+<hiddenlayers>
+<layer parttype="hrb"/>
+</hiddenlayers>
+</set>
+-
+<set id="1025" gender="U" club="1" colorable="0" selectable="1">
+<part id="25" type="ha" colorable="0" index="0"/>
+-
+<hiddenlayers>
+<layer parttype="hrb"/>
+</hiddenlayers>
+</set>
+-
+<set id="1026" gender="U" club="1" colorable="0" selectable="1">
+<part id="26" type="ha" colorable="0" index="0"/>
+</set>
+-
+<set id="1027" gender="U" club="1" colorable="0" selectable="1">
+<part id="27" type="ha" colorable="0" index="0"/>
+-
+<hiddenlayers>
+<layer parttype="hrb"/>
+</hiddenlayers>
+</set>
+</settype>
+-
+<settype type="he" paletteid="3" mandatory="0">
+-
+<set id="1606" gender="U" club="0" colorable="1" selectable="1">
+<part id="6" type="he" colorable="1" index="0"/>
+</set>
+-
+<set id="1605" gender="U" club="0" colorable="1" selectable="1">
+<part id="5" type="he" colorable="1" index="0"/>
+</set>
+-
+<set id="1602" gender="U" club="0" colorable="1" selectable="1">
+<part id="2" type="he" colorable="1" index="0"/>
+</set>
+-
+<set id="1601" gender="U" club="0" colorable="0" selectable="1">
+<part id="1" type="he" colorable="0" index="0"/>
+</set>
+-
+<set id="1607" gender="U" club="1" colorable="0" selectable="1">
+<part id="7" type="he" colorable="0" index="0"/>
+</set>
+-
+<set id="1604" gender="U" club="1" colorable="0" selectable="1">
+<part id="4" type="he" colorable="0" index="0"/>
+</set>
+-
+<set id="1603" gender="U" club="1" colorable="1" selectable="1">
+<part id="3" type="he" colorable="1" index="0"/>
+</set>
+-
+<set id="1608" gender="U" club="0" colorable="0" selectable="1">
+<part id="8" type="he" colorable="0" index="0"/>
+</set>
+-
+<set id="1609" gender="U" club="0" colorable="1" selectable="1">
+<part id="9" type="he" colorable="1" index="0"/>
+</set>
+-
+<set id="1610" gender="U" club="0" colorable="0" selectable="1">
+<part id="10" type="he" colorable="0" index="0"/>
+</set>
+</settype>
+-
+<settype type="ea" paletteid="3" mandatory="0">
+-
+<set id="1404" gender="U" club="0" colorable="1" selectable="1">
+<part id="4" type="ea" colorable="1" index="0"/>
+</set>
+-
+<set id="1401" gender="U" club="0" colorable="1" selectable="1">
+<part id="1" type="ea" colorable="1" index="0"/>
+</set>
+-
+<set id="1403" gender="U" club="0" colorable="1" selectable="1">
+<part id="3" type="ea" colorable="1" index="0"/>
+</set>
+-
+<set id="1402" gender="U" club="1" colorable="0" selectable="1">
+<part id="2" type="ea" colorable="0" index="0"/>
+</set>
+-
+<set id="1405" gender="U" club="1" colorable="0" selectable="1">
+<part id="5" type="ea" colorable="0" index="0"/>
+</set>
+-
+<set id="1406" gender="U" club="0" colorable="0" selectable="1">
+<part id="6" type="ea" colorable="0" index="0"/>
+</set>
+</settype>
+-
+<settype type="fa" paletteid="3" mandatory="0">
+-
+<set id="1202" gender="U" club="0" colorable="1" selectable="1">
+<part id="2" type="fa" colorable="1" index="0"/>
+</set>
+-
+<set id="1208" gender="U" club="0" colorable="1" selectable="1">
+<part id="8" type="fa" colorable="1" index="0"/>
+</set>
+-
+<set id="1206" gender="U" club="0" colorable="1" selectable="1">
+<part id="6" type="fa" colorable="1" index="0"/>
+</set>
+-
+<set id="1204" gender="U" club="0" colorable="0" selectable="1">
+<part id="4" type="fa" colorable="0" index="0"/>
+</set>
+-
+<set id="1205" gender="U" club="0" colorable="1" selectable="1">
+<part id="5" type="fa" colorable="1" index="0"/>
+</set>
+-
+<set id="1201" gender="U" club="0" colorable="0" selectable="1">
+<part id="1" type="fa" colorable="0" index="0"/>
+</set>
+-
+<set id="1209" gender="U" club="1" colorable="1" selectable="1">
+<part id="9" type="fa" colorable="1" index="0"/>
+</set>
+-
+<set id="1203" gender="U" club="1" colorable="0" selectable="1">
+<part id="3" type="fa" colorable="0" index="0"/>
+-
+<hiddenlayers>
+<layer parttype="ea"/>
+</hiddenlayers>
+</set>
+-
+<set id="1207" gender="U" club="1" colorable="0" selectable="1">
+<part id="7" type="fa" colorable="0" index="0"/>
+-
+<hiddenlayers>
+<layer parttype="ea"/>
+</hiddenlayers>
+</set>
+-
+<set id="1210" gender="U" club="0" colorable="0" selectable="1">
+<part id="10" type="fa" colorable="0" index="0"/>
+</set>
+-
+<set id="1211" gender="U" club="0" colorable="0" selectable="1">
+<part id="11" type="fa" colorable="0" index="0"/>
+</set>
+-
+<set id="1212" gender="U" club="0" colorable="0" selectable="1">
+<part id="12" type="fa" colorable="0" index="0"/>
+</set>
+</settype>
+-
+<settype type="ca" paletteid="3" mandatory="0">
+-
+<set id="1810" gender="U" club="0" colorable="0" selectable="1">
+<part id="10" type="ca" colorable="0" index="0"/>
+</set>
+-
+<set id="1803" gender="U" club="0" colorable="1" selectable="1">
+<part id="3" type="ca" colorable="1" index="0"/>
+</set>
+-
+<set id="1806" gender="U" club="0" colorable="1" selectable="1">
+<part id="6" type="ca" colorable="1" index="0"/>
+</set>
+-
+<set id="1809" gender="U" club="0" colorable="0" selectable="1">
+<part id="9" type="ca" colorable="0" index="0"/>
+</set>
+-
+<set id="1805" gender="U" club="0" colorable="1" selectable="1">
+<part id="5" type="ca" colorable="1" index="0"/>
+</set>
+-
+<set id="1801" gender="U" club="0" colorable="1" selectable="1">
+<part id="1" type="ca" colorable="1" index="0"/>
+</set>
+-
+<set id="1802" gender="U" club="0" colorable="0" selectable="1">
+<part id="2" type="ca" colorable="0" index="0"/>
+</set>
+-
+<set id="1804" gender="U" club="0" colorable="1" selectable="1">
+<part id="4" type="ca" colorable="1" index="0"/>
+</set>
+-
+<set id="1808" gender="U" club="1" colorable="0" selectable="1">
+<part id="8" type="ca" colorable="0" index="0"/>
+</set>
+-
+<set id="1811" gender="U" club="1" colorable="0" selectable="1">
+<part id="11" type="ca" colorable="0" index="0"/>
+</set>
+-
+<set id="1807" gender="U" club="1" colorable="0" selectable="1">
+<part id="7" type="ca" colorable="0" index="0"/>
+</set>
+-
+<set id="1812" gender="U" club="0" colorable="0" selectable="1">
+<part id="12" type="ca" colorable="0" index="0"/>
+</set>
+-
+<set id="1813" gender="U" club="0" colorable="0" selectable="1">
+<part id="13" type="ca" colorable="0" index="0"/>
+</set>
+-
+<set id="1814" gender="U" club="1" colorable="0" selectable="1">
+<part id="14" type="ca" colorable="0" index="0"/>
+</set>
+-
+<set id="1815" gender="U" club="0" colorable="1" selectable="1">
+<part id="15" type="ca" colorable="1" index="0"/>
+</set>
+-
+<set id="1816" gender="U" club="1" colorable="0" selectable="1">
+<part id="16" type="ca" colorable="0" index="0"/>
+</set>
+-
+<set id="1817" gender="U" club="0" colorable="0" selectable="1">
+<part id="17" type="ca" colorable="0" index="0"/>
+</set>
+-
+<set id="1818" gender="U" club="0" colorable="0" selectable="1">
+<part id="18" type="ca" colorable="0" index="0"/>
+</set>
+-
+<set id="1819" gender="U" club="0" colorable="0" selectable="1">
+<part id="19" type="ca" colorable="0" index="0"/>
+</set>
+</settype>
+-
+<settype type="wa" paletteid="3" mandatory="0">
+-
+<set id="2012" gender="U" club="0" colorable="0" selectable="1">
+<part id="12" type="wa" colorable="0" index="0"/>
+</set>
+-
+<set id="2007" gender="U" club="0" colorable="0" selectable="1">
+<part id="7" type="wa" colorable="0" index="0"/>
+</set>
+-
+<set id="2006" gender="U" club="0" colorable="0" selectable="1">
+<part id="6" type="wa" colorable="0" index="0"/>
+</set>
+-
+<set id="2011" gender="U" club="0" colorable="0" selectable="1">
+<part id="11" type="wa" colorable="0" index="0"/>
+</set>
+-
+<set id="2009" gender="U" club="0" colorable="1" selectable="1">
+<part id="9" type="wa" colorable="1" index="0"/>
+</set>
+-
+<set id="2008" gender="U" club="0" colorable="0" selectable="1">
+<part id="8" type="wa" colorable="0" index="0"/>
+</set>
+-
+<set id="2002" gender="U" club="0" colorable="0" selectable="1">
+<part id="2" type="wa" colorable="0" index="0"/>
+</set>
+-
+<set id="2004" gender="U" club="0" colorable="1" selectable="1">
+<part id="4" type="wa" colorable="1" index="0"/>
+</set>
+-
+<set id="2001" gender="U" club="0" colorable="0" selectable="1">
+<part id="1" type="wa" colorable="0" index="0"/>
+</set>
+-
+<set id="2003" gender="U" club="1" colorable="0" selectable="1">
+<part id="3" type="wa" colorable="0" index="0"/>
+</set>
+-
+<set id="2010" gender="F" club="1" colorable="0" selectable="1">
+<part id="10" type="wa" colorable="0" index="0"/>
+</set>
+-
+<set id="2005" gender="U" club="1" colorable="0" selectable="1">
+<part id="5" type="wa" colorable="0" index="0"/>
+</set>
+</settype>
+</sets>
+</figuredata>

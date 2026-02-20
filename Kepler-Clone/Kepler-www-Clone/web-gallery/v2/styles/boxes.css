@@ -1,0 +1,383 @@
+/* -- flash message box -- */
+div.splashmessage {
+    position: absolute;
+    left: 0;
+    top: 0;
+    border: 1px solid #ccc;
+    padding: 3px;
+}
+
+#splashmessagebox0 {
+    left: 50px;
+    top: 150px;
+}
+
+#splashmessagebox1 {
+    left: 500px;
+    top: 150px;
+}
+
+#splashmessagebox2 {
+    left: 50px;
+    top: 400px;
+}
+
+#splashmessagebox3 {
+    left: 500px;
+    top: 400px;
+}
+
+#splashmessagebox4 {
+    left: 50px;
+    top: 650px;
+}
+
+#splashmessagebox5 {
+    left: 500px;
+    top: 650px;
+}
+
+/* Grey dialog box */
+div.dialog-grey, div.dialog-greytab {
+	position: absolute;
+	width: 398px;
+	z-index: 9001;
+}
+
+div.dialog-grey-top, div.dialog-greytab-top {
+	background-repeat: no-repeat;
+	background-image: url(../images/dialogs/grey-tl.gif);
+	padding-left: 13px;
+	height: 26px;
+	position: relative;
+}
+
+#editmode div.dialog-grey-top,#editmode div.dialog-greytab-top, #viewmode div.dialog-grey-top,#viewmode div.dialog-greytab-top {
+	cursor: move;
+}
+
+div.dialog-grey-top div, div.dialog-greytab-top div {
+	background-position: top right;
+	background-repeat: no-repeat;
+	background-image: url(../images/dialogs/grey-tr.gif);
+	height: 26px;
+}
+
+div.dialog-grey-top h3, div.dialog-greytab-top h3 {
+	margin: 0;
+	float: left;
+	height: 26px;
+	background-repeat: repeat-x;
+	background-image: url(../images/dialogs/grey-header.gif);
+	font-size: 10px;
+	font-weight: bold;
+	color: white;
+	text-transform: uppercase;
+	text-align: left;
+}
+
+div.dialog-grey-top h3 span, div.dialog-greytab-top h3 span {
+	float: left;
+	padding: 7px 14px 0 4px;
+}
+
+a.dialog-grey-exit, a.dialog-greytab-exit {
+	text-align: right;
+	position: absolute;
+	top: 9px;
+	right: 13px;
+	height: 26px;
+}
+
+div.dialog-grey-content, div.dialog-greytab-content {
+	background-color: #E2E2E2;
+	background-repeat: repeat-y;
+	background-image: url(../images/dialogs/grey-content-l.gif);
+	padding: 0;
+	margin: 0;
+	clear: both;
+}
+
+div.dialog-grey-body, div.dialog-greytab-body {
+	background-position: top right;
+	background-repeat: repeat-y;
+	background-image: url(../images/dialogs/grey-content-r.gif);
+	margin: 0 0 0 7px;
+	padding: 7px 7px 0 0;
+	text-align: left;
+}
+
+div.dialog-grey-body p, div.dialog-greytab-body p {
+	margin: 0;
+	padding: 0 0 1em 0;
+	text-align: left;
+}
+
+div.dialog-grey-bottom, div.dialog-greytab-bottom {
+	background-repeat: no-repeat;
+	background-image: url(../images/dialogs/grey-bl.gif);
+	height: 7px;
+	font-size: 1%;
+}
+
+div.dialog-grey-bottom div, div.dialog-greytab-bottom div {
+	background-position: top right;
+	background-repeat: no-repeat;
+	background-image: url(../images/dialogs/grey-br.gif);
+	height: 7px;
+	margin-left: 7px;
+}
+
+div.dialog-greytab {
+	width: 300px;
+}
+
+div.dialog-greytab-tabs {
+	background-image: url(../images/dialogs/greytab-l.gif);
+	background-repeat: repeat-y;
+	padding: 0 0 0 4px;
+}
+
+div.dialog-greytab-tabs-content {
+	background-image: url(../images/dialogs/greytab-tabbg2.gif);
+	background-repeat: no-repeat;
+	background-position: bottom right;
+}
+
+div.dialog-greytab-tabs-bottom {
+	background-image: url(../images/dialogs/greytab-l.gif);
+	background-repeat: repeat-y;
+}
+
+div.dialog-greytab-tabs-bottom div {
+	background-image: url(../images/dialogs/greytab-tabbg.gif);
+	background-repeat: no-repeat;
+	background-position: bottom right;
+	height: 5px;
+	margin-left: 10px;
+}
+
+div.dialog-greytab-tabs-content ul {
+	margin: 0;
+	padding: 3px 0;
+	list-style-type: none;
+	font-size: 10px;
+}
+
+div.dialog-greytab-tabs-content ul li {
+	margin: 0;
+	padding: 0 0 0 6px;
+	display: block;
+	float: left;
+	background-image: url(../images/dialogs/greytab-tab-l.gif);
+	background-repeat: no-repeat;
+	background-position: bottom left;
+}
+
+div.dialog-greytab-tabs-content ul li a, div.dialog-greytab-tabs-content ul li span {
+	background-image: url(../images/dialogs/greytab-tab-r.gif) !important;
+	background-repeat: no-repeat;
+	background-position: bottom right;
+	display: block;
+	padding: 3px 6px 5px 0;
+	color: black;
+	font-weight: normal;
+}
+
+div.dialog-greytab-tabs-content ul li.selected {
+	background-image: url(../images/dialogs/greytab-tab-l-selected.gif);
+	font-weight: bold;
+}
+
+div.dialog-greytab-tabs-content ul li.selected a, div.dialog-greytab-tabs-content ul li.selected span {
+	background-image: url(../images/dialogs/greytab-tab-r-selected.gif) !important;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+div.dialog-greytab-content {
+	background-image: url(../images/dialogs/greytab-l.gif);
+}
+
+div.dialog-greytab-body {
+	background-image: url(../images/dialogs/greytab-r.gif);
+	margin: 0 0 0 10px;
+	padding: 10px 10px 0 0;
+}
+
+div.dialog-greytab-bottom {
+	background-image: url(../images/dialogs/greytab-bl.gif);
+	height: 10px;
+}
+
+div.dialog-greytab-bottom div {
+	background-image: url(../images/dialogs/greytab-br.gif);
+	height: 10px;
+	margin-left: 10px;
+}
+
+/* bubbles */
+div.bottom-bubble-c {
+	background-color: white;
+	border-left: 2px solid black;
+	border-right: 2px solid black;
+	padding: 4px 7px;
+}
+
+div.bottom-bubble-t {
+	background: url(../images/groups/editbubble-tl.png) no-repeat 0 100%;
+	font-size: 1px;
+	margin-right: 5px;
+	text-align: right;
+}
+
+div.bottom-bubble-t div {
+	background: url(../images/groups/editbubble-tr.png) no-repeat 100% 100%;
+	padding-top: 15px;
+	margin-right: -5px;
+}
+
+div.bottom-bubble-b {
+	background: url(../images/groups/editbubble-bl.png) no-repeat 0 0;
+	font-size: 1px;
+	margin-right: 5px;
+}
+
+div.bottom-bubble-b div {
+	background: url(../images/groups/editbubble-br.png) no-repeat 100% 0;
+	padding-top: 5px;
+	margin-right: -5px;
+}
+
+/* hotel open */
+div.hotel-open, div.hotel-closed {
+    width: 113px;
+    height: 124px;
+    margin-top: 10px;
+}
+
+div.hotel-open-image-splash, div.hotel-closed-image-splash {
+    margin-left:3px;
+    width: 106px;
+    height:106px;
+    background: url(../images/systemavailability/hotel-button-splash.png) no-repeat;
+}
+
+div.hotel-image {
+    margin-top: -82px;
+}
+
+div.hotel-open-button-content, div.hotel-closed-button-content {
+    margin-top: 3px;
+}
+
+div.hotel-open-button-content a, div.hotel-closed-button-content div, div.register-button a {
+    background-image: url(../images/systemavailability/hotel-button.png);
+    background-position: -7px 0;
+    text-align: center;
+    overflow: hidden;
+    color: #FFFFFF;
+    font-size: 14px;
+    font-weight: bold;
+    max-width: 260px;
+    height: 28px;
+    text-decoration: none;
+    float:left;
+    padding-left: 7px;
+    padding-top: 8px;
+    white-space: nowrap;
+}
+
+div.hotel-open-button-content a, div.hotel-closed-button-content div {
+    width: 98px;
+}
+
+div.hotel-closed-button-content div.closed {
+    background-position: -7px -72px;
+}
+
+div.hotel-closed-button-content span.closed {
+    background-position: 0 -72px;
+}
+
+div.hotel-open-button-content span, div.hotel-closed-button-content span {
+    background-image: url(../images/systemavailability/hotel-button.png);
+    background-repeat:no-repeat;
+    float:left;
+    width: 7px;
+    height: 35px;
+}
+
+div.hotel-open-image {
+    background: url(../images/systemavailability/hotel-button-hotelopen.gif) no-repeat;
+    margin-left: 27px;
+    width: 53px;
+    height: 52px;
+}
+
+div.hotel-closed-image {
+    background: url(../images/systemavailability/hotel-button-hotelclosed.png) no-repeat;
+    margin-left: 35px;
+    width: 44px;
+    height: 52px;
+}
+
+
+div.hotel-open-button-content:hover a.open {
+	background-position: -7px -36px;
+}
+div.hotel-open-button-content:hover span.open {
+	background-position: 0 -36px;
+}
+
+div.register-button span {
+    background-image: url(../images/systemavailability/hotel-button-ends.png);
+    background-repeat:no-repeat;
+    float:left;
+    width: 20px;
+    height: 36px;
+}
+
+div.register-button:hover a {
+	background-position: -7px -36px;
+}
+
+div.register-button:hover span {
+	background-position: 0 -36px;
+}
+
+/* --- bubble w/ black border --- */
+
+div.blackbubble {
+    background-image: url(../images/box-scale/bubble_tl.gif);
+    background-repeat: no-repeat;
+    margin-bottom: 0;
+}
+
+div.blackbubble-body {
+	margin-left: 11px;
+	padding-top: 11px;
+	padding-right: 11px;
+	margin-bottom: 0;
+    background-image: url(../images/box-scale/bubble_tr.gif);
+    background-repeat: no-repeat;
+    background-position: top right;
+}
+
+div.blackbubble-bottom {
+	clear: both;
+    background-image: url(../images/box-scale/bubble_bl.gif);
+    background-repeat: no-repeat;
+    background-position: top left;
+    margin-top: 0;
+    margin-bottom: 3px;
+    text-align: rigth;
+}
+
+div.blackbubble-bottom-body {
+	margin-left: 11px;
+    margin-top: 0;
+    background-image: url(../images/box-scale/bubble_br.gif);
+    background-repeat: no-repeat;
+    background-position: top right;
+}

@@ -1,0 +1,214 @@
+#friend-management {
+    width: 560px;
+    float:left;
+}
+
+#friend-management #search-view {
+    float: left;
+    width: 240px;
+}
+
+#friend-management #category-list {
+    float: right;
+    width: 270px;
+    border: 2px solid #999999;
+    margin: 0;
+}
+
+#friends-category-title {
+    color: #fff;
+	background-color: #999999;
+    text-align: center;
+    height: 17px;
+}
+
+#friend-management #category-list div.category-item {
+    font-weight: bold;
+    padding: 4px 6px 4px 6px;
+    border-bottom: 1px dashed #999999;
+    height: 15px;
+}
+
+#friend-management #category-list input.create-category {
+    width: 220px;
+    float: left;
+    margin: 10px;
+}
+
+.friendmanagement-small-icons {
+    background: transparent url(../images/shared_icons/small_icons.png) no-repeat;
+    cursor: pointer;
+    min-height: 15px;
+    width: 15px;
+}
+
+#friend-management .big-icons {
+    background: transparent url(../images/personal_info/big_icons.png) no-repeat;
+    cursor: pointer;
+    min-height: 15px;
+}
+
+.friendmanagement-remove {
+    background-position: -3px -595px;
+    float: right;
+}
+
+#friend-management .remove-friend {
+    padding-right: 70px;
+}
+
+#friend-management .friend-header-icon {
+    background-position: -900px -1px;
+    height: 30px;
+    padding-left: 40px;
+}
+
+#friend-management #category-list .edit-category {
+    background-position: -1px -530px;
+    float: right;
+    width: 20px;
+    height: 20px;
+}
+
+.friendmanagement-save {
+    background-position: -1px -175px;
+    float: right;
+    width: 20px;
+}
+
+#friend-management #category-list .add-category {
+    background-position: -3px -660px;    
+    float: right;
+    margin: 1em 0.4em;
+}
+
+#friend-management #search-view input.friend-search-query {
+    float: left;
+    width: 187px;
+    color: #999999;
+}
+
+#friend-management #friend-search {
+    padding-top: 10px;
+}
+
+#friend-management #friend-list {
+    width: 100%;
+}
+
+#friend-management #category-list .category-name {
+    width: 220px;
+    overflow: hidden;
+    float: left;
+    cursor: pointer;
+}
+
+#friend-management #category-list-select {
+    float: left;
+    width: 200px;
+}
+
+#friend-management #category-options {
+    padding-top: 20px;
+}
+
+#friend-list-header-container {
+    padding-top: 10px;
+}
+
+#friend-list td.friend-name, #friend-list td.friend-login {
+    width: 200px;
+}
+
+#friend-list td.friend-remove, #friend-list td.friend-category {
+    width: 105px;
+}
+
+#friend-list tr.friend-list-header {
+    background-color: #4AB501;
+}
+
+#friend-management .even {
+   background-color: #DAFDC2;
+}
+
+#friend-list-table {
+    width:100%;
+    margin: 0;
+    padding: 0;
+}
+
+#friend-list-table td.friend-select {
+    width: 30px;
+}
+
+#friend-list-table th {
+    color: #fff;
+    height: 20px;
+    font-weight: normal;
+}
+
+#friend-list-header .page-limit {
+    width: 50%;
+    height: 40px;
+    font-weight: bold;
+    float: left;
+}
+
+#friend-list-paging {
+    float: right;
+    font-weight: bold;
+}
+
+.friendmanagement-tip-delete {
+    float: left;
+    padding-left: 20px;
+}
+
+.friendmanagement-tip-cancel {
+    padding-left: 20px;
+    margin-right: 70px;
+}
+
+#friend-management #category-list .category-default:hover, #friend-management #category-list .open-category:hover, #friend-list-header .category-limit:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+#friend-management #category-list .limit-reached {    
+    font-style: italic;
+    padding: 10px;
+}
+
+#friend-management #category-list .selected-category {
+    background-color: #ECECEC;
+}
+
+#friend-management #category-list .edit-category-name {
+    width: 200px;
+}
+
+#friend-list-table tr.odd:hover {
+    background-color: #ECECEC;
+}
+
+#friend-list-table tr.even:hover {
+    background-color: #DCEAFA;
+}
+
+#friend-list a {
+    color: #409643;
+}
+
+#friend-list-table a.sort {
+    cursor: pointer;
+    color: #FFFFFF;
+}
+
+#friend-list-table a.sorted {
+    font-weight: bold;
+}
+
+#friend-list-table a.sort:hover {
+    text-decoration: underline;
+}

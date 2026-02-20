@@ -1,0 +1,222 @@
+#new-personal-info {
+	position: relative;
+	background-repeat: no-repeat;
+	background-color: transparent;
+	margin: 0pt 8px 7px 2px;
+	padding-top:143px;	
+}
+
+#new-personal-info a {
+	color: #fff;
+	text-decoration: none;	
+}
+#new-personal-info a:hover  {
+	text-decoration: underline;
+}
+
+#personal-info div.hotel-open-button-content a {
+    color: #ffffff;
+}
+
+#new-personal-info .enter-hotel-btn {
+	position: absolute;
+	top: 15px;
+	right: 40px;
+	background: transparent url(../images/personal_info/orange_thing.png) no-repeat 50% 0;
+	padding: 28px 0;
+}
+
+#new-personal-info .enter-beta-btn {
+	position: absolute;
+	top: 15px;
+	left: 110px;
+	background: transparent url(../images/personal_info/orange_thing.png) no-repeat 50% 0;
+	padding: 28px 0;
+}
+
+/* habbo plate ---------------------- */
+
+#new-personal-info #habbo-plate {
+	position: absolute;
+	top: 48px;
+	left: 15px;	
+	background: url(../images/personal_info/info_habbo_plate.png) no-repeat 2px -162px;
+	text-align: center;
+	height: 138px;
+	position: absolute;
+	width: 96px;
+}
+
+#new-personal-info #habbo-plate:hover {
+	background-position: 2px 75px;
+}
+
+#new-personal-info #habbo-info {
+	background-color: #7B7B71;
+	padding-top: 10px;
+}
+
+/* Link bar ----------------- */
+
+#new-personal-info #link-bar {
+	padding: 7px 0 5px 0;	
+	background-color: #7B7B71;
+}
+
+#new-personal-info #link-bar li {
+	float: left;
+	margin: 0pt 23px 0pt 17px;
+}
+
+#new-personal-info #link-bar li {
+    padding: 2px 0 2px 20px;
+    line-height: 16px;
+    float: left;
+	background-color: transparent;
+	background-repeat: no-repeat;
+    background-image: url(../images/info_icons.png);
+}
+
+#new-personal-info #link-bar .change-looks   { background-position: 0 -976px; }
+#new-personal-info #link-bar .credits        { background-position: 0 -143px; }
+#new-personal-info #link-bar .club           { background-position: 0 -95px; }
+#new-personal-info #link-bar .activitypoints { background-position: 0 -1070px; padding-left: 18px }
+
+/* motto editor */
+
+#new-personal-info #habbo-info #motto-container {
+	margin-left: 120px;
+	width: 323px;
+	background: transparent url(../images/personal_info/motto_field.png) no-repeat;
+	height: 18px;
+	padding: 2px 3px 4px 3px;
+}
+
+#new-personal-info #habbo-info #motto-container strong, #new-personal-info #habbo-info #motto-container div {
+	display: block;
+	float: left;	
+	line-height: 18px;
+}
+
+#new-personal-info #habbo-info #motto-container strong {
+	padding: 0 10px;
+}
+
+#new-personal-info #habbo-info #motto-container input {
+	border: 1px solid #fff;
+	padding: 1px 0;
+	height: 14px;
+	margin: 0;
+	background-color: #ddd;
+}
+
+#new-personal-info #habbo-info #motto-container span {
+	line-height: 18px;
+	white-space: nowrap;
+	overflow: hidden;
+	color: #000;
+	display: block;
+	cursor: pointer;
+	color: #555;
+}
+
+#new-personal-info #habbo-info #motto-container span .progress {
+	margin: 6px 20px 0 0;
+	float: right;
+}
+
+#new-personal-info #habbo-info #motto-container p {
+	margin: 0;
+	padding: 0;
+}
+
+#new-personal-info #habbo-info #motto-links {
+	text-align: right; 
+	font-size: 9px;
+	margin-right: 8px;
+	color: #fff;
+}
+
+/* feed container and items */
+
+#new-personal-info #habbo-feed {
+	background-color: #A0A097;
+}
+
+#new-personal-info #habbo-feed ul#feed-items li {
+    padding: 7px 5px 7px 45px;
+    background: transparent url(../images/personal_info/big_icons.png) no-repeat 10px 7px;
+    border-top: 1px dotted #7B7B73;
+    min-height: 28px;
+}
+
+#new-personal-info #habbo-feed ul#feed-items li:first-child {
+	border-top: none;
+}
+#new-personal-info #habbo-feed ul#feed-items li .remove-feed-item {
+	display: block;
+	float: right;
+	text-indent: -10000px;
+	background: transparent url(../images/personal_info/close_msg.png) no-repeat;
+	width: 13px;
+	height: 13px;
+}
+
+#new-personal-info #habbo-feed ul#feed-items li:hover .remove-feed-item {
+	background-position: -118px 0;
+}
+
+#new-personal-info #habbo-feed ul#feed-items .remove-feed-item:active,
+#new-personal-info #habbo-feed ul#feed-items .remove-feed-item:focus { outline: none; }
+
+#new-personal-info #habbo-feed ul#feed-items li#feed-birthday         { background-position: -3153px 6px; font-weight: bold; color: white; }
+#new-personal-info #habbo-feed ul#feed-items li#feed-notification     { background-position: -439px 6px;  }
+#new-personal-info #habbo-feed ul#feed-items li#feed-friends          { background-position: -892px 6px;  }
+#new-personal-info #habbo-feed ul#feed-items li#feed-item-giftqueue   { background-position: -2240px 6px; }
+#new-personal-info #habbo-feed ul#feed-items li#feed-item-dailygift   { background-position: -2240px 6px; }
+#new-personal-info #habbo-feed ul#feed-items li#feed-item-creditdonation { background-position: -1790px 6px; }
+#new-personal-info #habbo-feed ul#feed-items li#feed-item-productdonation { background-position: -2240px 6px; }
+#new-personal-info #habbo-feed ul#feed-items li#feed-item-hcgift      { background-position: -2690px 6px; }
+#new-personal-info #habbo-feed ul#feed-items li#feed-item-hc-reminder { background-position: -1339px 6px; }
+#new-personal-info #habbo-feed ul#feed-items li#feed-item-hc-expired  { background-position: -1339px 6px; }
+#new-personal-info #habbo-feed ul#feed-items li#feed-item-tutor-score { background-position: -3609px 6px; }
+#new-personal-info #habbo-feed ul#feed-items li#feed-item-campaign    { background-image: none; }
+#new-personal-info #habbo-feed ul#feed-items li#feed-pending-members  { background-position: 15px -367px; }
+#new-personal-info #habbo-feed ul#feed-items li#feed-lastlogin        { background-position: 15px -297px; }
+#new-personal-info #habbo-feed ul#feed-items li#feed-group-discussion { background-position: 15px -456px; }
+#new-personal-info #habbo-feed ul#feed-items li#feed-trading-enabled  { background-position: 15px -825px; }
+#new-personal-info #habbo-feed ul#feed-items li#feed-trading-disabled { background-position: 15px -886px; }
+#new-personal-info #habbo-feed ul#feed-items li#feed-flashbeta,
+#new-personal-info #habbo-feed ul#feed-items li#feed-flashbeta-invites { background: transparent url(../images/personal_info/BE2.png) no-repeat 3px 6px; padding-left: 50px; height: 36px }
+#new-personal-info #habbo-feed ul#feed-items li#feed-friends span, #new-personal-info #habbo-feed ul#feed-items li#feed-pending-members span {
+	color: #fff;
+}
+
+#new-personal-info #habbo-feed ul#feed-items li.contributed div {
+	margin-right: 15px;
+}
+
+#new-personal-info #habbo-feed ul#feed-items li.small {
+	font-size: 10px;
+    background: transparent url(../images/shared_icons/small_icons.png) no-repeat 15px 7px;
+	min-height: 15px;
+}
+
+#new-personal-info #habbo-feed ul#feed-items li.contributed:hover, 
+#new-personal-info #habbo-feed ul#feed-items #feed-item-hc-reminder:hover {
+	background-color: #798ea1;	
+}
+
+#new-personal-info p.last {
+	display: block;
+	height: 3px;
+	background: url(../images/personal_info/bottom.png) no-repeat top left;
+	margin: 0;
+}
+
+#hc-reminder-buttons a.new-button {
+	margin-bottom: 0;
+	margin-top: 5px;
+	float: left;
+	margin: 10px 10px 5px 0;
+}

@@ -1,0 +1,171 @@
+body.process-template #header {
+	margin-bottom: 12px;
+}
+
+#create-habbo div.box-content div a {
+	background-image: url(../images/landing/createbutton_arrow.gif);
+}
+
+#create-habbo div.box-content div a span {
+	background-image: url(../images/landing/createbutton_bg.gif);
+}
+
+#create-habbo-nonflash #landing-register-text a {
+	background: url(../images/landing/createbutton_arrow.gif) no-repeat 100% 0;
+}
+
+#create-habbo-nonflash div a span {
+	background: url(../images/landing/createbutton_bg.gif) no-repeat 0 0;;
+}
+
+#hc-membership-gift {
+	zoom: 1;
+}
+
+#navi li.onhover strong, #navi li.onhover a {
+	background-position: -10px -56px;
+}
+
+#navi li.onhover span {
+	background-position: -4px -56px;
+}
+
+#navi li.selected strong, #navi li.selected a {
+	background-position: -10px 0;
+}
+#navi li.selected span {
+	background-position: -4px 0;
+}
+
+
+ul.box-tabs li.onhover a {
+	background-position: -16px -50px;
+}
+ul.box-tabs li.onhover span.tab-spacer {
+	background-position: -12px -50px;
+}
+
+ul.box-tabs li.selected a {
+	background-position: -16px 0;
+}
+ul.box-tabs li.selected span.tab-spacer {
+	background-position: -12px 0;
+}
+
+div.green ul.box-tabs li.onhover a {
+	background-position: -16px -200px;
+}
+div.green ul.box-tabs li.onhover span.tab-spacer {
+	background-position: -12px -200px;
+}
+
+div.green ul.box-tabs li.selected a {
+	background-position: -16px -150px;
+}
+div.green ul.box-tabs li.selected span.tab-spacer {
+	background-position: -12px -150px;
+}
+
+div.blue ul.box-tabs li.onhover a {
+	background-position: -16px -125px;
+}
+div.blue ul.box-tabs li.onhover span.tab-spacer {
+	background-position: -12px -125px;
+}
+
+div.blue ul.box-tabs li.selected a {
+	background-position: -16px -75px;
+}
+div.blue ul.box-tabs li.selected span.tab-spacer {
+	background-position: -12px -75px;
+}
+
+div.black ul.box-tabs li.onhover a {
+	background-position: -16px -275px;
+}
+div.black ul.box-tabs li.onhover span.tab-spacer {
+	background-position: -12px -275px;
+}
+
+div.black ul.box-tabs li.selected a {
+	background-position: -16px -225px;
+}
+div.black ul.box-tabs li.selected span.tab-spacer {
+	background-position: -12px -225px;
+}
+
+div.new-button.fill a {
+	float: right;
+	margin-right: 0px;
+}
+
+#hc-buy-buttons .new-button b {
+	width: 120px;		
+} 
+
+#room_wrapper {
+	height:expression(this.scrollHeight > 200? "200px": "auto" );
+}
+
+#registration-overlay {
+    height: 345px;
+}
+
+li span.enter-room-link {
+    overflow-y: visible;
+    overflow-x: hidden;
+    width: 90%;
+}
+#column2 span.enter-room-link {
+    width: 84%;
+}
+
+#group-identity-area {
+    width: 154px;
+}
+
+/* personal info habblet */
+
+#new-personal-info #habbo-feed ul#feed-items li.small { height: 15px; }
+#new-personal-info #habbo-feed ul#feed-items li { height: 28px; }
+#new-personal-info #habbo-info #motto-container span { width: 100%;	}
+#new-personal-info #habbo-info #motto-container input { height: 12px; }
+#new-personal-info #link-bar li { display: inline; }
+#new-personal-info #habbo-info #motto-container div { overflow: hidden; white-space: nowrap;}
+
+/* avatar-info widget */
+UL.avatar-widget-list li h4 {width: 80px;}
+UL.avatar-widget-list li.onhover h4 {width: 65px;}
+
+#clientembed-loader.loader-image { background-image: none; }
+
+#subnavi-login form { width: 300px; padding-left: 5px; }
+#subnavi-login:hover form, #subnavi-login.focused form { width: 420px; padding-left: 0; }
+#subnavi-login:hover #subnavi-login-help { margin-left: 115px; }
+
+#event-list {
+    height: 200px;
+}
+
+#friend-management #search-view input.friend-search-query {
+    width: 183px; /* HL-14788 */
+}
+
+#inviter-info-habblet p { margin-left: 40px }
+#column2 #inviter-info-habblet p { margin-left: 4px }
+
+#newspromo #topstories #topstories-nav {
+    background: transparent url(../images/topstories_nav_bg_8bit.png) no-repeat top left;
+}
+
+#fp-container {
+    width: 776px;
+}
+#fp-container .loginbox a.new-button {
+	margin: 4px -1px 1px 0;
+}
+
+#fp-container #tag-cloud-slim .bb {
+    margin-left: 11px;
+}
+

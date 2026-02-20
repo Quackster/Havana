@@ -1,0 +1,157 @@
+/* Required IE fixes
+================================================*/
+/* Serve gif images to IE/Win pre version 7 */
+* html #container .i1,
+* html #container .i2 {background-image:url(../images/borders.gif);}
+* html #container .gray .i1, * html #content .gray .i2 {background-image:url(../images/borders_gray.gif);}
+* html #container .bt,
+* html #container .bt div,
+* html #container .bb,
+* html #container .bb div {background-image:url(../images/box.gif);}
+* html .gray .bb, * html .gray .bb div, * html .gray .bt, * html .gray .bt div {background-image:url(../images/box_gray.gif);}
+/* Set a height to fix up some rendering issues. */
+* html .i1,
+* html .i3 {height:1px;}
+
+/* Give the absolutely positioned box a width (including IE 7)*/
+.one {width:70%;}
+
+/* Custom rules for the buttons */
+/* All IE versions need a width */
+.button {width:20em;}
+/* IE 7 does not need these */
+* html .button .i1,
+* html .button .i2 {background:transparent;}
+* html .button .bt,
+* html .button .bt div {background-image:url(../images/button.gif);}
+* html .button .bb,
+* html .button .bb div {background-image:url(../images/button.gif);}
+* html #newspromo .topstory { height: 177px }
+* html #container { width: 940px }
+
+* html .clearfix {height: 1%;}
+.clearfix {display: block;}
+
+#navi li strong, #navi li a { width: expression( this.offsetWidth > 250 ? "250px" : "auto" ); }
+div.bubbletip div.title, div.bubbletip div.bubbletip-title {height: 1%;}
+
+#qtab-container {
+	height: expression( this.scrollHeight > 460 ? "460px" : "auto" ); /* sets max-height for IE */
+}
+
+h2.title { zoom: 1; }
+
+input.save, input.cancel, input.new {
+	padding-left: 0;
+	padding-right: 9px;
+}
+
+div#discussionbox input.save {
+    padding-right: 15px;
+}
+
+div#discussionbox input.new {
+    padding-right: 6px;
+}
+
+div.dialog-grey-body {
+	height: 1%;
+}
+
+* html #faq-container {
+    height: 450px;
+}
+
+#faq-category-list ul.faq li a:hover {
+    color: #76c7e6;
+    padding-left: 4px;
+}
+
+* html #faq-category-list ul.faq li a:hover {
+    color: #76c7e6;
+    padding-left: 4px;
+}
+
+#faq-category-content div.faq-item-content div.faq-close-container {
+    background-color: #efefef;
+    height: 14px;
+}
+
+#faq-category-content h4.faq-item-header:hover {
+    color: #76c7e6;
+	padding-left: 4px;
+}
+
+div.menu-body {
+	display: inline-block;
+}
+
+* html #guestbook-entry-container {
+	height: expression(this.scrollHeight > 250 ? "250px" : "auto"); /* IE 6 max-height hack*/	
+}
+
+div.bubbletip .active-habbo-data-container {
+	word-wrap: break-word;
+}
+
+div.blackbubble-body {
+	height: 1%;
+}
+
+div.box-tabs-container { height: 1% }
+
+div.welcome-intro { height: expression(this.scrollHeight < 250 ? "250px" : "auto"); }
+
+#personal-info { zoom: 1 }
+
+#description_text {
+    padding-top: 5px;
+}
+
+#new-personal-info #habbo-info #motto-container span {
+	text-overflow:ellipsis;
+	zoom: 1;
+}
+
+#new-personal-info #habbo-info, #new-personal-info #link-bar {
+	zoom: 1;
+}
+
+div.welcome-intro { height: expression(this.scrollHeight < 250 ? "250px" : "auto"); }
+
+#collectibles-instructions { height: expression(this.scrollHeight < 80 ? "80px" : "auto"); }
+
+#minimail .new-buttons { height: 1% }
+#minimail .message-preview img { vertical-align: middle }
+#minimail .message-sender { width: expression(this.offsetWidth > 177 ? "177px" : "auto"); }
+#minimail .new-buttons, #minimail .box-tabs { position: relative; }
+#minimail .minimail-contents { zoom: 1; }
+#minimail .unread-selector input { vertical-align: middle;}
+#minimail .message-body .body-text, #minimail .preview-area { word-wrap: break-word }
+#minimail ul.bbcode_toolbar li.linktools .new-button { margin: 0 }
+#minimail ul.bbcode_toolbar li.linktools div { margin: 0 5px 5px 0 }
+
+#tag-search-add {
+    margin-top: 6px;
+}
+
+#friend-management-container .new-button, #guestbook-form .new-button { margin: 0; padding: 0 0 5px 10px;}
+
+/* new front page login box margin tweaks */
+#fp-container #login-password, #fp-container #captcha-container, #fp-container #captcha-code,
+#fp-container #recaptcha_response_field {
+    margin-bottom: 4px;
+}
+#fp-container .loginbox a.new-button {
+	margin-bottom: -3px;
+}
+#fp-container #remember-me input {
+    margin-left: -4px;
+}
+#fp-container #login-username {
+    margin-bottom: 2px;
+    margin-top: 0;
+}
+#fp-container #login-password {
+    margin-top: 0;
+}

@@ -1,0 +1,260 @@
+
+.dialog .dialog-header h3 {
+	margin: 0;
+	text-transform: uppercase;
+	font-size: 11px;
+	font-weight: bold;
+	overflow: hidden;
+	max-height: 15px;
+}
+
+.dialog .dialog-header {
+	background: url(../../images/myhabbo/dialogs/skin_edit_dropdown_topL.gif) no-repeat;
+	padding-left: 8px;
+}
+
+.dialog .dialog-header h3 {
+	background: url(../../images/myhabbo/dialogs/skin_edit_dropdown_topR.gif) no-repeat top right;
+	padding: 5px 8px 5px 0;
+}
+
+.dialog .dialog-body {
+	background: url(../../images/myhabbo/dialogs/skin_edit_dropdown_btmL.gif) no-repeat bottom left;
+	padding-left: 8px;
+}
+
+.dialog .dialog-content {
+	background: url(../../images/myhabbo/dialogs/skin_edit_dropdown_btmR.gif) no-repeat bottom right;
+	padding: 8px 8px 8px 0;
+}
+
+.report-dialog {
+	position: absolute;
+	z-index: 9000;
+	width: 133px;
+}
+
+.report-dialog .dialog-header h3 {
+	text-transform: uppercase;
+	margin: 0;
+	padding: 0 0 3px 18px;
+	border-bottom: 1px dashed black;
+	font-size: 10px;
+	font-weight: bold;
+}
+
+.report-dialog .dialog-header {
+	padding: 6px 6px 3px 6px;
+	background-repeat: no-repeat;
+}
+
+.report-dialog .dialog-body {
+	padding: 6px 6px 0 6px;
+	background-repeat: repeat-y;
+}
+
+.report-dialog .dialog-content {
+	height: 1%;
+
+}
+
+.report-dialog .dialog-bottom {
+	font-size: 1%;
+	height: 7px;
+	background-repeat: no-repeat;
+}
+
+.report-dialog .dialog-header {
+	background-image: url(../../images/myhabbo/edit_menu/top_with_report_icon.png);
+}
+
+.report-dialog .dialog-body {
+	background-image: url(../../images/myhabbo/edit_menu/body.png);
+}
+
+.report-dialog .dialog-bottom {
+	background-image: url(../../images/myhabbo/edit_menu/bottom.png);
+}
+
+div.package_product_pre {
+    background: url(../../images/myhabbo/stickers/package_icon.gif) no-repeat 50% 50%;
+}
+
+div.menu {
+	position: absolute;
+	top: 0;
+	left: -1500px;
+	z-index: 9000;
+	width: 193px;
+}
+
+div.menu-header {
+	padding: 6px 6px 3px 6px;
+	background-repeat: no-repeat;
+	background-image: url(../../images/dialogs/menu-top.gif);
+}
+
+div.menu-header h3 {
+	text-align: center;
+	margin: 0;
+	padding: 0 0 3px 18px;
+	border-bottom: 1px dashed black;
+	font-size: 10px;
+	font-weight: bold;
+}
+
+div.menu-exit {
+	float: right;
+}
+
+div.menu-body {
+	padding: 6px 6px 0 6px;
+	background-repeat: repeat-y;
+	background-image: url(../../images/dialogs/menu-body.gif);
+}
+
+div.menu-content form {
+	margin: 0;
+}
+
+div.menu-content input, div.menu-content select {
+	width: 99%;
+}
+
+div.menu-bottom {
+	font-size: 1%;
+	height: 7px;
+	background-repeat: no-repeat;
+	background-image: url(../../images/dialogs/menu-bottom.gif);
+}
+
+#edit-menu div.menu-header {
+	background-image: url(../../images/dialogs/menu-top_with_edit.gif);
+}
+
+#edit-menu-skins {
+	display: none;
+	padding-bottom: 3px;
+}
+
+#edit-menu-stickie, #edit-menu-remove-group-warning {
+	display: none;
+}
+
+#edit-menu-stickie {
+	padding-top: 1em;
+}
+
+#dialog-name-report div.menu-header,
+#dialog-motto-report div.menu-header,
+#dialog-stickie-report div.menu-header,
+#dialog-success-report div.menu-header,
+#dialog-spam-report div.menu-header,
+#dialog-error-report div.menu-header,
+#dialog-groupname-report div.menu-header,
+#dialog-groupdesc-report div.menu-header,
+#dialog-habbomovie-report div.menu-header,
+#dialog-animator-report div.menu-header {
+	background-image: url(../../images/dialogs/menu-top_with_report.gif);
+}
+
+img.edit-button {
+	float: right;
+	cursor: pointer;
+	border: none;
+}
+
+body.dragging img.edit-button {
+	display: none;
+}
+
+/*
+member list
+*/
+
+#group-memberlist {
+	top: 0;
+	left: -1500px;
+	width: 480px;
+}
+
+#group-memberlist-members, #group-memberlist-pending {
+	overflow: auto;
+	height: 200px;
+}
+
+#group-memberlist-members-search {
+    clear: both;
+}
+
+ul.group-memberlist-list {
+	padding-left: 0;
+	margin: 0;
+	list-style-type: none;
+}
+
+ul.group-memberlist-list li {
+	clear: both;
+}
+
+ul.group-memberlist-list li div.group-memberlist-member {
+	width: 259px;
+	height: 20px;
+	display: block;
+	background-image: url(../../images/groups/memberlist-raster.gif);
+	background-repeat: no-repeat;
+}
+
+ul.group-memberlist-list li div.group-memberlist-member img {
+	vertical-align: middle;
+}
+
+ul.group-memberlist-list li div.group-memberlist-cb {
+	display: block;
+	float: left;
+	width: 30px;
+}
+
+ul.group-memberlist-list li div.group-memberlist-open {
+	float: right;
+	width: 16px;
+	height: 16px;
+	background-image: url(../../images/groups/plus.gif);
+	background-repeat: no-repeat;
+	background-position: 1px 1px;
+	visibility: hidden;
+}
+
+ul.group-memberlist-list li.group-memberlist-opened div.group-memberlist-open {
+	background-image: url(../../images/groups/minus.gif);
+}
+
+ul.group-memberlist-list li:hover div.group-memberlist-open {
+	visibility: visible;
+}
+
+div.group-memberlist-avatarinfo {
+	font-size: 10px;
+	width: 259px;
+	display: none;
+}
+
+div.group-memberlist-avatarinfo div.progressbar {
+	padding: 7px 0;
+}
+
+div.group-memberlist-avatarinfo-images {
+	float: right;
+	margin-left: 4px;
+}
+
+div.group-memberlist-avatarinfo-birthday, 
+div.group-memberlist-avatarinfo-motto {
+	margin: 4px 3px 4px 30px;
+}
+
+div.group-memberlist-avatarinfo-motto {
+	padding-top: 4px;
+	clear: both;
+	border-top: 1px dashed black;
+}

@@ -1,0 +1,119 @@
+<partSets>
+
+    <partSet>
+         <part set-type="ri" flipped-set-type="ri"/>
+         <part set-type="rh" flipped-set-type="lh"/>
+         <part set-type="rs" swim="0" flipped-set-type="ls"/>
+         <part set-type="bd"/>
+         <part set-type="sh" swim="0"/>
+         <part set-type="lg" swim="0"/>
+         <part set-type="ch"/>
+         <part set-type="hd"/>
+         <part set-type="fc"/>
+         <part set-type="ey"/>
+         <part set-type="hr"/>
+         <part set-type="hrb" remove-set-type="hr"/>
+         <part set-type="li" flipped-set-type="li"/>
+         <part set-type="lh" flipped-set-type="rh"/>
+         <part set-type="ls" swim="0" flipped-set-type="rs"/>
+		 <part set-type="wa" swim="0"/>				
+         <part set-type="ea"/>
+         <part set-type="ca" swim="0"/>
+         <part set-type="fa"/>
+         <part set-type="ha"/>
+         <part set-type="he"/>
+    </partSet>
+
+
+    <activePartSet id="figure">
+         <activePart set-type="rh"/>
+         <activePart set-type="rs"/>
+         <activePart set-type="bd"/>
+         <activePart set-type="sh"/>
+         <activePart set-type="lg" />
+         <activePart set-type="ch"/>
+         <activePart set-type="wa"/>
+         <activePart set-type="hd"/>
+         <activePart set-type="fc"/>
+         <activePart set-type="ey"/>
+         <activePart set-type="hr"/>
+         <activePart set-type="hrb"/>
+         <activePart set-type="lh"/>
+         <activePart set-type="ls"/>
+         <activePart set-type="ea"/>
+         <activePart set-type="ca"/>
+         <activePart set-type="fa"/>
+         <activePart set-type="ha"/>
+         <activePart set-type="he"/>
+    </activePartSet>
+
+    <activePartSet id="head">
+        <activePart set-type="hd"/>
+        <activePart set-type="fc"/>
+        <activePart set-type="ey"/>
+        <activePart set-type="hr"/>
+        <activePart set-type="hrb"/>
+        <activePart set-type="ea"/>
+        <activePart set-type="fa"/>
+        <activePart set-type="ha"/>
+        <activePart set-type="he"/>
+    </activePartSet>
+
+    <activePartSet id="speak">
+        <activePart set-type="hd"/>
+        <activePart set-type="hr"/>
+        <activePart set-type="hrb"/>
+        <activePart set-type="fc"/>
+		<activePart set-type="fa"/>
+		<activePart set-type="ha"/>	
+    </activePartSet>
+
+    <activePartSet id="gesture">
+        <activePart set-type="ey"/>
+        <activePart set-type="fc"/>
+    </activePartSet>
+
+    <activePartSet id="eye">
+        <activePart set-type="ey"/>
+    </activePartSet>
+
+    <activePartSet id="handRight">
+        <activePart set-type="rh"/>
+        <activePart set-type="rs"/>
+        <activePart set-type="ri"/>
+    </activePartSet>
+
+    <activePartSet id="handLeft">
+        <activePart set-type="lh"/>
+        <activePart set-type="ls"/>
+        <activePart set-type="li"/>
+    </activePartSet>
+
+    <activePartSet id="walk">
+        <activePart set-type="bd"/>
+        <activePart set-type="lg"/>
+        <activePart set-type="lh"/>
+        <activePart set-type="rh"/>
+        <activePart set-type="ls"/>
+        <activePart set-type="rs"/>
+        <activePart set-type="sh"/>
+    </activePartSet>
+
+    <activePartSet id="sit">
+        <activePart set-type="bd"/>
+        <activePart set-type="lg"/>
+        <activePart set-type="sh"/>
+    </activePartSet>
+
+    <activePartSet id="itemRight">
+        <activePart set-type="ri"/>
+    </activePartSet>
+
+    <activePartSet id="swim">
+        <activePart set-type="bd"/>
+        <activePart set-type="lh"/>
+        <activePart set-type="ch"/>
+        <activePart set-type="rh"/>
+    </activePartSet>
+
+</partSets>

@@ -1,0 +1,2 @@
+Under #purse-habblet li.icon-purse { change background-image to url(../../images/purse/purse_icon.gif);
+In boxes.css replace all (/images/ with (../images/

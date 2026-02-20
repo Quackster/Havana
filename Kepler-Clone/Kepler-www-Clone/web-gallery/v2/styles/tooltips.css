@@ -1,0 +1,38 @@
+div.bubbletip, div.redtip {
+	width: 308px;
+}
+
+div.bubbletip div.content, div.redtip div.content {
+	padding: 0 15px 20px 15px;
+}
+
+div.bubbletip div.title, div.bubbletip div.bubbletip-title, div.redtip div.title {
+	padding-bottom: 10px;
+}
+
+div.bubbletip div.content {
+	background: url(../images/tooltips/bubble-bottom.png) no-repeat left bottom;
+}
+
+div.bubbletip.left div.content {
+	background: url(../images/tooltips/bubble-bottom-left.png) no-repeat left bottom;
+}
+
+div.bubbletip div.title, div.bubbletip div.bubbletip-title {
+	background: url(../images/tooltips/bubble-top.png) no-repeat left bottom;
+}
+
+
+div.redtip {
+	color: white;
+}
+
+div.redtip div.content {
+	background: url(../images/tooltips/red-bottom.png) no-repeat left bottom;
+}
+
+div.redtip div.title {
+	background: url(../images/tooltips/red-top.png) no-repeat left bottom;
+	height: 10px;
+	padding: 0;
+}

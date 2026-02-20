@@ -1,0 +1,136 @@
+h2 { 
+	margin: 0px; 
+	padding-bottom: 5px; 
+	color: #069; 
+	font-size: 110%; 
+	text-transform:uppercase; 
+}
+
+ul
+{
+	padding-left: 15px;
+}
+
+.imaindiv 
+{
+	margin-left: 10px;
+	margin-right: 50px;
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
+
+.h2low 
+{
+	padding-bottom: 0px;
+}
+
+.button { 
+	height: 21px;
+	margin: 0px;
+	padding: 0px;
+}
+
+.button .middle { 
+	margin: 0px;
+	padding: 0px;
+	background: transparent url(../images/buttons/button_bg.gif) top left repeat-x;
+}
+
+.button-left-side {
+	width: 9px; 
+	height: 21px;  
+	background: transparent url(../images/buttons/button_left.gif) top left no-repeat; 
+}
+
+.button-left-side-arrow { 
+	width: 17px; 
+	height: 21px; 
+	background: transparent url(../images/buttons/button_left_arr.gif) top left no-repeat; 
+}
+
+.button-right-side { 
+	width: 9px;
+	height: 21px;
+	background: transparent url(../images/buttons/button_right.gif) top left no-repeat; 
+}
+
+.button-right-side-arrow { 
+	width: 17px; 
+	height: 21px; 
+	background: transparent url(../images/buttons/button_right_arr.gif) top left no-repeat; 
+}
+
+.button .proceedbutton 
+{
+	font-size: 12px;
+	background: transparent; 
+	border: 0; 
+	color: #fff; 
+	font-weight: bold; 
+	text-decoration: none;
+	padding: 0px;
+}
+
+.button .changebutton 
+{
+	font-size: 12px;
+	background: transparent; 
+	border: 0;
+	color: #fff; 
+	font-weight: bold; 
+	text-decoration: none;
+	padding: 1px;
+}
+
+.ihead
+{
+	width: 100%;
+}
+
+.ihead .icon 
+{
+	width: 70px;
+	text-align: right;
+	vertical-align: top;
+}
+
+.ihead .text 
+{
+}
+
+.ihead .btn {
+	vertical-align: top;
+	width: 90px;
+}
+
+.content-table 
+{
+	margin-left: 40px;
+}
+
+.iinfotd 
+{
+	padding-left: 0px;
+	width: 320px;
+	vertical-align: top;
+}
+
+.iactiontd
+{
+	width: 275px;
+}
+
+
+.iinfodiv 
+{
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.imessageform 
+{
+	width: 550px;
+	height: 150px;
+}
+
+

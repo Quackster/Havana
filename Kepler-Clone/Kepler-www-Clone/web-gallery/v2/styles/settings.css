@@ -1,0 +1,211 @@
+#security-settings {
+    width: 560px;
+    float:left;
+}
+
+#settingsNavigation ul li {
+	margin-bottom: 4px;
+}
+
+#settingsNavigation ul li.selected {
+	font-weight: bold;
+}
+
+#settingsNavigation a {
+	color: #333333;
+	text-decoration:none;
+}
+
+#settingsNavigation a:hover {
+	text-decoration:underline;
+}
+
+#settings-form {
+	margin-top: 1em;
+	clear: both;
+	text-align: right;
+}
+
+#settings-hc {
+	color: white;
+	font-weight: bold;
+	clear: both;
+}
+
+#settings-hc a {
+	color: #ffce0b;
+}
+
+#settings-hc-logo {
+	background: url(/images/habbo_club.png) top right no-repeat;
+	width: 49px;
+	height: 41px;
+	float: right;
+	border: 0;
+}
+
+#settings-oldfigure {
+	padding-top: 1em;
+	clear: both;
+}
+
+#pwform h3, #emailform h3 {
+	margin: 0;
+}
+
+div.settings-step {
+	clear: both;
+	padding-top: 1.2em;
+}
+
+div.settings-step h4 {
+	float: left;
+	margin: 0;
+}
+
+div.settings-step-content {
+	padding-left: 30px;
+}
+
+.settings h3 {
+	margin-bottom:4px;
+    margin-top: 4px;
+    font-size: 12px;
+}
+
+div.settings-buttons {
+	clear: both;
+	padding-top: .7em;
+}
+
+div.settings {
+    color: #333333;
+}
+
+/* Habboclub tryout habblet */
+#habboclub-tryout p.heading {    
+    color: #fff;    
+}
+
+#habboclub-tryout p.habboclub-logo {
+    background: url(../images/habboclub/habboclub_logo.gif) no-repeat 100% 50%;
+    min-height: 35px;
+    padding-right: 45px;
+}
+
+#habboclub-tryout p.habboclub-logo a {
+	color: #c00;
+}
+
+div.habboclub-tryout h2.title {
+    background-color: #ffcc00;
+}
+
+#habboclub-tryout #flashcontent {
+	margin-top: 10px;
+}
+
+div.habboclub-clothes-banner {
+	background: url(../images/habboclub/hc_banner.png);
+    width: 174px;
+    height: 150px;
+}
+
+div.habboclub-banner-container {
+    margin-top: 5px;
+}
+
+p.habboclub-link {
+    text-align: center;
+}
+
+p.habboclub-link a {
+    font-weight: bold;
+    color: #ffcc00;
+}
+
+p.habboclub-header {
+    margin-top: 10px;    
+}
+
+#settings-editor {
+	float: left;
+}
+
+#settings-wardrobe {
+	margin-top: 46px;
+}
+
+#wardrobe-slots li {
+	float: right;
+	display: block;
+	width: 67px;
+	height: 66px;
+	background: url(../images/wardrobe/slot_bg.png) no-repeat;
+}
+
+#wardrobe-slots li.locked {
+	background-image: url(../images/wardrobe/slot_locked_bg.png);
+	position: relative;
+}
+
+#wardrobe-slots li p {
+	float: right;
+	display: block;
+	width: 67px;
+	height: 62px;
+	background-repeat: no-repeat;
+	background-position: 27px 0;
+	padding: 0;
+}
+
+span.wardrobe-store, span.wardrobe-dress {
+	display: block;
+	width: 19px;
+	height: 27px;
+	margin-left: 2px;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	cursor: pointer;
+}
+
+span.wardrobe-store {
+	background-image: url(../images/wardrobe/arrow_red.png);
+	margin-top: 2px;
+}
+
+span.wardrobe-dress {
+	background-image: url(../images/wardrobe/arrow_green.png);
+	margin-top: 3px;
+}
+
+#wardrobe-slots li.locked p span.wardrobe-dress {
+	height: 58px;
+	background-image: url(../images/wardrobe/arrow_green_big.png);
+}
+
+img.wardrobe-lock {
+	position: absolute;
+	right: 4px;
+	bottom: 8px;
+}
+
+#wardrobe-instructions {
+	position: absolute;
+	width: 270px;
+	left: 585px;
+	top: 0;
+}
+
+p.feeds-disabled {
+    color: #cccccc;
+    font-style: italic;
+}
+
+#toolman-image {
+    float: right;
+}
+
+#trade-timer {
+    color: #FC6204;
+}

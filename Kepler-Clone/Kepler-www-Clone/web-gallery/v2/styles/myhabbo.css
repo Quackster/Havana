@@ -1,0 +1,242 @@
+#navi2-container {
+	background-image: url(../images/navi2-bottom-wide.png);
+}
+
+#navi2 {
+	background-image: url(../images/navi2-borders-wide.png);
+}
+
+#navi2 ul {
+	margin: 0 12px;
+}
+
+#mypage-content {
+	margin-top: 5px;
+}
+
+#mypage-wrapper div.box-tabs-container h2 {
+	margin-right: 8px;
+}
+
+form.myhabbo-edit-form, div.myhabbo-edit-error {
+	float: left;
+	margin-left: 10px;
+}
+
+div.myhabbo-edit-error {
+	padding-top: 5px;
+	color: #f00;
+}
+
+div.myhabbo-view-tools {
+	float: right;
+	margin: 5px 10px 0px 5px;
+}
+
+#top-toolbar {
+	padding: 0 180px 0 10px;
+}
+
+#top-toolbar ul {
+	float: left;
+	list-style: none;
+	margin-top: 2px;
+	margin-bottom: 3px;
+}
+
+#top-toolbar ul li {
+	padding-left: 0;
+	display: inline;
+	margin-right: 5px;
+}
+
+#top-toolbar form {
+	float: right;
+	margin-bottom: 3px;
+}
+
+#ad_sidebar {
+	text-align: center;
+}
+
+
+/* buttons */
+
+#inventory-button, #webstore-button, 
+#join-group-button, #leave-group-button, #join-group-with-invite-button,
+#reporting-button, #stop-reporting-button, .create-report-button,
+#select-favorite-button, #deselect-favorite-button, .delete-button {
+	background-image: url(../images/myhabbo_icons.png);
+	background-repeat: no-repeat;
+	padding: 0 0 3px 18px;
+	text-decoration: none;
+	color: black;
+	margin-left: 4px;
+}
+
+#inventory-button:hover, #webstore-button:hover, 
+#join-group-button:hover, #leave-group-button:hover, 
+#reporting-button:hover, #stop-reporting-button:hover, .create-report-button:hover,
+#select-favorite-button:hover, #deselect-favorite-button:hover, .delete-button:hover {
+	text-decoration: underline;
+}
+
+#webstore-button { background-position: 0 -47px; }
+#join-group-button, #join-group-with-invite-button { background-position: 0 -239px; padding-left: 15px; margin-left: 10px; }
+#leave-group-button { background-position: 0 -198px; padding-left: 15px; margin-left: 10px; }
+#reporting-button, .create-report-button { background-position: 0 -101px; }
+#stop-reporting-button { background-position: 0 -155px; }
+#select-favorite-button { background-position: 0 -331px; }
+#deselect-favorite-button { background-position: 0 -376px; }
+.delete-button { background-position: 0 -402px; padding-left: 17px; }
+.delete-button:hover { background-position: 0 -432px; }
+.create-report-button, .delete-button { display: block; height: 16px;  }
+
+/* group edit tools */
+
+#group-tools {
+	position: absolute;
+	top: 0;
+	left: -1500px;
+	text-align: left;
+	padding: 7px;
+	color: #666;
+	z-index:1000;	
+}
+
+#group-tools h3 {
+	text-align: center;
+	font-size: 11px;
+	margin-top: 0;
+	text-transform: uppercase;
+}
+
+#group-tools ul {
+	list-style: none;
+}
+
+#group-tools ul li {
+	padding: 5px 0;
+}
+
+#group-tools ul li a {
+	color: #666;
+	text-decoration: none;
+	padding: 0 0 5px 20px;
+	background-repeat: no-repeat;
+	background-image: url(../images/groups/group_tool_icons.png);
+}
+
+#group-tools ul li a:hover {
+	text-decoration: underline;
+}
+
+#group-tools-settings {
+	background-position: 0 -28px;
+}
+
+#group-tools-badge {
+	background-position: 0 -56px;
+}
+
+#group-tools-members {
+	background-position: 0 -83px;
+}
+
+
+/* Highscore list widget */
+
+ul.highscorelist-selector, div.HighscoreListWidget p {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	clear: both;
+}
+
+ul.highscorelist-selector {
+	text-align: center;
+}
+
+ul.highscorelist-selector li {
+	margin: 0 .5em;
+	display: inline;
+}
+
+ul.highscorelist-selector li, ul.highscorelist-periods li.next, ul.highscorelist-periods li.prev, 
+ul.highscorelist-pagination li.next, ul.highscorelist-pagination li.prev {
+	cursor: pointer;
+	text-decoration: underline;
+}
+
+ul.highscorelist-selector li.selected, ul.highscorelist-periods li.now {
+	font-weight: bold;
+	text-decoration: none;
+}
+
+ul.highscorelist-periods { text-align: center; }
+ul.highscorelist-periods li.next { float: left; }
+ul.highscorelist-periods li.prev { float: right; }
+
+div.HighscoreListWidget p, ul.highscorelist-periods, ul.highscorelist-pagination {
+	padding-top: 1em;
+	clear: both;
+}
+
+table.highscorelist-scores {
+	border: 0;
+	border-spacing: 0;
+	border-collapse: collapse;
+	width: 100%;
+	margin-top: 1em;
+}
+table.highscorelist-scores td, table.highscorelist-scores th {
+	margin: 0;
+	padding: 2px;
+	text-align: left;
+}
+
+table.highscorelist-scores th {
+	font-size: 10px;
+	color: #777;
+	font-weight: normal;
+}
+
+table.highscorelist-scores .scores-position { color: #777; }
+table.highscorelist-scores .scores-name { width: 100%; }
+table.highscorelist-scores .scores-games { text-align: center; }
+table.highscorelist-scores .scores-total { text-align: right; }
+
+ul.highscorelist-pagination li.next {
+	float: right;
+}
+
+table.highscorelist-scores tr.odd { background-color: #cacab8; }
+.w_skin_speechbubbleskin table.highscorelist-scores tr.odd { background-color: #e6e6e6; }
+.w_skin_noteitskin table.highscorelist-scores tr.odd { background-color: #7da9d6; }
+.w_skin_metalskin table.highscorelist-scores tr.odd { background-color: #94949c; }
+.w_skin_goldenskin table.highscorelist-scores tr.odd { background-color: #c7c8ae; }
+.w_skin_notepadskin table.highscorelist-scores tr.odd { background-color: #d9dce6; }
+
+
+a.group-info-room {
+    background: url(../images/info_icons.png) no-repeat 100% -800px;
+    padding-right: 21px;
+    padding-bottom: 3px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a.group-info-room:hover {
+	text-decoration: underline;
+}
+
+#badgelist-content ul li {
+    width: 53px;
+    height: 45px;
+    float: left;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+#invite-code-dialog-content { background: transparent url(../images/personal_info/BE2.png) no-repeat 3px 6px; padding-left: 50px; }
+#group-invitation-code { margin-top: 5px; padding: 3px }

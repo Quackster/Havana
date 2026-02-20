@@ -1,0 +1,145 @@
+/* room selection */
+
+ul.roomselection-welcome, #roomselection-plp {
+	list-style: none;
+	background-repeat: no-repeat;
+}
+
+ul.roomselection-welcome li, #roomselection-plp li {
+	padding: 0;
+	margin: 0;
+	display: block;
+	float: left;
+}
+
+ul.roomselection-welcome {
+	background-image: url(../images/welcome/roomselection_big.png);
+	margin: 8px 11px;
+	padding-bottom: 20px;
+	min-height: 1%; /* for IE */
+}
+
+#roomselection-plp {
+	background-image: url(../images/welcome/roomselection_small.png);
+	margin: 8px 26px;
+	min-height: 1%; /* for IE */
+}
+
+ul.roomselection-welcome li {
+	width: 214px;
+	height: 167px;
+}
+
+#roomselection-plp li {
+	width: 132px;
+	height: 99px;
+}
+#roomselection-plp li.bottom {
+	height: 88px;
+}
+
+ul.roomselection-welcome li.odd, ul.roomselection-welcome li.even, 
+#roomselection-plp li.odd, #roomselection-plp li.even {
+	background-color: transparent;
+}
+
+ul.roomselection-welcome a.roomselection-select {
+	margin: 114px 0 0 0;
+}
+ul.roomselection-welcome li.odd a.roomselection-select {
+	margin-right: 10px;
+}
+
+#roomselection-plp a.roomselection-select {
+	margin: 50px 0 0 0;
+}
+
+div.welcome-intro {
+	background: #fff url(../images/welcome/welcome_party.png) top left no-repeat;
+	min-height: 319px;
+	position: relative;
+}
+
+div.welcome-intro .partner-logo {
+    position: absolute;
+    top: 60px;
+    width: 190px;
+    left: 50px;
+    background-color: #fff;
+    text-align: center;
+    padding: 5px;
+}
+
+div.welcome-skip {
+	text-align: center;
+	font-size: 10px;
+}
+
+img.welcome-habbo {
+	margin: 160px 0 0 115px;
+}
+
+div.gift-content-container {
+	overflow: hidden;
+}
+
+div.gift-content-container p {
+	font-size: 13px;
+}
+
+div.gift-content-container .new-button {
+	float: left;
+	margin: 0;
+}
+
+#gift-container strong {
+	text-transform: uppercase;
+}
+
+p.gift-content {
+	margin-top: 15px;
+}
+
+div.gift-img {
+	float: left;
+	width: 210px;
+	height: 150px;
+	text-align: center;
+	background: url(../images/welcome/newbie_item_bg.png) 50% 50% no-repeat;
+}
+
+div.gift-img img {
+	margin-top: 32px;
+}
+
+p.aftergift-img {
+	text-align: center;
+}
+
+#gift-container ul {
+    margin-left: 2em;
+}
+
+#welcome-shockwave-logo {
+    float: right;
+    padding-top: 5px;
+}
+
+#welcome-shockwave-text {
+    float: left;
+    padding-top: 5px;
+    width: 60%;
+}
+
+#welcome-intro-welcome-user {
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    color: #ff6600;
+    padding-top: 55px;
+    padding-bottom: 15px;
+}
+
+#welcome-partner .bt { display: none }
+#welcome-partner .i2 { background-position: right 5px; background-repeat: no-repeat }
+#welcome-partner .i1 { background-position: 0 5px; background-repeat:no-repeat; }

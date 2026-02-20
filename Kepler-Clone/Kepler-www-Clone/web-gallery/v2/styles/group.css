@@ -1,0 +1,133 @@
+#dialog-group-settings {
+    width: 480px;
+    position: absolute;
+    left: -1500px;
+    top: 0;
+}
+
+#group-button-area {
+    clear: left;
+    padding-top: 7px;
+}
+
+#group-settings-update-button, #group-delete-button {
+    float: left;
+}
+
+#group-settings-update-button.disabled b {
+    color: #999 !important;
+}
+
+#group-settings-update-button {
+    margin-left: 0;
+}
+
+#group-delete-button {
+    margin-left: 40px;
+}
+
+#dialog-group-settings form {
+    margin: 0px;
+}
+
+div.group-settings-pane {
+    float: left;
+    height: 274px;
+    width: 224px;
+}
+
+div.group-settings-pane-wide {
+    float: left;
+    height: 274px;
+    width: 458px;
+    overflow: auto;
+}
+
+#group-settings-form label {
+    font-weight: bold;
+}
+
+
+#group-settings-type, forum-settings-topics {
+    padding-left: 10px;
+}
+
+#group-logo {
+    float: left;
+    margin-right: 11px;
+}
+
+#group-settings-data #group-logo {
+    margin: 11px 16px 0 5px;
+}
+
+#group-identity-area {
+    float: left;
+    width: 164px;
+}
+
+div.group-settings-selection label {
+    display: block;
+    padding-bottom: 4px;
+}
+
+div.group-settings-selection input {
+    float: left;
+}
+
+div.group-settings-selection div.description {
+    float: left;
+    padding-left: 2px;
+    width: 198px;
+}
+
+div.group-settings-selection div.description p {
+    clear: left;
+    color: #666;
+    font-size: 10px;
+}
+
+div.group-settings-selection div.description p.description-note {
+    color: #c00;
+}
+
+div.group-type-normal, div.group-type-exclusive, div.group-type-private, div.group-type-large {
+    background: transparent url(../images/info_icons.png) no-repeat 100% -896px;
+    float: left;
+    height: 16px;
+    padding-right: 21px;
+}
+
+div.group-type-exclusive {
+    background-position: 100% -720px;
+}
+
+div.group-type-private {
+    background-position: 100% -672px;
+}
+
+div.group-type-large {
+    background-position: 100% -928px;
+}
+
+#room-settings div.group-settings-pane-wide {
+	margin-top: 4px;
+}
+
+#room-settings-id ul li {
+	float: none;
+	clear: both;
+	padding: 2px;
+}
+
+#room-settings-id ul li span.room-description {
+    color: #666;
+    font-size: 10px;
+}
+
+#room-settings-id ul li a.room-enter {
+	float: right;
+    background: url(../images/info_icons.png) no-repeat 100% -800px;
+    padding-right: 21px;
+    color: #4AB501;
+}

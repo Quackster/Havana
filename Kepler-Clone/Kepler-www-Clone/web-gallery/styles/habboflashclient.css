@@ -1,0 +1,81 @@
+html, body.flashclient {
+    height: 100%;
+}
+
+#flash-wrapper {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+    overflow: hidden;
+}
+
+#flash-container #content, #minimail-report {
+    color: #333;	
+}
+	
+.contains-minimail { width: 460px }
+.contains-news { width: 400px }
+.contains-avatars { width: 342px; }
+
+.contains-roomenterad { width: 740px }
+
+.client-habblet-container.contains-roomenterad {
+    width: 740px;
+}
+
+.client-habblet-container {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+.loading-element {
+    padding-top: 15px;
+    height: 70px;
+    width: 145px;
+    background-color: #FFFFFF;
+    text-align: center;
+}
+
+.loading-element p {
+    padding-top: 2px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.draggable .title { cursor: move }
+
+.x-workaround .client-habblet-container {
+    position: static;
+    top: auto;
+    right: auto;
+}
+.x-workaround .client-habblet-container .title { cursor: default; }
+
+#client-ui {
+	height:100%;
+	position: relative;
+}
+
+#client-ui.x-workaround { background-color: #e3e3db; background-image: url(../images/bg.png);	}
+#client-ui.x-workaround #flash-wrapper { right: 465px }
+#client-ui.x-workaround-wide #flash-wrapper { right: 765px }
+
+#client-ui.x-workaround-feed { background-color: #000 }
+#client-ui.x-workaround-feed #flash-wrapper { right: auto; width: 57px }
+
+#client-ui.embed #flash-wrapper { top: 35px; }
+.client-content { position: absolute; top:0; right: 0; z-index: 1000; color: #000 }
+.embed .client-content { top: 37px }
+
+#applifier-container { position: absolute; bottom: 0; height: 76px; z-index: 1; width: 100%; background-color: #ffffff; }
+.applifier #client-ui.embed #flash-wrapper { bottom: 76px; }
+
+/* external links */
+#external-link-container { right: 0; margin: 0 auto; width: 410px; border: 3px solid #FFAA5F; padding: 15px 15px 5px 15px; background-color: #fff }
+#external-link-container h2 { margin: 0 0 20px 0; border-bottom: 1px solid #aaa; padding-bottom: 5px }
+.contains-externalLink {  width: 450px }
+
+#fb-like-container { right: 0; margin: 0 auto; padding: 10px 10px 5px 10px; background-color: #fff; }
+.contains-fbLike {  width: 410px; height: 187px }

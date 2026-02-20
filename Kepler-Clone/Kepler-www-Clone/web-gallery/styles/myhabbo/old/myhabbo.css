@@ -1,0 +1,1487 @@
+#mypage-wrapper {
+	padding: 0;
+	margin: 0;
+}
+
+/** PANELS **/
+
+#mypage-top-nav {
+	height: 18px;
+}
+
+#mypage-top-error {
+	margin: 0 130px 15px 130px;
+}
+
+#mypage-top-spacer {
+	height: 4px;
+	font-size: 1%;
+}
+
+#mypage-bg {
+    position: relative;
+    padding: 0 3px;
+    clear: both;
+}
+
+#playground {
+	position: relative;
+}
+
+body#editmode #playground-outer {
+	border: 1px dotted white;
+}
+
+body#editmode #playground {
+	border: 1px dotted black;
+}
+
+#mypage-ad {
+	position: absolute;
+	top: 0;
+	right: 0px;
+    z-index: 10000;
+    width: 160px;
+	text-align: right;
+}
+
+#header-bar {
+	color: white;
+	font-weight: bold;
+	font-size: 12px;
+	margin: 0 3px;
+}
+
+#header-bar .box-content {
+	height: 23px;
+}
+
+#header-bar-text {
+	float: left;
+	padding: 3px 10px 0 5px;
+}
+
+#header-bar-warning {
+	float: left;
+	padding: 3px 10px 0 0;
+	font-size: 11px;
+	font-weight: normal;
+	color: yellow;
+}
+
+#editmode #header-bar-outer {
+	padding-bottom: 4px;
+}
+
+img.header-bar-group-status {
+	vertical-align: middle;
+}
+
+#edit-page-button {
+	font-family: Veranda;
+	font-size: 10px;
+	font-weight: bold;
+	line-height: 1;
+	color: white;
+}
+
+#edit-page-button .button-content {
+	height: 14px;
+}
+
+/*** PROFILE BOX ***/
+
+.profile-info {
+	width: 90px;
+	/* margin-left: -3px; */
+	float: left;
+}
+
+.profile-info .name-text {
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+.profile-info img {
+	margin-top: 3px;
+	margin-bottom: 3px;
+}
+
+.profile-figure {
+	float: left;
+	margin-left: 5px;
+}
+
+div.profile-motto, div.profile-friend-request {
+	clear: both;
+	margin-top: 5px;
+	padding-top: 5px;
+	border-top: 1px dashed black;
+}
+
+#loading {
+	font-size: 18px;
+	font-weight: bold;
+	text-align: center;
+	padding: 20px;
+}
+
+#editor, #bg-editor {
+	border: 2px solid black;
+	width: 250px;
+	position: absolute;
+	z-index: 1001;
+	display: none;
+	padding: 4px;
+	background-color: #EAEAEA;
+}
+
+#edit-bg-btn {
+	cursor: pointer;
+	width: 11px;
+	height: 10px;
+	background: url(../../images/myhabbo/box_edit_btn_1.gif) no-repeat;
+	float: right;
+	margin-right: 20px;
+	margin-top: 7px;
+}
+
+div.stickie-header h3 {
+	margin: 0;
+	text-transform: uppercase;
+	font-size: 11px;
+	font-weight: bold;
+}
+
+div.habboimg {
+	float: right;
+	background-position: 0 -20px;
+	background-repeat: no-repeat;
+	width: 64px;
+	height: 100px;
+}
+
+/*** STICKER ***/
+
+div.sticker {
+    background-repeat: no-repeat;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    font-size: 1%;
+}
+
+#editmode div.sticker {
+	cursor: move;
+}
+
+#sticker-preview {
+    position: absolute;
+	z-index: 10000;
+	padding: 20px;
+	background-color: white;
+	cursor: default;
+}
+
+
+/*** STICKIE ***/
+
+div.stickie {
+	position: absolute;
+	top: 0;
+	left: -1500px;
+}
+
+#editmode div.stickie {
+	cursor: move;
+}
+
+
+div.stickie-header {
+	padding-left: 4px;
+}
+
+div.stickie-header h3 {
+	font-size: 1px;
+	height: 20px;
+	padding: 2px 7px 0px 3px;
+}
+
+div.stickie-body {
+	/*margin-top: -3px;*/
+	padding-left: 4px;
+}
+
+div.stickie-content {
+	padding: 3px 28px 4px 3px;
+ 	word-wrap: break-word;
+}
+
+div.stickie-footer {
+	padding: 0 15px 5px 0;
+}
+
+div.stickie ul {
+	padding-left: 12px;
+}
+
+div.stickie div.stickie-markup {
+	overflow: hidden;
+}
+
+
+/*** Dialogs ***/
+.dialog {
+	position: absolute;
+}
+
+/* ---- ban page ----------- */
+#user-banned-wrapper, #user-404-wrapper {
+	padding: 10px 250px;
+	text-align: center;
+}
+
+.widget {
+	position: absolute;
+}
+
+.widget h3 .widget-title {
+	float: left;
+}
+
+/*** rooms widget styles ***/
+div#room_wrapper {
+	overflow: auto;
+	max-height: 200px;
+}
+
+div.room_image {
+	float: left;
+	width: 50px;
+	padding: 5px 0 5px 0;
+}
+
+div.room_info {
+	float: left;
+	word-wrap: break-word;
+	padding: 5px 0 5px 0;
+}
+
+div.room_name {
+	float: left;
+	font-weight: bold;
+}
+
+td.dotted-line {
+	border-bottom: dotted 1px black;
+}
+
+hr.divider {
+	width: 90%;
+	height: 1px;
+}
+
+/* guestbook */
+
+.GuestbookWidget  .widget-headline img {
+	vertical-align: top;
+}
+
+.GuestbookWidget  .widget-headline .private {
+	display: inline;
+}
+
+.GuestbookWidget  .widget-headline .public {
+	display:none;
+}
+
+.guestbook-entries {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	max-height: 250px;
+	overflow: auto;
+}
+
+.guestbook-entries li {
+	list-style: none;
+	border-bottom: 1px dashed #000;
+	padding-bottom: 3px;
+	margin-bottom: 5px;
+	word-wrap: break-word;
+}
+
+* html .guestbook-entries li {
+	zoom : 1;
+}
+
+.guestbook-entries li p {
+	padding: 0;
+	margin: 0;
+}
+
+.guestbook-entries .guestbook-author {
+	float: left;
+	width: 30px;
+	margin-right: 8px;
+}
+
+.guestbook-entries .guestbook-message {
+	margin: 0 38px 0 38px;
+}
+
+.guestbook-entries .guestbook-actions {
+	float: right;
+	width: 30px;
+	margin-left: 0px;
+	margin-top: 15px;
+}
+
+.guestbook-entries .guestbook-cleaner {
+	clear:both;
+	height:1px;
+	font-size:1px;
+	border:none;
+	margin:0; padding:0;
+	background:transparent;
+}
+
+.guestbook-entries .guestbook-entry-footer {
+	font-size: 9px;
+	text-align: right;
+	padding-right: 30px;
+}
+
+.metadata {
+	color: #666;
+}
+
+#guestbook-form-dialog, #guestbook-delete-dialog {
+	width: 300px;
+    position: absolute;
+    left: -1500px;
+    top: 0;
+}
+#guestbook-form {
+	margin: 0;
+	padding: 0;
+}
+#guestbook-form textarea {
+	width: 98%;
+	font-size: 11px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+#guestbook-form-preview.disabled span {
+	color: #888;
+}
+
+.guestbook-toolbar {
+	margin-top: 12px;
+}
+
+.guestbook-toolbar .colorlink span img {
+	margin-right: 10px;
+}
+
+.guestbook-message .offline, .guestbook-message .online {
+	text-indent: 17px;
+	height: 18px;
+}
+
+.guestbook-message .offline {
+	background: transparent url(../../images/myhabbo/habbo_offline.gif) no-repeat top left;
+}
+
+.guestbook-message .online {
+	background: transparent url(../../images/myhabbo/habbo_online_anim.gif) no-repeat top left;
+}
+
+.rating-unit-rating {
+	list-style:none;
+	margin: 0px;
+	padding:0px;
+	height: 30px;
+	position: relative;
+	background: url('../../images/myhabbo/widgets/rating/starrating.gif') top left repeat-x;
+	}
+
+.rating-unit-rating li{
+    text-indent: -90000px;
+	padding:0px;
+	margin:0px;
+	float: left;
+	}
+
+.rating-unit-rating li a {
+	outline: none;
+	display:block;
+	width:30px;
+	height: 30px;
+	text-decoration: none;
+	text-indent: -9000px;
+	z-index: 20;
+	position: absolute;
+	padding: 0px;
+	}
+
+.rating-unit-rating li a:hover{
+	background: url('../../images/myhabbo/widgets/rating/starrating.gif') left center;
+	z-index: 10;
+	left: 0px;
+	}
+
+.rating-unit-rating a.r1-unit{left: 0px;}
+.rating-unit-rating a.r1-unit:hover{width:30px;}
+.rating-unit-rating a.r2-unit{left:30px;}
+.rating-unit-rating a.r2-unit:hover{width: 60px;}
+.rating-unit-rating a.r3-unit{left: 60px;}
+.rating-unit-rating a.r3-unit:hover{width: 90px;}
+.rating-unit-rating a.r4-unit{left: 90px;}
+.rating-unit-rating a.r4-unit:hover{width: 120px;}
+.rating-unit-rating a.r5-unit{left: 120px;}
+.rating-unit-rating a.r5-unit:hover{width: 150px;}
+
+
+.rating-unit-rating li.rating-current-rating {
+	background: url('../../images/myhabbo/widgets/rating/starrating.gif') left bottom;
+	position: absolute;
+	height: 30px;
+	display: block;
+	text-indent: -9000px;
+	z-index: 1;
+	}
+
+.rating-average {
+    width:160px;
+    margin:auto;
+    text-align: center;
+}
+
+.rating-unit-rating{
+    text-align: left;
+    width:150px;
+    margin: 0 auto;
+}
+
+.rating-stars{
+    margin-top:5px;
+    margin-bottom:5px;
+    text-align: center;
+}
+
+/* Movies widget */
+
+div#movies_wrapper {
+	overflow: auto;
+	height: 200px;
+}
+
+div.movie_genre_image {
+	float: left;
+	width: 50px;
+	padding: 5px 0 5px 0;
+}
+
+div.movie_info {
+	float: left;
+	word-wrap: break-word;
+	padding: 5px 0 5px 0;
+}
+
+div.movie_name {
+	float: left;
+	font-weight: bold;
+}
+
+div.movie_created {
+	font-size: 9px;
+	text-align: left;
+	padding-right: 0px;
+    clear: both;
+}
+
+/*
+* esticker editor styles
+*/
+
+div#avatarimage-preview-box {
+	width: 64px;
+	height: 110px;
+	float: left;
+}
+div#avatarimage-preview-box div#avatarimage-progressbar {
+	padding-top: 30px;
+	width: 64px;
+	text-align: center;
+}
+
+/* avatar list */
+
+div.avatar-widget-list-container {
+	height: 196px;
+	overflow: auto;
+}
+
+div.avatar-list-info-container {
+	height: 196px;
+	overflow: auto;
+}
+
+div.avatar-list-info {
+	display: none;
+}
+
+div.avatar-list-info-close-container {
+	float: right;
+	width: 18px;
+	height: 18px;
+}
+
+ul.avatar-widget-list {
+	list-style: none;
+	margin: 0;
+	padding-left: 0;
+}
+
+ul.avatar-widget-list li {
+	margin: 2px 3px;
+	width: 125px;
+	height: 56px;
+	border: 1px dashed white;
+	overflow: hidden;
+	float: left;
+	font-size: 10px;
+	white-space: nowrap;
+	background-image: url(../../images/myhabbo/widgets/raster_unselected.gif);
+}
+
+ul.avatar-widget-list li:hover {
+	border: 1px solid white;
+	background-image: url(../../images/myhabbo/widgets/raster_selected.gif);
+}
+
+ul.avatar-widget-list li h4 {
+    width: 70px;
+}
+ul.avatar-widget-list li h4, ul.avatar-widget-list li p {
+	margin: 0;
+	font-size: 10px;
+	padding: 2px;
+	overflow: hidden;
+}
+
+div.avatar-list-info h4 {
+	font-size: 11px;
+}
+
+div.avatar-list-info h4 a {
+	color: black;
+}
+
+ul.avatar-widget-list li div.avatar-list-open {
+	display: none;
+	float: right;
+	width: 14px;
+	height: 14px;
+}
+
+ul.avatar-widget-list li:hover div.avatar-list-open {
+	display: block;
+}
+
+ul.avatar-widget-list li div.avatar-list-open a {
+	float: right;
+	width: 14px;
+	height: 14px;
+	background-repeat: no-repeat;
+	background-image: url(../../images/myhabbo/widgets/plus.gif);
+}
+
+div.avatar-list-avatar {
+	display: block;
+	float: left;
+	margin-right: 2px;
+}
+
+p.avatar-list-birthday {
+	font-style: italic;
+}
+
+a.avatar-list-info-close {
+	float: right;
+	width: 18px;
+	height: 18px;
+	background-repeat: no-repeat;
+	background-image: url(../../images/myhabbo/widgets/minus.gif);
+}
+
+div.avatar-info-basic {
+	padding: 0 0 4px 4px;
+	border: 1px solid white;
+	background-image: url(../../images/myhabbo/widgets/raster_selected.gif);
+	margin-bottom: 2px;
+	font-size: 10px;
+}
+
+div.avatar-info-basic h4 {
+	margin: 0;
+}
+
+div.avatar-info-rights {
+	padding: 4px;
+	border: 1px dashed black;
+	background-image: url(../../images/myhabbo/widgets/raster_unselected.gif);
+	font-size: 10px;
+	clear: both;
+}
+
+div.avatar-info-basic p, div.avatar-info-rights p {
+	margin: 6px 0 0 2px;
+}
+
+div.avatar-info-image {
+	float: right;
+	margin: 0 2px 0 7px;
+}
+
+div.avatar-info-basic p.avatar-info-motto {
+	clear: both;
+	border-top: 1px dashed black;
+	padding-top: 3px;
+	margin-right: 6px;
+	font-style: italic;
+}
+
+a.avatar-info-rights-revoke, a.avatar-info-rights-remove, a.avatar-info-rights-give, a.avatar-info-rights-leave {
+	float: left;
+	margin-left: 0;
+	margin-top: 4px;
+	clear: both;
+}
+
+img.avatar-list-groupstatus {
+	margin-right: 5px;
+}
+
+
+/* groups list */
+
+div.groups-list-container {
+	height: 196px;
+	overflow: auto;
+}
+
+ul.groups-list {
+	list-style: none;
+	margin: 0;
+	padding-left: 0;
+}
+
+ul.groups-list li {
+	padding: 0;
+	margin-bottom: 2px;
+	border: 1px dashed white;
+	overflow: hidden;
+	background-image: url(../../images/myhabbo/widgets/raster_unselected.gif);
+}
+
+ul.groups-list li:hover {
+	border: 1px solid white;
+	background-image: url(../../images/myhabbo/widgets/raster_selected.gif);
+}
+
+ul.groups-list li h4, ul.groups-list li p {
+	margin: 0;
+	font-size: 1em;
+	padding: 2px;
+	overflow: hidden;
+}
+
+ul.groups-list li div.groups-list-icon {
+	float: left;
+	margin: 2px;
+}
+
+div.groups-info-icon {
+	float: right;
+	margin: 6px 2px 2px 2px;
+}
+
+ul.groups-list li div.groups-list-open {
+	visibility: hidden;
+	float: right;
+	width: 14px;
+	height: 14px;
+	background-repeat: no-repeat;
+	background-image: url(../../images/myhabbo/widgets/plus.gif);
+	cursor: pointer;
+}
+
+ul.groups-list li:hover div.groups-list-open {
+	visibility: visible;
+}
+
+div.groups-list-loading, div.groups-list-info {
+	display: none;
+}
+
+a.groups-loading-close, a.groups-info-close {
+	float: right;
+	width: 18px;
+	height: 18px;
+	background-repeat: no-repeat;
+	background-image: url(../../images/myhabbo/widgets/minus.gif);
+}
+
+div.groups-info-close-container {
+	float: right;
+	width: 18px;
+	height: 18px;
+}
+
+div.groups-list-info h4, div.groups-list-info p {
+	margin: 0;
+	font-size: 1em;
+	padding: 2px;
+}
+
+div.groups-list-info h4 a {
+	color: black;
+}
+
+div.groups-info-basic {
+	padding: 0 0 4px 4px;
+	border: 1px solid white;
+	background-image: url(../../images/myhabbo/widgets/raster_selected.gif);
+	margin-bottom: 2px;
+}
+
+div.groups-info-actions {
+	padding: 4px;
+	border: 1px dashed black;
+	background-image: url(../../images/myhabbo/widgets/raster_unselected.gif);
+	clear: both;
+}
+
+div.groups-info-description {
+	clear: both;
+	border-top: 1px dashed black;
+	padding-top: 2px;
+	margin-right: 6px;
+	overflow: auto;
+	height: 80px;
+}
+
+img.groups-list-icon, img.groups-info-favorite {
+	float: right;
+	margin-left: 5px;
+}
+
+a.groups-info-select-favorite, a.groups-info-deselect-favorite {
+	float: left;
+	margin-left: 0;
+}
+
+
+/* group info */
+
+div.GroupInfoWidget h4 {
+	font-size: 11px;
+}
+
+div.GroupInfoWidget h4, div.GroupInfoWidget p {
+	margin: 0;
+	padding-bottom: 4px;
+}
+
+div.group-info-icon {
+	float: right;
+	width: 48px;
+	height: 48px;
+	margin: 0 0 4px 4px;
+}
+
+div.group-info-description {
+	clear: both;
+	border-top: 1px dashed black;
+	padding-top: 2px;
+	overflow: auto;
+	max-height: 100px;
+}
+
+
+span.avatar-image-frame {
+     margin-right:15px;
+    margin-top:-20px;
+     float: left;
+}
+
+#badge-editor-dialog{
+    width: 302px;
+}
+
+#badge-editor-dialog-body{
+   height: 363px;
+   width: 280px;
+}
+
+
+
+ul.web-item-list {
+	list-style: none;
+	margin: 0;
+	padding-left: 0;
+}
+
+ul.web-item-list li {
+	margin: 2px 3px;
+	width: 47%;
+	height: 56px;
+	border: 1px dashed white;
+	overflow: hidden;
+	float: left;
+	font-size: 10px;
+	white-space: nowrap;
+	background-image: url(../../images/myhabbo/widgets/raster_unselected.gif);
+}
+
+ul.web-item-list li:hover {
+	border: 1px solid white;
+	background-image: url(../../images/myhabbo/widgets/raster_selected.gif);
+}
+
+#purchase-main-dialog {
+    width: 596px;
+}
+
+#purchase-main-dialog h4 {
+	font-size: 10px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-weight: normal;
+	margin: 4px 0;
+}
+
+#webstore-preview h4, #inventory-preview h4 {
+	font-weight: bold;
+	text-align: center;
+	overflow: hidden;
+}
+
+#purchase-main-dialog-body {
+	height: 324px;
+    padding-bottom: 10px;
+}
+
+#webstore-categories-container, #webstore-content-container,
+#inventory-categories-container, #inventory-content-container {
+	display: none;
+}
+
+#webstore-categories-container, #webstore-items-container, #webstore-preview-container, #webstore-close-container,
+#inventory-categories-container, #inventory-items-container, #inventory-preview-container {
+	position: absolute;
+	top: 0;
+}
+
+#webstore-categories-container, #inventory-categories-container,
+#webstore-categories, #inventory-categories {
+	width: 150px;
+	left: 0;
+}
+
+#webstore-items-container, #inventory-items-container {
+	width: 263px;
+	left: 154px;
+}
+
+#webstore-preview-container, #inventory-preview-container {
+	width: 150px;
+	left: 423px;
+	height: 306px;
+}
+
+#webstore-close-container {
+	width: 150px;
+	left: 423px;
+	top: 306px;
+}
+
+#webstore-categories, #webstore-items,
+#inventory-categories, #inventory-items {
+	overflow: auto;
+	overflow-x: hidden;
+	overflow-y: auto;
+	height: 306px;
+}
+
+#webstore-categories, #inventory-categories {
+	background: url(../../images/myhabbo/store/categories_bg.png) no-repeat;
+}
+
+#webstore-content-container.avatar #webstore-items-container {
+	width: 419px;
+}
+
+#webstore-content-container.avatar #webstore-preview-container {
+	display: none;
+}
+
+#webstore-categories ul, #webstore-items ul,
+#inventory-categories ul, #inventory-items ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+#webstore-items ul li, #inventory-items ul li {
+	padding: 0;
+	cursor: pointer;
+}
+
+#webstore-items ul li h3, #webstore-items ul li p,
+#inventory-items ul li h3, #inventory-items ul li p {
+	margin: 0;
+	font-size: 10px;
+}
+
+#webstore-items ul li h3, #inventory-items ul li h3 {
+	padding-bottom: 3px;
+	margin-bottom: 3px;
+	border-bottom: 1px dashed black;
+}
+
+#webstore-items ul li, #inventory-items ul li {
+	float: left;
+	width: 61px;
+	height: 61px;
+	background: url(../../images/myhabbo/store/slot.gif) no-repeat 1px 1px;
+}
+
+#webstore-items ul li.webstore-widget-item, #inventory-items ul li.webstore-widget-item {
+	float: none;
+	width: 240px;
+	height: 61px;
+	background: url(../../images/myhabbo/store/slot_widget.png) no-repeat 1px 1px;
+	clear: both;
+}
+
+#webstore-items ul li.webstore-widget-disabled, #inventory-items ul li.webstore-widget-disabled {
+	-moz-opacity: .5;
+	opacity: .50;
+	filter: alpha(opacity=50);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+}
+
+#webstore-items ul li:hover, #webstore-items ul li.selected,
+#inventory-items ul li:hover, #inventory-items ul li.selected {
+	background: url(../../images/myhabbo/store/highlight_slot.gif) no-repeat 1px 1px;
+}
+
+#webstore-items ul li.webstore-widget-item:hover, #webstore-items ul li.webstore-widget-item.selected,
+#inventory-items ul li.webstore-widget-item:hover, #inventory-items ul li.webstore-widget-item.selected {
+	background: url(../../images/myhabbo/store/highlight_slot_widget.png) no-repeat 1px 1px;
+}
+
+#webstore-items ul li.webstore-widget-disabled:hover, #inventory-items ul li.webstore-widget-disabled:hover {
+	background: url(../../images/myhabbo/store/slot_widget.png) no-repeat 1px 1px;
+}
+
+#webstore-items ul li.webstore-item-empty, #webstore-items ul li.webstore-item-empty:hover,
+#inventory-items ul li.webstore-item-empty, #inventory-items ul li.webstore-item-empty:hover {
+	background: url(../../images/myhabbo/store/empty_slot.gif) no-repeat 1px 1px;
+	cursor: default;
+}
+
+#webstore-items ul li.webstore-widget-empty, #webstore-items ul li.webstore-widget-empty:hover,
+#inventory-items ul li.webstore-widget-empty, #inventory-items ul li.webstore-widget-empty:hover {
+	background: url(../../images/myhabbo/store/empty_widget_slot.png) no-repeat 1px 1px;
+	cursor: default;
+	float: none;
+	width: 240px;
+	clear: both;
+}
+
+#webstore-items div.progressbar {
+	margin-top: 136px;
+}
+
+#webstore-preview div.progressbar {
+	margin-top: 90px;
+}
+
+div.webstore-item-preview {
+	float: left;
+	width: 61px;
+	height: 61px;
+}
+div.webstore-widget-description {
+	overflow: hidden;
+	padding: 3px 0 3px 3px;
+	margin-right: 4px;
+}
+
+#webstore-items ul li div.webstore-item-preview, #inventory-items ul li div.webstore-item-preview {
+	float: left;
+	width: 61px;
+	height: 61px;
+}
+
+#webstore-confirm div.webstore-item-preview {
+	margin: 0 4px 4px 0;
+}
+
+div.webstore-item-preview div.webstore-item-mask {
+	background: url(../../images/myhabbo/store/slot_mask.png) no-repeat 0 0;
+	width: 61px;
+	height: 61px;
+}
+
+li.webstore-widget-item div.webstore-item-preview div.webstore-item-mask {
+	background: url(../../images/myhabbo/store/slot_widget_mask.png) no-repeat 0 0;
+}
+
+li.selected div.webstore-item-preview div.webstore-item-mask {
+	background: url(../../images/myhabbo/store/selector.png) no-repeat 0 0;
+}
+
+li.webstore-widget-item.selected div.webstore-item-preview div.webstore-item-mask {
+	background: url(../../images/myhabbo/store/selector_widget.png) no-repeat 0 0;
+}
+
+div.webstore-item-count {
+	padding: 5px 5px 0 0;
+	font-size: 10px;
+    font-weight: bold;
+    color: white;
+}
+
+div.webstore-item-count div {
+	text-align: center;
+	float: right;
+	width: 32px;
+	height: 17px;
+	padding-top: 2px;
+	background: url(../../images/myhabbo/dialogs/item_count_label.gif) no-repeat;
+}
+
+#webstore-preview-box, #inventory-preview-box {
+	border: 1px solid black;
+	height: 150px;
+	background: url(../../images/myhabbo/store/preview_background.gif) no-repeat 50% 50%;
+}
+
+#webstore-preview-pre, #inventory-preview-pre {
+	height: 100%;
+	position: relative;
+}
+
+#webstore-preview-pre a.toolbutton {
+	position: absolute;
+	top: 2px;
+	left: 5px;
+	margin: 0;
+}
+
+#webstore-preview-price, #webstore-preview-purse {
+	margin-top: 5px;
+	padding-bottom: 5px;
+	border-bottom: 1px dashed black;
+	text-align: center;
+	background-repeat: no-repeat;
+	background-position: 0 50%;
+	font-size: 10px;
+}
+
+#webstore-preview-price {
+	background-image: url(../../images/myhabbo/store/credit_icon.gif);
+}
+
+#webstore-preview-purse {
+	background-image: url(../../images/myhabbo/store/purse_icon.gif);
+}
+
+#webstore-preview-purse a {
+	margin-left: 14px;
+	padding-right: 14px;
+	background-image: url(../../images/top_bar/arrow.gif);
+	background-repeat: no-repeat;
+	background-position: 100% 50%;
+}
+
+#webstore-preview-purchase, #inventory-preview-place {
+	margin-top: 5px;
+}
+
+#webstore-preview-purchase a.colorlink, #inventory-preview-place a.colorlink {
+	float: right;
+	margin-bottom: 3px;
+	margin-left: 0;
+}
+
+#webstore-preview-purchase a.toolbutton, #webstore-close-container a.toolbutton {
+	float: right;
+	margin: 0;
+}
+
+#webstore-preview-prev, #webstore-preview-next {
+	width: 18px;
+	height: 22px;
+	float: left;
+	background-color: #F00;
+	position: absolute;
+	top: 110px;
+	cursor: pointer;
+}
+
+#webstore-preview-prev {
+	left: 20px;
+	background: url(../../images/myhabbo/store/preview_left.png) no-repeat;
+}
+
+#webstore-preview-next {
+	right: 20px;
+	background: url(../../images/myhabbo/store/preview_right.png) no-repeat;
+}
+
+#webstore-preview-page {
+	position: absolute;
+	top: 115px;
+	left: 38px;
+	font-size: 10px;
+	font-weight: bold;
+	text-align: center;
+	width: 68px;
+	float: left;
+	text-shadow: white 2px 2px 2px;
+}
+
+span.webstore-preview-error {
+	font-weight: bold;
+	color: red;
+}
+
+/* inventory */
+
+#webstore-tabs li a span {
+	background: none;
+	display: inline;
+	padding: 0;
+	margin: 0;
+}
+
+#webstore-inventory a {
+	text-decoration: none;
+}
+
+#webstore-inventory a span {
+	text-decoration: underline;
+}
+
+#webstore-inventory.selected a span {
+	text-decoration: none;
+}
+
+#webstore-inventory a span#webstore-inventory-new {
+	font-weight: bold;
+	text-decoration: none;
+	background-image: none !important;
+}
+
+#webstore-inventory a span#webstore-inventory-new.new {
+	padding-right: 13px;
+	background: url(../../images/myhabbo/store/animated_arrow.gif) no-repeat 100% 50% !important;
+}
+
+#webstore-noteeditor {
+	width: 320px;
+}
+
+#webstore-notes-counter {
+    background-color: #FC0;
+	border: 1px solid black;
+	padding: 3px;
+	margin: 5px 5px 0 0;
+	float: right;
+}
+
+#webstore-notes-form {
+    margin-bottom: 12px;
+}
+
+#webstore-notes-form textarea {
+	width: 96%;
+}
+
+#webstore-notes-container {
+	position: relative;
+	margin: 0 0 1em 20px;
+}
+
+#webstore-notes-container div.stickie {
+	position: relative;
+	cursor: default;
+}
+
+#webstore-notes-container div.stickie h3 img {
+	display: none;
+}
+
+#webstore-notes-edit-container {
+    overflow: auto;
+}
+
+/* main categories */
+ul.purchase-main-category div {
+    color: black;
+    padding-left:13px;
+    text-decoration:none;
+    cursor: pointer;
+}
+
+ul.purchase-main-category {
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    border-top: 1px solid black;
+}
+
+li.main-category, li.main-category-no-subcategories, li.selected-main-category, li.selected-main-category-no-subcategories {
+    border-bottom: 1px solid black;
+    padding-left:0;
+    padding-top:2px;
+}
+
+li.main-category div, li.main-category-no-subcategories div,
+li.selected-main-category div, li.selected-main-category-no-subcategories div {
+    padding-bottom: 2px;
+}
+
+li.main-category, li.main-category-no-subcategories {
+   background-color: #bdbdbd;
+}
+
+li.selected-main-category, li.selected-main-category-no-subcategories {
+    background-color: #e2e2e2;
+}
+
+li.selected-main-category div {
+    background: url(../../images/myhabbo/store/arrow_down.gif) no-repeat 2px 3px;
+    font-weight: bold;
+}
+
+li.main-category div {
+    background: url(../../images/myhabbo/store/arrow_right.gif) no-repeat 2px 3px;
+}
+
+/* subcategories */
+ul.purchase-subcategory-list li {
+    border-top: 1px dotted black;
+    padding: 2px 0;
+}
+
+li.subcategory {
+    background-image: none;
+    background-color: #e2e2e2;
+    display: none;
+}
+
+li.subcategory:hover, li.subcategory-selected {
+    background-image: none;
+    background-color: #f5f5f5;
+    display: block;
+}
+
+li.selected-main-category li.subcategory,
+li.selected-main-category li.subcategory-selected {
+    display: block;
+}
+
+li.subcategory div{
+    font-weight: normal;
+    background: transparent;
+}
+
+li.subcategory-selected div{
+    font-weight: bold;
+    background-image: none;
+}
+
+div.webstore-frank {
+	position: absolute;
+	top: 35px;
+	left: 15px;
+	width: 240px;
+}
+
+div.webstore-frank div.blackbubble-bottom-body, div.webstore-frank-image {
+	text-align: right;
+}
+
+div.webstore-frank div.blackbubble-bottom-body img.invitation-tail {
+	margin-right: 60px;
+}
+
+div.es_dynamic_animator_sticker_pre div.preview-image {
+	height: 100%;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+}
+
+a#group-url-button{
+    margin-top:-26px;
+    margin-left:40px;
+    float:right;
+}
+
+/* support for larger ... */
+div#member-list-paging, div#avatar-list-paging, div#badge-list-paging {
+	text-align:center;
+}
+a.avatar-list-paging-link {
+}
+input#group-memberlist-members-search-string {
+	float:right;
+}
+
+#group-memberlist-search-info {
+    float: left;
+    padding-top: 5px;
+}
+
+#group-memberlist-search-info.error {
+    color: #ee0000;
+}
+
+div#group-memberlist-members {
+	overflow:hidden;
+}
+div#group-memberlist-members-list {
+	height:175px;
+	width:100%;
+	overflow:auto;
+}
+
+#group-memberlist-members-search input {
+	padding: 4px;
+}
+
+#group-memberlist-members-list div.item {
+	height: 18px;	
+}
+
+#group-memberlist-members-list li.offline span {
+    color: #888 !important
+}
+
+#group-memberlist-members-list li.online span {
+    color: #000 !important
+}
+
+div#member-list-pagenumbers {
+	text-align: center;
+}
+
+div#profile-tags-panel, div#profile-tags-list {
+	position: relative;
+}
+
+a.tag {
+	font-weight: normal;
+	text-decoration: none;
+}
+a.tag:hover {
+    text-decoration: underline;
+}
+
+img.tag-delete-link, img.tag-add-link {
+	position: relative;
+	top: 1px;
+	cursor: pointer;
+    margin: 0 5px 0 0;
+}
+
+input#profile-add-tag-input {
+	width: 210px;
+	float: left;
+}
+
+div.profile-add-tag {
+	margin-top: 5px;
+	display: block;
+}
+
+div#profile-tag-list {
+}
+
+div#profile-tags-container {
+	margin: 5px 0 5px 0;
+	border: 1px solid #fff;
+	background-image: url(../../images/myhabbo/widgets/raster_selected.gif);
+	padding: 2px;
+}
+
+div#profile-tags-status-field {
+	margin-top: 5px;
+	display: none;
+}
+
+span#tag-limit-message, span#tag-invalid-message  {
+	display: none;
+	font-weight: bold;
+}
+
+div#linktool {
+    margin-bottom: 12px;
+}
+
+div#linktool-scope {
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+
+div#linktool-inline div#linktool-scope {
+    float: left;
+}
+div#linktool-inline {
+    padding-top: 3px;
+}
+
+div#linktool-scope label {
+    font-weight: normal;
+    margin: auto;
+}
+
+div#linktool-scope input {
+    vertical-align: middle;
+}
+
+input#linktool-query {
+    float: left;
+    margin-top: 3px;
+    width: 68%;
+}
+
+div#linktool-inline div.linktool-input {
+    float: right;
+    padding-right: 4px;
+    width: auto;
+}
+
+a#linktool-find {
+    float: right;
+}
+
+div#linktool-inline a#linktool-find {
+    margin-top: 3px;
+    margin-bottom: 0;
+    margin-left: 0;
+}
+
+div#linktool-inline input#linktool-find {
+    margin-left: 11px;
+}
+
+div#linktool-results {
+    display: none;
+    margin-top: 3px;
+}

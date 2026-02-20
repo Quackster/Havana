@@ -1,0 +1,136 @@
+body {
+	padding: 0px;
+	font-size: 11px;
+	background-image: url(habbo.gif);
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	background-color: #083940;
+}
+
+div#page-container {
+	position: relative;
+	margin: 0px auto;
+	width: 680px;
+}
+
+div#maintenance-container {
+	position: relative;
+	margin: 0px auto;
+	width: 680px;
+	background-image: url('v_corners.gif');
+	background-repeat: y;
+}
+
+div#content-container {
+	position: relative;
+	margin: 0px auto;
+	width: 670px;
+	height: 370px;
+	background-image: url('wrapper_bg.gif');
+	z-index: 1;
+}
+
+div#inner-container {
+	position: relative;
+	width: 582px;
+	margin: 0px auto;
+	padding: 44px 0 44px 0;
+}
+
+div#header-container {
+	position: relative;
+	margin: 0px auto;
+	width: 680px;
+	height: 101px;
+	background-image: url('header_bg.gif');
+	background-repeat: none;
+	z-index: 2;
+}
+
+div#check-in {
+	position: absolute;
+	z-index: 10001;
+	left: 470px;
+	top: 17px;
+}
+
+div#footer-container {
+	position: relative;
+	margin: 0px auto;
+	width: 680px;
+	height: 33px;
+	background-image: url('footer_bg.gif');
+	background-repeat: none;
+	text-align: center;
+	color: #ffffff;
+}
+
+div#footer-container a:link,
+div#footer-container a:visited,
+div#footer-container a:active,
+div#footer-container a:hover {
+	line-height: 31px;
+	color: #ffffff;
+	font-weight: bold;
+}
+
+
+
+/* --- bubble --- */
+div.bubble {
+    background-image: url('bubble_tl.gif');
+    background-repeat: no-repeat;
+    margin-bottom: 0px;
+}
+
+div.bubble-body {
+	margin-left: 11px;
+	padding-top: 11px;
+	padding-right: 11px;
+	margin-bottom: 0;
+    background-image: url('bubble_tr.gif');
+    background-repeat: no-repeat;
+    background-position: top right;
+	text-align: left;
+}
+
+div.bubble-bottom {
+	position: relative;
+	clear: both;
+    background-image: url('bubble_bl.gif');
+    background-repeat: no-repeat;
+    background-position: top left;
+    margin-top: 0;
+    margin-bottom: 3px;
+    text-align: center;
+}
+
+div.bubble-bottom-body {
+	margin-left: 11px;
+    margin-top: 0;
+    background-image: url('bubble_br.gif');
+    background-repeat: no-repeat;
+    background-position: top right;
+}
+
+div#left_col {
+	position: relative;
+	float: left;
+	width: 286px;
+	margin-right: 10px;
+	text-align: center;
+}
+
+div#right_col {
+	position: relative;
+	float: left;
+	width: 286px;
+	text-align: center;
+}
+
+.clear {
+	clear: both;
+}
+
+.triangle {
+	margin: 0px 10px 5px 0px;
+}

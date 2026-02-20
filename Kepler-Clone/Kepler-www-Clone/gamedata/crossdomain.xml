@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE cross-domain-policy SYSTEM "http://www.macromedia.com/xml/dtds/cross-domain-policy.dtd">
+<cross-domain-policy>
+
+<allow-access-from domain="images.habbohotel.nl" />
+<allow-access-from domain="*.habbomobile.nl" />
+<allow-access-from domain="amp.music.euro.real.com" />
+<allow-access-from domain="*.habbo.nl" />
+<allow-access-from domain="*.habbo.be" />
+
+
+<allow-access-from domain="*.habbohotel.ca"/>
+<allow-access-from domain="ads.habbohotel.ca"/>
+<allow-access-from domain="flaredcrs.co.cc"/>
+<allow-access-from domain="images.habbohotel.nl"/>
+<allow-access-from domain="*flaredcrs.co.cc" />
+
+</cross-domain-policy>

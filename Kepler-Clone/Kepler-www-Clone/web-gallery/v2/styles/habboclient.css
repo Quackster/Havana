@@ -1,0 +1,160 @@
+body#client {
+	background-color: black;
+	background-image: none !important;
+	color: white;
+	text-align: left;
+}
+
+#client-topbar {	
+	background: url(../images/popup/popup_topbar_slice.gif) repeat-x; 
+	width: 720px;
+	height: 29px;
+	font-size: 9px;
+}
+
+#client-topbar .logo {	
+	float: left; 
+	width: 230px; 
+	height: 19px;
+	text-align: left;
+}
+
+#client-topbar .logo img {	
+	padding: 5px 0 5px 8px;
+}
+
+#client-topbar .habbocount {	
+	width: 260px; 
+	height: 19px; 
+	text-align: center; 
+	float: left;
+	background: url(../images/popup/popup_habbocount_bg.gif) no-repeat; 
+	margin-top: 6px; 
+	padding-top: 3px;
+	overflow: hidden;
+}
+
+#client-topbar .logout {	
+	width: 230px; 
+	float: right;
+	text-align: right;
+	line-height: 19px;
+	padding-top: 3px;
+}
+
+#client-topbar .logout a {	
+	color: #fff;
+	vertical-align: middle;
+	padding: 2px 16px 0 0;
+	text-transform: uppercase;
+}
+
+#clientembed-container {
+	position: relative;
+}
+
+#clientembed, #clientembed-loader, #clientembed-loader div.loader-image-inner {
+	width: 720px;
+	overflow: hidden;
+    height: 540px;
+}
+
+#clientembed {
+	background-color: black;
+	color: white;
+	text-align: center;
+	position: absolute;
+}
+
+#clientembed-loader.loader-image {
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: #1d394e;
+	background-image: url(../images/client/grid.png);
+}
+
+#clientembed-loader.dimmed {
+	background-image: url(../images/client/grid-dimmed.png);
+}
+
+#clientembed-loader div.loader-image-inner {
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-image: url(../images/client/preload.png);
+	background-repeat: no-repeat;
+}
+
+.loader-image div .loading-text {
+	font: 28px Verdana, Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	position: absolute;
+	top: 251px;
+	left: 410px;
+	display: block;
+	width: 250px;
+}
+#clientembed-loader.wait { cursor: wait; }
+#clientembed-loader.dimmed div.loader-image-inner { background-image: url(../images/client/preload-dimmed.png); }
+
+body.wide #client-topbar, body.wide #clientembed, 
+body.wide #clientembed-loader, body.wide #clientembed-loader div.loader-image-inner { width: 960px; }
+body.wide #client-topbar .logo { width: 350px; }
+
+.info-client_error-text {
+    width: 190px;
+    float:left;
+}
+
+.retry-enter-hotel, .install-shockwave, .upgrade-shockwave {
+    float: right;
+}
+
+.install-shockwave, .upgrade-shockwave {
+    width: 100%;
+}
+
+.shockwave-icon {
+    background-image: url(../images/popup/shockwave_logo.png);
+    background-repeat: no-repeat;
+    height: 45px;
+}
+
+#shockwave-install-progressbar {
+    display: none;
+}
+
+div.install-shockwave span.install-label {
+    font-size: 14px;
+    padding: 0 8px 0 8px;
+}
+
+body.client_error {
+    background-color: black;
+    background-image: none;
+}
+
+body.client_error .process-template-box {
+    background-color: black;
+}
+
+body.client_error #process-content {
+    margin-top: 88px;
+}
+
+body#popup.client_error div.centered-client-error #column1 {
+    float: none;
+    margin: 0pt auto;
+}
+
+body.client_error li.client_error {
+    font-weight: bold;
+    list-style-position: inside;
+    list-style-type: decimal;
+    margin-bottom: 11px;
+}
+
+body.client_error li.client_error span {
+    font-weight: normal;
+}

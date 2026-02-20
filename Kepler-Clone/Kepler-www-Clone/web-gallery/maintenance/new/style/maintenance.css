@@ -1,0 +1,139 @@
+body {
+	background-color: #bce0ee;
+	font-size: 11px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	text-align: center;
+	margin: 0;
+	padding: 10px;
+}
+
+a {
+	color: #fc6204;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+#header {
+	position: relative;	
+    zoom: 1;
+}
+
+
+#header h1 {
+	float: left;
+	margin: 0;
+}
+
+#header h1 span {
+	position: relative;
+	float: left;
+	width: 111px;
+	height: 42px;
+	background: url(../../../v2/images/habbo.png) no-repeat;
+}
+
+#container {
+	background-color: #fff;
+	border: 1px solid #96b3be;
+	width: 760px;
+	text-align: left;
+	margin: 0 auto;
+}
+
+#content {
+	margin: 21px;
+}
+
+#process-content {
+	clear: both;
+	padding-top: 21px;
+}
+
+h2 {
+	margin: 4px;
+	padding: 4px 10px;
+	font-size: 14px;
+	background-color: #959595;
+	color: #fff;
+	position: relative;
+    text-align: center;
+}
+
+div.fireman {
+	color: #fff;
+	background: #f60 url(../images/fireman.png) no-repeat 100% 140px;
+	border: 1px solid #d6d6d6;
+	float: left;
+	width: 396px;
+	height: 400px;
+}
+
+div.fireman h1 {
+	margin: 14px 14px 7px 14px;
+	font-size: 30px;
+}
+
+div.fireman p {
+	margin: 0 14px 7px 14px;
+	font-size: 16px;
+}
+
+div.tweet-container {
+	border: 1px solid #d6d6d6;
+	float: right;
+	width: 290px;
+	height: 400px;
+	overflow: auto;
+}
+
+ul.tweet_list li {
+	padding: 7px 14px;
+}
+
+li.tweet_even {
+	background-color: #ececec;
+}
+
+a.time {
+	color: #b8b8b8;
+}
+
+#footer {
+	clear: both;
+	text-align: center;
+	font-size: 11px;
+	padding: 16px 0 0 4px;
+
+}
+
+#footer p {
+	margin: 0;
+	padding-top: .7em;
+    padding-bottom: 0;
+    font-size: 9px;
+    color: #777;
+}
+
+#footer a {
+    color: #000000;
+}
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.clear {
+	clear: both;
+}
+
