@@ -1,0 +1,87 @@
+apply plugin: 'java'
+apply plugin: 'application'
+
+java {
+    sourceCompatibility = JavaVersion.toVersion("25")
+    targetCompatibility = JavaVersion.toVersion("25")
+}
+
+application {
+    mainClass = 'org.alexdev.kepler.Kepler'
+}
+
+repositories {
+    maven { url = 'https://jitpack.io' }
+    mavenCentral()
+}
+
+dependencies {
+    // https://mvnrepository.com/artifact/com.zaxxer/HikariCP
+    implementation 'com.zaxxer:HikariCP:6.2.1'
+
+    // https://mvnrepository.com/artifact/org.mariadb.jdbc/mariadb-java-client
+    implementation 'org.mariadb.jdbc:mariadb-java-client:3.5.2'
+
+    // https://mvnrepository.com/artifact/io.netty/netty-all
+    implementation 'io.netty:netty-all:4.2.10.Final'
+
+    // https://mvnrepository.com/artifact/org.slf4j/slf4j-api
+    implementation 'org.slf4j:slf4j-api:2.0.17'
+
+    // https://mvnrepository.com/artifact/org.slf4j/slf4j-reload4j
+    implementation 'org.slf4j:slf4j-reload4j:2.0.17'
+
+    // https://mvnrepository.com/artifact/ch.qos.reload4j/reload4j
+    implementation 'ch.qos.reload4j:reload4j:1.2.26'
+
+    // https://mvnrepository.com/artifact/org.apache.commons/commons-configuration2
+    implementation 'org.apache.commons:commons-configuration2:2.11.0'
+
+    // https://mvnrepository.com/artifact/org.apache.commons/commons-lang3
+    implementation 'org.apache.commons:commons-lang3:3.17.0'
+
+    // https://mvnrepository.com/artifact/commons-lang/commons-lang
+    implementation 'commons-lang:commons-lang:2.6'
+
+    // https://mvnrepository.com/artifact/commons-validator/commons-validator
+    implementation 'commons-validator:commons-validator:1.9.0'
+
+    // https://mvnrepository.com/artifact/com.google.code.gson/gson
+    implementation 'com.google.code.gson:gson:2.11.0'
+
+    // https://mvnrepository.com/artifact/org.springframework.security/spring-security-crypto
+    implementation 'org.springframework.security:spring-security-crypto:6.4.2'
+
+    // https://mvnrepository.com/artifact/org.bouncycastle/bcprov-jdk18on
+    implementation 'org.bouncycastle:bcprov-jdk18on:1.79'
+
+    implementation 'com.github.bhlangonijr:chesslib:1.1.1'
+
+}
+
+// Create fat jar with libraries inside of it.
+task fatJar(type: Jar) {
+    zip64 = true
+    duplicatesStrategy = 'exclude'
+    manifest {
+        attributes 'Main-Class': application.mainClass
+    }
+    archiveBaseName = project.name + '-all'
+    from { configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) } }
+    with jar
+}
+
+// Create jar with no libraries inside of it, used when creating with "gradle distZip" and
+// libraries are then to be stored in the folder next to it called 'dependency-jars'
+// https://vocon-it.com/2016/11/15/how-to-build-a-lean-jar-file-with-gradle/
+
+/*jar {
+    manifest {
+        attributes (
+                'Main-Class': application.mainClass,
+                "Class-Path": '. dependency-jars/' + configurations.runtimeClasspath.collect {
+                    it.getName()
+                }.join(' dependency-jars/')
+        )
+    }
+}*/

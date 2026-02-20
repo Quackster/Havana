@@ -1,0 +1,57 @@
+services:
+  kepler:
+    build: .
+    container_name: kepler
+    restart: unless-stopped
+    env_file:
+      - .env
+    depends_on:
+      mariadb:
+        condition: service_healthy
+    ports:
+      - "${SERVER_PORT}:${SERVER_PORT}"
+      - "${RCON_PORT}:${RCON_PORT}"
+      - "${MUS_PORT}:${MUS_PORT}"
+    develop:
+      watch:
+        - action: rebuild
+          path: Kepler-Server/src
+        - action: rebuild
+          path: Kepler-Server/build.gradle
+        - action: rebuild
+          path: settings.gradle
+        - action: rebuild
+          path: gradle
+        - action: rebuild
+          path: gradlew
+        - action: rebuild
+          path: tools/scripts/run.sh
+        - action: rebuild
+          path: Dockerfile
+  mariadb:
+    image: mariadb:11.4
+    container_name: mariadb
+    restart: unless-stopped
+    env_file:
+      - .env
+    volumes:
+      - mariadb:/var/lib/mysql
+      - ./tools/kepler.sql:/docker-entrypoint-initdb.d/kepler.sql
+    healthcheck:
+      test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
+      start_period: 10s
+      interval: 10s
+      timeout: 5s
+      retries: 3
+  phpmyadmin:
+    image: phpmyadmin
+    container_name: phpmyadmin
+    restart: always
+    ports:
+      - 8080:80
+    environment:
+      - PMA_ARBITRARY=1
+
+volumes:
+  mariadb:
+    name: kepler-mariadb
