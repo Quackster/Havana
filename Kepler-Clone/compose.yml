@@ -4,19 +4,21 @@ services:
     container_name: kepler
     restart: unless-stopped
     env_file:
-      - .env
+      - path: .env
+        required: false
     depends_on:
       mariadb:
         condition: service_healthy
     ports:
-      - "${SERVER_PORT}:${SERVER_PORT}"
-      - "${MUS_PORT}:${MUS_PORT}"
+      - "${SERVER_PORT:-30000}:${SERVER_PORT:-30000}"
+      - "${MUS_PORT:-30001}:${MUS_PORT:-30001}"
   mariadb:
     image: mariadb:11.4
     container_name: kepler-mariadb
     restart: unless-stopped
     env_file:
-      - .env
+      - path: .env
+        required: false
     volumes:
       - mariadb:/var/lib/mysql
       - ./tools/kepler.sql:/docker-entrypoint-initdb.d/kepler.sql
