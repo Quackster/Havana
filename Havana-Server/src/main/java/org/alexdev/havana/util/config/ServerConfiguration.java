@@ -7,14 +7,13 @@ import org.slf4j.LoggerFactory;
 
 import java.io.IOError;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.net.InetAddress;
 import java.net.UnknownHostException;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
 public class ServerConfiguration {
-    private static Logger log = LoggerFactory.getLogger(ServerConfiguration.class);
+    private static final Logger log = LoggerFactory.getLogger(ServerConfiguration.class);
     private static Map<String, String> config = new ConcurrentHashMap<>();
     private static ConfigWriter writer;
 
@@ -108,16 +107,6 @@ public class ServerConfiguration {
             log.warn("Could not use {} as port for {}, reverting to default {}", envPort, targetName, config.get(configKey));
         }
     }
-
-    /**
-     * Writes default server configuration
-     *
-     * @param writer - {@link PrintWriter} the file writer
-     */
-    private static void setConfigurationData(PrintWriter writer) {
-
-    }
-
 
     /**
      * Get key from configuration and cast to an Boolean
