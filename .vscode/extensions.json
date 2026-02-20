@@ -6,6 +6,11 @@
     "oracle.oracle-java",
     "renesaarsoo.sql-formatter-vsc",
     "digitarald.agent-handoff",
+    "ms-python.python",
+    "ms-python.vscode-pylance",
+    "ms-python.debugpy",
+    "zyte.web-scraping",
+    "vsls-contrib.gistfs",
     "ronco-jhon.better-context-to-ai"
   ]
 }
