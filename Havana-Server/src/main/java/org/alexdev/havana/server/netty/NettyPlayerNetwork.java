@@ -5,7 +5,7 @@ import org.alexdev.havana.Havana;
 import org.alexdev.havana.game.player.Player;
 import org.alexdev.havana.server.netty.codec.EncryptionDecoder;
 import org.alexdev.havana.server.netty.codec.EncryptionEncoder;
-import org.apache.commons.validator.routines.InetAddressValidator;
+import org.alexdev.havana.util.ValidationUtil;
 
 import java.math.BigInteger;
 import java.security.SecureRandom;
@@ -128,16 +128,14 @@ public class NettyPlayerNetwork {
         var data = channel.remoteAddress().toString().replace("/", "");
         String[] ipData = data.split(":");
 
-        InetAddressValidator validator = InetAddressValidator.getInstance();
-
         // Validate an IPv4 address
-        if (validator.isValidInet4Address(ipData[0])) {
+        if (ValidationUtil.isValidInet4Address(ipData[0])) {
             return ipData[0];
         } else {
             // Try validate IPv6
             String ip = data.replace(":" + ipData[ipData.length - 1], "");
 
-            if (validator.isValidInet6Address(ip)) {
+            if (ValidationUtil.isValidInet6Address(ip)) {
                 return ip;
             }
         }

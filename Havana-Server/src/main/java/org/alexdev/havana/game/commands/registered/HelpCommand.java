@@ -8,7 +8,6 @@ import org.alexdev.havana.game.player.Player;
 import org.alexdev.havana.game.player.PlayerRank;
 import org.alexdev.havana.messages.outgoing.alerts.ALERT;
 import org.alexdev.havana.util.StringUtil;
-import org.apache.commons.lang3.StringUtils;
 
 import java.util.Arrays;
 import java.util.Comparator;
@@ -28,13 +27,13 @@ public class HelpCommand extends Command {
         String parsePageId = args.length > 0 ? args[0] : "1";
         String commandFilter = null;
 
-        if (!StringUtils.isNumeric(parsePageId))
+        if (!StringUtil.isNumeric(parsePageId))
         {
             commandFilter = args[0];
             parsePageId = args.length > 1 ? args[1] : "1";
         }
 
-        if (StringUtils.isNumeric(parsePageId)) {
+        if (StringUtil.isNumeric(parsePageId)) {
             pageId = Integer.parseInt(parsePageId);
         }
 

@@ -6,7 +6,7 @@ import org.alexdev.havana.game.player.PlayerManager;
 import org.alexdev.havana.messages.outgoing.tutorial.INVITE_FOLLOW_FAILED;
 import org.alexdev.havana.messages.types.MessageEvent;
 import org.alexdev.havana.server.netty.streams.NettyRequest;
-import org.apache.commons.lang3.StringUtils;
+import org.alexdev.havana.util.StringUtil;
 
 public class MSG_ACCEPT_TUTOR_INVITATION implements MessageEvent {
     @Override
@@ -21,7 +21,7 @@ public class MSG_ACCEPT_TUTOR_INVITATION implements MessageEvent {
 
         String data = reader.readString();
 
-        if (!StringUtils.isNumeric(data)) {
+        if (!StringUtil.isNumeric(data)) {
             return;
         }
 

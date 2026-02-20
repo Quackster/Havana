@@ -12,7 +12,7 @@ import org.alexdev.havana.util.config.GameConfiguration;
 import org.alexdev.http.dao.GroupDiscussionDao;
 import org.alexdev.http.game.groups.DiscussionTopic;
 import org.alexdev.http.util.XSSUtil;
-import org.apache.commons.lang3.StringUtils;
+import org.alexdev.havana.util.StringUtil;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -27,7 +27,7 @@ public class GroupDiscussionsController {
         String groupAlias = null;
         Group group = null;
 
-        if (StringUtils.isNumeric(match) && webConnection.getRouteRequest().endsWith("/id/discussions")) {
+        if (StringUtil.isNumeric(match) && webConnection.getRouteRequest().endsWith("/id/discussions")) {
             group = GroupDao.getGroup(Integer.parseInt(match));
 
             if (group == null) {
@@ -84,7 +84,7 @@ public class GroupDiscussionsController {
         String groupAlias = null;
         Group group = null;
 
-        if (StringUtils.isNumeric(match) && webConnection.getRouteRequest().contains("/id/discussions")) {
+        if (StringUtil.isNumeric(match) && webConnection.getRouteRequest().contains("/id/discussions")) {
             group = GroupDao.getGroup(Integer.parseInt(match));
 
             if (group == null) {

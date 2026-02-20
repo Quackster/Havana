@@ -3,7 +3,7 @@ package org.alexdev.http.util;
 import org.alexdev.havana.dao.mysql.PlayerDao;
 import org.alexdev.havana.game.wordfilter.WordfilterManager;
 import org.alexdev.http.controllers.habblet.NameCheckController;
-import org.apache.commons.validator.routines.EmailValidator;
+import org.alexdev.havana.util.ValidationUtil;
 
 public class RegisterUtil {
     public static boolean isValidName(String username) {
@@ -41,7 +41,7 @@ public class RegisterUtil {
     }
 
     public static boolean isValidEmail(String email) {
-        if (!EmailValidator.getInstance().isValid(email)) {
+        if (!ValidationUtil.isValidEmail(email)) {
             return false;
         }
 

@@ -11,7 +11,7 @@ import org.alexdev.havana.messages.flash.outgoing.navigator.FLASH_FRONTPAGERESUL
 import org.alexdev.havana.messages.flash.outgoing.navigator.beta.BETA_FLASH_FRONTPAGERESULT;
 import org.alexdev.havana.messages.types.MessageEvent;
 import org.alexdev.havana.server.netty.streams.NettyRequest;
-import org.apache.commons.lang3.StringUtils;
+import org.alexdev.havana.util.StringUtil;
 
 import java.util.ArrayList;
 import java.util.LinkedHashMap;

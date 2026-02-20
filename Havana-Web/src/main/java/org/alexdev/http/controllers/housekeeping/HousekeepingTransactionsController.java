@@ -7,7 +7,7 @@ import org.alexdev.havana.game.player.PlayerDetails;
 import org.alexdev.http.Routes;
 import org.alexdev.http.game.housekeeping.HousekeepingManager;
 import org.alexdev.http.util.SessionUtil;
-import org.apache.commons.lang3.StringUtils;
+import org.alexdev.havana.util.StringUtil;
 
 public class HousekeepingTransactionsController {
 
@@ -69,7 +69,7 @@ public class HousekeepingTransactionsController {
             return;
         }
 
-            var transactions = TransactionDao.getTransactionByItem(StringUtils.isNumeric(client.get().getString("id")) ? client.get().getInt("id") : 0);
+            var transactions = TransactionDao.getTransactionByItem(StringUtil.isNumeric(client.get().getString("id")) ? client.get().getInt("id") : 0);
             tpl.set("transactions", transactions);
 
         tpl.set("pageName", "Transaction Lookup");

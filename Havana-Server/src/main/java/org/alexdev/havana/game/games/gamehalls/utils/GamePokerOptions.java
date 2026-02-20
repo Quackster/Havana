@@ -10,7 +10,7 @@ import org.alexdev.havana.messages.outgoing.user.currencies.CREDIT_BALANCE;
 import org.alexdev.havana.messages.outgoing.user.currencies.TICKET_BALANCE;
 import org.alexdev.havana.util.DateUtil;
 import org.alexdev.havana.util.config.GameConfiguration;
-import org.apache.commons.lang3.tuple.Pair;
+import org.alexdev.havana.util.Pair;
 
 import java.sql.SQLException;
 import java.util.ArrayList;

@@ -6,7 +6,7 @@ import org.alexdev.havana.game.games.enums.GameType;
 import org.alexdev.havana.game.games.battleball.BattleBallGame;
 import org.alexdev.havana.game.games.player.GameTeam;
 import org.alexdev.havana.util.DateUtil;
-import org.apache.commons.lang3.tuple.Pair;
+import org.alexdev.havana.util.Pair;
 
 import java.util.ArrayList;
 import java.util.HashMap;

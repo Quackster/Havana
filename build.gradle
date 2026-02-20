@@ -1,0 +1,16 @@
+plugins {
+    id 'org.graalvm.buildtools.native' version '0.10.4' apply false
+}
+
+subprojects {
+    apply plugin: 'java'
+
+    repositories {
+        maven { url 'https://jitpack.io' }
+        mavenCentral()
+    }
+
+    java {
+        toolchain { languageVersion = JavaLanguageVersion.of(17) }
+    }
+}

@@ -3,19 +3,22 @@ FROM eclipse-temurin:17-jdk AS builder
 WORKDIR /sources
 COPY ./gradle /sources/gradle
 COPY ./gradlew /sources
-COPY ./figuredata.xml /sources
-COPY ./tools/docker/server-entrypoint.sh /sources/tools/docker/server-entrypoint.sh
 COPY ./Havana-Server/ /sources/Havana-Server
 COPY ./settings.gradle /sources
 
-RUN ./gradlew build
-RUN cd Havana-Server/build/distributions && tar xf Havana-Server.tar
-RUN cd Havana-Server/build/distributions/Havana-Server/bin && ./Havana-Server
+RUN ./gradlew :Havana-Server:shadowJar
 
 FROM eclipse-temurin:17-jre
-COPY --from=builder /sources/Havana-Server/build/distributions/Havana-Server /havana-server
-COPY --from=builder /sources/figuredata.xml /havana-server/bin
-COPY --from=builder /sources/tools/docker/server-entrypoint.sh /havana-server/bin/run.sh
-WORKDIR /havana-server/bin
-RUN chmod +x run.sh
-ENTRYPOINT ["/havana-server/bin/run.sh"]
+WORKDIR /havana-server
+
+# Copy the JAR file from build
+COPY --from=builder /sources/Havana-Server/build/libs/Havana-Server-unspecified.jar /havana-server/Havana-Server.jar
+
+# Copy figuredata.xml
+COPY ./tools/figuredata.xml /havana-server/
+
+# Copy entrypoint script
+COPY ./tools/docker/server-entrypoint.sh /havana-server/run.sh
+RUN chmod +x /havana-server/run.sh
+
+ENTRYPOINT ["/havana-server/run.sh"]

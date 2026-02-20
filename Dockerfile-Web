@@ -3,20 +3,23 @@ FROM eclipse-temurin:17-jdk AS builder
 WORKDIR /sources
 COPY ./gradle /sources/gradle
 COPY ./gradlew /sources
-COPY ./figuredata.xml /sources
-COPY ./tools/docker/web-entrypoint.sh /sources/tools/docker/web-entrypoint.sh
 COPY ./Havana-Server/ /sources/Havana-Server
 COPY ./Havana-Web/ /sources/Havana-Web
 COPY ./settings.gradle /sources
 
-RUN ./gradlew build
-RUN cd Havana-Web/build/distributions && tar xf Havana-Web.tar
-RUN cd Havana-Web/build/distributions/Havana-Web/bin && ./Havana-Web
+RUN ./gradlew :Havana-Web:shadowJar
 
 FROM eclipse-temurin:17-jre
-COPY --from=builder /sources/Havana-Web/build/distributions/Havana-Web /havana-web
-COPY --from=builder /sources/figuredata.xml /havana-web/bin
-COPY --from=builder /sources/tools/docker/web-entrypoint.sh /havana-web/bin/run.sh
-WORKDIR /havana-web/bin
-RUN chmod +x run.sh
-ENTRYPOINT ["/havana-web/bin/run.sh"]
+WORKDIR /havana-web
+
+# Copy the JAR file from build
+COPY --from=builder /sources/Havana-Web/build/libs/Havana-Web-unspecified.jar /havana-web/Havana-Web.jar
+
+# Copy figuredata.xml
+COPY ./tools/figuredata.xml /havana-web/
+
+# Copy entrypoint script
+COPY ./tools/docker/web-entrypoint.sh /havana-web/run.sh
+RUN chmod +x /havana-web/run.sh
+
+ENTRYPOINT ["/havana-web/run.sh"]

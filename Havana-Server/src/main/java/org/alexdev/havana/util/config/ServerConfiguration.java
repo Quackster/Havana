@@ -1,7 +1,6 @@
 package org.alexdev.havana.util.config;
 
 import org.alexdev.havana.util.config.writer.ConfigWriter;
-import org.apache.commons.configuration2.ex.ConfigurationException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -18,7 +17,7 @@ public class ServerConfiguration {
     private static Map<String, String> config = new ConcurrentHashMap<>();
     private static ConfigWriter writer;
 
-    public static void load(String configPath) throws IOError, IOException, ConfigurationException {
+    public static void load(String configPath) throws IOError, IOException {
         config = writer.setConfigurationDefaults();
 
         var configurationFile = Configuration.createConfigurationFile(configPath);

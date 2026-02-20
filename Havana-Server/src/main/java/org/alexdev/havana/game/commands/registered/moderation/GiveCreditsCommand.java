@@ -12,7 +12,7 @@ import org.alexdev.havana.game.player.PlayerRank;
 import org.alexdev.havana.messages.outgoing.rooms.user.CHAT_MESSAGE;
 import org.alexdev.havana.messages.outgoing.rooms.user.CHAT_MESSAGE.ChatMessageType;
 import org.alexdev.havana.messages.outgoing.user.currencies.CREDIT_BALANCE;
-import org.apache.commons.lang3.StringUtils;
+import org.alexdev.havana.util.StringUtil;
 
 public class GiveCreditsCommand extends Command {
     @Override
@@ -53,7 +53,7 @@ public class GiveCreditsCommand extends Command {
             return;
         }
 
-        if (!StringUtils.isNumeric(args[1])) {
+        if (!StringUtil.isNumeric(args[1])) {
             player.send(new CHAT_MESSAGE(ChatMessageType.WHISPER, player.getRoomUser().getInstanceId(), "Credit amount not provided", 0));
             return;
         }

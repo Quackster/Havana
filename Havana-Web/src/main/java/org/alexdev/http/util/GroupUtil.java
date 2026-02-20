@@ -6,7 +6,7 @@ import org.alexdev.duckhttpd.util.config.Settings;
 import org.alexdev.havana.dao.mysql.GroupDao;
 import org.alexdev.havana.game.groups.Group;
 import org.alexdev.havana.server.rcon.messages.RconHeader;
-import org.apache.commons.lang3.StringUtils;
+import org.alexdev.havana.util.StringUtil;
 
 import java.util.HashMap;
 
@@ -23,7 +23,7 @@ public class GroupUtil {
         String groupAlias = null;
         Group group = null;
 
-        if (StringUtils.isNumeric(match) && webConnection.getRouteRequest().endsWith("/id/discussions")) {
+        if (StringUtil.isNumeric(match) && webConnection.getRouteRequest().endsWith("/id/discussions")) {
             group = GroupDao.getGroup(Integer.parseInt(match));
 
             if (group == null) {

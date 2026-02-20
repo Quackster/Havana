@@ -9,7 +9,7 @@ import org.alexdev.havana.messages.outgoing.rooms.games.CLOSEGAMEBOARD;
 import org.alexdev.havana.messages.outgoing.rooms.games.ITEMMSG;
 import org.alexdev.havana.messages.outgoing.rooms.user.CHAT_MESSAGE;
 import org.alexdev.havana.messages.outgoing.rooms.user.CHAT_MESSAGE.ChatMessageType;
-import org.apache.commons.lang3.tuple.Pair;
+import org.alexdev.havana.util.Pair;
 
 import java.util.ArrayList;
 import java.util.HashMap;

@@ -35,3 +35,5 @@ Havana-Server/src/main/java/META-INF/MANIFEST.MF
 Havana-Web/src/main/java/META-INF/MANIFEST.MF
 Havana-Server/META-INF/MANIFEST.MF
 .DS_Store
+/Havana-Server/src/main/resources/META-INF
+/Havana-Web/src/main/resources/META-INF

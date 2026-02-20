@@ -10,7 +10,7 @@ import org.alexdev.havana.game.groups.GroupMemberRank;
 import org.alexdev.havana.game.player.PlayerRank;
 import org.alexdev.havana.server.rcon.messages.RconHeader;
 import org.alexdev.http.util.RconUtil;
-import org.apache.commons.lang3.StringUtils;
+import org.alexdev.havana.util.StringUtil;
 
 import java.util.HashMap;
 import java.util.List;
@@ -222,7 +222,7 @@ public class GroupMemberController {
         List<String> data = webConnection.post().getArray("targetIds");
 
         for (String user : data) {
-            if (!StringUtils.isNumeric(user)) {
+            if (!StringUtil.isNumeric(user)) {
                 continue;
             }
 
@@ -271,7 +271,7 @@ public class GroupMemberController {
         List<String> data = webConnection.post().getArray("targetIds");
 
         for (String user : data) {
-            if (!StringUtils.isNumeric(user)) {
+            if (!StringUtil.isNumeric(user)) {
                 continue;
             }
 
@@ -321,7 +321,7 @@ public class GroupMemberController {
         List<String> data = webConnection.post().getArray("targetIds");
 
         for (String user : data) {
-            if (!StringUtils.isNumeric(user)) {
+            if (!StringUtil.isNumeric(user)) {
                 continue;
             }
 
@@ -386,7 +386,7 @@ public class GroupMemberController {
         List<String> data = webConnection.post().getArray("targetIds");
 
         for (String user : data) {
-            if (!StringUtils.isNumeric(user)) {
+            if (!StringUtil.isNumeric(user)) {
                 continue;
             }
 
@@ -435,7 +435,7 @@ public class GroupMemberController {
         List<String> data = webConnection.post().getArray("targetIds");
 
         for (String user : data) {
-            if (!StringUtils.isNumeric(user)) {
+            if (!StringUtil.isNumeric(user)) {
                 continue;
             }
 

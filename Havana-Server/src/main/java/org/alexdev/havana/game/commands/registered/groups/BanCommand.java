@@ -8,7 +8,6 @@ import org.alexdev.havana.game.player.Player;
 import org.alexdev.havana.game.player.PlayerRank;
 import org.alexdev.havana.messages.outgoing.alerts.ALERT;
 import org.alexdev.havana.util.StringUtil;
-import org.apache.commons.lang3.StringUtils;
 
 import java.util.Arrays;
 import java.util.concurrent.TimeUnit;
@@ -34,7 +33,7 @@ public class BanCommand extends Command {
 
         String name = args[0];
 
-        int minutes = StringUtils.isNumeric(args[1]) ? Integer.parseInt(args[1]) : 0;
+        int minutes = StringUtil.isNumeric(args[1]) ? Integer.parseInt(args[1]) : 0;
         var reason = StringUtil.filterInput(Arrays.asList(args).stream().skip(2).collect(Collectors.joining(" ")), true);
 
         var response = ModeratorBanUserAction.ban(player.getDetails(), reason, "", name, TimeUnit.MINUTES.toSeconds(minutes), true, true);

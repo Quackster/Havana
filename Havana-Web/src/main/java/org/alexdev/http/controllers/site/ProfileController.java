@@ -19,8 +19,7 @@ import org.alexdev.havana.util.StringUtil;
 import org.alexdev.havana.util.config.GameConfiguration;
 import org.alexdev.http.dao.SessionDao;
 import org.alexdev.http.util.*;
-import org.apache.commons.lang3.StringUtils;
-import org.apache.commons.validator.routines.EmailValidator;
+import org.alexdev.havana.util.ValidationUtil;
 
 import javax.mail.internet.AddressException;
 import java.util.HashMap;
@@ -48,7 +47,7 @@ public class ProfileController {
         if (webConnection.get().contains("tab")) {
             String value = webConnection.get().getString("tab");
 
-            if (StringUtils.isNumeric(value)) {
+            if (StringUtil.isNumeric(value)) {
                 tab = Integer.parseInt(value);
             }
         };
@@ -269,7 +268,7 @@ public class ProfileController {
             if (!PlayerDao.login(playerDetails, playerDetails.getName(), currentPassword)) {
                 webConnection.session().set("alertMessage", "Your current password is invalid");
                 webConnection.session().set("alertColour", "red");
-            } else if (!EmailValidator.getInstance().isValid(email)) {
+            } else if (!ValidationUtil.isValidEmail(email)) {
                 webConnection.session().set("alertMessage", "The email you entered is invalid");
                 webConnection.session().set("alertColour", "red");
             } else if (!webConnection.session().getString("captcha-text").equals(captcha)) {
@@ -528,7 +527,7 @@ public class ProfileController {
             return;
         }
 
-        if (!StringUtils.isNumeric( webConnection.post().getString("slot"))) {
+        if (!StringUtil.isNumeric( webConnection.post().getString("slot"))) {
             webConnection.redirect("/");
             return;
         }
@@ -641,7 +640,7 @@ public class ProfileController {
         if (webConnection.get().contains("tab")) {
             String value = webConnection.get().getString("tab");
 
-            if (StringUtils.isNumeric(value)) {
+            if (StringUtil.isNumeric(value)) {
                 tab = Integer.parseInt(value);
             }
         };

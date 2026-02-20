@@ -13,7 +13,7 @@ import org.alexdev.http.game.groups.DiscussionTopic;
 import org.alexdev.http.game.news.NewsArticle;
 import org.alexdev.http.game.news.NewsDateKey;
 import org.alexdev.http.util.config.WebSettingsConfigWriter;
-import org.apache.commons.lang3.tuple.Pair;
+import org.alexdev.havana.util.Pair;
 
 import java.net.MalformedURLException;
 import java.net.Socket;

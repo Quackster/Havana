@@ -1,8 +1,7 @@
 package org.alexdev.http.util;
 
-import org.apache.commons.codec.binary.Base64;
-
 import javax.imageio.ImageIO;
+import java.util.Base64;
 import java.awt.image.BufferedImage;
 import java.io.*;
 
@@ -84,7 +83,7 @@ public class HtmlUtil {
             ImageIO.write(image, type, bos);
             byte[] imageBytes = bos.toByteArray();
 
-            imageString =  new String(Base64.encodeBase64(imageBytes));
+            imageString = Base64.getEncoder().encodeToString(imageBytes);
 
             bos.close();
         } catch (IOException e) {

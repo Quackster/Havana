@@ -2,7 +2,7 @@ package org.alexdev.havana.dao.mysql;
 
 import org.alexdev.havana.dao.Storage;
 import org.alexdev.havana.game.item.Transaction;
-import org.apache.commons.lang3.StringUtils;
+import org.alexdev.havana.util.StringUtil;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -84,7 +84,7 @@ public class TransactionDao {
             preparedStatement = Storage.getStorage().prepare("SELECT * FROM users_transactions INNER JOIN users ON users.id = users_transactions.user_id WHERE MONTH(users_transactions.created_at) = ? AND YEAR(users_transactions.created_at) = ? AND user_id = ? OR username = ? ORDER BY users_transactions.created_at DESC", sqlConnection);
             preparedStatement.setInt(1, month);
             preparedStatement.setInt(2, year);
-            preparedStatement.setInt(3, StringUtils.isNumeric(searchQuery) ? Integer.parseInt(searchQuery) : -1);
+            preparedStatement.setInt(3, StringUtil.isNumeric(searchQuery) ? Integer.parseInt(searchQuery) : -1);
             preparedStatement.setString(4, searchQuery);
             resultSet = preparedStatement.executeQuery();
 

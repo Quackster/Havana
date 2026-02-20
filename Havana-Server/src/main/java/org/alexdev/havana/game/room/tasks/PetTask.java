@@ -12,7 +12,6 @@ import org.alexdev.havana.game.room.enums.StatusType;
 import org.alexdev.havana.messages.outgoing.rooms.user.CHAT_MESSAGE;
 import org.alexdev.havana.util.DateUtil;
 import org.alexdev.havana.util.StringUtil;
-import org.apache.commons.lang3.StringUtils;
 
 import java.util.List;
 import java.util.concurrent.ThreadLocalRandom;
@@ -234,7 +233,7 @@ public class PetTask extends TickTask {
                     this.room.getMapping().removeItem(currentItem);
                     currentItem.delete();
                 } else {
-                    if (StringUtils.isNumeric(currentItem.getCustomData())) {
+                    if (StringUtil.isNumeric(currentItem.getCustomData())) {
                         int state = Integer.parseInt(currentItem.getCustomData()) + 1;
 
                         if (state <= 4) {
@@ -305,7 +304,7 @@ public class PetTask extends TickTask {
             if (currentItem != null &&
                 currentItem.hasBehaviour(ItemBehaviour.PET_WATER_BOWL)) {
 
-                if (StringUtils.isNumeric(currentItem.getCustomData())) {
+                if (StringUtil.isNumeric(currentItem.getCustomData())) {
                     int state = Integer.parseInt(currentItem.getCustomData()) - 1;
 
                     if (state >= 0) {

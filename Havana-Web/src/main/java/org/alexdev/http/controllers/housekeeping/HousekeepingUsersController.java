@@ -10,8 +10,8 @@ import org.alexdev.http.Routes;
 import org.alexdev.http.dao.housekeeping.HousekeepingPlayerDao;
 import org.alexdev.http.game.housekeeping.HousekeepingManager;
 import org.alexdev.http.util.SessionUtil;
-import org.apache.commons.lang3.StringUtils;
-import org.apache.commons.validator.routines.EmailValidator;
+import org.alexdev.havana.util.StringUtil;
+import org.alexdev.havana.util.ValidationUtil;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -170,7 +170,7 @@ public class HousekeepingUsersController {
                     client.session().set("alertMessage", "The two passwords do not match");
                 } else if (client.post().getString("password").length() < 6) {
                     client.session().set("alertMessage", "The password needs to be at least 6 or more characters");
-                } else if (!EmailValidator.getInstance().isValid(client.post().getString("email"))) {
+                } else if (!ValidationUtil.isValidEmail(client.post().getString("email"))) {
                     client.session().set("alertMessage", "The email entered is not valid");
 
                 }
@@ -238,11 +238,11 @@ public class HousekeepingUsersController {
                     client.session().set("alertMessage", "The email chosen is already in use");
                 } else */
 
-                if (!EmailValidator.getInstance().isValid(client.post().getString("email"))) {
+                if (!ValidationUtil.isValidEmail(client.post().getString("email"))) {
                     client.session().set("alertMessage", "The email entered is not valid");
-                } else if (!StringUtils.isNumeric(client.post().getString("credits"))) {
+                } else if (!StringUtil.isNumeric(client.post().getString("credits"))) {
                     client.session().set("alertMessage", "The value supplied for credits is not a number");
-                } else if (!StringUtils.isNumeric(client.post().getString("pixels"))) {
+                } else if (!StringUtil.isNumeric(client.post().getString("pixels"))) {
                     client.session().set("alertMessage", "The value supplied for pixels is not a number");
                 }
             }

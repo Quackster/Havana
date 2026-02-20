@@ -6,7 +6,7 @@ import org.alexdev.havana.game.player.Player;
 import org.alexdev.havana.game.room.Room;
 import org.alexdev.havana.game.room.mapping.RoomTile;
 import org.alexdev.havana.game.triggers.GenericTrigger;
-import org.apache.commons.lang3.StringUtils;
+import org.alexdev.havana.util.StringUtil;
 
 public class DefaultInteractor extends GenericTrigger {
     public void onInteract(Player player, Room room, Item item, int status) {
@@ -32,7 +32,7 @@ public class DefaultInteractor extends GenericTrigger {
         }
 
         if (item.getDefinition().getMaxStatus() > 0) {
-            int currentMode = StringUtils.isNumeric(item.getCustomData()) ? Integer.valueOf(item.getCustomData()) : 0;
+            int currentMode = StringUtil.isNumeric(item.getCustomData()) ? Integer.valueOf(item.getCustomData()) : 0;
             int newMode = currentMode + 1;
 
             if (newMode >= item.getDefinition().getMaxStatus()) {

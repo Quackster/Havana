@@ -15,7 +15,6 @@ import org.alexdev.http.util.HtmlUtil;
 import org.alexdev.http.util.RconUtil;
 import org.alexdev.http.util.TagUtil;
 import org.alexdev.http.util.XSSUtil;
-import org.apache.commons.lang3.StringUtils;
 
 import java.net.URLDecoder;
 import java.nio.charset.StandardCharsets;
@@ -103,7 +102,7 @@ public class TagController {
             pageId = 1;
         }
 
-        tag = StringUtils.normalizeSpace(HtmlUtil.removeHtmlTags(tag));
+        tag = StringUtil.normalizeSpace(HtmlUtil.removeHtmlTags(tag));
         var tpl = webConnection.template(template);
 
         tpl.set("tagSearchAdd", "");

@@ -8,7 +8,7 @@ import org.alexdev.havana.game.room.Room;
 import org.alexdev.havana.messages.outgoing.rooms.dimmer.MOODLIGHT_PRESETS;
 import org.alexdev.havana.messages.types.MessageEvent;
 import org.alexdev.havana.server.netty.streams.NettyRequest;
-import org.apache.commons.lang3.tuple.Pair;
+import org.alexdev.havana.util.Pair;
 
 import java.util.ArrayList;
 
