@@ -38,29 +38,14 @@ public class ServerConfiguration {
 
         if (envBind != null) {
             try {
-                config.put("bind", InetAddress.getByName(envBind).getHostAddress());
+                config.put("server.bind", InetAddress.getByName(envBind).getHostAddress());
             } catch (UnknownHostException e) {
-                log.warn("Could not use {} as bind for game server, reverting to default {}", envBind, config.get("bind"));
+                log.warn("Could not use {} as bind for game server, reverting to default {}", envBind, config.get("server.bind"));
             }
         }
 
-        String envPort = System.getenv("KEPLER_PORT");
-
-        if (envPort != null) {
-            int parsedPort = Integer.parseUnsignedInt(envPort);
-            if (parsedPort > 0) {
-                config.put("server.port", Integer.toString(parsedPort));
-            }
-        }
-
-        String envMusPort = System.getenv("KEPLER_MUS_PORT");
-
-        if (envMusPort != null) {
-            int parsedPort = Integer.parseUnsignedInt(envMusPort);
-            if (parsedPort > 0) {
-                config.put("mus.port", Integer.toString(parsedPort));
-            }
-        }
+        applyPortOverride("KEPLER_PORT", "server.port", "game server");
+        applyPortOverride("KEPLER_MUS_PORT", "mus.port", "MUS server");
 
         String envRconBind = System.getenv("KEPLER_RCON_BIND");
 
@@ -73,14 +58,7 @@ public class ServerConfiguration {
             }
         }
 
-        String envRconPort = System.getenv("KEPLER_RCON_PORT");
-
-        if (envRconPort != null) {
-            int parsedPort = Integer.parseUnsignedInt(envRconPort);
-            if (parsedPort > 0) {
-                config.put("rcon.port", Integer.toString(parsedPort));
-            }
-        }
+        applyPortOverride("KEPLER_RCON_PORT", "rcon.port", "RCON server");
 
         String envMysqlHost = System.getenv("MYSQL_HOST");
 
@@ -92,14 +70,7 @@ public class ServerConfiguration {
             }
         }
 
-        String envMysqlPort = System.getenv("MYSQL_PORT");
-
-        if (envMysqlPort != null) {
-            int parsedPort = Integer.parseUnsignedInt(envMysqlPort);
-            if (parsedPort > 0) {
-                config.put("mysql.port", Integer.toString(parsedPort));
-            }
-        }
+        applyPortOverride("MYSQL_PORT", "mysql.port", "MariaDB");
 
         String envMysqlUser = System.getenv("MYSQL_USER");
 
@@ -117,6 +88,24 @@ public class ServerConfiguration {
 
         if (envMysqlPassword != null) {
             config.put("mysql.password", envMysqlPassword);
+        }
+    }
+
+    private static void applyPortOverride(String envKey, String configKey, String targetName) {
+        String envPort = System.getenv(envKey);
+
+        if (envPort == null || envPort.isBlank()) {
+            return;
+        }
+
+        try {
+            int parsedPort = Integer.parseUnsignedInt(envPort);
+
+            if (parsedPort > 0) {
+                config.put(configKey, Integer.toString(parsedPort));
+            }
+        } catch (NumberFormatException ex) {
+            log.warn("Could not use {} as port for {}, reverting to default {}", envPort, targetName, config.get(configKey));
         }
     }
 
