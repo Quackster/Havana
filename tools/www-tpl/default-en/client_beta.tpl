@@ -119,7 +119,7 @@
 
 <body id="client" class="flashclient">
     <div id="overlay"></div>
-    <img src="/client/page_loader.gif" style="position:absolute; margin: -1500px;" />
+    
     <div id="client-ui">
         <div id="flash-wrapper">
             <div id="flash-container">

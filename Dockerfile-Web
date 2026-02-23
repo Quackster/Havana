@@ -5,9 +5,13 @@ COPY ./gradle /sources/gradle
 COPY ./gradlew /sources
 COPY ./Havana-Server/ /sources/Havana-Server
 COPY ./Havana-Web/ /sources/Havana-Web
+COPY ./build.gradle /sources
 COPY ./settings.gradle /sources
 
-RUN ./gradlew :Havana-Web:shadowJar
+# Ensure clean state for build
+RUN rm -rf /sources/Havana-Web/build
+RUN sed -i -e 's/\r$//' ./gradlew && chmod +x ./gradlew
+RUN ./gradlew :Havana-Web:clean :Havana-Web:shadowJar
 
 FROM eclipse-temurin:17-jre
 WORKDIR /havana-web
@@ -20,6 +24,6 @@ COPY ./tools/figuredata.xml /havana-web/
 
 # Copy entrypoint script
 COPY ./tools/docker/web-entrypoint.sh /havana-web/run.sh
-RUN chmod +x /havana-web/run.sh
+RUN sed -i -e 's/\r$//' /havana-web/run.sh && chmod +x /havana-web/run.sh
 
 ENTRYPOINT ["/havana-web/run.sh"]

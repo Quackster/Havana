@@ -33,6 +33,9 @@ public class WebSettingsConfigWriter implements ConfigWriter {
         config.put("loader.flash.swf", "http://localhost/gordon/RELEASE39-22643-22891-200911110035_07c3a2a30713fd5bea8a8caf07e33438/Habbo.swf");
         config.put("loader.flash.external.texts", "http://localhost/flash/gamedata/external_flash_texts.txt");
         config.put("loader.flash.external.variables", "http://localhost/flash/gamedata/external_variables.txt");
+        // config.put("loader.flash.external.texts", "http://localhost/flash/gamedata/external_flash_texts.txt");
+        // config.put("loader.external.variables", "http://localhost/flash/gamedata/external_variables.txt");
+        // config.put("loader.external.texts", "http://localhost/flash/gamedata/external_flash_texts.txt");
 
 
         config.put("registration.disabled", "false");

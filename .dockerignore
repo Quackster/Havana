@@ -1,0 +1,10 @@
+.git
+.gradle
+.idea
+**/build
+**/dist
+**/out
+*.class
+*.jar
+*.war
+.DS_Store

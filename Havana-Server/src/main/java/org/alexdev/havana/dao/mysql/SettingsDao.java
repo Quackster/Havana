@@ -138,7 +138,8 @@ public class SettingsDao {
 
         try {
             sqlConnection = Storage.getStorage().getConnection();
-            preparedStatement = Storage.getStorage().prepare("INSERT INTO settings (setting, value) VALUES (?, ?)", sqlConnection);
+            // Use INSERT INTO ... ON DUPLICATE KEY UPDATE to ensure correct value
+            preparedStatement = Storage.getStorage().prepare("INSERT INTO settings (setting, value) VALUES (?, ?) ON DUPLICATE KEY UPDATE value = VALUES(value)", sqlConnection);
             preparedStatement.setString(1, key);
             preparedStatement.setString(2, value);
             preparedStatement.execute();
