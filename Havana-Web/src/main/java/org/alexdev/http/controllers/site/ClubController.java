@@ -10,7 +10,7 @@ import org.alexdev.havana.game.player.statistics.PlayerStatistic;
 import org.alexdev.havana.game.player.statistics.PlayerStatisticManager;
 import org.alexdev.havana.util.DateUtil;
 import org.alexdev.http.util.XSSUtil;
-import org.apache.commons.lang3.StringUtils;
+import org.alexdev.havana.util.StringUtil;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -69,8 +69,8 @@ public class ClubController {
             return;
         }
 
-        if (!StringUtils.isNumeric(connection.post().getString("month")) ||
-            !StringUtils.isNumeric(connection.post().getString("catalogpage"))) {
+        if (!StringUtil.isNumeric(connection.post().getString("month")) ||
+            !StringUtil.isNumeric(connection.post().getString("catalogpage"))) {
             connection.send("");
             return;
         }

@@ -11,7 +11,7 @@ import org.alexdev.havana.game.pathfinder.Position;
 import org.alexdev.havana.game.room.Room;
 import org.alexdev.havana.log.Log;
 import org.alexdev.havana.messages.outgoing.rooms.items.SLIDEOBJECTBUNDLE;
-import org.apache.commons.lang3.tuple.Pair;
+import org.alexdev.havana.util.Pair;
 
 import java.util.ArrayList;
 import java.util.LinkedHashMap;

@@ -17,7 +17,7 @@ import org.alexdev.http.dao.WidgetDao;
 import org.alexdev.http.game.homes.Widget;
 import org.alexdev.http.util.HomeUtil;
 import org.alexdev.http.util.XSSUtil;
-import org.apache.commons.lang3.StringUtils;
+import org.alexdev.havana.util.StringUtil;
 
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -38,7 +38,7 @@ public class GroupController {
         String groupAlias = null;
         Group group = null;
 
-        if (StringUtils.isNumeric(match) && webConnection.getRouteRequest().endsWith("/id")) {
+        if (StringUtil.isNumeric(match) && webConnection.getRouteRequest().endsWith("/id")) {
             group = GroupDao.getGroup(Integer.parseInt(match));
 
             if (group == null) {
@@ -137,7 +137,7 @@ public class GroupController {
 
         Group group = null;
 
-        if (StringUtils.isNumeric(match)) {
+        if (StringUtil.isNumeric(match)) {
             group = GroupDao.getGroup(Integer.parseInt(match));
         }
 

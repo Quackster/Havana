@@ -4,7 +4,7 @@ import org.alexdev.havana.dao.Storage;
 import org.alexdev.havana.game.ban.BanType;
 import org.alexdev.havana.game.bot.BotData;
 import org.alexdev.havana.util.DateUtil;
-import org.apache.commons.lang3.tuple.Pair;
+import org.alexdev.havana.util.Pair;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

@@ -11,7 +11,7 @@ import org.alexdev.havana.game.player.statistics.PlayerStatisticManager;
 import org.alexdev.havana.messages.outgoing.club.CLUB_INFO;
 import org.alexdev.havana.util.DateUtil;
 import org.alexdev.havana.util.config.GameConfiguration;
-import org.apache.commons.lang3.tuple.Pair;
+import org.alexdev.havana.util.Pair;
 
 import java.sql.SQLException;
 import java.util.concurrent.TimeUnit;

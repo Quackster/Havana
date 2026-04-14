@@ -2,7 +2,6 @@ package org.alexdev.havana.game.room.models;
 
 import org.alexdev.havana.game.pathfinder.Position;
 import org.alexdev.havana.game.room.mapping.RoomTileState;
-import org.apache.commons.lang3.StringUtils;
 import org.alexdev.havana.game.triggers.GenericTrigger;
 import org.alexdev.havana.util.StringUtil;
 
@@ -66,7 +65,7 @@ public class RoomModel {
             for (int x = 0; x < this.mapSizeX; x++) {
                 String tile = Character.toString(line.charAt(x));
 
-                if (StringUtils.isNumeric(tile)) {
+                if (StringUtil.isNumeric(tile)) {
                     this.tileStates[x][y] = RoomTileState.OPEN;
                     this.tileHeights[x][y] = Double.parseDouble(tile);
                 } else {

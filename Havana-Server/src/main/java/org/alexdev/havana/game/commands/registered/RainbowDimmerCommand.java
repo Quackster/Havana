@@ -13,7 +13,7 @@ import org.alexdev.havana.game.room.tasks.RainbowTask;
 import org.alexdev.havana.messages.outgoing.rooms.user.CHAT_MESSAGE;
 import org.alexdev.havana.messages.outgoing.rooms.user.CHAT_MESSAGE.ChatMessageType;
 import org.alexdev.havana.messages.outgoing.alerts.ALERT;
-import org.apache.commons.lang3.StringUtils;
+import org.alexdev.havana.util.StringUtil;
 
 import java.util.concurrent.TimeUnit;
 
@@ -44,7 +44,7 @@ public class RainbowDimmerCommand extends Command {
         int tickInterval = 5;
 
         if (args.length == 1) {
-            if (!StringUtils.isNumeric(args[0])) {
+            if (!StringUtil.isNumeric(args[0])) {
                 player.send(new ALERT("Please specify the number internal in seconds of the time it takes change colours"));
                 return;
             } else {

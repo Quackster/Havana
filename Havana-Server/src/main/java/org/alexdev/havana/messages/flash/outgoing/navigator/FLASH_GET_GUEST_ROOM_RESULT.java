@@ -5,7 +5,7 @@ import org.alexdev.havana.game.room.Room;
 import org.alexdev.havana.messages.types.MessageComposer;
 import org.alexdev.havana.server.netty.streams.NettyResponse;
 import org.alexdev.havana.util.DateUtil;
-import org.apache.commons.lang3.StringUtils;
+import org.alexdev.havana.util.StringUtil;
 
 import java.text.DateFormat;
 import java.util.List;
@@ -107,8 +107,8 @@ public class FLASH_GET_GUEST_ROOM_RESULT extends MessageComposer {
         try {
             String[] iconData = room.getData().getIconData().split("\\|");
 
-            int background = StringUtils.isNumeric(iconData[0]) ? Integer.parseInt(iconData[0]) : 0;
-            int topLayer = StringUtils.isNumeric(iconData[1]) ? Integer.parseInt(iconData[1]) : 0;
+            int background = StringUtil.isNumeric(iconData[0]) ? Integer.parseInt(iconData[0]) : 0;
+            int topLayer = StringUtil.isNumeric(iconData[1]) ? Integer.parseInt(iconData[1]) : 0;
             String[] items = iconData[2].split(" ");
 
             response.writeInt(background);
@@ -119,8 +119,8 @@ public class FLASH_GET_GUEST_ROOM_RESULT extends MessageComposer {
                 try {
                     String[] iconItems = data.split(",");
 
-                    int iconPosition = StringUtils.isNumeric(iconItems[0]) ? Integer.parseInt(iconItems[0]) : 0;
-                    int iconId = StringUtils.isNumeric(iconItems[1]) ? Integer.parseInt(iconItems[1]) : 0;
+                    int iconPosition = StringUtil.isNumeric(iconItems[0]) ? Integer.parseInt(iconItems[0]) : 0;
+                    int iconId = StringUtil.isNumeric(iconItems[1]) ? Integer.parseInt(iconItems[1]) : 0;
 
                     response.writeInt(iconPosition);
                     response.writeInt(iconId);

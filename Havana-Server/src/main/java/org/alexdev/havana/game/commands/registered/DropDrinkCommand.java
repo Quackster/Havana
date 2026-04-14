@@ -11,7 +11,6 @@ import org.alexdev.havana.game.texts.TextsManager;
 import org.alexdev.havana.messages.outgoing.alerts.ALERT;
 import org.alexdev.havana.messages.outgoing.rooms.user.CHAT_MESSAGE;
 import org.alexdev.havana.messages.outgoing.rooms.user.CHAT_MESSAGE.ChatMessageType;
-import org.apache.commons.lang3.StringUtils;
 
 public class DropDrinkCommand extends Command {
     @Override

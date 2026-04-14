@@ -1,7 +1,7 @@
 package org.alexdev.havana.game.games.battleball;
 
 import org.alexdev.havana.game.games.enums.GameType;
-import org.apache.commons.lang3.StringUtils;
+import org.alexdev.havana.util.StringUtil;
 
 public class BattleBallMap {
     private final String heightmap;
@@ -31,7 +31,7 @@ public class BattleBallMap {
             for (int x = 0; x < mapSizeX; x++) {
                 String tile = Character.toString(line.charAt(x));
 
-                if (StringUtils.isNumeric(tile)) {
+                if (StringUtil.isNumeric(tile)) {
                     this.battleballTileMap[x][y] = tile.equals("1");
                 } else {
                     this.battleballTileMap[x][y] = false;

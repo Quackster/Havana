@@ -10,7 +10,7 @@ import org.alexdev.havana.game.song.Song;
 import org.alexdev.http.dao.WidgetDao;
 import org.alexdev.http.game.homes.Widget;
 import org.alexdev.http.game.stickers.StickerType;
-import org.apache.commons.lang3.StringUtils;
+import org.alexdev.havana.util.StringUtil;
 
 public class TraxController {
     public static void selectSong(WebConnection webConnection) {
@@ -81,7 +81,7 @@ public class TraxController {
 
         }
 
-        if (!StringUtils.isNumeric(songData)) {
+        if (!StringUtil.isNumeric(songData)) {
             webConnection.send("");
             return;
         }

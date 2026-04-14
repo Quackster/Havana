@@ -21,7 +21,7 @@ import org.alexdev.http.game.stickers.StickerManager;
 import org.alexdev.http.game.stickers.StickerType;
 import org.alexdev.http.util.HomeUtil;
 import org.alexdev.http.util.XSSUtil;
-import org.apache.commons.lang3.StringUtils;
+import org.alexdev.havana.util.StringUtil;
 
 import java.util.ArrayList;
 import java.util.Comparator;
@@ -363,7 +363,7 @@ public class HomesController {
         int userId = webConnection.session().getInt("user.id");
         String match = webConnection.getMatches().get(0);
 
-        if (!StringUtils.isNumeric(match)) {
+        if (!StringUtil.isNumeric(match)) {
             webConnection.redirect("/me");
             return;
         }
@@ -400,7 +400,7 @@ public class HomesController {
         int userId = webConnection.session().getInt("user.id");
         String match = webConnection.getMatches().get(0);
 
-        if (!StringUtils.isNumeric(match)) {
+        if (!StringUtil.isNumeric(match)) {
             webConnection.redirect("/me");
             return;
         }

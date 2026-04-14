@@ -11,7 +11,7 @@ import org.alexdev.havana.game.texts.TextsManager;
 import org.alexdev.havana.messages.outgoing.alerts.ALERT;
 import org.alexdev.havana.messages.outgoing.rooms.user.CHAT_MESSAGE;
 import org.alexdev.havana.messages.outgoing.rooms.user.CHAT_MESSAGE.ChatMessageType;
-import org.apache.commons.lang3.StringUtils;
+import org.alexdev.havana.util.StringUtil;
 
 public class GiveDrinkCommand extends Command {
     @Override
@@ -60,7 +60,7 @@ public class GiveDrinkCommand extends Command {
         if (player.getRoomUser().containsStatus(StatusType.CARRY_DRINK)) {
             var value  = player.getRoomUser().getStatus(StatusType.CARRY_DRINK).getValue();
 
-            if (StringUtils.isNumeric(value)) {
+            if (StringUtil.isNumeric(value)) {
                 drinkId = Integer.parseInt(value);
             } else {
                 drinkName = value;

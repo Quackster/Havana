@@ -8,7 +8,7 @@ import org.alexdev.havana.game.fuserights.Fuseright;
 import org.alexdev.havana.game.player.Player;
 import org.alexdev.havana.game.room.Room;
 import org.alexdev.havana.game.triggers.GenericTrigger;
-import org.apache.commons.lang3.StringUtils;
+import org.alexdev.havana.util.StringUtil;
 
 public class ScoreboardInteractor extends GenericTrigger {
     public void onInteract(Player player, Room room, Item item, int status) {
@@ -18,7 +18,7 @@ public class ScoreboardInteractor extends GenericTrigger {
 
         if (status == 1) {
             if (item.getDefinition().getMaxStatus() > 0) {
-                int currentMode = StringUtils.isNumeric(item.getCustomData()) ? Integer.valueOf(item.getCustomData()) : 0;
+                int currentMode = StringUtil.isNumeric(item.getCustomData()) ? Integer.valueOf(item.getCustomData()) : 0;
                 int newMode = currentMode - 1;
 
                 if (newMode < 0) {
@@ -35,7 +35,7 @@ public class ScoreboardInteractor extends GenericTrigger {
         }
 
         if (status == 0) {
-            if (StringUtils.isNumeric(item.getCustomData())) {
+            if (StringUtil.isNumeric(item.getCustomData())) {
                 item.setCustomData("x");
                 item.updateStatus();
             } else {

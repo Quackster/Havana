@@ -5,7 +5,7 @@ import org.alexdev.havana.game.room.Room;
 import org.alexdev.havana.game.room.enums.StatusType;
 import org.alexdev.havana.messages.types.MessageEvent;
 import org.alexdev.havana.server.netty.streams.NettyRequest;
-import org.apache.commons.lang3.StringUtils;
+import org.alexdev.havana.util.StringUtil;
 
 public class SIGN implements MessageEvent {
     @Override
@@ -18,7 +18,7 @@ public class SIGN implements MessageEvent {
 
         String contents = reader.contents();
 
-        if (!StringUtils.isNumeric(contents)) {
+        if (!StringUtil.isNumeric(contents)) {
             return;
         }
 

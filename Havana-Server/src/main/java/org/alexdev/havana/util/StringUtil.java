@@ -4,7 +4,6 @@ import com.google.gson.Gson;
 import org.alexdev.havana.dao.mysql.TagDao;
 import org.alexdev.havana.game.player.Player;
 import org.alexdev.havana.util.config.GameConfiguration;
-import org.apache.commons.lang3.StringUtils;
 
 import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
@@ -140,7 +139,7 @@ public class StringUtil {
     }
 
     public static String isValidTag(String tag, int userId, int roomId, int groupId) {
-        String formatTag = StringUtils.normalizeSpace((StringUtil.filterInput(tag, false))).replaceAll("\\<[^>]*>", "").replace(",", "").toLowerCase();
+        String formatTag = StringUtil.normalizeSpace(StringUtil.filterInput(tag, false)).replaceAll("\\<[^>]*>", "").replace(",", "").toLowerCase();
 
         if (tag.length() <= 1 || tag.trim().isEmpty() || tag.length() > 20 || TagDao.hasTag(userId, roomId, groupId, tag)) {
             return null;
@@ -196,6 +195,73 @@ public class StringUtil {
         }
 
         return false;
+    }
+
+    /**
+     * Checks if a string contains only numeric digits.
+     * Replacement for Apache Commons Lang StringUtils.isNumeric().
+     *
+     * @param str the string to check
+     * @return true if the string contains only digits, false otherwise
+     */
+    public static boolean isNumeric(String str) {
+        if (str == null || str.isEmpty()) {
+            return false;
+        }
+        for (char c : str.toCharArray()) {
+            if (!Character.isDigit(c)) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    /**
+     * Normalizes whitespace in a string by trimming and collapsing multiple spaces to single space.
+     * Replacement for Apache Commons Lang StringUtils.normalizeSpace().
+     *
+     * @param str the string to normalize
+     * @return the normalized string, or null if input was null
+     */
+    public static String normalizeSpace(String str) {
+        if (str == null) {
+            return null;
+        }
+        return str.trim().replaceAll("\\s+", " ");
+    }
+
+    /**
+     * Right-pads a string to the specified size with the given pad string.
+     * Replacement for Apache Commons Lang StringUtils.rightPad().
+     *
+     * @param str    the string to pad
+     * @param size   the target size
+     * @param padStr the string to pad with
+     * @return the padded string
+     */
+    public static String rightPad(String str, int size, String padStr) {
+        if (str == null) {
+            str = "";
+        }
+        if (padStr == null || padStr.isEmpty()) {
+            padStr = " ";
+        }
+        StringBuilder sb = new StringBuilder(str);
+        while (sb.length() < size) {
+            sb.append(padStr);
+        }
+        return sb.substring(0, Math.min(sb.length(), size));
+    }
+
+    /**
+     * Checks if a string is null or empty.
+     * Replacement for Apache Commons Lang StringUtils.isEmpty().
+     *
+     * @param str the string to check
+     * @return true if the string is null or has zero length
+     */
+    public static boolean isEmpty(String str) {
+        return str == null || str.isEmpty();
     }
 
     public static String replaceAlertMessage(String message, Player player) {

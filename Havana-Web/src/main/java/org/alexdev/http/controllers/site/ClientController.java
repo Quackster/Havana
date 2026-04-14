@@ -13,7 +13,7 @@ import org.alexdev.havana.util.config.GameConfiguration;
 import org.alexdev.http.server.Watchdog;
 import org.alexdev.http.util.SessionUtil;
 import org.alexdev.http.util.XSSUtil;
-import org.apache.commons.lang3.StringUtils;
+import org.alexdev.havana.util.StringUtil;
 
 import java.sql.SQLException;
 import java.text.NumberFormat;
@@ -87,7 +87,7 @@ public class ClientController {
             return;
         }
 
-        if (webConnection.get().contains("createRoom") && StringUtils.isNumeric(webConnection.get().getString("createRoom"))) {
+        if (webConnection.get().contains("createRoom") && StringUtil.isNumeric(webConnection.get().getString("createRoom"))) {
             int roomType = Integer.parseInt(webConnection.get().getString("createRoom"));
             boolean setGift = false;
 
@@ -195,7 +195,7 @@ public class ClientController {
             return;
         }
 
-        if (webConnection.get().contains("createRoom") && StringUtils.isNumeric(webConnection.get().getString("createRoom"))) {
+        if (webConnection.get().contains("createRoom") && StringUtil.isNumeric(webConnection.get().getString("createRoom"))) {
             int roomType = Integer.parseInt(webConnection.get().getString("createRoom"));
             boolean setGift = false;
 
@@ -372,7 +372,7 @@ public class ClientController {
             return;
         }
 
-        if (webConnection.get().contains("createRoom") && StringUtils.isNumeric(webConnection.get().getString("createRoom"))) {
+        if (webConnection.get().contains("createRoom") && StringUtil.isNumeric(webConnection.get().getString("createRoom"))) {
             int roomType = Integer.parseInt(webConnection.get().getString("createRoom"));
             boolean setGift = false;
 

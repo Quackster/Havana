@@ -1,7 +1,7 @@
 package org.alexdev.havana.game.item;
 
 import org.alexdev.havana.util.DateUtil;
-import org.apache.commons.lang3.StringUtils;
+import org.alexdev.havana.util.StringUtil;
 
 public class Transaction {
     private final String description;
@@ -12,7 +12,7 @@ public class Transaction {
     private final int itemId;
 
     public Transaction(String[] itemId, String description, int costCoins, int costPixels, int amount, long createdAt) {
-        this.itemId = itemId.length > 0 ? (StringUtils.isNumeric(itemId[0]) ? Integer.parseInt(itemId[0]) : 0) : 0;
+        this.itemId = itemId.length > 0 ? (StringUtil.isNumeric(itemId[0]) ? Integer.parseInt(itemId[0]) : 0) : 0;
         this.description = description;
         this.costCoins = costCoins;
         this.costPixels = costPixels;

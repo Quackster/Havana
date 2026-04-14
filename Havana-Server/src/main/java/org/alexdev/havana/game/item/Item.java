@@ -27,7 +27,6 @@ import org.alexdev.havana.server.netty.streams.NettyResponse;
 import org.alexdev.havana.util.DateUtil;
 import org.alexdev.havana.util.StringUtil;
 import org.alexdev.havana.util.config.GameConfiguration;
-import org.apache.commons.lang3.StringUtils;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -222,7 +221,7 @@ public class Item {
             z = this.position.getZ() + ItemDefinition.DEFAULT_TOP_HEIGHT;
         } else {
             if (this.getDefinition().getInteractionType() == InteractionType.MULTI_HEIGHT) {
-                int currentState = (this.customData.length() > 0 && StringUtils.isNumeric(this.customData)) ? Integer.parseInt(this.customData) : 0;
+                int currentState = (this.customData.length() > 0 && StringUtil.isNumeric(this.customData)) ? Integer.parseInt(this.customData) : 0;
 
                 if (this.getDefinition().getHeights().isEmpty()) {
                     z += this.getDefinition().getTopHeight();

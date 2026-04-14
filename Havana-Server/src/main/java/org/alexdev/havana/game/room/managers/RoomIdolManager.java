@@ -16,7 +16,7 @@ import org.alexdev.havana.messages.outgoing.rooms.items.JUDGE_GUI_STATUS;
 import org.alexdev.havana.messages.outgoing.songs.START_PLAYING_SONG;
 import org.alexdev.havana.messages.outgoing.songs.STOP_PLAYING_SONG;
 import org.alexdev.havana.server.netty.NettyPlayerNetwork;
-import org.apache.commons.lang3.StringUtils;
+import org.alexdev.havana.util.StringUtil;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -175,7 +175,7 @@ public class RoomIdolManager {
             return;
         }
 
-        Integer value = StringUtils.isNumeric(scoreboard.getCustomData()) ? Integer.parseInt(scoreboard.getCustomData()) : 0;
+        Integer value = StringUtil.isNumeric(scoreboard.getCustomData()) ? Integer.parseInt(scoreboard.getCustomData()) : 0;
 
         if (type) {
             chair.setCustomData("1");

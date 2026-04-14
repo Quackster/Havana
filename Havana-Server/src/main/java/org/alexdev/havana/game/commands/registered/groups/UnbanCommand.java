@@ -12,7 +12,7 @@ import org.alexdev.havana.game.player.PlayerManager;
 import org.alexdev.havana.game.player.PlayerRank;
 import org.alexdev.havana.messages.outgoing.alerts.ALERT;
 import org.alexdev.havana.server.netty.NettyPlayerNetwork;
-import org.apache.commons.validator.routines.InetAddressValidator;
+import org.alexdev.havana.util.ValidationUtil;
 
 public class UnbanCommand extends Command {
     @Override
@@ -56,10 +56,8 @@ public class UnbanCommand extends Command {
             ip = PlayerDao.getLatestIp(playerDetails.getId());
         }
 
-        InetAddressValidator validator = InetAddressValidator.getInstance();
-
         // Validate an IPv4 address
-        if (ip != null && !validator.isValid(ip)) {
+        if (ip != null && !ValidationUtil.isValidIpAddress(ip)) {
             ip = null;
         }
 

@@ -16,7 +16,7 @@ import org.alexdev.http.dao.ReplyDao;
 import org.alexdev.http.game.groups.DiscussionReply;
 import org.alexdev.http.game.groups.DiscussionTopic;
 import org.alexdev.http.util.XSSUtil;
-import org.apache.commons.lang3.StringUtils;
+import org.alexdev.havana.util.StringUtil;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -49,7 +49,7 @@ public class DiscussionController {
         String groupAlias;
         Group group;
 
-        if (StringUtils.isNumeric(match) && webConnection.getRouteRequest().contains("/id/discussions")) {
+        if (StringUtil.isNumeric(match) && webConnection.getRouteRequest().contains("/id/discussions")) {
             group = GroupDao.getGroup(Integer.parseInt(match));
 
             if (group == null) {

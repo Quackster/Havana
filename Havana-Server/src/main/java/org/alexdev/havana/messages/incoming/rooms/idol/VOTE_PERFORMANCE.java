@@ -5,7 +5,7 @@ import org.alexdev.havana.game.item.interactors.InteractionType;
 import org.alexdev.havana.game.player.Player;
 import org.alexdev.havana.messages.types.MessageEvent;
 import org.alexdev.havana.server.netty.streams.NettyRequest;
-import org.apache.commons.lang3.StringUtils;
+import org.alexdev.havana.util.StringUtil;
 
 import java.util.Collections;
 import java.util.stream.Collectors;

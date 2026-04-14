@@ -11,7 +11,7 @@ import org.alexdev.havana.game.room.tasks.EntityTask;
 import org.alexdev.havana.game.room.tasks.RollerTask;
 import org.alexdev.havana.game.room.tasks.StatusTask;
 import org.alexdev.havana.util.config.GameConfiguration;
-import org.apache.commons.lang3.tuple.Pair;
+import org.alexdev.havana.util.Pair;
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;

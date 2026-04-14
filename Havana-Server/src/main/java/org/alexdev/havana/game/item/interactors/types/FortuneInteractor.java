@@ -9,7 +9,7 @@ import org.alexdev.havana.game.player.Player;
 import org.alexdev.havana.game.room.Room;
 import org.alexdev.havana.game.room.enums.StatusType;
 import org.alexdev.havana.game.triggers.GenericTrigger;
-import org.apache.commons.lang3.StringUtils;
+import org.alexdev.havana.util.StringUtil;
 
 import java.util.concurrent.ThreadLocalRandom;
 import java.util.concurrent.TimeUnit;
@@ -23,7 +23,7 @@ public class FortuneInteractor extends GenericTrigger {
             return;
         }
 
-        int currentMode = StringUtils.isNumeric(item.getCustomData()) ? Integer.valueOf(item.getCustomData()) : FORTUNE_OFF;
+        int currentMode = StringUtil.isNumeric(item.getCustomData()) ? Integer.valueOf(item.getCustomData()) : FORTUNE_OFF;
         int newMode;
 
         // Turn on

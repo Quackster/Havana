@@ -11,7 +11,7 @@ import org.alexdev.havana.game.player.PlayerManager;
 import org.alexdev.havana.game.player.PlayerRank;
 import org.alexdev.havana.messages.outgoing.alerts.ALERT;
 import org.alexdev.havana.util.DateUtil;
-import org.apache.commons.lang3.StringUtils;
+import org.alexdev.havana.util.StringUtil;
 
 import java.util.concurrent.TimeUnit;
 
@@ -34,7 +34,7 @@ public class TradeBanCommand extends Command {
         }
 
         String name = args[0];
-        int minutes = StringUtils.isNumeric(args[1]) ? Integer.parseInt(args[1]) : 0;
+        int minutes = StringUtil.isNumeric(args[1]) ? Integer.parseInt(args[1]) : 0;
         int seconds = 0;
 
         if (minutes > 0) {

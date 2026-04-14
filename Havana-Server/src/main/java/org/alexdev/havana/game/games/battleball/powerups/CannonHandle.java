@@ -13,7 +13,7 @@ import org.alexdev.havana.game.games.utils.PowerUpUtil;
 import org.alexdev.havana.game.games.utils.TileUtil;
 import org.alexdev.havana.game.pathfinder.Position;
 import org.alexdev.havana.game.room.Room;
-import org.apache.commons.lang3.tuple.Pair;
+import org.alexdev.havana.util.Pair;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
