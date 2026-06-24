@@ -41,6 +41,7 @@ public class SessionUtil {
             return false;
         } else {
             webConnection.session().set("authenticated", true);
+            webConnection.session().delete(SessionUtil.LOGGED_IN_HOUSKEEPING);
             webConnection.session().set("captcha.invalid", false);
             webConnection.session().set("user.id", details.getId() + "");
             webConnection.session().set("clientAuthenticate", false);
@@ -78,6 +79,7 @@ public class SessionUtil {
         // Delete user login session
         webConnection.session().delete("user.id");
         webConnection.session().delete("authenticated");
+        webConnection.session().delete(SessionUtil.LOGGED_IN_HOUSKEEPING);
         webConnection.session().delete("minimailLabel");
         webConnection.session().delete("lastBrowsedPage");
 

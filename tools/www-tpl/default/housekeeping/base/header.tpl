@@ -3,8 +3,15 @@
   <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <title>{{ site.siteName }} {{ locale.housekeeping_base_header_housekeeping }}: {{ pageName }}</title>
-    <link rel="shortcut icon" href="{{ site.staticContentPath }}/housekeeping/favicon.ico" type="image/vnd.microsoft.icon" />
-    <link rel="stylesheet" href="{{ site.staticContentPath }}/housekeeping/images/styles/style.css" type="text/css">
-    <link rel="stylesheet" href="{{ site.staticContentPath }}/housekeeping/images/styles/boxes.css" type="text/css">
+    <link rel="shortcut icon" href="/housekeeping/favicon.ico" type="image/vnd.microsoft.icon" />
+    <link rel="stylesheet" href="/housekeeping/images/styles/quackster.css" type="text/css">
+    <script type="text/javascript">
+      function closeMessageBox(event) {
+        var box = event.target.closest ? event.target.closest('.message-box') : event.target.parentNode;
+        if (box) {
+          box.style.display = 'none';
+        }
+      }
+    </script>
   </head>
   

@@ -1,7 +1,8 @@
 {% if alert.hasAlert %}
 
-<div class="clean-{{ alert.colour }}">
+<div class="message-box {{ alert.colour }}">
   {{ alert.message }}
+  <button class="close-btn" onclick="closeMessageBox(event)" type="button">x</button>
 </div>
 
 
