@@ -64,7 +64,7 @@ body { behavior: url({{ site.staticContentPath }}/web-gallery/js/csshover.htc); 
 <body id="faq" class="plain-template">
 <script src="{{ site.staticContentPath }}/web-gallery/static/js/faq.js" type="text/javascript"></script>
 <div id="faq" class="clearfix">
-<div id="faq-header" class="clearfix"><img src="{{ site.staticContentPath }}/web-gallery/v2/images/faq/faq_header.png" /><form method="post" action="{{ site.sitePath }}/help/faqsearch" class="search-box"><input type="text" id="faq-search" name="query" class="search-box-query search-box-onfocus" size="50" value="Search..."/><input type="submit" value="" title="{{ locale.faq_search }}" class="search" /></form></div>
+<div id="faq-header" class="clearfix"><img src="{{ site.staticContentPath }}/web-gallery/v2/images/faq/faq_header.png" /><form method="post" action="{{ site.sitePath }}/help/faqsearch" class="search-box"><input type="text" id="faq-search" name="query" class="search-box-query search-box-onfocus" size="50" value="{{ locale.faq_search_placeholder }}"/><input type="submit" value="" title="{{ locale.faq_search }}" class="search" /></form></div>
 <div id="faq-container" class="clearfix">
 <div id="faq-category-list">
 <ul class="faq">

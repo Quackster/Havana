@@ -114,8 +114,8 @@ body { behavior: url({{ site.staticContentPath }}/web-gallery/js/csshover.htc); 
     swfobj.addVariable("draworder_url", "{{ site.sitePath }}/xml/draworder.xml");
     swfobj.addVariable("localization_url", "{{ site.sitePath }}/xml/figure_editor.xml");
     swfobj.addVariable("habbos_url", "{{ site.sitePath }}/xml/promo_habbos_v2.xml");
-    swfobj.addVariable("figure", "{{ ("figure" {{ locale.club_tryout_is_present_figure|escape('js') }} "" }}");
-    swfobj.addVariable("gender", "{{ ("sex" {{ locale.club_tryout_is_present_sex|escape('js') }} ""  }}");
+    swfobj.addVariable("figure", "{{ ("figure" is present) ? figure : "" }}");
+    swfobj.addVariable("gender", "{{ ("sex" is present) ? sex : "" }}");
     swfobj.addVariable("showClubSelections", "1");
     if (deconcept.SWFObjectUtil.getPlayerVersion()["major"] >= 8) {
 	    $("flashcontent").setStyle({ textAlign: "center", "marginTop" : "10px" });

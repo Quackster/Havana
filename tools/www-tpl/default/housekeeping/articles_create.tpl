@@ -2,7 +2,7 @@
   <body>
     {% set createArticlesActive = " active " %}
 	{% include "housekeeping/base/navigation.tpl" %}
-	<script type="text/javascript"><script src="{{ site.staticContentPath }}/public/hk/js/jquery-3.1.1.slim.min.js">
+	<script type="text/javascript">
 	function previewTS(el) {
 		document.getElementById('ts-preview').innerHTML = '{{ locale.housekeeping_articles_img_src|escape('js') }}{{ site.staticContentPath }}/c_images/Top_Story_Images/' + el + '{{ locale.housekeeping_articles_br|escape('js') }}';
 	}
@@ -89,19 +89,12 @@
 			</div>
 		</form>
     </div>
-	<div style="margin-left:30px" class="col-3">
-		<h1 class="mt-4">{{ locale.housekeeping_articles_create_article }}</h1>
-		<p id="news-preview"><i>{{ locale.housekeeping_articles_preview_news_here }}</i></p>
-    </div>
-  </div>
-  </script>
-  <script src="{{ site.staticContentPath }}/public/hk/js/bootstrap.bundle.min.js"></script>
-  <script>
-    $("#menu-toggle").click(function(e) {
-      e.preventDefault();
-      $("#wrapper").toggleClass("toggled");
-    });
-	
+		<div style="margin-left:30px" class="col-3">
+			<h1 class="mt-4">{{ locale.housekeeping_articles_create_article }}</h1>
+			<p id="news-preview"><i>{{ locale.housekeeping_articles_preview_news_here }}</i></p>
+	    </div>
+	  </div>
+	  <script>
 	function previewChanges() {
 		var previewNewsText = document.getElementById("fullstory").value;
 		
@@ -131,7 +124,4 @@
 	}
 	
   </script>
-</body>
-</html>
-
 {% include "housekeeping/base/footer.tpl" %}

@@ -11,7 +11,7 @@ public class WebServerConfigWriter implements ConfigWriter {
     public Map<String, String>  setConfigurationDefaults() {
         Map<String, String> config = new HashMap<>();
         // DEFAULT settings
-        config.put("site.directory", "tools/www");
+        config.put("site.directory", "/var/www/html");
 
         config.put("bind.ip", "127.0.0.1");
         config.put("bind.port", "80");

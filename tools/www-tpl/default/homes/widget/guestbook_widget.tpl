@@ -17,7 +17,7 @@
 		</script>
 		{% endif %}
 		
-		<span class="header-left">&nbsp;</span><span class="header-middle">{{ locale.homes_widget_my_guestbook }}<span id="guestbook-size">{{ entries|length }}</span>) <span id="guestbook-type" class="{{ sticker.getGuestbookState() }}"><img src="{{ site.staticContentPath }}/web-gallery/images/groups/status_exclusive.gif" title="myhabbo.guestbook.unknown.private" alt="myhabbo.guestbook.unknown.private"/></span></span><span class="header-right">&nbsp;</span></h3>
+		<span class="header-left">&nbsp;</span><span class="header-middle">{{ locale.homes_widget_my_guestbook }}<span id="guestbook-size">{{ entries|length }}</span>) <span id="guestbook-type" class="{{ sticker.getGuestbookState() }}"><img src="{{ site.staticContentPath }}/web-gallery/images/groups/status_exclusive.gif" title="{{ locale.homes_widget_guestbook_private }}" alt="{{ locale.homes_widget_guestbook_private }}"/></span></span><span class="header-right">&nbsp;</span></h3>
 		</div>	
 	</div>
 	<div class="widget-body">

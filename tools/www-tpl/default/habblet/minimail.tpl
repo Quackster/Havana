@@ -13,7 +13,7 @@
 </div>
 	<div id="message-compose-wait"></div>
     <form style="display: none;" id="message-compose">
-        <div>A</div>
+        <div>{{ locale.habblet_minimail_a }}</div>
         <div id="message-recipients-container" class="input-text" style="width: 426px; margin-bottom: 1em">
         	<input type="text" value="" id="message-recipients">
         	<div class="autocomplete" id="message-recipients-auto">

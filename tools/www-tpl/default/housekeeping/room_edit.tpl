@@ -47,7 +47,7 @@
 			<div class="form-group col-md-2"><label>{{ locale.housekeeping_room_wallpaper }}</label><input type="number" class="form-control" name="wallpaper" value="{{ room.wallpaper() }}"></div>
 			<div class="form-group col-md-2"><label>{{ locale.housekeeping_room_floor }}</label><input type="number" class="form-control" name="floor" value="{{ room.floor() }}"></div>
 			<div class="form-group col-md-2"><label>{{ locale.housekeeping_room_landscape }}</label><input type="text" class="form-control" name="landscape" value="{{ room.landscape() }}"></div>
-			<div class="form-group col-md-3"><label>CCTS</label><input type="text" class="form-control" name="ccts" value="{{ room.ccts() }}"></div>
+			<div class="form-group col-md-3"><label>{{ locale.housekeeping_room_ccts }}</label><input type="text" class="form-control" name="ccts" value="{{ room.ccts() }}"></div>
 			<div class="form-group col-md-3"><label>{{ locale.housekeeping_room_icon_data }}</label><input type="text" class="form-control" name="icon_data" value="{{ room.iconData() }}"></div>
 		</div>
 		<div class="form-row">
@@ -94,16 +94,4 @@
 			</ul>
 		</div>
 	</div>
-    </div>
-  </div>
-  <script src="{{ site.staticContentPath }}/public/hk/js/jquery-3.1.1.slim.min.js"></script>
-  <script src="{{ site.staticContentPath }}/public/hk/js/bootstrap.bundle.min.js"></script>
-  <script>
-    $("#menu-toggle").click(function(e) {
-      e.preventDefault();
-      $("#wrapper").toggleClass("toggled");
-    });
-  </script>
-</body>
-</html>
 {% include "housekeeping/base/footer.tpl" %}

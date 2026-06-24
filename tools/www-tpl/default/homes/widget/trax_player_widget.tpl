@@ -10,7 +10,7 @@ Event.observe("{{ locale.homes_widget_widget|escape('js') }}{{ sticker.getId() }
 </script>
 {% endif %}
 
-		<span class="header-left">&nbsp;</span><span class="header-middle">TRAXPLAYER</span><span class="header-right">&nbsp;</span></h3>
+		<span class="header-left">&nbsp;</span><span class="header-middle">{{ locale.homes_widget_traxplayer }}</span><span class="header-right">&nbsp;</span></h3>
 		</div>	
 	</div>
 	<div class="widget-body">

@@ -35,7 +35,8 @@
 			<div class="form-group">
 				<label>{{ locale.housekeeping_infobus_question_text }}</label>
 				<input type="text" class="form-control" id="text" name="question" value="{{ poll.getPollData().getQuestion() }}"></input>
-			</div>
+    </div>
+{% include "housekeeping/base/footer.tpl" %}
 			{% set answerCount = 1 %}
 			{% for answer in poll.getPollData().getAnswers() %}
 			<div class="form-group" id="answer{{ answerCount }}">
@@ -54,15 +55,3 @@
 			</div>
 		</form>
       </div>
-    </div>
-  </div>
-  <script src="{{ site.staticContentPath }}/public/hk/js/jquery-3.1.1.slim.min.js"></script>
-  <script src="{{ site.staticContentPath }}/public/hk/js/bootstrap.bundle.min.js"></script>
-  <script>
-    $("#menu-toggle").click(function(e) {
-      e.preventDefault();
-      $("#wrapper").toggleClass("toggled");
-    });
-  </script>
-</body>
-</html>

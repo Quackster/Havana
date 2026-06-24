@@ -7,3 +7,5 @@ www/public/hk/*
 !www/public/hk/css/**
 !www/public/hk/js/
 !www/public/hk/js/**
+!www/housekeeping/
+!www/housekeeping/**

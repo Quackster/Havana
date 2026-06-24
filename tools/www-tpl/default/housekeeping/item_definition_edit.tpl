@@ -43,16 +43,4 @@
 		<button type="submit" class="btn btn-info">{{ locale.housekeeping_item_save_definition }}</button>
 		<a href="{{ site.sitePath }}/{{ site.housekeepingPath }}/item_definitions" class="btn btn-secondary">{{ locale.housekeeping_item_back }}</a>
 	</form>
-    </div>
-  </div>
-  <script src="{{ site.staticContentPath }}/public/hk/js/jquery-3.1.1.slim.min.js"></script>
-  <script src="{{ site.staticContentPath }}/public/hk/js/bootstrap.bundle.min.js"></script>
-  <script>
-    $("#menu-toggle").click(function(e) {
-      e.preventDefault();
-      $("#wrapper").toggleClass("toggled");
-    });
-  </script>
-</body>
-</html>
 {% include "housekeeping/base/footer.tpl" %}

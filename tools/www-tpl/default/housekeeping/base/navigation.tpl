@@ -1,117 +1,165 @@
-<div class="d-flex" id="wrapper">
-    <div class="bg-light border-right" id="sidebar-wrapper">
-      <div class="sidebar-heading">{{ locale.housekeeping_base_navigation_havana_web }} </div>
-      <div class="list-group list-group-flush">
-        <a href="{{ site.sitePath }}/{{ site.housekeepingPath }}" class="list-group-item list-group-item-action {{ dashboardActive }}">{{ locale.housekeeping_base_navigation_dashboard }}</a>
-		{% if housekeepingManager.hasPermission(playerDetails.getRank(), 'configuration') %}
-        <a href="{{ site.sitePath }}/{{ site.housekeepingPath }}/configurations" class="list-group-item list-group-item-action {{ configurationsActive }}">{{ locale.housekeeping_base_navigation_configurations }}</a>
-		{% endif %}
-		
-	    {% if housekeepingManager.hasPermission(playerDetails.getRank(), 'bans') %}
-        <a href="{{ site.sitePath }}/{{ site.housekeepingPath }}/bans" class="list-group-item list-group-item-action {{ bansActive }}">{{ locale.housekeeping_base_navigation_ban_management }}</a>
-		{% endif %}
-		
-		{% if housekeepingManager.hasPermission(playerDetails.getRank(), 'room_ads') %}
-        <a href="{{ site.sitePath }}/{{ site.housekeepingPath }}/room_ads" class="list-group-item list-group-item-action {{ roomAdsActive }}">{{ locale.housekeeping_base_navigation_room_advertisements }}</a>
-		<!-- <a href="{{ site.sitePath }}/{{ site.housekeepingPath }}/room_ads/create" class="list-group-item list-group-item-action {{ roomCreateAdsActive }}">{{ locale.housekeeping_base_navigation_create_room_advertisements }}</a> -->
-		{% endif %}
-		
-		
-		{% if housekeepingManager.hasPermission(playerDetails.getRank(), 'room_badges') %}
-        <a href="{{ site.sitePath }}/{{ site.housekeepingPath }}/room_badges" class="list-group-item list-group-item-action {{ roomBadgesActive }}">{{ locale.housekeeping_base_navigation_room_badges }}</a>
-		<!-- <a href="{{ site.sitePath }}/{{ site.housekeepingPath }}/room_badges/create" class="list-group-item list-group-item-action {{ roomCreateBadgesActive }}">{{ locale.housekeeping_base_navigation_create_room_entry_badge }}</a> -->
-		{% endif %}
+<div class="panel">
+  <div class="header_left">&nbsp;<br />&nbsp;<br />&nbsp;<br /><a href="{{ site.sitePath }}"><img src="{{ site.staticContentPath }}/housekeeping/images/header_logo.png" alt="{{ site.siteName }}"></a></div>
+  <div class="header_right"><img src="{{ site.staticContentPath }}/housekeeping/images/header_tm1.gif" alt=""></div>
 
-		{% if housekeepingManager.hasPermission(playerDetails.getRank(), 'infobus') %}
-        <a href="{{ site.sitePath }}/{{ site.housekeepingPath }}/infobus_polls" class="list-group-item list-group-item-action {{ infobusPollsActive }}">{{ locale.housekeeping_base_navigation_infobus_polls }}</a>
-		<!-- <a href="{{ site.sitePath }}/{{ site.housekeepingPath }}/infobus_polls/create" class="list-group-item list-group-item-action {{ infobusPollsCreateActive }}">{{ locale.housekeeping_base_navigation_create_infobus_polls }}</a> -->
-		{% endif %}
-		
-		{% if housekeepingManager.hasPermission(playerDetails.getRank(), 'articles/create') %}
-        <a href="{{ site.sitePath }}/{{ site.housekeepingPath }}/articles" class="list-group-item list-group-item-action {{ articlesActive }}">{{ locale.housekeeping_base_navigation_news_articles }}</a>
-		<!-- <a href="{{ site.sitePath }}/{{ site.housekeepingPath }}/articles/create" class="list-group-item list-group-item-action {{ createArticlesActive }}">{{ locale.housekeeping_base_navigation_post_news_article }}</a> -->
-		{% endif %}
-		
-		{% if housekeepingManager.hasPermission(playerDetails.getRank(), 'users/create') %}
-        <a href="{{ site.sitePath }}/{{ site.housekeepingPath }}/users/search" class="list-group-item list-group-item-action {{ searchUsersActive }}">{{ locale.housekeeping_base_navigation_search_users }}</a>
-		<a href="{{ site.sitePath }}/{{ site.housekeepingPath }}/users/create" class="list-group-item list-group-item-action {{ createUserActive }}">{{ locale.housekeeping_base_navigation_create_new_user }}</a>
-		{% endif %}
-		
-		{% if housekeepingManager.hasPermission(playerDetails.getRank(), 'transaction/lookup') %}
-        <a href="{{ site.sitePath }}/{{ site.housekeepingPath }}/transaction/lookup" class="list-group-item list-group-item-action {{ searchTransactionsActive }}">{{ locale.housekeeping_base_navigation_transaction_lookup }}</a>
-		{% endif %}
-		
-		{% if housekeepingManager.hasPermission(playerDetails.getRank(), 'catalogue/edit_frontpage') %}
-		<a href="{{ site.sitePath }}/{{ site.housekeepingPath }}/catalogue/edit_frontpage" class="list-group-item list-group-item-action {{ editCatalogueFrontPage }}">{{ locale.housekeeping_base_navigation_catalogue_frontpage }}</a>
-		{% endif %}
-		{% if housekeepingManager.hasPermission(playerDetails.getRank(), 'catalogue/manage') %}
-		<a href="{{ site.sitePath }}/{{ site.housekeepingPath }}/catalogue/pages" class="list-group-item list-group-item-action {{ cataloguePagesActive }}">{{ locale.housekeeping_base_navigation_catalogue_pages }}</a>
-		<a href="{{ site.sitePath }}/{{ site.housekeepingPath }}/catalogue/items" class="list-group-item list-group-item-action {{ catalogueItemsActive }}">{{ locale.housekeeping_base_navigation_catalogue_items }}</a>
-		<a href="{{ site.sitePath }}/{{ site.housekeepingPath }}/catalogue/packages" class="list-group-item list-group-item-action {{ cataloguePackagesActive }}">{{ locale.housekeeping_base_navigation_catalogue_packages }}</a>
-		<a href="{{ site.sitePath }}/{{ site.housekeepingPath }}/catalogue/sale_badges" class="list-group-item list-group-item-action {{ catalogueSaleBadgesActive }}">{{ locale.housekeeping_base_navigation_catalogue_sale_badges }}</a>
-		<a href="{{ site.sitePath }}/{{ site.housekeepingPath }}/catalogue/collectables" class="list-group-item list-group-item-action {{ catalogueCollectablesActive }}">{{ locale.housekeeping_base_navigation_catalogue_collectables }}</a>
-		{% endif %}
-		{% if housekeepingManager.hasPermission(playerDetails.getRank(), 'item_definitions/manage') %}
-		<a href="{{ site.sitePath }}/{{ site.housekeepingPath }}/item_definitions" class="list-group-item list-group-item-action {{ itemDefinitionsActive }}">{{ locale.housekeeping_base_navigation_item_definitions }}</a>
-		{% endif %}
-		{% if housekeepingManager.hasPermission(playerDetails.getRank(), 'vouchers/manage') %}
-		<a href="{{ site.sitePath }}/{{ site.housekeepingPath }}/vouchers" class="list-group-item list-group-item-action {{ vouchersActive }}">{{ locale.housekeeping_base_navigation_vouchers }}</a>
-		{% endif %}
-		{% if housekeepingManager.hasPermission(playerDetails.getRank(), 'wordfilter/manage') %}
-		<a href="{{ site.sitePath }}/{{ site.housekeepingPath }}/wordfilter" class="list-group-item list-group-item-action {{ wordfilterActive }}">{{ locale.housekeeping_base_navigation_wordfilter }}</a>
-		{% endif %}
-		{% if housekeepingManager.hasPermission(playerDetails.getRank(), 'recycler/manage') %}
-		<a href="{{ site.sitePath }}/{{ site.housekeepingPath }}/recycler_rewards" class="list-group-item list-group-item-action {{ recyclerRewardsActive }}">{{ locale.housekeeping_base_navigation_recycler_rewards }}</a>
-		{% endif %}
-		{% if housekeepingManager.hasPermission(playerDetails.getRank(), 'room_categories/manage') %}
-		<a href="{{ site.sitePath }}/{{ site.housekeepingPath }}/room_categories" class="list-group-item list-group-item-action {{ roomCategoriesActive }}">{{ locale.housekeeping_base_navigation_room_categories }}</a>
-		{% endif %}
-		{% if housekeepingManager.hasPermission(playerDetails.getRank(), 'room_models/manage') %}
-		<a href="{{ site.sitePath }}/{{ site.housekeepingPath }}/room_models" class="list-group-item list-group-item-action {{ roomModelsActive }}">{{ locale.housekeeping_base_navigation_room_models }}</a>
-		{% endif %}
-		{% if housekeepingManager.hasPermission(playerDetails.getRank(), 'rooms/manage') %}
-		<a href="{{ site.sitePath }}/{{ site.housekeepingPath }}/rooms" class="list-group-item list-group-item-action {{ roomsActive }}">{{ locale.housekeeping_base_navigation_rooms }}</a>
-		{% endif %}
-		{% if housekeepingManager.hasPermission(playerDetails.getRank(), 'groups/manage') %}
-		<a href="{{ site.sitePath }}/{{ site.housekeepingPath }}/groups" class="list-group-item list-group-item-action {{ groupsActive }}">{{ locale.housekeeping_base_navigation_groups }}</a>
-		{% endif %}
-		{% if housekeepingManager.hasPermission(playerDetails.getRank(), 'badges') %}
-		<a href="{{ site.sitePath }}/{{ site.housekeepingPath }}/badges" class="list-group-item list-group-item-action {{ badgesActive }}">{{ locale.housekeeping_base_navigation_badges }}</a>
-		{% endif %}
-      </div>
-    </div>
-    <div id="page-content-wrapper">
+  <div class="panel_title">
+    <span class="text">{{ locale.housekeeping_base_navigation_havana_web }} {{ locale.housekeeping_base_header_housekeeping }}</span>
+    <div class="close_button"><a href="{{ site.sitePath }}/{{ site.housekeepingPath }}/logout"><img src="{{ site.staticContentPath }}/housekeeping/images/button_close.gif" alt="{{ locale.housekeeping_base_navigation_logout }}"></a></div>
+  </div>
 
-      <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
-        <button class="btn btn-primary" id="menu-toggle">{{ locale.housekeeping_base_navigation_toggle_menu }}</button>
+  <div class="panel_header">
+    <ul {% if dashboardActive %}class="selected"{% endif %}>
+      <li class="top"><div><a href="#">{{ locale.housekeeping_base_navigation_dashboard }}</a></div></li>
+      <li class="item"><a href="{{ site.sitePath }}/{{ site.housekeepingPath }}">{{ locale.housekeeping_base_navigation_home }}</a></li>
+      <li class="item"><a href="{{ site.sitePath }}/{{ site.housekeepingPath }}/logout">{{ locale.housekeeping_base_navigation_logout }}</a></li>
+    </ul>
+    <div class="border"></div>
 
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ locale.housekeeping_base_navigation_toggle_navigation }}">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+    <ul {% if configurationsActive or wordfilterActive or recyclerRewardsActive %}class="selected"{% endif %}>
+      <li class="top"><div><a href="#">{{ locale.housekeeping_base_navigation_site }}</a></div></li>
+      {% if housekeepingManager.hasPermission(playerDetails.getRank(), 'configuration') %}
+      <li class="item"><a href="{{ site.sitePath }}/{{ site.housekeepingPath }}/configurations">{{ locale.housekeeping_base_navigation_configurations }}</a></li>
+      {% endif %}
+      {% if housekeepingManager.hasPermission(playerDetails.getRank(), 'articles/create') %}
+      <li class="item"><a href="{{ site.sitePath }}/{{ site.housekeepingPath }}/articles">{{ locale.housekeeping_base_navigation_news_articles }}</a></li>
+      {% endif %}
+      {% if housekeepingManager.hasPermission(playerDetails.getRank(), 'wordfilter/manage') %}
+      <li class="item"><a href="{{ site.sitePath }}/{{ site.housekeepingPath }}/wordfilter">{{ locale.housekeeping_base_navigation_wordfilter }}</a></li>
+      {% endif %}
+      {% if housekeepingManager.hasPermission(playerDetails.getRank(), 'recycler/manage') %}
+      <li class="item"><a href="{{ site.sitePath }}/{{ site.housekeepingPath }}/recycler_rewards">{{ locale.housekeeping_base_navigation_recycler_rewards }}</a></li>
+      {% endif %}
+    </ul>
+    <div class="border"></div>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
-            <li class="nav-item active">
-              <a class="nav-link" href="{{ site.sitePath }}/{{ site.housekeepingPath }}">{{ locale.housekeeping_base_navigation_home }}</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{{ site.sitePath }}/{{ site.housekeepingPath }}/logout">{{ locale.housekeeping_base_navigation_logout }}</a>
-            </li>
-            <!-- 
-			<li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                {{ locale.housekeeping_base_navigation_dropdown }}
-              </a>
-              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">{{ locale.housekeeping_base_navigation_action }}</a>
-                <a class="dropdown-item" href="#">{{ locale.housekeeping_base_navigation_another_action }}</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">{{ locale.housekeeping_base_navigation_something_else_here }}</a>
-              </div>
-            </li>
-			-->
-          </ul>
-        </div>
-      </nav>
+    <ul {% if cataloguePagesActive or catalogueItemsActive or cataloguePackagesActive or catalogueSaleBadgesActive or catalogueCollectablesActive or editCatalogueFrontPage or itemDefinitionsActive or vouchersActive %}class="selected"{% endif %}>
+      <li class="top"><div><a href="#">{{ locale.housekeeping_base_navigation_catalogue }}</a></div></li>
+      {% if housekeepingManager.hasPermission(playerDetails.getRank(), 'catalogue/edit_frontpage') %}
+      <li class="item"><a href="{{ site.sitePath }}/{{ site.housekeepingPath }}/catalogue/edit_frontpage">{{ locale.housekeeping_base_navigation_catalogue_frontpage }}</a></li>
+      {% endif %}
+      {% if housekeepingManager.hasPermission(playerDetails.getRank(), 'catalogue/manage') %}
+      <li class="item"><a href="{{ site.sitePath }}/{{ site.housekeepingPath }}/catalogue/pages">{{ locale.housekeeping_base_navigation_catalogue_pages }}</a></li>
+      <li class="item"><a href="{{ site.sitePath }}/{{ site.housekeepingPath }}/catalogue/items">{{ locale.housekeeping_base_navigation_catalogue_items }}</a></li>
+      <li class="item"><a href="{{ site.sitePath }}/{{ site.housekeepingPath }}/catalogue/packages">{{ locale.housekeeping_base_navigation_catalogue_packages }}</a></li>
+      <li class="item"><a href="{{ site.sitePath }}/{{ site.housekeepingPath }}/catalogue/sale_badges">{{ locale.housekeeping_base_navigation_catalogue_sale_badges }}</a></li>
+      <li class="item"><a href="{{ site.sitePath }}/{{ site.housekeepingPath }}/catalogue/collectables">{{ locale.housekeeping_base_navigation_catalogue_collectables }}</a></li>
+      {% endif %}
+      {% if housekeepingManager.hasPermission(playerDetails.getRank(), 'item_definitions/manage') %}
+      <li class="item"><a href="{{ site.sitePath }}/{{ site.housekeepingPath }}/item_definitions">{{ locale.housekeeping_base_navigation_item_definitions }}</a></li>
+      {% endif %}
+      {% if housekeepingManager.hasPermission(playerDetails.getRank(), 'vouchers/manage') %}
+      <li class="item"><a href="{{ site.sitePath }}/{{ site.housekeepingPath }}/vouchers">{{ locale.housekeeping_base_navigation_vouchers }}</a></li>
+      {% endif %}
+    </ul>
+    <div class="border"></div>
 
-      <div class="container-fluid">
+    <ul {% if bansActive or searchUsersActive or createUserActive or searchTransactionsActive or roomAdsActive or roomBadgesActive or infobusPollsActive or roomCategoriesActive or roomModelsActive or roomsActive or groupsActive or badgesActive %}class="selected"{% endif %}>
+      <li class="top"><div><a href="#">{{ locale.housekeeping_base_navigation_hotel }}</a></div></li>
+      {% if housekeepingManager.hasPermission(playerDetails.getRank(), 'bans') %}
+      <li class="item"><a href="{{ site.sitePath }}/{{ site.housekeepingPath }}/bans">{{ locale.housekeeping_base_navigation_ban_management }}</a></li>
+      {% endif %}
+      {% if housekeepingManager.hasPermission(playerDetails.getRank(), 'users/create') %}
+      <li class="item"><a href="{{ site.sitePath }}/{{ site.housekeepingPath }}/users/search">{{ locale.housekeeping_base_navigation_search_users }}</a></li>
+      <li class="item"><a href="{{ site.sitePath }}/{{ site.housekeepingPath }}/users/create">{{ locale.housekeeping_base_navigation_create_new_user }}</a></li>
+      {% endif %}
+      {% if housekeepingManager.hasPermission(playerDetails.getRank(), 'transaction/lookup') %}
+      <li class="item"><a href="{{ site.sitePath }}/{{ site.housekeepingPath }}/transaction/lookup">{{ locale.housekeeping_base_navigation_transaction_lookup }}</a></li>
+      {% endif %}
+      {% if housekeepingManager.hasPermission(playerDetails.getRank(), 'room_ads') %}
+      <li class="item"><a href="{{ site.sitePath }}/{{ site.housekeepingPath }}/room_ads">{{ locale.housekeeping_base_navigation_room_advertisements }}</a></li>
+      {% endif %}
+      {% if housekeepingManager.hasPermission(playerDetails.getRank(), 'room_badges') %}
+      <li class="item"><a href="{{ site.sitePath }}/{{ site.housekeepingPath }}/room_badges">{{ locale.housekeeping_base_navigation_room_badges }}</a></li>
+      {% endif %}
+      {% if housekeepingManager.hasPermission(playerDetails.getRank(), 'infobus') %}
+      <li class="item"><a href="{{ site.sitePath }}/{{ site.housekeepingPath }}/infobus_polls">{{ locale.housekeeping_base_navigation_infobus_polls }}</a></li>
+      {% endif %}
+      {% if housekeepingManager.hasPermission(playerDetails.getRank(), 'room_categories/manage') %}
+      <li class="item"><a href="{{ site.sitePath }}/{{ site.housekeepingPath }}/room_categories">{{ locale.housekeeping_base_navigation_room_categories }}</a></li>
+      {% endif %}
+      {% if housekeepingManager.hasPermission(playerDetails.getRank(), 'room_models/manage') %}
+      <li class="item"><a href="{{ site.sitePath }}/{{ site.housekeepingPath }}/room_models">{{ locale.housekeeping_base_navigation_room_models }}</a></li>
+      {% endif %}
+      {% if housekeepingManager.hasPermission(playerDetails.getRank(), 'rooms/manage') %}
+      <li class="item"><a href="{{ site.sitePath }}/{{ site.housekeepingPath }}/rooms">{{ locale.housekeeping_base_navigation_rooms }}</a></li>
+      {% endif %}
+      {% if housekeepingManager.hasPermission(playerDetails.getRank(), 'groups/manage') %}
+      <li class="item"><a href="{{ site.sitePath }}/{{ site.housekeepingPath }}/groups">{{ locale.housekeeping_base_navigation_groups }}</a></li>
+      {% endif %}
+      {% if housekeepingManager.hasPermission(playerDetails.getRank(), 'badges') %}
+      <li class="item"><a href="{{ site.sitePath }}/{{ site.housekeepingPath }}/badges">{{ locale.housekeeping_base_navigation_badges }}</a></li>
+      {% endif %}
+    </ul>
+  </div>
+  <div class="clear"></div>
+  <div class="topborder"></div>
+  <div class="page_title">
+    <img src="{{ site.staticContentPath }}/housekeeping/images/icons/dashboard.png" class="pticon" alt="">
+    <span class="page_name_shadow">{{ pageName }}</span>
+    <span class="page_name">{{ pageName }}</span>
+  </div>
+  <div class="page_main">
+    <table class="page_main_layout" border="0" cellpadding="0" cellspacing="0" height="100%">
+      <tbody>
+        <tr height="100%">
+          <td class="page_main_left">
+            <div class="left_date">{{ pageName }}</div>
+            <div class="hr"></div>
+            <div class="loginuser">{{ locale.housekeeping_base_navigation_havana_web }}</div>
+            <div class="hr"></div>
+            <div class="text">
+              <b>{{ locale.housekeeping_base_navigation_dashboard }}</b><br />
+              <a href="{{ site.sitePath }}/{{ site.housekeepingPath }}">{{ locale.housekeeping_base_navigation_home }}</a><br />
+              <a href="{{ site.sitePath }}/{{ site.housekeepingPath }}/logout">{{ locale.housekeeping_base_navigation_logout }}</a>
+            </div>
+            {% if housekeepingManager.hasPermission(playerDetails.getRank(), 'users/create') or housekeepingManager.hasPermission(playerDetails.getRank(), 'bans') or housekeepingManager.hasPermission(playerDetails.getRank(), 'transaction/lookup') %}
+            <div class="hr"></div>
+            <div class="text">
+              <b>{{ locale.housekeeping_base_navigation_users }}</b><br />
+              {% if housekeepingManager.hasPermission(playerDetails.getRank(), 'users/create') %}
+              <a href="{{ site.sitePath }}/{{ site.housekeepingPath }}/users/search">{{ locale.housekeeping_base_navigation_search_users }}</a><br />
+              <a href="{{ site.sitePath }}/{{ site.housekeepingPath }}/users/create">{{ locale.housekeeping_base_navigation_create_new_user }}</a><br />
+              {% endif %}
+              {% if housekeepingManager.hasPermission(playerDetails.getRank(), 'bans') %}
+              <a href="{{ site.sitePath }}/{{ site.housekeepingPath }}/bans">{{ locale.housekeeping_base_navigation_ban_management }}</a><br />
+              {% endif %}
+              {% if housekeepingManager.hasPermission(playerDetails.getRank(), 'transaction/lookup') %}
+              <a href="{{ site.sitePath }}/{{ site.housekeepingPath }}/transaction/lookup">{{ locale.housekeeping_base_navigation_transaction_lookup }}</a>
+              {% endif %}
+            </div>
+            {% endif %}
+            {% if housekeepingManager.hasPermission(playerDetails.getRank(), 'catalogue/manage') or housekeepingManager.hasPermission(playerDetails.getRank(), 'catalogue/edit_frontpage') or housekeepingManager.hasPermission(playerDetails.getRank(), 'vouchers/manage') %}
+            <div class="hr"></div>
+            <div class="text">
+              <b>{{ locale.housekeeping_base_navigation_catalogue }}</b><br />
+              {% if housekeepingManager.hasPermission(playerDetails.getRank(), 'catalogue/edit_frontpage') %}
+              <a href="{{ site.sitePath }}/{{ site.housekeepingPath }}/catalogue/edit_frontpage">{{ locale.housekeeping_base_navigation_catalogue_frontpage }}</a><br />
+              {% endif %}
+              {% if housekeepingManager.hasPermission(playerDetails.getRank(), 'catalogue/manage') %}
+              <a href="{{ site.sitePath }}/{{ site.housekeepingPath }}/catalogue/pages">{{ locale.housekeeping_base_navigation_catalogue_pages }}</a><br />
+              <a href="{{ site.sitePath }}/{{ site.housekeepingPath }}/catalogue/items">{{ locale.housekeeping_base_navigation_catalogue_items }}</a><br />
+              <a href="{{ site.sitePath }}/{{ site.housekeepingPath }}/catalogue/packages">{{ locale.housekeeping_base_navigation_catalogue_packages }}</a><br />
+              {% endif %}
+              {% if housekeepingManager.hasPermission(playerDetails.getRank(), 'vouchers/manage') %}
+              <a href="{{ site.sitePath }}/{{ site.housekeepingPath }}/vouchers">{{ locale.housekeeping_base_navigation_vouchers }}</a>
+              {% endif %}
+            </div>
+            {% endif %}
+            {% if housekeepingManager.hasPermission(playerDetails.getRank(), 'configuration') or housekeepingManager.hasPermission(playerDetails.getRank(), 'articles/create') or housekeepingManager.hasPermission(playerDetails.getRank(), 'wordfilter/manage') %}
+            <div class="hr"></div>
+            <div class="text">
+              <b>{{ locale.housekeeping_base_navigation_site }}</b><br />
+              {% if housekeepingManager.hasPermission(playerDetails.getRank(), 'configuration') %}
+              <a href="{{ site.sitePath }}/{{ site.housekeepingPath }}/configurations">{{ locale.housekeeping_base_navigation_configurations }}</a><br />
+              {% endif %}
+              {% if housekeepingManager.hasPermission(playerDetails.getRank(), 'articles/create') %}
+              <a href="{{ site.sitePath }}/{{ site.housekeepingPath }}/articles">{{ locale.housekeeping_base_navigation_news_articles }}</a><br />
+              {% endif %}
+              {% if housekeepingManager.hasPermission(playerDetails.getRank(), 'wordfilter/manage') %}
+              <a href="{{ site.sitePath }}/{{ site.housekeepingPath }}/wordfilter">{{ locale.housekeeping_base_navigation_wordfilter }}</a>
+              {% endif %}
+            </div>
+            {% endif %}
+          </td>
+          <td class="page_main_right">
+            <div class="page_content">

@@ -1,0 +1,192 @@
+/* --------------------------------- */
+/* CSS RESET	  					*/
+body{margin:0; border:0; padding:0;}
+
+/* --------------------------------- */
+/* STANDARD TAG  					*/
+body{
+	font-family:"Lucida Grande", "Lucida Sans Unicode", Verdana, Arial, Helvetica, sans-serif; 
+	font-size:12px;
+}
+
+/* --------------------------------- */
+/*CONTAINER		  					*/
+#container{ 
+	margin:0 auto;
+	margin-top:40px;
+	width:260px;
+}
+
+/* --------------------------------- */
+/*MESSAGE BOX CLEAN	serie	  		 */
+	.clean-gray{
+		border:solid 1px #DEDEDE; 
+		background:#EFEFEF;
+		color:#222222;
+		padding:4px;
+		text-align:center;
+		margin-bottom:2px;
+	}
+	.clean-yellow{
+		border:solid 1px #DEDEDE; 
+		background:#FFFFCC;
+		color:#222222;
+		padding:4px;
+		text-align:center;
+		margin-bottom:2px;
+	}
+	.clean-ok{
+		border:solid 1px #349534; 
+		background:#C9FFCA;
+		color:#008000;
+		font-weight:bold;
+		padding:4px;
+		text-align:center;
+		margin-bottom:2px;
+	}
+	.clean-error{
+		border:solid 1px #CC0000; 
+		background:#F7CBCA;
+		color:#CC0000;
+		font-weight:bold;
+		padding:4px;
+		text-align:center;
+		margin-bottom:2px;
+	}
+
+/* --------------------------------- */
+/*MESSAGE BOX Iconized	  		 */
+	.icon-gray{
+		border:solid 1px #DEDEDE; 
+		background:#EFEFEF;
+		color:#222222;
+		padding:4px;
+		text-align:center;
+	}
+	.icon-yellow{
+		border:solid 1px #DEDEDE; 
+		background:#FFFFCC url(./images/boxes/icon-yellow.png) 8px 6px no-repeat;
+		color:#222222;
+		padding:4px;
+		text-align:center;
+	}
+	.icon-ok{
+		border:solid 1px #90ac13; 
+		background:#eef4d3 url(./images/boxes/icon-green.png) 8px 6px no-repeat;
+		color:#6b800d;
+		font-weight:bold;
+		padding:4px;
+		text-align:center;
+	}
+	.icon-error{
+		border:solid 1px #CC0000; 
+		background:#F7CBCA url(./images/boxes/icon-red.png) 8px 6px no-repeat;
+		color:#CC0000;
+		font-weight:bold;
+		padding:4px;
+		text-align:center;
+	}
+	
+/* --------------------------------- */
+/*MESSAGE BOX SOLID	serie	  		 */
+
+	.solid-gray{
+		background:#444444;
+		color:#FFFFFF;
+		padding:4px;
+		text-align:center;
+	}
+	.solid-yellow{
+		background:#FFFFCC;
+		color:#222222;
+		padding:4px;
+		text-align:center;
+	}
+	.solid-ok{
+		background:#008000;
+		color:#FFFFFF;
+		font-weight:bold;
+		padding:4px;
+		text-align:center;
+	}
+	.solid-error{
+		background:#CC0000;
+		color:#FFFFFF;
+		font-weight:bold;
+		padding:4px;
+		text-align:center;
+	}
+	
+/* --------------------------------- */
+/* ROUNDED ALTERNATE	  		 	*/
+
+	/* ---------------------------------------------------------------------- */
+	.round-a-gray{
+		background:#444444 url(./images/boxes/round_gray-left.png) left top no-repeat;
+		color:#FFFFFF;
+		text-align:center;
+	}
+		.round-a-gray div{
+			background:url(./images/boxes/round_gray-right.png) right bottom no-repeat;
+			padding:4px;
+		}
+	/* ---------------------------------------------------------------------- */
+	.round-a-ok{
+		background:#008000 url(./images/boxes/round_green-left.png) left top no-repeat;
+		color:#FFFFFF;
+		text-align:center;
+	}
+		.round-a-ok div{
+			background:url(./images/boxes/round_green-right.png) right bottom no-repeat;
+			padding:4px;
+		}
+	/* ---------------------------------------------------------------------- */
+	.round-a-error{
+		background:#CC0000 url(./images/boxes/round_red-left.png) left top no-repeat;
+		color:#FFFFFF;
+		text-align:center;
+	}
+		.round-a-error div{
+			background:url(./images/boxes/round_red-right.png) right bottom no-repeat;
+			padding:4px;
+		}
+		
+/* --------------------------------- */
+/* TOOLTIPS				  		 	*/
+
+	/* ---------------------------------------------------------------------- */
+	.tooltips-gray{
+		background:#444444;
+		color:#FFFFFF;
+		text-align:center;
+		padding-top:4px;
+	}
+		.tooltips-gray div{
+			background:url(./images/boxes/tips_gray.png) left bottom no-repeat;
+			padding-top:4px;
+			height:18px;
+		}
+	/* ---------------------------------------------------------------------- */
+	.tooltips-ok{
+		background:#008000;
+		color:#FFFFFF;
+		text-align:center;
+		padding-top:4px;
+	}
+		.tooltips-ok div{
+			background:url(./images/boxes/tips_green.png) left bottom no-repeat;
+			padding-top:4px;
+			height:18px;
+		}
+	/* ---------------------------------------------------------------------- */
+	.tooltips-error{
+		background:#CC0000;
+		color:#FFFFFF;
+		text-align:center;
+		padding-top:4px;
+	}
+		.tooltips-error div{
+			background:url(./images/boxes/tips_red.png) left bottom no-repeat;
+			margin-top:4px;
+			height:18px;
+		}

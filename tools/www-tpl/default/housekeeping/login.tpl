@@ -1,45 +1,60 @@
-<!DOCTYPE html>
-<html lang="{{ locale.global_html_lang }}">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="../../favicon.ico">
-    <title>{{ site.siteName }}{{ locale.housekeeping_login_housekeeping }}</title>
-    <link href="{{ site.staticContentPath }}/public/hk/css/bootstrap.min.css" rel="stylesheet">
-	<link href="{{ site.staticContentPath }}/public/hk/css/bootstrap.login.override.css" rel="stylesheet">
-	<link href="{{ site.staticContentPath }}/public/hk/css/sticky-footer.css" rel="stylesheet">
-  </head>
+{% include "housekeeping/base/header.tpl" %}
   <body>
-	
-	<div class="container">
-		<div class="mt-1">
-			<h1>{{ locale.housekeeping_login_housekeeping_text }}</h1>
-		</div>
-		{% include "housekeeping/base/alert.tpl" %}
-		<div class="login-image">
-			<p style="margin-left:0">{{ locale.housekeeping_login_please_sign_in_to_access_the_housekeeping }}</p>
-			<form class="form-signin" action="/{{ site.housekeepingPath }}/login" method="post">
-				<label for="inputUsername" class="sr-only">{{ locale.housekeeping_login_username }}</label>
-				<input type="text" name="hkusername" id="inputUsername" class="form-control" placeholder="{{ locale.housekeeping_login_username }}" required autofocus>
-				<label for="inputPassword" class="sr-only">{{ locale.housekeeping_login_password }}</label>
-				<input type="password" name="hkpassword" id="inputPassword" class="form-control" placeholder="{{ locale.housekeeping_login_password }}" required>
-				<button class="btn btn-lg btn-primary btn-block" type="submit">{{ locale.housekeeping_login_sign_in }}</button>
-				<div class="checkbox">
-					<label>
-						<!--<input type="checkbox" value="remember-me"> {{ locale.housekeeping_login_remember_me }}
-						<p style="font-size; 5px">{{ locale.housekeeping_login_oops }} <a href="{{ site.sitePath }}">{{ locale.housekeeping_login_take_me_back_please }}</a></p>
-					</label>
-				</div>
-			</form>
-		</div>
-	</div>
-    <footer class="footer">
-      <div class="container">
-        <span class="text-muted">{{ locale.housekeeping_login_copy_copyright_two_zero_one_eight_alex_miller }}</span>
+    <div class="panel">
+      <div class="header_left">&nbsp;<br />&nbsp;<br />&nbsp;<br /><a href="{{ site.sitePath }}"><img src="{{ site.staticContentPath }}/housekeeping/images/header_logo.png" alt="{{ site.siteName }}"></a></div>
+      <div class="header_right"><img src="{{ site.staticContentPath }}/housekeeping/images/header_tm1.gif" alt=""></div>
+
+      <div class="panel_title">
+        <span class="text">{{ locale.housekeeping_base_navigation_havana_web }} {{ locale.housekeeping_base_header_housekeeping }}</span>
+        <div class="close_button"><a href="{{ site.sitePath }}"><img src="{{ site.staticContentPath }}/housekeeping/images/button_close.gif" alt="{{ locale.housekeeping_base_navigation_home }}"></a></div>
       </div>
-    </footer>
-    <script src="{{ site.staticContentPath }}/public/hk/js/ie10-viewport-bug-workaround.js"></script>
+
+      <div class="topborder"></div>
+      <div class="page_title">
+        <img src="{{ site.staticContentPath }}/housekeeping/images/icons/cfh.gif" class="pticon" alt="">
+        <span class="page_name_shadow">{{ locale.housekeeping_login_housekeeping_text }}</span>
+        <span class="page_name">{{ locale.housekeeping_login_housekeeping_text }}</span>
+      </div>
+      <div class="page_main">
+        <table border="0" cellpadding="0" cellspacing="0" height="100%">
+          <tbody>
+            <tr height="100%">
+              <td class="page_main_left">
+                <div class="loginuser">{{ locale.housekeeping_login_please_sign_in_to_access_the_housekeeping }}</div>
+                <div class="hr"></div>
+                <div class="text">
+                  <form id="loginform" action="/{{ site.housekeepingPath }}/login" method="post">
+                    <strong>{{ locale.housekeeping_login_username }}:</strong><br />
+                    <input type="text" size="20" name="hkusername" id="namefield" value="" /><br />
+                    <strong>{{ locale.housekeeping_login_password }}:</strong><br />
+                    <input type="password" size="20" name="hkpassword" value="" />
+                    <div class="button left"><input type="submit" value="{{ locale.housekeeping_login_sign_in }}"></input></div>
+                  </form>
+                </div>
+                <div class="hr"></div>
+                <div class="text">
+                  {{ locale.housekeeping_login_oops }} <a href="{{ site.sitePath }}">{{ locale.housekeeping_login_take_me_back_please }}</a>
+                </div>
+              </td>
+              <td class="page_main_right">
+                <div class="page_content">
+                  {% include "housekeeping/base/alert.tpl" %}
+                  <div class="login_top">
+                    <img src="{{ site.staticContentPath }}/housekeeping/images/workman_habbo_down.gif" alt="" /><br />
+                    {{ locale.housekeeping_base_navigation_havana_web }}
+                  </div>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="page_footer">
+        <div class="buttons">
+          <input type="button" class="footer_button" value="{{ locale.housekeeping_base_footer_homepage }}" onclick="window.location.href='{{ site.sitePath }}/'"></input>
+        </div>
+      </div>
+      <div class="copylight">{{ locale.housekeeping_base_footer_powered_by }} {{ locale.housekeeping_base_navigation_havana_web }}<br />{{ locale.housekeeping_base_footer_design_credit }}<br />{{ locale.housekeeping_base_footer_copyright_habbo }}</div>
+    </div>
   </body>
 </html>

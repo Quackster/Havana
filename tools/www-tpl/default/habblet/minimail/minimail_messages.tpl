@@ -58,7 +58,7 @@
 				</span>
 				<img src="{{ site.sitePath }}/habbo-imaging/avatarimage?figure={{ minimailMessage.getAuthor().getFigure() }}&size=s&direction=9&head_direction=2&crr=0&gesture=sml&frame=1" />
 				{% if minimailLabel == "sent" %}
-				<span class="message-sender" title="To: {{ minimailMessage.getTarget().getName() }}">{{ locale.habblet_minimail_to }} {{ minimailMessage.getTarget().getName() }}</span>
+				<span class="message-sender" title="{{ locale.habblet_minimail_to }} {{ minimailMessage.getTarget().getName() }}">{{ locale.habblet_minimail_to }} {{ minimailMessage.getTarget().getName() }}</span>
 				{% elseif minimailLabel == "inbox" %}
 				<span class="message-sender" title="{{ minimailMessage.getAuthor().getName() }}">{{ minimailMessage.getAuthor().getName() }}</span>
 				{% endif %}

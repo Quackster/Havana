@@ -2,7 +2,7 @@
   <body>
     {% set editCatalogueFrontPage = " active " %}
 	{% include "housekeeping/base/navigation.tpl" %}
-	<script type="text/javascript"><script src="{{ site.staticContentPath }}/public/hk/js/jquery-3.1.1.slim.min.js">
+	<script type="text/javascript">
 	function previewTS(el) {
 		document.getElementById('ts-preview').innerHTML = '{{ locale.housekeeping_catalogue_img_src|escape('js') }}{{ site.staticContentPath }}/c_images/Top_Story_Images/' + el + '{{ locale.housekeeping_catalogue_br|escape('js') }}';
 	}
@@ -40,17 +40,4 @@
 				<button type="submit" class="{{ locale.housekeeping_catalogue_btn_btn_info|escape('js') }}">{{ locale.housekeeping_catalogue_save_frontpage }}</button>
 			</div>
 		</form>
-    </div>
-  </div>
-  </script>
-  <script src="{{ site.staticContentPath }}/public/hk/js/bootstrap.bundle.min.js"></script>
-  <script>
-    $("#menu-toggle").click(function(e) {
-      e.preventDefault();
-      $("#wrapper").toggleClass("toggled");
-    });
-  </script>
-</body>
-</html>
-
 {% include "housekeeping/base/footer.tpl" %}

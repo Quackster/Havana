@@ -1,6 +1,6 @@
 {% if alert.hasAlert %}
 
-<div class="alert alert-{{ alert.colour }}">
+<div class="clean-{{ alert.colour }}">
   {{ alert.message }}
 </div>
 

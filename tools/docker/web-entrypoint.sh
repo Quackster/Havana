@@ -7,6 +7,9 @@ MYSQL_USERNAME="${MYSQL_USERNAME:-root}"
 MYSQL_PASSWORD="${MYSQL_PASSWORD:-goldfish}"
 MYSQL_DATABASE="${MYSQL_DATABASE:-havana}"
 
+mkdir -p /var/www/html
+cp -a /havana-web/tools/www/. /var/www/html/
+
 # Generate config if it doesn't exist (run with timeout to allow config creation)
 if [ ! -f webserver-config.ini ]; then
     timeout 10 java -Djava.net.preferIPv4Stack=true -Djava.net.preferIPv4Addresses=true -jar Havana-Web.jar || true
@@ -16,6 +19,7 @@ fi
 
 # Update config with environment variables if file exists
 if [ -f webserver-config.ini ]; then
+    sed -i -E "s#(site.directory=)(.*)#\\1/var/www/html#g" webserver-config.ini
     sed -i -E "s/(mysql.hostname=)(.*)/\1$MYSQL_HOSTNAME/g" webserver-config.ini
     sed -i -E "s/(mysql.port=)(.*)/\1$MYSQL_PORT/g" webserver-config.ini
     sed -i -E "s/(mysql.username=)(.*)/\1$MYSQL_USERNAME/g" webserver-config.ini
