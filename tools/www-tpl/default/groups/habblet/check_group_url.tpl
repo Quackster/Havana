@@ -1,0 +1,1 @@
+{{ locale.groups_habblet_your_group_alias_will_be }} {{ site.sitePath }}/groups/{{ url }}{{ locale.groups_habblet_you_can_not_alter_it_later_on }}

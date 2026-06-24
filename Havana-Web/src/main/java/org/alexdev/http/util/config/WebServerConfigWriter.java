@@ -26,7 +26,8 @@ public class WebServerConfigWriter implements ConfigWriter {
         config.put("mysql.database", "havana");
 
         config.put("template.directory", "tools/www-tpl");
-        config.put("template.name", "default-en");
+        config.put("template.name", "default");
+        config.put("template.locale.file", "locale-en.ini");
 
         config.put("page.encoding", "utf-8");
         return config;
@@ -55,6 +56,7 @@ public class WebServerConfigWriter implements ConfigWriter {
         writer.println("[Template]");
         writer.println("template.directory=" + config.get("template.directory"));
         writer.println("template.name=" + config.get("template.name"));
+        writer.println("template.locale.file=" + config.get("template.locale.file"));
         writer.println("");
         writer.println("page.encoding=" + config.get("page.encoding"));
         writer.flush();

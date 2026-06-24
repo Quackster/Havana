@@ -13,6 +13,7 @@ import org.alexdev.havana.util.StringUtil;
 import org.alexdev.havana.util.config.ServerConfiguration;
 import org.alexdev.http.log.Log;
 import org.alexdev.http.template.binders.AlertBinder;
+import org.alexdev.http.template.binders.LocaleBinder;
 import org.alexdev.http.template.binders.SessionBinder;
 import org.alexdev.http.template.binders.SiteBinder;
 
@@ -104,6 +105,7 @@ public class TwigTemplate extends Template {
     private void attachBinders() {
         this.registerBinder(new SessionBinder());
         this.registerBinder(new SiteBinder());
+        this.registerBinder(new LocaleBinder());
 
         if (this.webConnection != null) {
             this.registerBinder(new AlertBinder(
