@@ -52,8 +52,8 @@
       </div>
     </div>
   </div>
-  <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
-  <script src="https://blackrockdigital.github.io/startbootstrap-simple-sidebar/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="{{ site.staticContentPath }}/public/hk/js/jquery-3.1.1.slim.min.js"></script>
+  <script src="{{ site.staticContentPath }}/public/hk/js/bootstrap.bundle.min.js"></script>
   <script>
     $("#menu-toggle").click(function(e) {
       e.preventDefault();

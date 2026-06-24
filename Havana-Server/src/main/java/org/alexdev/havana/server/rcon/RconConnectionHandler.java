@@ -7,17 +7,23 @@ import org.alexdev.havana.dao.mysql.*;
 import org.alexdev.havana.game.achievements.AchievementManager;
 import org.alexdev.havana.game.achievements.AchievementType;
 import org.alexdev.havana.game.ads.AdManager;
+import org.alexdev.havana.game.catalogue.CatalogueManager;
+import org.alexdev.havana.game.catalogue.collectables.CollectablesManager;
+import org.alexdev.havana.game.ecotron.EcotronManager;
 import org.alexdev.havana.game.groups.GroupMember;
 import org.alexdev.havana.game.infobus.InfobusManager;
 import org.alexdev.havana.game.item.Item;
 import org.alexdev.havana.game.item.ItemManager;
 import org.alexdev.havana.game.messenger.MessengerUser;
+import org.alexdev.havana.game.navigator.NavigatorManager;
 import org.alexdev.havana.game.pathfinder.Position;
 import org.alexdev.havana.game.player.Player;
 import org.alexdev.havana.game.player.PlayerDetails;
 import org.alexdev.havana.game.player.PlayerManager;
 import org.alexdev.havana.game.room.Room;
 import org.alexdev.havana.game.room.RoomManager;
+import org.alexdev.havana.game.room.models.RoomModelManager;
+import org.alexdev.havana.game.wordfilter.WordfilterManager;
 import org.alexdev.havana.log.Log;
 import org.alexdev.havana.messages.incoming.catalogue.GET_CATALOG_INDEX;
 import org.alexdev.havana.messages.outgoing.alerts.ALERT;
@@ -261,6 +267,23 @@ public class RconConnectionHandler extends ChannelInboundHandlerAdapter {
                 case REFRESH_ADS:
                     AdManager.getInstance().reset();
                     break;
+                case REFRESH_ITEM_DEFINITIONS:
+                    ItemManager.reset();
+                    CatalogueManager.reset();
+                    CollectablesManager.reset();
+                    break;
+                case REFRESH_NAVIGATOR:
+                    NavigatorManager.reset();
+                    break;
+                case REFRESH_ROOM_MODELS:
+                    RoomModelManager.reset();
+                    break;
+                case REFRESH_WORDFILTER:
+                    WordfilterManager.reset();
+                    break;
+                case REFRESH_ECOTRON:
+                    EcotronManager.reset();
+                    break;
                 case REFRESH_ROOM_BADGES:
                     RoomManager.getInstance().reloadBadges();
                     RoomManager.getInstance().giveBadges();
@@ -274,6 +297,15 @@ public class RconConnectionHandler extends ChannelInboundHandlerAdapter {
                 case INFOBUS_POLL:
                     int pollId = Integer.parseInt(message.getValues().get("pollId"));
                     InfobusManager.getInstance().startPolling(pollId);
+                    break;
+                case REFRESH_CATALOGUE:
+                    CatalogueManager.reset();
+                    CollectablesManager.reset();
+
+                    for (Player p : PlayerManager.getInstance().getPlayers()) {
+                        new GET_CATALOG_INDEX().handle(p, null);
+                    }
+
                     break;
                 case REFRESH_CATALOGUE_FRONTPAGE:
                     GameConfiguration.reset(new GameConfigWriter());

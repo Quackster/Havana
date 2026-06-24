@@ -18,6 +18,8 @@ import java.util.List;
 public class HousekeepingCatalogueFrontpageController {
     public static void edit(WebConnection client) {
         if (!client.session().getBoolean(SessionUtil.LOGGED_IN_HOUSKEEPING)) {
+            client.session().set("alertColour", "warning");
+            client.session().set("alertMessage", "You need to log in to housekeeping first");
             client.redirect("/" + Routes.HOUSEKEEPING_PATH);
             return;
         }
@@ -25,6 +27,8 @@ public class HousekeepingCatalogueFrontpageController {
         PlayerDetails session = PlayerDao.getDetails(client.session().getInt("user.id"));
 
         if (!HousekeepingManager.getInstance().hasPermission(session.getRank(), "catalogue/edit_frontpage")) {
+            client.session().set("alertColour", "warning");
+            client.session().set("alertMessage", "You don't have permission to edit the catalogue frontpage");
             client.redirect("/" + Routes.HOUSEKEEPING_PATH);
             return;
         }

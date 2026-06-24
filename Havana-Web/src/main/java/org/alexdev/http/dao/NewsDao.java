@@ -470,9 +470,24 @@ public class NewsDao {
 
     public static List<String> getTopStoryImages() {
         List<String> images = new ArrayList<String>();
+        File[] files = Paths.get(Settings.getInstance().getSiteDirectory(), "c_images", "Top_Story_Images").toFile().listFiles();
 
-        for (File file : Objects.requireNonNull(Paths.get(Settings.getInstance().getSiteDirectory(), "c_images", "Top_Story_Images").toFile().listFiles())) {
-            if (!file.getName().contains(".gif")) {
+        if (files == null) {
+            files = Paths.get("/var/www/html", "c_images", "Top_Story_Images").toFile().listFiles();
+        }
+
+        if (files == null) {
+            return images;
+        }
+
+        for (File file : files) {
+            String fileName = file.getName().toLowerCase(Locale.ROOT);
+
+            if (!file.isFile() ||
+                (!fileName.endsWith(".gif") &&
+                 !fileName.endsWith(".png") &&
+                 !fileName.endsWith(".jpg") &&
+                 !fileName.endsWith(".jpeg"))) {
                 continue;
             }
 

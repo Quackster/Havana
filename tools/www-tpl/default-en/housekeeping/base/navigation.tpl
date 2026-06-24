@@ -44,6 +44,40 @@
 		{% if housekeepingManager.hasPermission(playerDetails.getRank(), 'catalogue/edit_frontpage') %}
 		<a href="{{ site.sitePath }}/{{ site.housekeepingPath }}/catalogue/edit_frontpage" class="list-group-item list-group-item-action {{ editCatalogueFrontPage }}">Catalogue Frontpage</a>
 		{% endif %}
+		{% if housekeepingManager.hasPermission(playerDetails.getRank(), 'catalogue/manage') %}
+		<a href="{{ site.sitePath }}/{{ site.housekeepingPath }}/catalogue/pages" class="list-group-item list-group-item-action {{ cataloguePagesActive }}">Catalogue Pages</a>
+		<a href="{{ site.sitePath }}/{{ site.housekeepingPath }}/catalogue/items" class="list-group-item list-group-item-action {{ catalogueItemsActive }}">Catalogue Items</a>
+		<a href="{{ site.sitePath }}/{{ site.housekeepingPath }}/catalogue/packages" class="list-group-item list-group-item-action {{ cataloguePackagesActive }}">Catalogue Packages</a>
+		<a href="{{ site.sitePath }}/{{ site.housekeepingPath }}/catalogue/sale_badges" class="list-group-item list-group-item-action {{ catalogueSaleBadgesActive }}">Catalogue Sale Badges</a>
+		<a href="{{ site.sitePath }}/{{ site.housekeepingPath }}/catalogue/collectables" class="list-group-item list-group-item-action {{ catalogueCollectablesActive }}">Catalogue Collectables</a>
+		{% endif %}
+		{% if housekeepingManager.hasPermission(playerDetails.getRank(), 'item_definitions/manage') %}
+		<a href="{{ site.sitePath }}/{{ site.housekeepingPath }}/item_definitions" class="list-group-item list-group-item-action {{ itemDefinitionsActive }}">Item Definitions</a>
+		{% endif %}
+		{% if housekeepingManager.hasPermission(playerDetails.getRank(), 'vouchers/manage') %}
+		<a href="{{ site.sitePath }}/{{ site.housekeepingPath }}/vouchers" class="list-group-item list-group-item-action {{ vouchersActive }}">Vouchers</a>
+		{% endif %}
+		{% if housekeepingManager.hasPermission(playerDetails.getRank(), 'wordfilter/manage') %}
+		<a href="{{ site.sitePath }}/{{ site.housekeepingPath }}/wordfilter" class="list-group-item list-group-item-action {{ wordfilterActive }}">Wordfilter</a>
+		{% endif %}
+		{% if housekeepingManager.hasPermission(playerDetails.getRank(), 'recycler/manage') %}
+		<a href="{{ site.sitePath }}/{{ site.housekeepingPath }}/recycler_rewards" class="list-group-item list-group-item-action {{ recyclerRewardsActive }}">Recycler Rewards</a>
+		{% endif %}
+		{% if housekeepingManager.hasPermission(playerDetails.getRank(), 'room_categories/manage') %}
+		<a href="{{ site.sitePath }}/{{ site.housekeepingPath }}/room_categories" class="list-group-item list-group-item-action {{ roomCategoriesActive }}">Room Categories</a>
+		{% endif %}
+		{% if housekeepingManager.hasPermission(playerDetails.getRank(), 'room_models/manage') %}
+		<a href="{{ site.sitePath }}/{{ site.housekeepingPath }}/room_models" class="list-group-item list-group-item-action {{ roomModelsActive }}">Room Models</a>
+		{% endif %}
+		{% if housekeepingManager.hasPermission(playerDetails.getRank(), 'rooms/manage') %}
+		<a href="{{ site.sitePath }}/{{ site.housekeepingPath }}/rooms" class="list-group-item list-group-item-action {{ roomsActive }}">Rooms</a>
+		{% endif %}
+		{% if housekeepingManager.hasPermission(playerDetails.getRank(), 'groups/manage') %}
+		<a href="{{ site.sitePath }}/{{ site.housekeepingPath }}/groups" class="list-group-item list-group-item-action {{ groupsActive }}">Groups</a>
+		{% endif %}
+		{% if housekeepingManager.hasPermission(playerDetails.getRank(), 'badges') %}
+		<a href="{{ site.sitePath }}/{{ site.housekeepingPath }}/badges" class="list-group-item list-group-item-action {{ badgesActive }}">Badges</a>
+		{% endif %}
       </div>
     </div>
     <div id="page-content-wrapper">

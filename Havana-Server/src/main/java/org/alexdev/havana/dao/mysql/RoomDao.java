@@ -18,12 +18,321 @@ public class RoomDao {
     public static final int FLASH_SEARCH_LIMIT = 100;
     public static final int SHOCKWAVE_SEARCH_LIMIT = 100;
 
+    public record RoomAdmin(
+            int id,
+            int ownerId,
+            String ownerName,
+            int categoryId,
+            String name,
+            String description,
+            String model,
+            String ccts,
+            int wallpaper,
+            int floor,
+            String landscape,
+            boolean showOwnerName,
+            boolean superUsers,
+            int accessType,
+            String password,
+            int visitorsNow,
+            int visitorsMax,
+            int rating,
+            String iconData,
+            int groupId,
+            boolean hidden,
+            String createdAt,
+            String updatedAt
+    ) {}
+
+    public record RoomRightAdmin(int userId, String username) {}
+    public record RoomBanAdmin(int userId, String username, long expireAt) {}
+    public record RoomEventAdmin(int userId, String username, int categoryId, String name, String description, long expireTime, String tags) {}
+
     public static void resetVisitors() {
         try {
             Storage.getStorage().execute("UPDATE rooms SET visitors_now = 0 WHERE visitors_now > 0");
         } catch (SQLException e) {
             Storage.logError(e);
         }
+    }
+
+    public static List<RoomAdmin> getAdminRooms(String query) {
+        List<RoomAdmin> rooms = new ArrayList<>();
+
+        Connection sqlConnection = null;
+        PreparedStatement preparedStatement = null;
+        ResultSet resultSet = null;
+
+        try {
+            String normalisedQuery = query == null ? "" : query.trim().toLowerCase();
+            int roomId = -1;
+
+            try {
+                roomId = Integer.parseInt(normalisedQuery);
+            } catch (NumberFormatException ignored) {
+
+            }
+
+            sqlConnection = Storage.getStorage().getConnection();
+
+            if (normalisedQuery.isBlank()) {
+                preparedStatement = Storage.getStorage().prepare("SELECT rooms.*, users.username AS username FROM rooms LEFT JOIN users ON rooms.owner_id = users.id ORDER BY rooms.id DESC LIMIT 100", sqlConnection);
+            } else {
+                preparedStatement = Storage.getStorage().prepare("SELECT rooms.*, users.username AS username FROM rooms LEFT JOIN users ON rooms.owner_id = users.id WHERE rooms.id = ? OR LOWER(rooms.name) LIKE ? OR LOWER(users.username) LIKE ? ORDER BY rooms.id DESC LIMIT 100", sqlConnection);
+                preparedStatement.setInt(1, roomId);
+                preparedStatement.setString(2, "%" + normalisedQuery + "%");
+                preparedStatement.setString(3, "%" + normalisedQuery + "%");
+            }
+
+            resultSet = preparedStatement.executeQuery();
+
+            while (resultSet.next()) {
+                rooms.add(readAdminRoom(resultSet));
+            }
+
+        } catch (Exception e) {
+            Storage.logError(e);
+        } finally {
+            Storage.closeSilently(resultSet);
+            Storage.closeSilently(preparedStatement);
+            Storage.closeSilently(sqlConnection);
+        }
+
+        return rooms;
+    }
+
+    public static RoomAdmin getAdminRoom(int id) {
+        RoomAdmin room = null;
+
+        Connection sqlConnection = null;
+        PreparedStatement preparedStatement = null;
+        ResultSet resultSet = null;
+
+        try {
+            sqlConnection = Storage.getStorage().getConnection();
+            preparedStatement = Storage.getStorage().prepare("SELECT rooms.*, users.username AS username FROM rooms LEFT JOIN users ON rooms.owner_id = users.id WHERE rooms.id = ? LIMIT 1", sqlConnection);
+            preparedStatement.setInt(1, id);
+            resultSet = preparedStatement.executeQuery();
+
+            if (resultSet.next()) {
+                room = readAdminRoom(resultSet);
+            }
+
+        } catch (Exception e) {
+            Storage.logError(e);
+        } finally {
+            Storage.closeSilently(resultSet);
+            Storage.closeSilently(preparedStatement);
+            Storage.closeSilently(sqlConnection);
+        }
+
+        return room;
+    }
+
+    private static RoomAdmin readAdminRoom(ResultSet resultSet) throws SQLException {
+        String ownerName = resultSet.getString("username");
+
+        return new RoomAdmin(
+                resultSet.getInt("id"),
+                resultSet.getInt("owner_id"),
+                ownerName == null ? "" : ownerName,
+                resultSet.getInt("category"),
+                resultSet.getString("name"),
+                resultSet.getString("description"),
+                resultSet.getString("model"),
+                resultSet.getString("ccts"),
+                resultSet.getInt("wallpaper"),
+                resultSet.getInt("floor"),
+                resultSet.getString("landscape"),
+                resultSet.getBoolean("showname"),
+                resultSet.getBoolean("superusers"),
+                resultSet.getInt("accesstype"),
+                resultSet.getString("password"),
+                resultSet.getInt("visitors_now"),
+                resultSet.getInt("visitors_max"),
+                resultSet.getInt("rating"),
+                resultSet.getString("icon_data"),
+                resultSet.getInt("group_id"),
+                resultSet.getBoolean("is_hidden"),
+                resultSet.getString("created_at"),
+                resultSet.getString("updated_at")
+        );
+    }
+
+    public static void saveAdminRoom(RoomAdmin room) {
+        Connection sqlConnection = null;
+        PreparedStatement preparedStatement = null;
+
+        try {
+            sqlConnection = Storage.getStorage().getConnection();
+            preparedStatement = Storage.getStorage().prepare("UPDATE rooms SET owner_id = ?, category = ?, name = ?, description = ?, model = ?, ccts = ?, wallpaper = ?, floor = ?, landscape = ?, showname = ?, superusers = ?, accesstype = ?, password = ?, visitors_max = ?, rating = ?, icon_data = ?, group_id = ?, is_hidden = ? WHERE id = ?", sqlConnection);
+            preparedStatement.setInt(1, room.ownerId());
+            preparedStatement.setInt(2, room.categoryId());
+            preparedStatement.setString(3, room.name());
+            preparedStatement.setString(4, room.description());
+            preparedStatement.setString(5, room.model());
+            preparedStatement.setString(6, room.ccts());
+            preparedStatement.setInt(7, room.wallpaper());
+            preparedStatement.setInt(8, room.floor());
+            preparedStatement.setString(9, room.landscape());
+            preparedStatement.setBoolean(10, room.showOwnerName());
+            preparedStatement.setBoolean(11, room.superUsers());
+            preparedStatement.setInt(12, room.accessType());
+            preparedStatement.setString(13, room.password());
+            preparedStatement.setInt(14, room.visitorsMax());
+            preparedStatement.setInt(15, room.rating());
+            preparedStatement.setString(16, room.iconData());
+            preparedStatement.setInt(17, room.groupId());
+            preparedStatement.setBoolean(18, room.hidden());
+            preparedStatement.setInt(19, room.id());
+            preparedStatement.execute();
+        } catch (Exception e) {
+            Storage.logError(e);
+        } finally {
+            Storage.closeSilently(preparedStatement);
+            Storage.closeSilently(sqlConnection);
+        }
+    }
+
+    public static void setAdminRoomHidden(int roomId, boolean hidden) {
+        Connection sqlConnection = null;
+        PreparedStatement preparedStatement = null;
+
+        try {
+            sqlConnection = Storage.getStorage().getConnection();
+            preparedStatement = Storage.getStorage().prepare("UPDATE rooms SET is_hidden = ? WHERE id = ?", sqlConnection);
+            preparedStatement.setBoolean(1, hidden);
+            preparedStatement.setInt(2, roomId);
+            preparedStatement.execute();
+        } catch (Exception e) {
+            Storage.logError(e);
+        } finally {
+            Storage.closeSilently(preparedStatement);
+            Storage.closeSilently(sqlConnection);
+        }
+    }
+
+    public static List<RoomRightAdmin> getAdminRoomRights(int roomId) {
+        List<RoomRightAdmin> rights = new ArrayList<>();
+
+        Connection sqlConnection = null;
+        PreparedStatement preparedStatement = null;
+        ResultSet resultSet = null;
+
+        try {
+            sqlConnection = Storage.getStorage().getConnection();
+            preparedStatement = Storage.getStorage().prepare("SELECT rooms_rights.user_id, users.username FROM rooms_rights LEFT JOIN users ON rooms_rights.user_id = users.id WHERE rooms_rights.room_id = ? ORDER BY users.username ASC", sqlConnection);
+            preparedStatement.setInt(1, roomId);
+            resultSet = preparedStatement.executeQuery();
+
+            while (resultSet.next()) {
+                String username = resultSet.getString("username");
+                rights.add(new RoomRightAdmin(resultSet.getInt("user_id"), username == null ? "" : username));
+            }
+
+        } catch (Exception e) {
+            Storage.logError(e);
+        } finally {
+            Storage.closeSilently(resultSet);
+            Storage.closeSilently(preparedStatement);
+            Storage.closeSilently(sqlConnection);
+        }
+
+        return rights;
+    }
+
+    public static List<RoomBanAdmin> getAdminRoomBans(int roomId) {
+        List<RoomBanAdmin> bans = new ArrayList<>();
+
+        Connection sqlConnection = null;
+        PreparedStatement preparedStatement = null;
+        ResultSet resultSet = null;
+
+        try {
+            sqlConnection = Storage.getStorage().getConnection();
+            preparedStatement = Storage.getStorage().prepare("SELECT rooms_bans.user_id, rooms_bans.expire_at, users.username FROM rooms_bans LEFT JOIN users ON rooms_bans.user_id = users.id WHERE rooms_bans.room_id = ? ORDER BY rooms_bans.expire_at DESC", sqlConnection);
+            preparedStatement.setInt(1, roomId);
+            resultSet = preparedStatement.executeQuery();
+
+            while (resultSet.next()) {
+                String username = resultSet.getString("username");
+                bans.add(new RoomBanAdmin(resultSet.getInt("user_id"), username == null ? "" : username, resultSet.getLong("expire_at")));
+            }
+
+        } catch (Exception e) {
+            Storage.logError(e);
+        } finally {
+            Storage.closeSilently(resultSet);
+            Storage.closeSilently(preparedStatement);
+            Storage.closeSilently(sqlConnection);
+        }
+
+        return bans;
+    }
+
+    public static List<RoomEventAdmin> getAdminRoomEvents(int roomId) {
+        List<RoomEventAdmin> events = new ArrayList<>();
+
+        Connection sqlConnection = null;
+        PreparedStatement preparedStatement = null;
+        ResultSet resultSet = null;
+
+        try {
+            sqlConnection = Storage.getStorage().getConnection();
+            preparedStatement = Storage.getStorage().prepare("SELECT rooms_events.*, users.username FROM rooms_events LEFT JOIN users ON rooms_events.user_id = users.id WHERE rooms_events.room_id = ? ORDER BY rooms_events.expire_time DESC", sqlConnection);
+            preparedStatement.setInt(1, roomId);
+            resultSet = preparedStatement.executeQuery();
+
+            while (resultSet.next()) {
+                String username = resultSet.getString("username");
+                events.add(new RoomEventAdmin(
+                        resultSet.getInt("user_id"),
+                        username == null ? "" : username,
+                        resultSet.getInt("category_id"),
+                        resultSet.getString("name"),
+                        resultSet.getString("description"),
+                        resultSet.getLong("expire_time"),
+                        resultSet.getString("tags")
+                ));
+            }
+
+        } catch (Exception e) {
+            Storage.logError(e);
+        } finally {
+            Storage.closeSilently(resultSet);
+            Storage.closeSilently(preparedStatement);
+            Storage.closeSilently(sqlConnection);
+        }
+
+        return events;
+    }
+
+    public static List<String> getAdminRoomEntryBadges(int roomId) {
+        List<String> badges = new ArrayList<>();
+
+        Connection sqlConnection = null;
+        PreparedStatement preparedStatement = null;
+        ResultSet resultSet = null;
+
+        try {
+            sqlConnection = Storage.getStorage().getConnection();
+            preparedStatement = Storage.getStorage().prepare("SELECT badge FROM rooms_entry_badges WHERE room_id = ? ORDER BY badge ASC", sqlConnection);
+            preparedStatement.setInt(1, roomId);
+            resultSet = preparedStatement.executeQuery();
+
+            while (resultSet.next()) {
+                badges.add(resultSet.getString("badge"));
+            }
+
+        } catch (Exception e) {
+            Storage.logError(e);
+        } finally {
+            Storage.closeSilently(resultSet);
+            Storage.closeSilently(preparedStatement);
+            Storage.closeSilently(sqlConnection);
+        }
+
+        return badges;
     }
 
     /**

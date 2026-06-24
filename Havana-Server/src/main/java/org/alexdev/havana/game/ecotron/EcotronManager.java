@@ -80,4 +80,9 @@ public class EcotronManager {
 
         return instance;
     }
+
+    public static void reset() {
+        instance = null;
+        getInstance();
+    }
 }

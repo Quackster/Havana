@@ -13,6 +13,20 @@ import java.sql.SQLException;
 import java.util.*;
 
 public class NavigatorDao {
+    public record RoomCategoryAdmin(
+            int id,
+            int orderId,
+            int parentId,
+            boolean node,
+            String name,
+            boolean publicSpaces,
+            boolean allowTrading,
+            int minRoleAccess,
+            int minRoleSetFlatCat,
+            boolean clubOnly,
+            boolean topPriority
+    ) {}
+
 
     /**
      * Get all categories from the database.
@@ -51,6 +65,141 @@ public class NavigatorDao {
         }
 
         return categories;
+    }
+
+    public static List<RoomCategoryAdmin> getAdminCategories() {
+        List<RoomCategoryAdmin> categories = new ArrayList<>();
+
+        Connection sqlConnection = null;
+        PreparedStatement preparedStatement = null;
+        ResultSet resultSet = null;
+
+        try {
+            sqlConnection = Storage.getStorage().getConnection();
+            preparedStatement = Storage.getStorage().prepare("SELECT * FROM rooms_categories ORDER BY parent_id ASC, order_id ASC, id ASC", sqlConnection);
+            resultSet = preparedStatement.executeQuery();
+
+            while (resultSet.next()) {
+                categories.add(readAdminCategory(resultSet));
+            }
+        } catch (Exception e) {
+            Storage.logError(e);
+        } finally {
+            Storage.closeSilently(resultSet);
+            Storage.closeSilently(preparedStatement);
+            Storage.closeSilently(sqlConnection);
+        }
+
+        return categories;
+    }
+
+    public static RoomCategoryAdmin getAdminCategory(int id) {
+        Connection sqlConnection = null;
+        PreparedStatement preparedStatement = null;
+        ResultSet resultSet = null;
+
+        try {
+            sqlConnection = Storage.getStorage().getConnection();
+            preparedStatement = Storage.getStorage().prepare("SELECT * FROM rooms_categories WHERE id = ?", sqlConnection);
+            preparedStatement.setInt(1, id);
+            resultSet = preparedStatement.executeQuery();
+
+            if (resultSet.next()) {
+                return readAdminCategory(resultSet);
+            }
+        } catch (Exception e) {
+            Storage.logError(e);
+        } finally {
+            Storage.closeSilently(resultSet);
+            Storage.closeSilently(preparedStatement);
+            Storage.closeSilently(sqlConnection);
+        }
+
+        return null;
+    }
+
+    private static RoomCategoryAdmin readAdminCategory(ResultSet resultSet) throws SQLException {
+        return new RoomCategoryAdmin(
+                resultSet.getInt("id"),
+                resultSet.getInt("order_id"),
+                resultSet.getInt("parent_id"),
+                resultSet.getBoolean("isnode"),
+                resultSet.getString("name"),
+                resultSet.getBoolean("public_spaces"),
+                resultSet.getBoolean("allow_trading"),
+                resultSet.getInt("minrole_access"),
+                resultSet.getInt("minrole_setflatcat"),
+                resultSet.getBoolean("club_only"),
+                resultSet.getBoolean("is_top_priority")
+        );
+    }
+
+    public static int saveAdminCategory(RoomCategoryAdmin category) {
+        Connection sqlConnection = null;
+        PreparedStatement preparedStatement = null;
+        ResultSet generatedKeys = null;
+
+        try {
+            sqlConnection = Storage.getStorage().getConnection();
+
+            if (category.id() > 0) {
+                preparedStatement = Storage.getStorage().prepare("UPDATE rooms_categories SET order_id = ?, parent_id = ?, isnode = ?, name = ?, public_spaces = ?, allow_trading = ?, minrole_access = ?, minrole_setflatcat = ?, club_only = ?, is_top_priority = ? WHERE id = ?", sqlConnection);
+            } else {
+                preparedStatement = Storage.getStorage().prepare("INSERT INTO rooms_categories (order_id, parent_id, isnode, name, public_spaces, allow_trading, minrole_access, minrole_setflatcat, club_only, is_top_priority) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)", sqlConnection);
+            }
+
+            preparedStatement.setInt(1, category.orderId());
+            preparedStatement.setInt(2, category.parentId());
+            preparedStatement.setBoolean(3, category.node());
+            preparedStatement.setString(4, category.name());
+            preparedStatement.setBoolean(5, category.publicSpaces());
+            preparedStatement.setBoolean(6, category.allowTrading());
+            preparedStatement.setInt(7, category.minRoleAccess());
+            preparedStatement.setInt(8, category.minRoleSetFlatCat());
+            preparedStatement.setBoolean(9, category.clubOnly());
+            preparedStatement.setBoolean(10, category.topPriority());
+
+            if (category.id() > 0) {
+                preparedStatement.setInt(11, category.id());
+            }
+
+            preparedStatement.executeUpdate();
+
+            if (category.id() > 0) {
+                return category.id();
+            }
+
+            generatedKeys = preparedStatement.getGeneratedKeys();
+
+            if (generatedKeys.next()) {
+                return generatedKeys.getInt(1);
+            }
+        } catch (Exception e) {
+            Storage.logError(e);
+        } finally {
+            Storage.closeSilently(generatedKeys);
+            Storage.closeSilently(preparedStatement);
+            Storage.closeSilently(sqlConnection);
+        }
+
+        return category.id();
+    }
+
+    public static void deleteAdminCategory(int id) {
+        Connection sqlConnection = null;
+        PreparedStatement preparedStatement = null;
+
+        try {
+            sqlConnection = Storage.getStorage().getConnection();
+            preparedStatement = Storage.getStorage().prepare("DELETE FROM rooms_categories WHERE id = ?", sqlConnection);
+            preparedStatement.setInt(1, id);
+            preparedStatement.executeUpdate();
+        } catch (Exception e) {
+            Storage.logError(e);
+        } finally {
+            Storage.closeSilently(preparedStatement);
+            Storage.closeSilently(sqlConnection);
+        }
     }
 
     /**

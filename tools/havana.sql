@@ -49955,7 +49955,7 @@ DELETE FROM `homes_ratings`;
 
 -- Dumping structure for table havana.housekeeping_audit_log
 CREATE TABLE IF NOT EXISTS `housekeeping_audit_log` (
-  `action` enum('alert_user','kick_user','ban_user','room_alert','room_kick') NOT NULL,
+  `action` enum('alert_user','kick_user','ban_user','room_alert','room_kick','badge_grant','badge_remove','badge_update') NOT NULL,
   `user_id` int(11) NOT NULL,
   `target_id` int(11) NOT NULL DEFAULT -1,
   `message` varchar(255) NOT NULL DEFAULT '',

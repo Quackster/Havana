@@ -36,6 +36,15 @@ public class HousekeepingManager {
         this.permissions.put("infobus/delete_any", PlayerRank.ADMINISTRATOR);
         this.permissions.put("infobus/delete_own", PlayerRank.COMMUNITY_MANAGER);
         this.permissions.put("catalogue/edit_frontpage", PlayerRank.COMMUNITY_MANAGER);
+        this.permissions.put("catalogue/manage", PlayerRank.ADMINISTRATOR);
+        this.permissions.put("item_definitions/manage", PlayerRank.ADMINISTRATOR);
+        this.permissions.put("vouchers/manage", PlayerRank.ADMINISTRATOR);
+        this.permissions.put("wordfilter/manage", PlayerRank.ADMINISTRATOR);
+        this.permissions.put("recycler/manage", PlayerRank.ADMINISTRATOR);
+        this.permissions.put("room_categories/manage", PlayerRank.ADMINISTRATOR);
+        this.permissions.put("room_models/manage", PlayerRank.ADMINISTRATOR);
+        this.permissions.put("rooms/manage", PlayerRank.ADMINISTRATOR);
+        this.permissions.put("groups/manage", PlayerRank.ADMINISTRATOR);
         this.permissions.put("user/imitate", PlayerRank.ADMINISTRATOR);
         this.permissions.put("user/matches", PlayerRank.ADMINISTRATOR);
         this.permissions.put("badges", PlayerRank.COMMUNITY_MANAGER);

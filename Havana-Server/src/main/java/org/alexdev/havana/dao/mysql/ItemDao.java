@@ -15,6 +15,27 @@ import java.util.*;
 import java.util.concurrent.CopyOnWriteArrayList;
 
 public class ItemDao {
+    public record ItemDefinitionAdmin(
+            int id,
+            String sprite,
+            String name,
+            String description,
+            int spriteId,
+            int length,
+            int width,
+            double topHeight,
+            String maxStatus,
+            String behaviour,
+            String interactor,
+            boolean tradable,
+            boolean recyclable,
+            String drinkIds,
+            int rentalTime,
+            String allowedRotations,
+            String heights
+    ) {}
+
+    public record RecyclerRewardAdmin(String sprite, int orderId, int chance) {}
     
     /**
      * Get the item definitions.
@@ -83,6 +104,153 @@ public class ItemDao {
         return definitions;
     }
 
+    public static List<ItemDefinitionAdmin> getAdminItemDefinitions() {
+        List<ItemDefinitionAdmin> definitions = new ArrayList<>();
+
+        Connection sqlConnection = null;
+        PreparedStatement preparedStatement = null;
+        ResultSet resultSet = null;
+
+        try {
+            sqlConnection = Storage.getStorage().getConnection();
+            preparedStatement = Storage.getStorage().prepare("SELECT * FROM items_definitions ORDER BY id ASC", sqlConnection);
+            resultSet = preparedStatement.executeQuery();
+
+            while (resultSet.next()) {
+                definitions.add(readAdminItemDefinition(resultSet));
+            }
+        } catch (Exception e) {
+            Storage.logError(e);
+        } finally {
+            Storage.closeSilently(resultSet);
+            Storage.closeSilently(preparedStatement);
+            Storage.closeSilently(sqlConnection);
+        }
+
+        return definitions;
+    }
+
+    public static ItemDefinitionAdmin getAdminItemDefinition(int id) {
+        Connection sqlConnection = null;
+        PreparedStatement preparedStatement = null;
+        ResultSet resultSet = null;
+
+        try {
+            sqlConnection = Storage.getStorage().getConnection();
+            preparedStatement = Storage.getStorage().prepare("SELECT * FROM items_definitions WHERE id = ?", sqlConnection);
+            preparedStatement.setInt(1, id);
+            resultSet = preparedStatement.executeQuery();
+
+            if (resultSet.next()) {
+                return readAdminItemDefinition(resultSet);
+            }
+        } catch (Exception e) {
+            Storage.logError(e);
+        } finally {
+            Storage.closeSilently(resultSet);
+            Storage.closeSilently(preparedStatement);
+            Storage.closeSilently(sqlConnection);
+        }
+
+        return null;
+    }
+
+    private static ItemDefinitionAdmin readAdminItemDefinition(ResultSet resultSet) throws SQLException {
+        return new ItemDefinitionAdmin(
+                resultSet.getInt("id"),
+                resultSet.getString("sprite"),
+                resultSet.getString("name"),
+                resultSet.getString("description"),
+                resultSet.getInt("sprite_id"),
+                resultSet.getInt("length"),
+                resultSet.getInt("width"),
+                resultSet.getDouble("top_height"),
+                resultSet.getString("max_status"),
+                resultSet.getString("behaviour"),
+                resultSet.getString("interactor"),
+                resultSet.getBoolean("is_tradable"),
+                resultSet.getBoolean("is_recyclable"),
+                resultSet.getString("drink_ids"),
+                resultSet.getInt("rental_time"),
+                resultSet.getString("allowed_rotations"),
+                resultSet.getString("heights")
+        );
+    }
+
+    public static int saveAdminItemDefinition(ItemDefinitionAdmin definition) {
+        Connection sqlConnection = null;
+        PreparedStatement preparedStatement = null;
+        ResultSet generatedKeys = null;
+
+        try {
+            sqlConnection = Storage.getStorage().getConnection();
+
+            if (definition.id() > 0) {
+                preparedStatement = Storage.getStorage().prepare("UPDATE items_definitions SET sprite = ?, name = ?, description = ?, sprite_id = ?, length = ?, width = ?, top_height = ?, max_status = ?, behaviour = ?, interactor = ?, is_tradable = ?, is_recyclable = ?, drink_ids = ?, rental_time = ?, allowed_rotations = ?, heights = ? WHERE id = ?", sqlConnection);
+            } else {
+                preparedStatement = Storage.getStorage().prepare("INSERT INTO items_definitions (sprite, name, description, sprite_id, length, width, top_height, max_status, behaviour, interactor, is_tradable, is_recyclable, drink_ids, rental_time, allowed_rotations, heights) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)", sqlConnection);
+            }
+
+            preparedStatement.setString(1, definition.sprite());
+            preparedStatement.setString(2, definition.name());
+            preparedStatement.setString(3, definition.description());
+            preparedStatement.setInt(4, definition.spriteId());
+            preparedStatement.setInt(5, definition.length());
+            preparedStatement.setInt(6, definition.width());
+            preparedStatement.setDouble(7, definition.topHeight());
+            preparedStatement.setString(8, definition.maxStatus());
+            preparedStatement.setString(9, definition.behaviour());
+            preparedStatement.setString(10, definition.interactor());
+            preparedStatement.setBoolean(11, definition.tradable());
+            preparedStatement.setBoolean(12, definition.recyclable());
+            preparedStatement.setString(13, definition.drinkIds());
+            preparedStatement.setInt(14, definition.rentalTime());
+            preparedStatement.setString(15, definition.allowedRotations());
+            preparedStatement.setString(16, definition.heights());
+
+            if (definition.id() > 0) {
+                preparedStatement.setInt(17, definition.id());
+            }
+
+            preparedStatement.executeUpdate();
+
+            if (definition.id() > 0) {
+                return definition.id();
+            }
+
+            generatedKeys = preparedStatement.getGeneratedKeys();
+
+            if (generatedKeys.next()) {
+                return generatedKeys.getInt(1);
+            }
+        } catch (Exception e) {
+            Storage.logError(e);
+        } finally {
+            Storage.closeSilently(generatedKeys);
+            Storage.closeSilently(preparedStatement);
+            Storage.closeSilently(sqlConnection);
+        }
+
+        return definition.id();
+    }
+
+    public static void deleteAdminItemDefinition(int id) {
+        Connection sqlConnection = null;
+        PreparedStatement preparedStatement = null;
+
+        try {
+            sqlConnection = Storage.getStorage().getConnection();
+            preparedStatement = Storage.getStorage().prepare("DELETE FROM items_definitions WHERE id = ?", sqlConnection);
+            preparedStatement.setInt(1, id);
+            preparedStatement.executeUpdate();
+        } catch (Exception e) {
+            Storage.logError(e);
+        } finally {
+            Storage.closeSilently(preparedStatement);
+            Storage.closeSilently(sqlConnection);
+        }
+    }
+
     public static List<EcotronItem> getEcotronItems() {
         List<EcotronItem> itemList = new ArrayList<>();
 
@@ -109,6 +277,101 @@ public class ItemDao {
         }
 
         return itemList;
+    }
+
+    public static List<RecyclerRewardAdmin> getAdminRecyclerRewards() {
+        List<RecyclerRewardAdmin> rewards = new ArrayList<>();
+
+        Connection sqlConnection = null;
+        PreparedStatement preparedStatement = null;
+        ResultSet resultSet = null;
+
+        try {
+            sqlConnection = Storage.getStorage().getConnection();
+            preparedStatement = Storage.getStorage().prepare("SELECT * FROM recycler_rewards ORDER BY order_id ASC, sprite ASC", sqlConnection);
+            resultSet = preparedStatement.executeQuery();
+
+            while (resultSet.next()) {
+                rewards.add(new RecyclerRewardAdmin(resultSet.getString("sprite"), resultSet.getInt("order_id"), resultSet.getInt("chance")));
+            }
+        } catch (Exception e) {
+            Storage.logError(e);
+        } finally {
+            Storage.closeSilently(resultSet);
+            Storage.closeSilently(preparedStatement);
+            Storage.closeSilently(sqlConnection);
+        }
+
+        return rewards;
+    }
+
+    public static RecyclerRewardAdmin getAdminRecyclerReward(String sprite) {
+        Connection sqlConnection = null;
+        PreparedStatement preparedStatement = null;
+        ResultSet resultSet = null;
+
+        try {
+            sqlConnection = Storage.getStorage().getConnection();
+            preparedStatement = Storage.getStorage().prepare("SELECT * FROM recycler_rewards WHERE sprite = ?", sqlConnection);
+            preparedStatement.setString(1, sprite);
+            resultSet = preparedStatement.executeQuery();
+
+            if (resultSet.next()) {
+                return new RecyclerRewardAdmin(resultSet.getString("sprite"), resultSet.getInt("order_id"), resultSet.getInt("chance"));
+            }
+        } catch (Exception e) {
+            Storage.logError(e);
+        } finally {
+            Storage.closeSilently(resultSet);
+            Storage.closeSilently(preparedStatement);
+            Storage.closeSilently(sqlConnection);
+        }
+
+        return null;
+    }
+
+    public static void saveAdminRecyclerReward(RecyclerRewardAdmin reward, String originalSprite) {
+        Connection sqlConnection = null;
+        PreparedStatement preparedStatement = null;
+
+        try {
+            sqlConnection = Storage.getStorage().getConnection();
+
+            if (originalSprite != null && !originalSprite.equals(reward.sprite())) {
+                preparedStatement = Storage.getStorage().prepare("DELETE FROM recycler_rewards WHERE sprite = ?", sqlConnection);
+                preparedStatement.setString(1, originalSprite);
+                preparedStatement.executeUpdate();
+                Storage.closeSilently(preparedStatement);
+            }
+
+            preparedStatement = Storage.getStorage().prepare("REPLACE INTO recycler_rewards (sprite, order_id, chance) VALUES (?, ?, ?)", sqlConnection);
+            preparedStatement.setString(1, reward.sprite());
+            preparedStatement.setInt(2, reward.orderId());
+            preparedStatement.setInt(3, reward.chance());
+            preparedStatement.executeUpdate();
+        } catch (Exception e) {
+            Storage.logError(e);
+        } finally {
+            Storage.closeSilently(preparedStatement);
+            Storage.closeSilently(sqlConnection);
+        }
+    }
+
+    public static void deleteAdminRecyclerReward(String sprite) {
+        Connection sqlConnection = null;
+        PreparedStatement preparedStatement = null;
+
+        try {
+            sqlConnection = Storage.getStorage().getConnection();
+            preparedStatement = Storage.getStorage().prepare("DELETE FROM recycler_rewards WHERE sprite = ?", sqlConnection);
+            preparedStatement.setString(1, sprite);
+            preparedStatement.executeUpdate();
+        } catch (Exception e) {
+            Storage.logError(e);
+        } finally {
+            Storage.closeSilently(preparedStatement);
+            Storage.closeSilently(sqlConnection);
+        }
     }
 
     /**
