@@ -1,1 +1,9 @@
-www/
+www/*
+!www/public/
+www/public/*
+!www/public/hk/
+www/public/hk/*
+!www/public/hk/css/
+!www/public/hk/css/**
+!www/public/hk/js/
+!www/public/hk/js/**
