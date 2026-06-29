@@ -20,6 +20,7 @@
 					<th>{{ locale.housekeeping_rooms_state }}</th>
 					<th>{{ locale.housekeeping_rooms_visitors }}</th>
 					<th>{{ locale.housekeeping_rooms_rating }}</th>
+					<th>{{ locale.housekeeping_rooms_staff_pick }}</th>
 					<th></th>
 				</tr>
 			</thead>
@@ -34,8 +35,14 @@
 					<td>{% if room.hidden() %}{{ locale.housekeeping_rooms_hidden }}{% else %}{% if room.accessType() == 2 %}{{ locale.housekeeping_rooms_password }}{% elseif room.accessType() == 1 %}{{ locale.housekeeping_rooms_closed }}{% else %}{{ locale.housekeeping_rooms_open }}{% endif %}{% endif %}</td>
 					<td>{{ room.visitorsNow() }} / {{ room.visitorsMax() }}</td>
 					<td>{{ room.rating() }}</td>
+					<td>{% if room.staffPick() %}{{ locale.housekeeping_rooms_yes }}{% else %}{{ locale.housekeeping_rooms_no }}{% endif %}</td>
 					<td>
 						<a href="{{ site.sitePath }}/{{ site.housekeepingPath }}/rooms/edit?id={{ room.id() }}" class="btn btn-primary">{{ locale.housekeeping_rooms_edit }}</a>
+						{% if room.staffPick() %}
+						<a href="{{ site.sitePath }}/{{ site.housekeepingPath }}/rooms/staff_pick?id={{ room.id() }}&enabled=false" class="btn btn-secondary">{{ locale.housekeeping_rooms_remove_pick }}</a>
+						{% else %}
+						<a href="{{ site.sitePath }}/{{ site.housekeepingPath }}/rooms/staff_pick?id={{ room.id() }}&enabled=true" class="btn btn-success">{{ locale.housekeeping_rooms_staff_pick }}</a>
+						{% endif %}
 						{% if room.hidden() %}
 						<a href="{{ site.sitePath }}/{{ site.housekeepingPath }}/rooms/hide?id={{ room.id() }}&hidden=false" class="btn btn-secondary">{{ locale.housekeeping_rooms_unhide }}</a>
 						{% else %}

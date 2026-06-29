@@ -27,7 +27,9 @@ import org.alexdev.havana.game.room.models.RoomModelTriggerType;
 import org.alexdev.havana.game.wordfilter.WordfilterManager;
 import org.alexdev.havana.server.rcon.messages.RconHeader;
 import org.alexdev.http.Routes;
+import org.alexdev.http.dao.RecommendedDao;
 import org.alexdev.http.game.housekeeping.HousekeepingManager;
+import org.alexdev.http.server.Watchdog;
 import org.alexdev.http.util.RconUtil;
 import org.alexdev.http.util.SessionUtil;
 
@@ -124,7 +126,8 @@ public class HousekeepingGameDataController {
                         client.post().getInt("group_id"),
                         client.post().contains("is_hidden"),
                         room.createdAt(),
-                        room.updatedAt()
+                        room.updatedAt(),
+                        room.staffPick()
                 ));
 
                 refreshRoom(id);
@@ -157,6 +160,27 @@ public class HousekeepingGameDataController {
             RoomDao.setAdminRoomHidden(roomId, hidden);
             refreshRoom(roomId);
             setAlert(client, "success", hidden ? "Room hidden successfully" : "Room unhidden successfully");
+        }
+
+        client.redirect("/" + Routes.HOUSEKEEPING_PATH + "/rooms");
+    }
+
+    public static void setRoomStaffPick(WebConnection client) {
+        if (!ensurePermission(client, ROOMS_PERMISSION)) {
+            return;
+        }
+
+        if (client.get().contains("id")) {
+            int roomId = client.get().getInt("id");
+
+            if (RoomDao.getAdminRoom(roomId) == null) {
+                setAlert(client, "danger", "Room does not exist");
+            } else {
+                boolean enabled = !client.get().contains("enabled") || Boolean.parseBoolean(client.get().getString("enabled"));
+                RecommendedDao.setRecommended(roomId, "ROOM", true, enabled);
+                Watchdog.STAFF_PICK_ROOMS = RecommendedDao.getRecommendedRooms(true);
+                setAlert(client, "success", enabled ? "Room added to staff picks" : "Room removed from staff picks");
+            }
         }
 
         client.redirect("/" + Routes.HOUSEKEEPING_PATH + "/rooms");
@@ -253,7 +277,8 @@ public class HousekeepingGameDataController {
                         group.createdAt(),
                         group.memberCount(),
                         group.pendingCount(),
-                        group.threadCount()
+                        group.threadCount(),
+                        group.staffPick()
                 ));
 
                 setAlert(client, "success", "Group saved successfully");
@@ -348,6 +373,27 @@ public class HousekeepingGameDataController {
         if (client.get().contains("id")) {
             GroupDao.deleteAdminGroup(client.get().getInt("id"));
             setAlert(client, "success", "Group deleted successfully");
+        }
+
+        client.redirect("/" + Routes.HOUSEKEEPING_PATH + "/groups");
+    }
+
+    public static void setGroupStaffPick(WebConnection client) {
+        if (!ensurePermission(client, GROUPS_PERMISSION)) {
+            return;
+        }
+
+        if (client.get().contains("id")) {
+            int groupId = client.get().getInt("id");
+
+            if (GroupDao.getAdminGroup(groupId) == null) {
+                setAlert(client, "danger", "Group does not exist");
+            } else {
+                boolean enabled = !client.get().contains("enabled") || Boolean.parseBoolean(client.get().getString("enabled"));
+                RecommendedDao.setRecommended(groupId, "GROUP", true, enabled);
+                Watchdog.STAFF_PICK_GROUPS = RecommendedDao.getRecommendedGroups(true);
+                setAlert(client, "success", enabled ? "Group added to staff picks" : "Group removed from staff picks");
+            }
         }
 
         client.redirect("/" + Routes.HOUSEKEEPING_PATH + "/groups");

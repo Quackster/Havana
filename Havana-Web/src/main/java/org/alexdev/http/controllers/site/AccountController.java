@@ -187,6 +187,7 @@ public class AccountController {
         template.set("alerts", AlertsDao.getAlerts(playerDetails.getId()).stream().filter(alert -> !alert.isDisabled()).collect(Collectors.toList()));
         template.set("recommendedGroups", Watchdog.RECOMMENDED_GROUPS);//RecommendedDao.getRecommendedGroups(false));
         template.set("staffPickGroups", Watchdog.STAFF_PICK_GROUPS);
+        template.set("staffPickRooms", Watchdog.STAFF_PICK_ROOMS);
 
         FriendsFeed.createFriendsOnline(webConnection, template);
         MinimailController.appendMessages(webConnection, template, true, false, false, false, false, false);

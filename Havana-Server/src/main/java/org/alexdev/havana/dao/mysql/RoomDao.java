@@ -41,7 +41,8 @@ public class RoomDao {
             int groupId,
             boolean hidden,
             String createdAt,
-            String updatedAt
+            String updatedAt,
+            boolean staffPick
     ) {}
 
     public record RoomRightAdmin(int userId, String username) {}
@@ -76,9 +77,9 @@ public class RoomDao {
             sqlConnection = Storage.getStorage().getConnection();
 
             if (normalisedQuery.isBlank()) {
-                preparedStatement = Storage.getStorage().prepare("SELECT rooms.*, users.username AS username FROM rooms LEFT JOIN users ON rooms.owner_id = users.id ORDER BY rooms.id DESC LIMIT 100", sqlConnection);
+                preparedStatement = Storage.getStorage().prepare("SELECT rooms.*, users.username AS username, EXISTS(SELECT 1 FROM cms_recommended WHERE cms_recommended.recommended_id = rooms.id AND cms_recommended.type = 'ROOM' AND cms_recommended.is_staff_pick = 1) AS staff_pick FROM rooms LEFT JOIN users ON rooms.owner_id = users.id ORDER BY rooms.id DESC LIMIT 100", sqlConnection);
             } else {
-                preparedStatement = Storage.getStorage().prepare("SELECT rooms.*, users.username AS username FROM rooms LEFT JOIN users ON rooms.owner_id = users.id WHERE rooms.id = ? OR LOWER(rooms.name) LIKE ? OR LOWER(users.username) LIKE ? ORDER BY rooms.id DESC LIMIT 100", sqlConnection);
+                preparedStatement = Storage.getStorage().prepare("SELECT rooms.*, users.username AS username, EXISTS(SELECT 1 FROM cms_recommended WHERE cms_recommended.recommended_id = rooms.id AND cms_recommended.type = 'ROOM' AND cms_recommended.is_staff_pick = 1) AS staff_pick FROM rooms LEFT JOIN users ON rooms.owner_id = users.id WHERE rooms.id = ? OR LOWER(rooms.name) LIKE ? OR LOWER(users.username) LIKE ? ORDER BY rooms.id DESC LIMIT 100", sqlConnection);
                 preparedStatement.setInt(1, roomId);
                 preparedStatement.setString(2, "%" + normalisedQuery + "%");
                 preparedStatement.setString(3, "%" + normalisedQuery + "%");
@@ -110,7 +111,7 @@ public class RoomDao {
 
         try {
             sqlConnection = Storage.getStorage().getConnection();
-            preparedStatement = Storage.getStorage().prepare("SELECT rooms.*, users.username AS username FROM rooms LEFT JOIN users ON rooms.owner_id = users.id WHERE rooms.id = ? LIMIT 1", sqlConnection);
+            preparedStatement = Storage.getStorage().prepare("SELECT rooms.*, users.username AS username, EXISTS(SELECT 1 FROM cms_recommended WHERE cms_recommended.recommended_id = rooms.id AND cms_recommended.type = 'ROOM' AND cms_recommended.is_staff_pick = 1) AS staff_pick FROM rooms LEFT JOIN users ON rooms.owner_id = users.id WHERE rooms.id = ? LIMIT 1", sqlConnection);
             preparedStatement.setInt(1, id);
             resultSet = preparedStatement.executeQuery();
 
@@ -155,7 +156,8 @@ public class RoomDao {
                 resultSet.getInt("group_id"),
                 resultSet.getBoolean("is_hidden"),
                 resultSet.getString("created_at"),
-                resultSet.getString("updated_at")
+                resultSet.getString("updated_at"),
+                resultSet.getBoolean("staff_pick")
         );
     }
 

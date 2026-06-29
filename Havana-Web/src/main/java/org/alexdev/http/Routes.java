@@ -360,12 +360,14 @@ public class Routes {
         RouteManager.addRoute("/" + HOUSEKEEPING_PATH + "/rooms", HousekeepingGameDataController::rooms);
         RouteManager.addRoute("/" + HOUSEKEEPING_PATH + "/rooms/edit", HousekeepingGameDataController::editRoom);
         RouteManager.addRoute("/" + HOUSEKEEPING_PATH + "/rooms/hide", HousekeepingGameDataController::hideRoom);
+        RouteManager.addRoute("/" + HOUSEKEEPING_PATH + "/rooms/staff_pick", HousekeepingGameDataController::setRoomStaffPick);
         RouteManager.addRoute("/" + HOUSEKEEPING_PATH + "/rooms/delete", HousekeepingGameDataController::deleteRoom);
         RouteManager.addRoute("/" + HOUSEKEEPING_PATH + "/groups", HousekeepingGameDataController::groups);
         RouteManager.addRoute("/" + HOUSEKEEPING_PATH + "/groups/edit", HousekeepingGameDataController::editGroup);
         RouteManager.addRoute("/" + HOUSEKEEPING_PATH + "/groups/member", HousekeepingGameDataController::updateGroupMember);
         RouteManager.addRoute("/" + HOUSEKEEPING_PATH + "/groups/thread", HousekeepingGameDataController::updateGroupThread);
         RouteManager.addRoute("/" + HOUSEKEEPING_PATH + "/groups/reply", HousekeepingGameDataController::updateGroupReply);
+        RouteManager.addRoute("/" + HOUSEKEEPING_PATH + "/groups/staff_pick", HousekeepingGameDataController::setGroupStaffPick);
         RouteManager.addRoute("/" + HOUSEKEEPING_PATH + "/groups/delete", HousekeepingGameDataController::deleteGroup);
         RouteManager.addRoute("/" + HOUSEKEEPING_PATH + "/badges", HousekeepingGameDataController::badges);
         RouteManager.addRoute("/" + HOUSEKEEPING_PATH + "/badges/grant", HousekeepingGameDataController::grantBadge);

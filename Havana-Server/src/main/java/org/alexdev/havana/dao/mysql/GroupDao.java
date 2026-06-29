@@ -28,7 +28,8 @@ public class GroupDao {
             String createdAt,
             int memberCount,
             int pendingCount,
-            int threadCount
+            int threadCount,
+            boolean staffPick
     ) {}
 
     public record GroupMemberAdmin(int userId, String username, int memberRank, boolean pending, String createdAt) {}
@@ -85,7 +86,8 @@ public class GroupDao {
             String select = "SELECT groups_details.*, users.username AS owner_name, " +
                     "(SELECT COUNT(*) FROM groups_memberships WHERE groups_memberships.group_id = groups_details.id AND is_pending = 0) AS member_count, " +
                     "(SELECT COUNT(*) FROM groups_memberships WHERE groups_memberships.group_id = groups_details.id AND is_pending = 1) AS pending_count, " +
-                    "(SELECT COUNT(*) FROM cms_forum_threads WHERE cms_forum_threads.group_id = groups_details.id) AS thread_count " +
+                    "(SELECT COUNT(*) FROM cms_forum_threads WHERE cms_forum_threads.group_id = groups_details.id) AS thread_count, " +
+                    "EXISTS(SELECT 1 FROM cms_recommended WHERE cms_recommended.recommended_id = groups_details.id AND cms_recommended.type = 'GROUP' AND cms_recommended.is_staff_pick = 1) AS staff_pick " +
                     "FROM groups_details LEFT JOIN users ON groups_details.owner_id = users.id ";
 
             if (normalisedQuery.isBlank()) {
@@ -127,8 +129,10 @@ public class GroupDao {
             preparedStatement = Storage.getStorage().prepare("SELECT groups_details.*, users.username AS owner_name, " +
                     "(SELECT COUNT(*) FROM groups_memberships WHERE groups_memberships.group_id = groups_details.id AND is_pending = 0) AS member_count, " +
                     "(SELECT COUNT(*) FROM groups_memberships WHERE groups_memberships.group_id = groups_details.id AND is_pending = 1) AS pending_count, " +
-                    "(SELECT COUNT(*) FROM cms_forum_threads WHERE cms_forum_threads.group_id = groups_details.id) AS thread_count " +
-                    "FROM groups_details LEFT JOIN users ON groups_details.owner_id = users.id WHERE groups_details.id = ? LIMIT 1", sqlConnection);
+                    "(SELECT COUNT(*) FROM cms_forum_threads WHERE cms_forum_threads.group_id = groups_details.id) AS thread_count, " +
+                    "EXISTS(SELECT 1 FROM cms_recommended WHERE cms_recommended.recommended_id = groups_details.id AND cms_recommended.type = 'GROUP' AND cms_recommended.is_staff_pick = 1) AS staff_pick " +
+                    "FROM groups_details LEFT JOIN users ON groups_details.owner_id = users.id " +
+                    "WHERE groups_details.id = ? LIMIT 1", sqlConnection);
             preparedStatement.setInt(1, groupId);
             resultSet = preparedStatement.executeQuery();
 
@@ -169,7 +173,8 @@ public class GroupDao {
                 resultSet.getString("created_at"),
                 resultSet.getInt("member_count"),
                 resultSet.getInt("pending_count"),
-                resultSet.getInt("thread_count")
+                resultSet.getInt("thread_count"),
+                resultSet.getBoolean("staff_pick")
         );
     }
 

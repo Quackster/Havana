@@ -27,6 +27,7 @@ public class Watchdog implements Runnable {
     public static List<Group> STAFF_PICK_GROUPS = new ArrayList<>();
     public static List<Group> RECOMMENDED_GROUPS = new ArrayList<>();
     public static List<Event> EVENTS = new ArrayList<>();
+    public static List<Room> STAFF_PICK_ROOMS = new ArrayList<>();
     public static List<Room> RECOMMENDED_ROOMS = new ArrayList<>();
     public static List<Room> HIDDEN_RECOMMENDED_ROOMS = new ArrayList<>();
     public static List<DiscussionTopic> RECENT_DISCUSSIONS = new ArrayList<>();
@@ -128,6 +129,12 @@ public class Watchdog implements Runnable {
 
             try {
                 STAFF_PICK_GROUPS = RecommendedDao.getRecommendedGroups(true);
+            } catch (Exception ex) {
+
+            }
+
+            try {
+                STAFF_PICK_ROOMS = RecommendedDao.getRecommendedRooms(true);
             } catch (Exception ex) {
 
             }
