@@ -1,5 +1,7 @@
 ![](https://i.imgur.com/alAG9uW.png)
 
+### This project is _discontinued_ and is no longer in active development. Pull requests are always welcome however.
+
 # Information
 
 Originally started as a fork from [Quackster/Kepler](https://github.com/Quackster/Kepler), this is a server created in Java designed to revive Habbo Hotel v31 from the 2009 era and its inception was in early 2018 as a side project. Havana is the most complete v31+ server to date, this was undertaken by various reverse engineering efforts of the Shockwave client throughout the years to achieve this.
