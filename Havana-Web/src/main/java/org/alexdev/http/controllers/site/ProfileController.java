@@ -118,12 +118,6 @@ public class ProfileController {
 
         PlayerDetails playerDetails = (PlayerDetails) template.get("playerDetails");
 
-        if (!playerDetails.hasClubSubscription()) {
-            webConnection.redirect("/");
-            return;
-        }
-
-
         List<Wardrobe> wardrobeList = WardrobeDao.getWardrobe(playerDetails.getId());
 
         Wardrobe wardrobeSlot1 = wardrobeList.stream().filter(wardrobe -> wardrobe.getSlotId() == 1).findFirst().orElse(null);
